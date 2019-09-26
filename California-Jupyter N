@@ -1,0 +1,291 @@
+
+
+print ("Hello World!")
+
+Hello World!
+
+import os
+import tarfile
+from six.moves import urllib
+
+DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml/master/"
+HOUSING_PATH = os.path.join("datasets", "housing")
+HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
+
+def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
+    os.makedirs(housing_path, exist_ok=True)
+    tgz_path = os.path.join(housing_path, "housing.tgz")
+    urllib.request.urlretrieve(housing_url, tgz_path)
+    housing_tgz = tarfile.open(tgz_path)
+    housing_tgz.extractall(path=housing_path)
+    housing_tgz.close()
+
+fetch_housing_data()
+
+import pandas as pd
+
+def load_housing_data(housing_path=HOUSING_PATH):
+    csv_path = os.path.join(housing_path, "housing.csv")
+    return pd.read_csv(csv_path)
+
+housing = load_housing_data()
+housing.head()
+
+	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income 	median_house_value 	ocean_proximity
+0 	-122.23 	37.88 	41.0 	880.0 	129.0 	322.0 	126.0 	8.3252 	452600.0 	NEAR BAY
+1 	-122.22 	37.86 	21.0 	7099.0 	1106.0 	2401.0 	1138.0 	8.3014 	358500.0 	NEAR BAY
+2 	-122.24 	37.85 	52.0 	1467.0 	190.0 	496.0 	177.0 	7.2574 	352100.0 	NEAR BAY
+3 	-122.25 	37.85 	52.0 	1274.0 	235.0 	558.0 	219.0 	5.6431 	341300.0 	NEAR BAY
+4 	-122.25 	37.85 	52.0 	1627.0 	280.0 	565.0 	259.0 	3.8462 	342200.0 	NEAR BAY
+
+housing.info()
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 20640 entries, 0 to 20639
+Data columns (total 10 columns):
+longitude             20640 non-null float64
+latitude              20640 non-null float64
+housing_median_age    20640 non-null float64
+total_rooms           20640 non-null float64
+total_bedrooms        20433 non-null float64
+population            20640 non-null float64
+households            20640 non-null float64
+median_income         20640 non-null float64
+median_house_value    20640 non-null float64
+ocean_proximity       20640 non-null object
+dtypes: float64(9), object(1)
+memory usage: 1.6+ MB
+
+housing["ocean_proximity"].value_counts()
+
+<1H OCEAN     9136
+INLAND        6551
+NEAR OCEAN    2658
+NEAR BAY      2290
+ISLAND           5
+Name: ocean_proximity, dtype: int64
+
+housing.describe()
+
+	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income 	median_house_value
+count 	20640.000000 	20640.000000 	20640.000000 	20640.000000 	20433.000000 	20640.000000 	20640.000000 	20640.000000 	20640.000000
+mean 	-119.569704 	35.631861 	28.639486 	2635.763081 	537.870553 	1425.476744 	499.539680 	3.870671 	206855.816909
+std 	2.003532 	2.135952 	12.585558 	2181.615252 	421.385070 	1132.462122 	382.329753 	1.899822 	115395.615874
+min 	-124.350000 	32.540000 	1.000000 	2.000000 	1.000000 	3.000000 	1.000000 	0.499900 	14999.000000
+25% 	-121.800000 	33.930000 	18.000000 	1447.750000 	296.000000 	787.000000 	280.000000 	2.563400 	119600.000000
+50% 	-118.490000 	34.260000 	29.000000 	2127.000000 	435.000000 	1166.000000 	409.000000 	3.534800 	179700.000000
+75% 	-118.010000 	37.710000 	37.000000 	3148.000000 	647.000000 	1725.000000 	605.000000 	4.743250 	264725.000000
+max 	-114.310000 	41.950000 	52.000000 	39320.000000 	6445.000000 	35682.000000 	6082.000000 	15.000100 	500001.000000
+
+%matplotlib inline
+import matplotlib.pyplot as plt
+housing.hist(bins=50, figsize=(20,15))
+save_fig("attribute_histogram_plots")
+plt.show()
+
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-10-9ed20d64fbee> in <module>
+      2 import matplotlib.pyplot as plt
+      3 housing.hist(bins=50, figsize=(20,15))
+----> 4 save_fig("attribute_histogram_plots")
+      5 plt.show()
+
+NameError: name 'save_fig' is not defined
+
+import numpy as np
+
+# For illustration only. Sklearn has train_test_split()
+def split_train_test(data, test_ratio):
+    shuffled_indices = np.random.permutation(len(data))
+    test_set_size = int(len(data) * test_ratio)
+    test_indices = shuffled_indices[:test_set_size]
+    train_indices = shuffled_indices[test_set_size:]
+    return data.iloc[train_indices], data.iloc[test_indices]
+
+np.random.seed(42)
+
+train_set, test_set = split_train_test(housing, 0.2)
+print(len(train_set), "train +", len(test_set), "test")
+
+16512 train + 4128 test
+
+from zlib import crc32
+
+def test_set_check(identifier, test_ratio):
+    return crc32(np.int64(identifier)) & 0xffffffff < test_ratio * 2**32
+
+def split_train_test_by_id(data, test_ratio, id_column):
+    ids = data[id_column]
+    in_test_set = ids.apply(lambda id_: test_set_check(id_, test_ratio))
+    return data.loc[~in_test_set], data.loc[in_test_set]
+
+import hashlib
+
+def test_set_check(identifier, test_ratio, hash=hashlib.md5):
+    return hash(np.int64(identifier)).digest()[-1] < 256 * test_ratio
+
+def test_set_check(identifier, test_ratio, hash=hashlib.md5):
+    return bytearray(hash(np.int64(identifier)).digest())[-1] < 256 * test_ratio
+
+housing_with_id = housing.reset_index()   # adds an `index` column
+train_set, test_set = split_train_test_by_id(housing_with_id, 0.2, "index")
+
+housing_with_id["id"] = housing["longitude"] * 1000 + housing["latitude"]
+train_set, test_set = split_train_test_by_id(housing_with_id, 0.2, "id")
+
+test_set.head()
+
+	index 	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income 	median_house_value 	ocean_proximity 	id
+8 	8 	-122.26 	37.84 	42.0 	2555.0 	665.0 	1206.0 	595.0 	2.0804 	226700.0 	NEAR BAY 	-122222.16
+10 	10 	-122.26 	37.85 	52.0 	2202.0 	434.0 	910.0 	402.0 	3.2031 	281500.0 	NEAR BAY 	-122222.15
+11 	11 	-122.26 	37.85 	52.0 	3503.0 	752.0 	1504.0 	734.0 	3.2705 	241800.0 	NEAR BAY 	-122222.15
+12 	12 	-122.26 	37.85 	52.0 	2491.0 	474.0 	1098.0 	468.0 	3.0750 	213500.0 	NEAR BAY 	-122222.15
+13 	13 	-122.26 	37.84 	52.0 	696.0 	191.0 	345.0 	174.0 	2.6736 	191300.0 	NEAR BAY 	-122222.16
+
+housing["median_income"].hist()
+
+<matplotlib.axes._subplots.AxesSubplot at 0x7fbe8ae6c7b8>
+
+housing["income_cat"] = pd.cut(housing["median_income"],
+                               bins=[0., 1.5, 3.0, 4.5, 6., np.inf],
+                               labels=[1, 2, 3, 4, 5])
+
+housing["income_cat"].value_counts()
+
+3    7236
+2    6581
+4    3639
+5    2362
+1     822
+Name: income_cat, dtype: int64
+
+housing["income_cat"].hist()
+
+<matplotlib.axes._subplots.AxesSubplot at 0x7fbe8a4c2c88>
+
+from sklearn.model_selection import StratifiedShuffleSplit
+
+split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+for train_index, test_index in split.split(housing, housing["income_cat"]):
+    strat_train_set = housing.loc[train_index]
+    strat_test_set = housing.loc[test_index]
+
+strat_test_set["income_cat"].value_counts() / len(strat_test_set)
+
+3    0.350533
+2    0.318798
+4    0.176357
+5    0.114583
+1    0.039729
+Name: income_cat, dtype: float64
+
+for set_ in (strat_train_set, strat_test_set):
+    set_.drop("income_cat", axis=1, inplace=True)
+
+housing = strat_train_set.copy()
+
+housing.plot(kind="scatter", x="longitude", y="latitude")
+save_fig("bad_visualization_plot")
+
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-29-f21825eaee5b> in <module>
+      1 housing.plot(kind="scatter", x="longitude", y="latitude")
+----> 2 save_fig("bad_visualization_plot")
+      3 
+
+NameError: name 'save_fig' is not defined
+
+housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.1)
+
+<matplotlib.axes._subplots.AxesSubplot at 0x7fbebc1ae048>
+
+housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.4,
+    s=housing["population"]/100, label="population", figsize=(10,7),
+    c="median_house_value", cmap=plt.get_cmap("jet"), colorbar=True,
+    sharex=False)
+plt.legend()
+save_fig("housing_prices_scatterplot")
+
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-31-2eef791dbcb7> in <module>
+      4     sharex=False)
+      5 plt.legend()
+----> 6 save_fig("housing_prices_scatterplot")
+
+NameError: name 'save_fig' is not defined
+
+corr_matrix = housing.corr()
+
+corr_matrix["median_house_value"].sort_values(ascending=False)
+
+median_house_value    1.000000
+median_income         0.687160
+total_rooms           0.135097
+housing_median_age    0.114110
+households            0.064506
+total_bedrooms        0.047689
+population           -0.026920
+longitude            -0.047432
+latitude             -0.142724
+Name: median_house_value, dtype: float64
+
+# from pandas.tools.plotting import scatter_matrix # For older versions of Pandas
+from pandas.plotting import scatter_matrix
+
+attributes = ["median_house_value", "median_income", "total_rooms",
+              "housing_median_age"]
+scatter_matrix(housing[attributes], figsize=(12, 8))
+
+array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7fbe833f3c18>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a7d93c8>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a785978>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a7b5f28>],
+       [<matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a76c4e0>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a719a90>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a6d7080>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a684668>],
+       [<matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a6846a0>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a66f1d0>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a61f780>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a5d1d30>],
+       [<matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a58f320>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a53f8d0>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a571e80>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x7fbe7a52e470>]],
+      dtype=object)
+
+housing.plot(kind="scatter", x="median_income", y="median_house_value",
+             alpha=0.1)
+plt.axis([0, 16, 0, 550000])
+
+[0, 16, 0, 550000]
+
+housing["rooms_per_household"] = housing["total_rooms"]/housing["households"]
+housing["bedrooms_per_room"] = housing["total_bedrooms"]/housing["total_rooms"]
+housing["population_per_household"]=housing["population"]/housing["households"]
+
+corr_matrix = housing.corr()
+corr_matrix["median_house_value"].sort_values(ascending=False)
+
+median_house_value          1.000000
+median_income               0.687160
+rooms_per_household         0.146285
+total_rooms                 0.135097
+housing_median_age          0.114110
+households                  0.064506
+total_bedrooms              0.047689
+population_per_household   -0.021985
+population                 -0.026920
+longitude                  -0.047432
+latitude                   -0.142724
+bedrooms_per_room          -0.259984
+Name: median_house_value, dtype: float64
+
+housing = strat_train_set.drop("median_house_value", axis=1) # drop labels for training set
+housing_labels = strat_train_set["median_house_value"].copy()
+
+ 
+
