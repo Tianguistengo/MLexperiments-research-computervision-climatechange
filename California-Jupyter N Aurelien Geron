@@ -288,4 +288,388 @@ housing = strat_train_set.drop("median_house_value", axis=1) # drop labels for t
 housing_labels = strat_train_set["median_house_value"].copy()
 
  
+# from pandas.tools.plotting import scatter_matrix # For older versions of Pandas
+from pandas.plotting import scatter_matrix
+
+attributes = ["median_house_value", "median_income", "total_rooms",
+              "housing_median_age"]
+scatter_matrix(housing[attributes], figsize=(12, 8))
+save_fig("scatter_matrix_plot")
+
+Saving figure scatter_matrix_plot
+
+In [39]:
+
+housing.plot(kind="scatter", x="median_income", y="median_house_value",
+             alpha=0.1)
+plt.axis([0, 16, 0, 550000])
+save_fig("income_vs_house_value_scatterplot")
+
+Saving figure income_vs_house_value_scatterplot
+
+In [40]:
+
+housing["rooms_per_household"] = housing["total_rooms"]/housing["households"]
+housing["bedrooms_per_room"] = housing["total_bedrooms"]/housing["total_rooms"]
+housing["population_per_household"]=housing["population"]/housing["households"]
+
+Note: there was a bug in the previous cell, in the definition of the rooms_per_household attribute. This explains why the correlation value below differs slightly from the value in the book (unless you are reading the latest version).
+In [41]:
+
+corr_matrix = housing.corr()
+corr_matrix["median_house_value"].sort_values(ascending=False)
+
+Out[41]:
+
+median_house_value          1.000000
+median_income               0.687160
+rooms_per_household         0.146285
+total_rooms                 0.135097
+housing_median_age          0.114110
+households                  0.064506
+total_bedrooms              0.047689
+population_per_household   -0.021985
+population                 -0.026920
+longitude                  -0.047432
+latitude                   -0.142724
+bedrooms_per_room          -0.259984
+Name: median_house_value, dtype: float64
+
+In [42]:
+
+housing.plot(kind="scatter", x="rooms_per_household", y="median_house_value",
+             alpha=0.2)
+plt.axis([0, 5, 0, 520000])
+plt.show()
+
+In [43]:
+
+housing.describe()
+
+Out[43]:
+	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income 	median_house_value 	rooms_per_household 	bedrooms_per_room 	population_per_household
+count 	16512.000000 	16512.000000 	16512.000000 	16512.000000 	16354.000000 	16512.000000 	16512.000000 	16512.000000 	16512.000000 	16512.000000 	16354.000000 	16512.000000
+mean 	-119.575834 	35.639577 	28.653101 	2622.728319 	534.973890 	1419.790819 	497.060380 	3.875589 	206990.920724 	5.440341 	0.212878 	3.096437
+std 	2.001860 	2.138058 	12.574726 	2138.458419 	412.699041 	1115.686241 	375.720845 	1.904950 	115703.014830 	2.611712 	0.057379 	11.584826
+min 	-124.350000 	32.540000 	1.000000 	6.000000 	2.000000 	3.000000 	2.000000 	0.499900 	14999.000000 	1.130435 	0.100000 	0.692308
+25% 	-121.800000 	33.940000 	18.000000 	1443.000000 	295.000000 	784.000000 	279.000000 	2.566775 	119800.000000 	4.442040 	0.175304 	2.431287
+50% 	-118.510000 	34.260000 	29.000000 	2119.500000 	433.000000 	1164.000000 	408.000000 	3.540900 	179500.000000 	5.232284 	0.203031 	2.817653
+75% 	-118.010000 	37.720000 	37.000000 	3141.000000 	644.000000 	1719.250000 	602.000000 	4.744475 	263900.000000 	6.056361 	0.239831 	3.281420
+max 	-114.310000 	41.950000 	52.000000 	39320.000000 	6210.000000 	35682.000000 	5358.000000 	15.000100 	500001.000000 	141.909091 	1.000000 	1243.333333
+Prepare the data for Machine Learning algorithms
+In [44]:
+
+housing = strat_train_set.drop("median_house_value", axis=1) # drop labels for training set
+housing_labels = strat_train_set["median_house_value"].copy()
+
+In [45]:
+
+sample_incomplete_rows = housing[housing.isnull().any(axis=1)].head()
+sample_incomplete_rows
+
+Out[45]:
+	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income 	ocean_proximity
+4629 	-118.30 	34.07 	18.0 	3759.0 	NaN 	3296.0 	1462.0 	2.2708 	<1H OCEAN
+6068 	-117.86 	34.01 	16.0 	4632.0 	NaN 	3038.0 	727.0 	5.1762 	<1H OCEAN
+17923 	-121.97 	37.35 	30.0 	1955.0 	NaN 	999.0 	386.0 	4.6328 	<1H OCEAN
+13656 	-117.30 	34.05 	6.0 	2155.0 	NaN 	1039.0 	391.0 	1.6675 	INLAND
+19252 	-122.79 	38.48 	7.0 	6837.0 	NaN 	3468.0 	1405.0 	3.1662 	<1H OCEAN
+In [46]:
+
+sample_incomplete_rows.dropna(subset=["total_bedrooms"])    # option 1
+
+Out[46]:
+	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income 	ocean_proximity
+In [47]:
+
+sample_incomplete_rows.drop("total_bedrooms", axis=1)       # option 2
+
+Out[47]:
+	longitude 	latitude 	housing_median_age 	total_rooms 	population 	households 	median_income 	ocean_proximity
+4629 	-118.30 	34.07 	18.0 	3759.0 	3296.0 	1462.0 	2.2708 	<1H OCEAN
+6068 	-117.86 	34.01 	16.0 	4632.0 	3038.0 	727.0 	5.1762 	<1H OCEAN
+17923 	-121.97 	37.35 	30.0 	1955.0 	999.0 	386.0 	4.6328 	<1H OCEAN
+13656 	-117.30 	34.05 	6.0 	2155.0 	1039.0 	391.0 	1.6675 	INLAND
+19252 	-122.79 	38.48 	7.0 	6837.0 	3468.0 	1405.0 	3.1662 	<1H OCEAN
+In [48]:
+
+median = housing["total_bedrooms"].median()
+sample_incomplete_rows["total_bedrooms"].fillna(median, inplace=True) # option 3
+sample_incomplete_rows
+
+Out[48]:
+	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income 	ocean_proximity
+4629 	-118.30 	34.07 	18.0 	3759.0 	433.0 	3296.0 	1462.0 	2.2708 	<1H OCEAN
+6068 	-117.86 	34.01 	16.0 	4632.0 	433.0 	3038.0 	727.0 	5.1762 	<1H OCEAN
+17923 	-121.97 	37.35 	30.0 	1955.0 	433.0 	999.0 	386.0 	4.6328 	<1H OCEAN
+13656 	-117.30 	34.05 	6.0 	2155.0 	433.0 	1039.0 	391.0 	1.6675 	INLAND
+19252 	-122.79 	38.48 	7.0 	6837.0 	433.0 	3468.0 	1405.0 	3.1662 	<1H OCEAN
+
+Warning: Since Scikit-Learn 0.20, the sklearn.preprocessing.Imputer class was replaced by the sklearn.impute.SimpleImputer class.
+In [49]:
+
+try:
+    from sklearn.impute import SimpleImputer # Scikit-Learn 0.20+
+except ImportError:
+    from sklearn.preprocessing import Imputer as SimpleImputer
+
+imputer = SimpleImputer(strategy="median")
+
+Remove the text attribute because median can only be calculated on numerical attributes:
+In [50]:
+
+housing_num = housing.drop('ocean_proximity', axis=1)
+# alternatively: housing_num = housing.select_dtypes(include=[np.number])
+
+In [51]:
+
+imputer.fit(housing_num)
+
+Out[51]:
+
+SimpleImputer(copy=True, fill_value=None, missing_values=nan,
+       strategy='median', verbose=0)
+
+In [52]:
+
+imputer.statistics_
+
+Out[52]:
+
+array([-118.51  ,   34.26  ,   29.    , 2119.5   ,  433.    , 1164.    ,
+        408.    ,    3.5409])
+
+Check that this is the same as manually computing the median of each attribute:
+In [53]:
+
+housing_num.median().values
+
+Out[53]:
+
+array([-118.51  ,   34.26  ,   29.    , 2119.5   ,  433.    , 1164.    ,
+        408.    ,    3.5409])
+
+Transform the training set:
+In [54]:
+
+X = imputer.transform(housing_num)
+
+In [55]:
+
+housing_tr = pd.DataFrame(X, columns=housing_num.columns,
+                          index=housing.index)
+
+In [56]:
+
+housing_tr.loc[sample_incomplete_rows.index.values]
+
+Out[56]:
+	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income
+4629 	-118.30 	34.07 	18.0 	3759.0 	433.0 	3296.0 	1462.0 	2.2708
+6068 	-117.86 	34.01 	16.0 	4632.0 	433.0 	3038.0 	727.0 	5.1762
+17923 	-121.97 	37.35 	30.0 	1955.0 	433.0 	999.0 	386.0 	4.6328
+13656 	-117.30 	34.05 	6.0 	2155.0 	433.0 	1039.0 	391.0 	1.6675
+19252 	-122.79 	38.48 	7.0 	6837.0 	433.0 	3468.0 	1405.0 	3.1662
+In [57]:
+
+imputer.strategy
+
+Out[57]:
+
+'median'
+
+In [58]:
+
+housing_tr = pd.DataFrame(X, columns=housing_num.columns,
+                          index=housing_num.index)
+housing_tr.head()
+
+Out[58]:
+	longitude 	latitude 	housing_median_age 	total_rooms 	total_bedrooms 	population 	households 	median_income
+0 	-121.89 	37.29 	38.0 	1568.0 	351.0 	710.0 	339.0 	2.7042
+1 	-121.93 	37.05 	14.0 	679.0 	108.0 	306.0 	113.0 	6.4214
+2 	-117.20 	32.77 	31.0 	1952.0 	471.0 	936.0 	462.0 	2.8621
+3 	-119.61 	36.31 	25.0 	1847.0 	371.0 	1460.0 	353.0 	1.8839
+4 	-118.59 	34.23 	17.0 	6592.0 	1525.0 	4459.0 	1463.0 	3.0347
+
+Now let's preprocess the categorical input feature, ocean_proximity:
+In [59]:
+
+housing_cat = housing[['ocean_proximity']]
+housing_cat.head(10)
+
+Out[59]:
+	ocean_proximity
+17606 	<1H OCEAN
+18632 	<1H OCEAN
+14650 	NEAR OCEAN
+3230 	INLAND
+3555 	<1H OCEAN
+19480 	INLAND
+8879 	<1H OCEAN
+13685 	INLAND
+4937 	<1H OCEAN
+4861 	<1H OCEAN
+
+Warning: earlier versions of the book used the LabelEncoder class or Pandas' Series.factorize() method to encode string categorical attributes as integers. However, the OrdinalEncoder class that was introduced in Scikit-Learn 0.20 (see PR #10521) is preferable since it is designed for input features (X instead of labels y) and it plays well with pipelines (introduced later in this notebook). If you are using an older version of Scikit-Learn (<0.20), then you can import it from future_encoders.py instead.
+In [60]:
+
+try:
+    from sklearn.preprocessing import OrdinalEncoder
+except ImportError:
+    from future_encoders import OrdinalEncoder # Scikit-Learn < 0.20
+
+In [61]:
+
+ordinal_encoder = OrdinalEncoder()
+housing_cat_encoded = ordinal_encoder.fit_transform(housing_cat)
+housing_cat_encoded[:10]
+
+Out[61]:
+
+array([[0.],
+       [0.],
+       [4.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [0.]])
+
+In [62]:
+
+ordinal_encoder.categories_
+
+Out[62]:
+
+[array(['<1H OCEAN', 'INLAND', 'ISLAND', 'NEAR BAY', 'NEAR OCEAN'],
+       dtype=object)]
+
+Warning: earlier versions of the book used the LabelBinarizer or CategoricalEncoder classes to convert each categorical value to a one-hot vector. It is now preferable to use the OneHotEncoder class. Since Scikit-Learn 0.20 it can handle string categorical inputs (see PR #10521), not just integer categorical inputs. If you are using an older version of Scikit-Learn, you can import the new version from future_encoders.py:
+In [63]:
+
+try:
+    from sklearn.preprocessing import OrdinalEncoder # just to raise an ImportError if Scikit-Learn < 0.20
+    from sklearn.preprocessing import OneHotEncoder
+except ImportError:
+    from future_encoders import OneHotEncoder # Scikit-Learn < 0.20
+
+cat_encoder = OneHotEncoder()
+housing_cat_1hot = cat_encoder.fit_transform(housing_cat)
+housing_cat_1hot
+
+Out[63]:
+
+<16512x5 sparse matrix of type '<class 'numpy.float64'>'
+	with 16512 stored elements in Compressed Sparse Row format>
+
+By default, the OneHotEncoder class returns a sparse array, but we can convert it to a dense array if needed by calling the toarray() method:
+In [64]:
+
+housing_cat_1hot.toarray()
+
+Out[64]:
+
+array([[1., 0., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 1.],
+       ...,
+       [0., 1., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 1., 0.]])
+
+Alternatively, you can set sparse=False when creating the OneHotEncoder:
+In [65]:
+
+cat_encoder = OneHotEncoder(sparse=False)
+housing_cat_1hot = cat_encoder.fit_transform(housing_cat)
+housing_cat_1hot
+
+Out[65]:
+
+array([[1., 0., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 1.],
+       ...,
+       [0., 1., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 1., 0.]])
+
+In [66]:
+
+cat_encoder.categories_
+
+Out[66]:
+
+[array(['<1H OCEAN', 'INLAND', 'ISLAND', 'NEAR BAY', 'NEAR OCEAN'],
+       dtype=object)]
+
+Let's create a custom transformer to add extra attributes:
+In [67]:
+
+housing.columns
+
+Out[67]:
+
+Index(['longitude', 'latitude', 'housing_median_age', 'total_rooms',
+       'total_bedrooms', 'population', 'households', 'median_income',
+       'ocean_proximity'],
+      dtype='object')
+
+In [68]:
+
+from sklearn.base import BaseEstimator, TransformerMixin
+
+# get the right column indices: safer than hard-coding indices 3, 4, 5, 6
+rooms_ix, bedrooms_ix, population_ix, household_ix = [
+    list(housing.columns).index(col)
+    for col in ("total_rooms", "total_bedrooms", "population", "households")]
+
+class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
+    def __init__(self, add_bedrooms_per_room = True): # no *args or **kwargs
+        self.add_bedrooms_per_room = add_bedrooms_per_room
+    def fit(self, X, y=None):
+        return self  # nothing else to do
+    def transform(self, X, y=None):
+        rooms_per_household = X[:, rooms_ix] / X[:, household_ix]
+        population_per_household = X[:, population_ix] / X[:, household_ix]
+        if self.add_bedrooms_per_room:
+            bedrooms_per_room = X[:, bedrooms_ix] / X[:, rooms_ix]
+            return np.c_[X, rooms_per_household, population_per_household,
+                         bedrooms_per_room]
+        else:
+            return np.c_[X, rooms_per_household, population_per_household]
+
+attr_adder = CombinedAttributesAdder(add_bedrooms_per_room=False)
+housing_extra_attribs = attr_adder.transform(housing.values)
+
+Alternatively, you can use Scikit-Learn's FunctionTransformer class that lets you easily create a transformer based on a transformation function (thanks to Hanmin Qin for suggesting this code). Note that we need to set validate=False because the data contains non-float values (validate will default to False in Scikit-Learn 0.22).
+In [69]:
+
+from sklearn.preprocessing import FunctionTransformer
+
+def add_extra_features(X, add_bedrooms_per_room=True):
+    rooms_per_household = X[:, rooms_ix] / X[:, household_ix]
+    population_per_household = X[:, population_ix] / X[:, household_ix]
+    if add_bedrooms_per_room:
+        bedrooms_per_room = X[:, bedrooms_ix] / X[:, rooms_ix]
+        return np.c_[X, rooms_per_household, population_per_household,
+                     bedrooms_per_room]
+    else:
+        return np.c_[X, rooms_per_household, population_per_household]
+
+attr_adder = FunctionTransformer(add_extra_features, validate=False,
+                                 kw_args={"add_bedrooms_per_room": False})
+housing_extra_attribs = attr_adder.fit_transform(housing.values)
+
+In [70]:
+
+housing_extra_attribs = pd.DataFrame(
+    housing_extra_attribs,
+    columns=list(housing.columns)+["rooms_per_household", "population_per_household"],
+    index=housing.index)
+housing_extra_attribs.head()
+
 
