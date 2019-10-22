@@ -1,3 +1,5 @@
+#Experiment #7 --- Using conv nets to have a live state of the forests (and compare to forest watch, not compete)
+
 
 import pandas as pd
 import numpy as np
