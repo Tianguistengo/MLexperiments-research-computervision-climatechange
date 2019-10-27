@@ -11,20 +11,24 @@ goals:
 1. How to anticipate them
 2. How to predict which ones will grow out of control
 3. How to put them off
+4. Analyze how far the "preventive" strategy would allow us to go (recognize hot spots 
+well before they turn into fires)
 
-4.¿Build a CNN to recognize live satellite data ---early wildfire recognition system?
+4.¿Build a CNN to recognize near-real time satellite data -->>>-early wildfire recognition system?
 
-5.What other sensors/databases could feed this model?
+5.What other sensors/databases could feed this model?  what ensemble of sensors from dif earth factors
 
-6. Which satellites are useful?
+6. Which satellites are useful?  MODIS, VIIRS, LANCE suite
 
 projects working on it:
 
 1. terrafuse.ai
 2. http://www.wildfireaware.co.uk/about/
+
 read more about:
 
 1. The super gels to enclose fire and not let it go out. How to apply them.
+aka optimze firelining and backing and other response methods.  Gels could be preventive and responsive.
 2. Drones vs planes
 
 considerations:
