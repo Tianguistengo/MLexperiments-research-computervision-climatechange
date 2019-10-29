@@ -1,7 +1,7 @@
 
 goals:
 
-1. How to anticipate them  , hot spots and other methods
+1. How to anticipate them  , hot spots and other methods // Early warning systems
 
 2. How to predict which ones will grow out of control
 
@@ -36,6 +36,8 @@ aka optimze firelining and backing and other response methods.  Gels could be pr
 3.http://www.publish.csiro.au/wf/WF19023  
 RESEARCH ARTICLE (Open Access)
 Machine learning to predict final fire size at the time of ignition
+
+4. example of convolutional network used in alaska https://www.osti.gov/servlets/purl/1491321
 
 considerations:
 
