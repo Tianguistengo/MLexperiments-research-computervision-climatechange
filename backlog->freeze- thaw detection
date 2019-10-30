@@ -1,1 +1,19 @@
 inspirede by nasa's article https://earthdata.nasa.gov/esds/competitive-programs/measures/freeze-thaw-esdr
+
+
+datasets:
+
+-The MCD43A3 V6 Albedo Model dataset is a daily 16-day product. 
+It provides both directional hemispherical reflectance (black sky albedo) and bihemispherical reflectance (white sky albedo)
+for each of the MODIS surface reflectance bands (band 1 through band 7) as well as
+3 broad spectrum bands (visible, near infrared, and shortwave). 
+Each 500m/pixel daily image is generated using 16 days of data, centered on the given day. 
+A quality band is also provided for each of the 10 albedo bands. 
+
+-MCD43A2.006 MODIS BRDF-Albedo Quality Daily 500m
+
+The MCD43A2 V6 Bidirectional Reflectance Distribution Function and Albedo (BRDF/Albedo) 
+Quality dataset is a 500 meter daily 16-day product.
+It contains all the quality information for the corresponding 16-day MCD43A3 Albedo and the MCD43A4 Nadir-BRDF (NBAR) products.
+The MCD43A2 contains individual band quality and observation information for the MODIS land bands 1-7,
+along with the overall BRDF/Albedo quality information. 
