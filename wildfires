@@ -23,9 +23,28 @@ from keras.callbacks import ReduceLROnPlateau
 sns.set(style='white', context='notebook', palette='deep')
 
 
+
+#example for Modis" 
+
+var dataset = ee.ImageCollection('MODIS/006/MOD14A1')
+                  .filter(ee.Filter.date('2018-01-01', '2018-05-01'));
+var fireMaskVis = {
+  min: 0.0,
+  max: 6000.0,
+  bands: ['MaxFRP', 'FireMask', 'FireMask'],
+};
+Map.setCenter(6.746, 46.529, 2);
+Map.addLayer(dataset, fireMaskVis, 'Fire Mask');
+
+
+
 databases:
 
--
+- "The MOD14A1 V6 dataset provides daily fire mask composites at 1km resolution derived from the
+MODIS 4- and 11-micrometer radiances. The fire detection strategy is based on absolute detection of a
+fire (when the fire strength is sufficient to detect), and on detection relative to its background 
+(to account for variability of the surface temperature and reflection by sunlight). 
+The product distinguishes between fire, no fire and no observation.
 
 goals:
 
