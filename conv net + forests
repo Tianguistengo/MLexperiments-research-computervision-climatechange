@@ -20,3 +20,10 @@ from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D
 from keras.optimizers import RMSprop
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import ReduceLROnPlateau
+
+
+
+
+datasets:
+
+-https://archive.ics.uci.edu/ml/machine-learning-databases/forest-fires/
