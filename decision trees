@@ -7,3 +7,7 @@ additional stopping conditions:
 -min_samples_leaf
 -min_weight_fraction
 -max_leaf_nodes
+
+
+-By default, the Gini impurity measure is used, but you can select the entropy impurity
+measure instead by setting the criterion hyperparameter to "entropy" .
