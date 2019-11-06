@@ -1,3 +1,9 @@
 CART cost function for classificaiton
 It stops recursing once it reaches the maximum depth (defined by the max_depth hyperparameter), or if it cannot
 find a split that will reduce impurity.
+
+additional stopping conditions:
+-min_samples_split
+-min_samples_leaf
+-min_weight_fraction
+-max_leaf_nodes
