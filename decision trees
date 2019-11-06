@@ -3,10 +3,11 @@ It stops recursing once it reaches the maximum depth (defined by the max_depth h
 find a split that will reduce impurity.
 
 additional stopping conditions:
--min_samples_split
--min_samples_leaf
--min_weight_fraction
--max_leaf_nodes
+-min_samples_split         #the minimum number of samples a node must have before it can be split
+-min_samples_leaf          #the minimum number of samples a leaf node must have
+-min_weight_fraction_leaf  #same as min_samples_leaf but expressed as a fraction of the total number of weighted instances
+-max_leaf_nodes            #maximum number of leaf nodes
+-max_features              #maximum number of featuers that are evaluated for splitting at each node
 
 
 -By default, the Gini impurity measure is used, but you can select the entropy impurity
