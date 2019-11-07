@@ -1,3 +1,6 @@
+# to make this notebook's output stable across runs
+np.random.seed(42)
+
 CART cost function for classificaiton
 It stops recursing once it reaches the maximum depth (defined by the max_depth hyperparameter), or if it cannot
 find a split that will reduce impurity.
@@ -11,4 +14,39 @@ additional stopping conditions:
 
 
 -By default, the Gini impurity measure is used, but you can select the entropy impurity
-measure instead by setting the criterion hyperparameter to "entropy" .
+measure instead by setting the criterion hyperparameter to "entropy".
+
+
+-from sklearn.tree import export_graphviz
+
+export_graphviz(
+        tree_clf,
+        out_file=image_path("iris_tree.dot"),
+        feature_names=iris.feature_names[2:],
+        class_names=iris.target_names,
+        rounded=True,
+        filled=True
+    )
+    
+  
+ -For regression tasks:  
+ from sklearn.tree import DecisionTreeRegressor
+ 
+ 
+ -Grid search with cross-validation (with the help of the GridSearchCV class) 
+ to find good hyperparameter values for a DecisionTreeClassifier
+ 
+ from sklearn.model_selection import GridSearchCV
+ 
+ By default, GridSearchCV trains the best model found on the whole training set (you can change this by setting refit=False), 
+ so we don't need to do it again. We can simply evaluate the model's accuracy:
+ 
+ from sklearn.metrics import accuracy_score
+
+y_pred = grid_search_cv.predict(X_test)
+accuracy_score(y_test, y_pred)
+ 
+ 
+ 
+ 
+ 
