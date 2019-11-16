@@ -38,6 +38,13 @@ export_graphviz(
  
  from sklearn.model_selection import GridSearchCV
  
+ -random forests: "For example, you can train a group of Decision Tree classifiers, each on a different
+random subset of the training set. To make predictions, you just obtain the predic‐
+tions of all individual trees, then predict the class that gets the most votes (see the last
+exercise in Chapter 6). Such an ensemble of Decision Trees is called a Random Forest,
+and despite its simplicity, this is one of the most powerful Machine Learning algo‐
+rithms available today." A.G.
+ 
  By default, GridSearchCV trains the best model found on the whole training set (you can change this by setting refit=False), 
  so we don't need to do it again. We can simply evaluate the model's accuracy:
  
