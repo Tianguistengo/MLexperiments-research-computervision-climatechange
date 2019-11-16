@@ -24,3 +24,10 @@ COUNT THEM ALL AND BRAINSTORM-->>> MISSING ONES  <<<<----
 and 2. ML models/algorithms to combine and analize them--->> make predictions,
 understand patters/recognize fires faster
 , etc..
+
+
+ensemble methods: "suppose you ask a complex question to thousands of random people, then aggregate
+their answers. In many cases you will find that this aggregated answer is better than
+an expert’s answer. This is called the wisdom of the crowd. Similarly, if you aggregate
+the predictions of a group of predictors (such as classifiers or regressors), you will
+often get better predictions than with the best individual predictor." A.G.
