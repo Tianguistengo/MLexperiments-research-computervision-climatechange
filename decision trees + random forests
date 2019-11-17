@@ -53,8 +53,8 @@ accuracy_score(y_test, y_pred)
 random subset of the training set. To make predictions, you just obtain the predic‐
 tions of all individual trees, then predict the class that gets the most votes (see the last
 exercise in Chapter 6). Such an ensemble of Decision Trees is called a Random Forest,
-and despite its simplicity, this is one of the most powerful Machine Learning algo‐
-rithms available today." A.G.
+and despite its simplicity, ***this is one of the most powerful Machine Learning algo‐
+rithms available today***." A.G.
  
  -"As we have discussed, a Random Forest 9 is an ensemble of Decision Trees, generally
 trained via the bagging method (or sometimes pasting), typically with max_samples
