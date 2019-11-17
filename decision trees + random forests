@@ -56,6 +56,8 @@ exercise in Chapter 6). Such an ensemble of Decision Trees is called a Random Fo
 and despite its simplicity, this is one of the most powerful Machine Learning algo‐
 rithms available today." A.G.
  
- -
+ -"As we have discussed, a Random Forest 9 is an ensemble of Decision Trees, generally
+trained via the bagging method (or sometimes pasting), typically with max_samples
+set to the size of the training set" A.G.
  
  
