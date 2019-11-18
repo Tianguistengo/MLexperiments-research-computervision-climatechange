@@ -1,0 +1,32 @@
+
+A.G.  The following Python code uses NumPy’s svd() function to obtain all the principal
+components of the training set, then extracts the first two PCs:
+
+X_centered = X - X.mean(axis=0)
+U, s, Vt = np.linalg.svd(X_centered)
+c1 = Vt.T[:, 0]
+c2 = Vt.T[:, 1]
+
+
+2 approaches: 
+
+--projection 
+
+a much lower-dimensional SUBSPACE of the high-dimensional space
+Notice that all training instances lie close to a plane: this is a lower-dimensional (2D)
+subspace of the high-dimensional (3D) space.
+
+-- Manifold Learning
+
+The Swiss roll is an example of a 2D manifold. Put simply, a 2D manifold is a 2D
+shape that can be bent and twisted in a higher-dimensional space.
+
+3 dimensionality reduction techniques:
+
+-- Principal Component Analysis (PCA)
+
+PCA identifies the axis that accounts for the largest amount of variance in the train‐
+ing set.
+
+-- Kernel PCA
+-- LLE
