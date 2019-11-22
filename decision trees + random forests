@@ -61,3 +61,23 @@ trained via the bagging method (or sometimes pasting), typically with max_sample
 set to the size of the training set" A.G.
  
  
+ 
+ ---How to measure how long it took the model to trian 
+ 
+ 
+from sklearn.ensemble import RandomForestClassifier
+
+rnd_clf = RandomForestClassifier(n_estimators=10, random_state=42)
+
+
+import time
+
+t0 = time.time()
+rnd_clf.fit(X_train, y_train)
+t1 = time.time()
+
+print("Training took {:.2f}s".format(t1 - t0))
+
+Training took 3.98s
+
+
