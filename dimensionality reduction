@@ -87,3 +87,10 @@ variable:
 {'kpca__gamma': 0.043333333333333335, 'kpca__kernel': 'rbf'}
 
 -- LLE (Locally Linear Embedding)
+
+
+A.G. "
+
+It is common for performance to drop slightly when reducing dimensionality, 
+because we do lose some useful signal in the process. However, the performance drop is rather severe in this case. 
+So PCA really did not help: it slowed down training and reduced performance.   :(   "
