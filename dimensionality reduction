@@ -94,3 +94,13 @@ A.G. "
 It is common for performance to drop slightly when reducing dimensionality, 
 because we do lose some useful signal in the process. However, the performance drop is rather severe in this case. 
 So PCA really did not help: it slowed down training and reduced performance.   :(   "
+
+
+--basic PCA  to reduce the dataset's dimensionality, with an explained variance ratio of 95%.
+
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components=0.95)
+X_train_reduced = pca.fit_transform(X_train)
+
+
