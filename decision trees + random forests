@@ -80,4 +80,11 @@ print("Training took {:.2f}s".format(t1 - t0))
 
 Training took 3.98s
 
+-----Parameters:	
+
+n_estimators : integer, optional (default=10)
+
+    The number of trees in the forest.
+
+    Changed in version 0.20: The default value of n_estimators will change from 10 in version 0.20 to 100 in version 0.22.
 
