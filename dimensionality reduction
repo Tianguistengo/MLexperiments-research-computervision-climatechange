@@ -104,3 +104,6 @@ pca = PCA(n_components=0.95)
 X_train_reduced = pca.fit_transform(X_train)
 
 
+n_components in sklearn.decomposition -- PCA is number of components to keep. 
+
+if n_components is not set all components are kept
