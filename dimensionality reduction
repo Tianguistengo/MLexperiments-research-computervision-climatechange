@@ -107,3 +107,24 @@ X_train_reduced = pca.fit_transform(X_train)
 n_components in sklearn.decomposition -- PCA is number of components to keep. 
 
 if n_components is not set all components are kept
+
+
+---
+
+A.G.  Let's use t-SNE to reduce dimensionality down to 2D so we can plot the dataset:
+
+from sklearn.manifold import TSNE
+
+tsne = TSNE(n_components=2, random_state=42)
+X_reduced = tsne.fit_transform(X)
+
+Now let's use Matplotlib's scatter() function to plot a scatterplot, using a different color for each digit:
+
+
+plt.figure(figsize=(13,10))
+plt.scatter(X_reduced[:, 0], X_reduced[:, 1], c=y, cmap="jet")
+plt.axis('off')
+plt.colorbar()
+plt.show()
+
+
