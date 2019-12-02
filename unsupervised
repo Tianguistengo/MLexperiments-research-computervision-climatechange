@@ -1,0 +1,29 @@
+
+"
+In unsupervised learning, as you might guess, the training data is unlabeled.
+The system tries to learn without a teacher.
+
+Some of the most important unsupervised learning algorithms:
+
+• Clustering
+
+— k-Means
+— Hierarchical Cluster Analysis (HCA)
+— Expectation Maximization
+
+• Visualization and dimensionality reduction
+
+— Principal Component Analysis (PCA)
+— Kernel PCA
+— Locally-Linear Embedding (LLE)
+— t-distributed Stochastic Neighbor Embedding (t-SNE)
+
+• Association rule learning
+
+— Apriori
+— Eclat
+
+"
+
+
+" It is also being used to develop labels on top of the supervised models."
