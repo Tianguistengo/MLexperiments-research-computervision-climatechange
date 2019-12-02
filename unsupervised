@@ -1,6 +1,6 @@
 
 "
-In unsupervised learning, as you might guess, the training data is unlabeled.
+In unsupervised learning, the training data is unlabeled.
 The system tries to learn without a teacher.
 
 Some of the most important unsupervised learning algorithms:
