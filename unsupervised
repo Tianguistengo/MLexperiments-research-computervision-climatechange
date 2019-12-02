@@ -27,3 +27,16 @@ Some of the most important unsupervised learning algorithms:
 
 
 " It is also being used to develop labels on top of the supervised models."
+
+""2 broad categories of unsupervised:
+
+
+Association: An association rule learning problem is where you want to discover rules 
+that describe large portions of your data, such as people that buy X also tend to buy Y.
+
+Clustering: A clustering problem is where one can find the inherent groupings in the data, 
+such as grouping customers by purchasing behaviour.
+
+Some of the common clustering algorithms are hierarchical clustering, Gaussian mixture models,
+and K-means clustering. The last one is considered one of the simplest unsupervised learning algorithms,
+wherein data is split into k distinct clusters based on distance to the centroid of a cluster. ""
