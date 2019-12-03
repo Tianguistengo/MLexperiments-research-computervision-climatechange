@@ -1,0 +1,48 @@
+Fine-tuning a model:
+
+"1.Grid Search: set up a grid of hyperparameter values and for each combination, 
+train a model and score on the validation data. In this approach, every single combination of hyperparameters
+values is tried which can be very inefficient!
+
+2. Random search: set up a grid of hyperparameter values and select random combinations
+to train the model and score. The number of search iterations is set based on time/resources.
+
+3. Automated Hyperparameter Tuning: use methods such as gradient descent, Bayesian Optimization,
+or evolutionary algorithms to conduct a guided search for the best hyperparameters.
+
+-To "test" the tuning results, we will save some of the training data, 6000 rows, as a separate testing set. 
+When we do hyperparameter tuning, it's crucial to         
+not tune the hyperparameters on the testing data. 
+We can only use the testing data a single time when we evaluate the final model that has been tuned on the validation data. 
+
+- The performance of each set of hyperparameters is determined by
+Receiver Operating Characteristic Area Under the Curve (ROC AUC) from the cross-validation.
+
+-Part of the reason why hyperparameter tuning is so time-consuming is because of the use of cross validation. If we have 
+a large enough training set, we can probably get away with just using a single separate validation set,
+but cross validation is a safer method to avoid overfitting.
+
+
+
+
+- Gradient Boosting Machine (GBM) 
+
+"The basics you need to know about the GBM are that it is an ensemble method 
+that works by training many individual learners, almost always decision trees. However, unlike in a random forest
+where the trees are trained in parallel, in a GBM, the trees are trained sequentially 
+with each tree learning from 
+the mistakes of the previous ones. 
+The hundreds or thousands of weak learners are combined to make a single strong 
+ensemble learner with the contributions of each individual learned during training using Gradient Descent 
+(the weights of the individual trees would therefore be a model parameter).
+
+The GBM has many hyperparameters to tune that control both the overall ensemble (such as the learning rate) and the individual decision trees (such as the number of leaves in the tree or the maximum depth of the tree).
+
+
+-One of the most important hyperparameters in a Gradient Boosting Machine is the number of estimators 
+(the number of decision trees trained sequentially). We could set this as another hyperparameter in our search, 
+but there's a better method: early stopping. Early stopping means training until the validation error
+does not decrease for a specified number of iterations. In the case of the GBM, this means training more decision trees, 
+and in this example, we will use early stopping with 100 rounds, meaning that the training will continue until validation 
+error has not decreased for 100 rounds. Then, the number of estimators 
+that yielded the best score on the validation data will be chosen as the number of estimators to use in the final model.
