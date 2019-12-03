@@ -10,6 +10,15 @@ to train the model and score. The number of search iterations is set based on ti
 3. Automated Hyperparameter Tuning: use methods such as gradient descent, Bayesian Optimization,
 or evolutionary algorithms to conduct a guided search for the best hyperparameters.
 
+-"  We will use cross validation to determine the performance of model hyperparameters 
+and early stopping with the GBM so we do not have to tune the number of estimators.
+
+The basic strategy for both grid and random search is simple: for each hyperparameter value combination, 
+evaluate the cross validation score and record the results along with the hyperparameters. 
+
+Then, at the end of searching, choose the hyperparameters that yielded the highest cross-validation score,
+train the model on all the training data, and make predictions on the test data.
+
 -To "test" the tuning results, we will save some of the training data, 6000 rows, as a separate testing set. 
 When we do hyperparameter tuning, it's crucial to         
 not tune the hyperparameters on the testing data. 
@@ -22,7 +31,14 @@ Receiver Operating Characteristic Area Under the Curve (ROC AUC) from the cross-
 a large enough training set, we can probably get away with just using a single separate validation set,
 but cross validation is a safer method to avoid overfitting.
 
+-# Cross validation with early stopping
 
+cv_results = lgb.cv(default_params, train_set, num_boost_round = 10000, early_stopping_rounds = 100, 
+                    metrics = 'auc', nfold = N_FOLDS, seed = 42)
+                    
+  We can use this result as a baseline model to beat. To find out how well the model does on our "test" data,
+  we will retrain it on all the training data with the best number of estimators
+  found during cross validation with early stopping.                  
 
 
 - Gradient Boosting Machine (GBM) 
@@ -46,3 +62,5 @@ does not decrease for a specified number of iterations. In the case of the GBM, 
 and in this example, we will use early stopping with 100 rounds, meaning that the training will continue until validation 
 error has not decreased for 100 rounds. Then, the number of estimators 
 that yielded the best score on the validation data will be chosen as the number of estimators to use in the final model.
+This is one of many forms of regularization that aims to improve generalization performance on the testing set 
+by not overfitting to the training data.
