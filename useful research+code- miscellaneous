@@ -52,7 +52,10 @@ The hundreds or thousands of weak learners are combined to make a single strong
 ensemble learner with the contributions of each individual learned during training using Gradient Descent 
 (the weights of the individual trees would therefore be a model parameter).
 
-The GBM has many hyperparameters to tune that control both the overall ensemble (such as the learning rate) and the individual decision trees (such as the number of leaves in the tree or the maximum depth of the tree).
+The GBM has many hyperparameters to tune 
+that control both the overall ensemble (such as the learning rate) 
+and the individual decision trees 
+(such as the number of leaves in the tree or the maximum depth of the tree).
 
 
 -One of the most important hyperparameters in a Gradient Boosting Machine is the number of estimators 
@@ -64,3 +67,23 @@ error has not decreased for 100 rounds. Then, the number of estimators
 that yielded the best score on the validation data will be chosen as the number of estimators to use in the final model.
 This is one of many forms of regularization that aims to improve generalization performance on the testing set 
 by not overfitting to the training data.
+
+
+
+-Histogram-based Gradient Boosting Classification Tree.
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html#sklearn.ensemble.HistGradientBoostingClassifier
+
+This estimator is much faster than GradientBoostingClassifier for big datasets (n_samples >= 10 000).
+
+This estimator has --native support for missing values (NaNs--).
+During training, the tree grower learns at each split point whether samples with missing values should go to the left 
+or right child, based on the potential gain.
+When predicting, samples with missing values are assigned to the left or right child consequently. 
+If no missing values were encountered for a given feature during training, then samples with missing values
+are mapped to whichever child has the most samples.
+
+This implementation is inspired by LightGBM.
+
+
+
+
