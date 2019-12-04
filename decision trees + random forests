@@ -87,4 +87,21 @@ n_estimators : integer, optional (default=10)
     The number of trees in the forest.
 
     Changed in version 0.20: The default value of n_estimators will change from 10 in version 0.20 to 100 in version 0.22.
+    
+    
+   --the drawback to using a single decision/regression tree – it fails to include
+   predictive power from multiple, overlapping regions of the feature space.  "
+   
+   -- random forests vs gradient descent machines
+   
+   
+    RF uses decision trees, which are very prone to overfitting.
+    In order to achieve higher accuracy, RF decides to create a large number of them based on bagging. 
+    The basic idea is to resample the data over and over and for each sample train a new classifier. 
+    Different classifiers overfit the data in a different way, and through voting those differences are averaged out.
+    
+    GBM is a boosting method, which builds on weak classifiers. 
+    The idea is to add a classifier at a time, so that the next classifier is trained to improve the already trained ensemble.
+    -->Notice that for RF each iteration the classifier is trained independently from the rest.
+
 
