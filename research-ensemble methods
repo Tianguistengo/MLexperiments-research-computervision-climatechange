@@ -1,0 +1,93 @@
+
+voting classifier
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import VotingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+
+log_clf = LogisticRegression()
+rnd_clf = RandomForestClassifier()
+svm_clf = SVC()
+
+voting_clf = VotingClassifier(
+   estimators=[('lr', log_clf), ('rf', rnd_clf), ('svc', svm_clf)],
+   voting='hard')
+voting_clf.fit(X_train, y_train)
+
+
+What would the ideal ensemble of
+
+1. methods of detection (FIRMS, MODIS,VIIRS, wind, lightning, soil moisture, weather, athmospheric data {which one?},
+COUNT THEM ALL AND BRAINSTORM-->>> MISSING ONES  <<<<----
+
+and 2. ML models/algorithms to combine and analize them--->> make predictions,
+understand patters/recognize fires faster
+, etc..
+
+
+ensemble methods: "suppose you ask a complex question to thousands of random people, then aggregate
+their answers. In many cases you will find that this aggregated answer is better than
+an expert’s answer. This is called the wisdom of the crowd. Similarly, if you aggregate
+the predictions of a group of predictors (such as classifiers or regressors), you will
+often get better predictions than with the best individual predictor." A.G.
+
+
+-"Let’s look at each classifier’s accuracy on the test set:" A.G.
+
+>>> from sklearn.metrics import accuracy_score
+>>> for clf in (log_clf, rnd_clf, svm_clf, voting_clf):
+...
+clf.fit(X_train, y_train)
+...
+y_pred = clf.predict(X_test)
+...
+print(clf.__class__.__name__, accuracy_score(y_test, y_pred))
+...
+LogisticRegression 0.864
+RandomForestClassifier 0.872
+SVC 0.888
+VotingClassifier 0.896
+
+
+
+- Gradient Boosting Machines GBMs
+
+This sequential learning technique sounds a bit like Gradient Descent, except that instead of
+tweaking a single predictor’s parameter to minimise the cost function, AdaBoost adds predictors 
+to the ensemble gradually making it better. The great disadvantage of this algorithm is that
+the model cannot be parallelized
+since each predictor can only be trained after the previous one has been trained and evaluated.
+
+--Adaptive Boosting --AdaBoost
+
+    Weights can be determined using the error value. 
+    For instance,the higher the error the more is the weight assigned to the observation.
+    This process is repeated until the error function does not change, 
+    or the maximum limit of the number of estimators is reached.
+
+Hyperparameters
+
+base_estimators: specifies the base type estimator, i.e. the algorithm to be used as base learner.
+
+n_estimators: It defines the number of base estimators, where the default is 10 
+but you can increase it in order to obtain a better performance.
+
+learning_rate : same impact as in gradient descent algorithm
+
+max_depth : Maximum depth of the individual estimator
+
+n_jobs : indicates the system how many processors it is allowed to use. Value of ‘-1’ means there is no limit;
+
+random_state : makes the model’s output replicable. It will always produce the same results
+when you give it a fixed value as well as the same parameters and training data.
+
+
+AdaBoost difference with Gradient BM:
+This is another very popular Boosting algorithm whose work basis is just like what we’ve seen for AdaBoost.
+Gradient Boosting works by sequentially 
+adding the previous predictors underfitted predictions to the ensemble, ensuring the erros made previously are corrected.
+
+The difference lies in what it does with the underfitted values of its predecessor.
+Contrary to AdaBoost, which tweaks the instance weights at every interaction, 
+this method tries to fit the new predictor to the --residual errors-- made by the previous predictor.
