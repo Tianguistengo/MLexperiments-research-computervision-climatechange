@@ -96,3 +96,39 @@ This probability gives you some kind of confidence on the prediction.
 Some models can give you poor estimates of the class probabilities and some even do not support probability prediction. 
 The calibration module allows you 
 to better calibrate the probabilities of a given model, or to add support for probability prediction.
+
+
+- Working with small data:
+
+"In the manufacturing system described above, the absolute number of examples was small. 
+But the problem of small data also arises when
+the dataset in aggregate is large, but the frequency of specific important classes is low.
+
+Say you are building an X-ray diagnosis system trained on 100,000 total images. If there are few examples of hernia
+in the training set, then the algorithm can obtain high training- and test-set accuracy, 
+but still do poorly on cases of hernia
+
+Small data (also called low data) problems are hard because most learning algorithms optimize a cost function 
+that is an average over the training examples. As a result, the algorithm gives low aggregate weight to rare classes
+and under-performs on them. Giving 1,000 times higher weight to examples from very rare classes 
+does not work, as it introduces excessive variance.
+
+We have huge datasets for self-driving, 
+but getting good performance on important but rare cases continues to be challenging.
+
+
+How do we address small data? We are still in the early days of building small data algorithms, but some approaches include:
+
+    Transfer learning, in which we learn from a related task and transfer knowledge over.
+    This includes variations on self-supervised learning, in which the related tasks
+    can be “made up” from cheap unlabeled data.
+    
+    One- or few-shot learning, in which we (meta-)learn from many related tasks with small training sets in the hope
+    of doing well on the problem of interest.
+    
+    Relying on hand-coded knowledge, for example through designing more complex ML pipelines. 
+    An AI system has two major sources of knowledge: (i) data and (ii) prior knowledge encoded by the engineering team.
+    If we have small data, then we may need to encode more prior knowledge.
+    
+    Data augmentation and data synthesis.
+
