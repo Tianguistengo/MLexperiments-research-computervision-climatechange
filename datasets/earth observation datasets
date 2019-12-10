@@ -73,3 +73,15 @@ DigitalGlobe DeepCore SDK
 
 DeepCore Machine Learning Abstraction Framework is a utility toolkit that allows a user to download, perform either image classification or object detection, and manipulate geospatial vector files.
 http://deepcore.io/
+
+xBD Dataset
+Annotated high-resolution satellite imagery for building damage assessment
+https://xview2.org/dataset
+
+The SpaceNet Dataset is hosted as an Amazon Web Services (AWS) Public Dataset. 
+It contains ~27,000 square km of very high-resolution imagery, 811,000 building footprints, and ~20,000 km of road labels 
+to ensure that there is adequate open source data available for geospatial machine learning research.
+https://spacenet.ai/datasets/
+
+open data aws 
+https://registry.opendata.aws/
