@@ -1,0 +1,75 @@
+
+ImageNet Database
+
+Large repository of images with associated bounding boxes
+http://www.image-net.org/
+COCO Dataset
+
+Image recognition, segmentation, and captioning dataset.
+http://mscoco.org/
+PASCAL VOC Project
+
+Standardized image data sets for object class recognition
+http://host.robots.ox.ac.uk/pascal/VOC/
+Kaggle Competition Example
+
+Satellite data competition: Understanding the Amazon from Space
+https://www.kaggle.com/c/planet-understanding-the-amazon-from-space
+Kaggle Dstl Satellite Imagery Feature Detection Challenge
+
+Challenge from the Defence Science and Technology Laboratory (Dstl)
+to accurately classify features in overhead imagery
+https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection
+Land Use Dataset
+
+UC Merced image dataset with 21 classes with 100 images per class
+http://vision.ucmerced.edu/datasets/landuse.html
+SpaceNet
+
+SpaceNet online repository of freely available satellite imagery
+http://explore.digitalglobe.com/spacenet
+NWPU-RESISC45 Dataset
+
+Publicly available benchmark for Remote Sensing Image Scene Classification (RESISC),
+created by Northwestern Polytechnical University (NWPU)
+http://www.escience.cn/people/JunweiHan/NWPU-RESISC45.html
+AID Project
+
+Benchmark Dataset for Performance Evaluation of Aerial Scene Classification
+http://www.lmars.whu.edu.cn/xia/AID-project.html
+SIRI-WHU
+
+Google image dataset of mainly urban areas of China
+http://www.lmars.whu.edu.cn/prof_web/zhongyanfei/e-code.html
+TorontoCity: Seeing the World with a Million Eyes
+
+TorontoCity benchmark providing different perspectives of the world captured from airplanes, drones and cars driving around the city
+https://arxiv.org/abs/1612.00423
+Remote Sensing Image Scene Classification: Benchmark and State of the Art
+
+Comprehensive review of the recent progress in dataset progress. Propose a large-scale dataset, termed "NWPU-RESISC45"
+https://arxiv.org/abs/1703.00121
+TensorFlow Tutorial
+
+This guide gets you started programming in TensorFlow to help build you neural net
+https://www.tensorflow.org/get_started/get_started
+The Neural Network Zoo
+
+A cheat sheet guide containing many neural network architectures and their explanations
+http://www.asimovinstitute.org/neural-network-zoo
+Amazon AI Services
+
+A listing of Amazon AI Services that can be used on the challenge
+https://aws.amazon.com/amazon-ai
+fMoW Benchmark Example
+
+Benchmark Algorithm and code used for the fMoW Challenge
+https://github.com/fMoW
+SpaceNet GitHub Repository
+
+Packages intended to assist in the preprocessing of SpaceNet satellite imagery data corpus to a format that is consumable by machine learning algorithms.
+https://github.com/SpaceNetChallenge
+DigitalGlobe DeepCore SDK
+
+DeepCore Machine Learning Abstraction Framework is a utility toolkit that allows a user to download, perform either image classification or object detection, and manipulate geospatial vector files.
+http://deepcore.io/
