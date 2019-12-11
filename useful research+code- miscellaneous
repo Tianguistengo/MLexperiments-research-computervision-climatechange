@@ -140,3 +140,4 @@ How do we address small data? We are still in the early days of building small d
 
  conf_mx
 
+-"Many machine learning algorithms are known to produce better models by discretizing continuous attributes."
