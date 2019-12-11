@@ -158,3 +158,37 @@ the predictions made real quick. Real-time quick. Because of this, it is easily 
 algorithm of choice for real-world applications (apps) that are required to respond to user’s requests instantaneously.
 
 We need to understand what ‘Conditional Probability’ is and what is the ‘Bayes Rule’.
+
+-"Bayesian Optimization is often used in applied machine learning to tune the hyperparameters
+of a given well-performing model on a validation dataset.
+
+If training is really long, you  might prefer a bayesian optimization approach.
+
+Bayesian Optimization provides a probabilistically principled method for global optimization.
+
+Global optimization is a challenging problem that involves black box and often non-convex,
+non-linear, noisy, and computationally expensive objective functions.
+
+Global function optimization, or function optimization for short, 
+involves finding the minimum or maximum of an objective function.
+
+Objective Function == Function that takes a sample and returns a cost.
+
+
+Samples are drawn from the domain and evaluated by the objective function to give a score or cost.
+
+-
+-"Through hyperparameter optimization, a practitioner identifies free parameters in the model 
+that can be tuned to achieve better model performance. There are a few commonly used methods: 
+hand-tuning, grid search, random search, evolutionary algorithms and Bayesian optimization.
+
+Grid search cannot efficiently optimize models with more than 4 dimensions, due to the curse of dimensionality.
+Although random search is more capable than grid search, its naive approach is still both time-consuming and expensive 
+and is more likely to settle in a local optima. Furthermore, it is unscalable beyond 10 parameters. 
+Evolutionary algorithms are great if you have access to nearly unlimited compute that can be run in parallel, 
+but is often difficult to implement if you do not.  
+
+Bayesian optimization democratizes access to these algorithmic superpowers by relaxing each of these constraints. 
+
+-"Evolutionary algorithms for hyperparameter optmizaiton  use the comparison of “mutation-like” configurations
+with the best performing configurations to iterate on the model parameters.
