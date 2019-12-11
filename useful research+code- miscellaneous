@@ -131,4 +131,12 @@ How do we address small data? We are still in the early days of building small d
     If we have small data, then we may need to encode more prior knowledge.
     
     Data augmentation and data synthesis.
+    
+    --  how to create a confusion matrix for error analysis 
+    
+     y_train_pred = cross_val_predict(sgd_clf, X_train_scaled, y_train, cv=3)
+    
+ conf_mx = confusion_matrix(y_train, y_train_pred)
+
+ conf_mx
 
