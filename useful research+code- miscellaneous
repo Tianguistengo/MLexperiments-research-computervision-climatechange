@@ -192,3 +192,32 @@ Bayesian optimization democratizes access to these algorithmic superpowers by re
 
 -"Evolutionary algorithms for hyperparameter optmizaiton  use the comparison of “mutation-like” configurations
 with the best performing configurations to iterate on the model parameters.
+
+-A.G. "Once you are confident about your final model, measure its performance on the
+test set to estimate the generalization error.
+
+Don’t tweak your model after measuring the generalization error:
+you would just start overfitting the test set.
+
+- A.G. "Fine-Tune the System
+
+• You will want to use as much data as possible for this step, especially as you move
+toward the end of fine-tuning.
+• As always automate what you can.
+
+-A.G. "Monitoring
+
+Write monitoring code to check your system’s live performance at regular intervals 
+and trigger alerts when it drops.
+
+• Beware of slow degradation too: models tend to “rot” as data evolves.
+
+• Measuring performance may require a human pipeline (e.g., via a crowdsourc‐
+ing service).
+
+• Also monitor your inputs’ quality (e.g., a malfunctioning sensor sending ran‐
+dom values, or another team’s output becoming stale). This is particularly
+important for online learning systems.
+
+Retrain your models on a regular basis on fresh data (automate as much as possi‐
+ble).
