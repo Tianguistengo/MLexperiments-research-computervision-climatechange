@@ -156,3 +156,5 @@ used in the algorithm.
 Since it is a probabilistic model, the algorithm can be coded up easily and
 the predictions made real quick. Real-time quick. Because of this, it is easily scalable and is trditionally the 
 algorithm of choice for real-world applications (apps) that are required to respond to user’s requests instantaneously.
+
+We need to understand what ‘Conditional Probability’ is and what is the ‘Bayes Rule’.
