@@ -141,3 +141,18 @@ How do we address small data? We are still in the early days of building small d
  conf_mx
 
 -"Many machine learning algorithms are known to produce better models by discretizing continuous attributes."
+
+-"NAIVE BAYES is a probabilistic machine learning algorithm that can be used in a wide variety of classification tasks.
+ It is based on the works of Thomas Bayes (1702–61).
+
+But why is it called ‘Naive’?
+
+The name naive is used because it assumes the features that go into the model 
+are independent of each other. 
+That is changing the value of one feature, does not directly influence or change the value 
+of any of the other features 
+used in the algorithm.
+
+Since it is a probabilistic model, the algorithm can be coded up easily and
+the predictions made real quick. Real-time quick. Because of this, it is easily scalable and is trditionally the 
+algorithm of choice for real-world applications (apps) that are required to respond to user’s requests instantaneously.
