@@ -239,3 +239,28 @@ ble).
 
 An intercept or offset from an origin. Bias (also known as the bias term)
 is referred to as b or w0 in machine learning models. 
+
+--convergence (Google ML Glossary)
+
+Informally, often refers to a state reached during training in which training loss and validation loss
+change very little or not at all with each iteration after a certain number of iterations. 
+In other words, a model reaches convergence when additional training on the current data will not improve the model.
+
+--A.G. "training a model means
+searching for a combination of model parameters 
+that minimizes a cost function (over the training set). 
+
+It is a search in the model's "parameter space"
+
+-- batch
+
+The set of examples used in one iteration (that is, one gradient update) of model training.
+
+This is why the algorithm is
+called Batch Gradient Descent: it uses the whole batch of training
+data at every step. As a result it is terribly slow on very large train‐
+ing sets (but we will see much faster Gradient Descent algorithms
+shortly). However, Gradient Descent scales well with the number of
+features; training a Linear Regression model when there are hun‐
+dreds of thousands of features is much faster using Gradient
+Descent than using the Normal Equation.
