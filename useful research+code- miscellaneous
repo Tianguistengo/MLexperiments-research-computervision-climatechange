@@ -134,11 +134,24 @@ How do we address small data? We are still in the early days of building small d
     
     --  how to create a confusion matrix for error analysis 
     
+  
+  You need to make predictions using the cross_val_predict() function,
+  and then call the confusion_matrix() function
+    
      y_train_pred = cross_val_predict(sgd_clf, X_train_scaled, y_train, cv=3)
     
  conf_mx = confusion_matrix(y_train, y_train_pred)
 
  conf_mx
+ 
+
+Let’s focus the plot on the errors. First, you need to divide each value in the confusion
+matrix by the number of images in the corresponding class, so you can compare error
+rates instead of absolute number of errors (which would make abundant classes look
+unfairly bad):
+
+row_sums = conf_mx.sum(axis=1, keepdims=True)
+norm_conf_mx = conf_mx / row_sums
 
 -"Many machine learning algorithms are known to produce better models by discretizing continuous attributes."
 
