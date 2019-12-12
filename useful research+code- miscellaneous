@@ -234,3 +234,8 @@ important for online learning systems.
 
 Retrain your models on a regular basis on fresh data (automate as much as possi‐
 ble).
+
+--bias (math)
+
+An intercept or offset from an origin. Bias (also known as the bias term)
+is referred to as b or w0 in machine learning models. 
