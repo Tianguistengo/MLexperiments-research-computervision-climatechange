@@ -103,5 +103,8 @@ n_estimators : integer, optional (default=10)
     GBM is a boosting method, which builds on weak classifiers. 
     The idea is to add a classifier at a time, so that the next classifier is trained to improve the already trained ensemble.
     -->Notice that for RF each iteration the classifier is trained independently from the rest.
+    
+    
+    --Isolation forests for anomaly detection / fraud
 
 
