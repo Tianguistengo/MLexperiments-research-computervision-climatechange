@@ -264,3 +264,16 @@ shortly). However, Gradient Descent scales well with the number of
 features; training a Linear Regression model when there are hun‐
 dreds of thousands of features is much faster using Gradient
 Descent than using the Normal Equation.
+
+-- "The risk of using external data sources is that schema or pattern of the data 
+may change over time without notification or the team’s awareness. 
+
+For example, someone may vandalize the open data, the method of contents generation may change,
+or suppliers may alter the schema of the data without telling downstream users. 
+The reasons above can threaten the performance of the ML model and create critical issues if left unnoticed for too long.
+
+In order to monitor the ETL process effectively and prevent critical data issue to affect 
+the model and its performance; 
+integrity, consistency, and availability of the data are three aspects
+to consider when selecting metrics for ETL monitoring.
+
