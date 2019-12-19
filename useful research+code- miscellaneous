@@ -282,3 +282,16 @@ to catch and report the exceptions. Validation rules are usually developed durin
 exploratory data analysis and training of the model. Some metrics that can be used are, for instance,
 the number of missing or unseen features or ratio of data points that fail each validation rule.
 
+The second principle for ETL monitoring metrics is the consistency of the data.
+Consistency is important because a data point may pass the validation rules but the values in the features may
+be vastly different from its history in which the model was trained from. The causes that impact the integrity 
+of the data also affect the consistency of the data as well.
+But in the case of user-generated data, 
+the change in consistency can also happen organically
+due to a shift in how users interact on the platform.
+
+The availability of the data may not affect the precision of the ML model but it does affect the performance of the ML pipeline as a whole since the business objectives can’t be achieved without the data coming in (or coming late). Examples of KPIs that can be used to monitor the availability of the data are:
+
+    Amount of delay time between each batch of data
+    Total minutes, hours, or days, without data in the pipeline
+    Number of times that data is delivered behind schedule
