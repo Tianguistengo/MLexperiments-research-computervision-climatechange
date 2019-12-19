@@ -277,3 +277,8 @@ the model and its performance;
 integrity, consistency, and availability of the data are three aspects
 to consider when selecting metrics for ETL monitoring.
 
+The integrity of the data can be monitored by creating comprehensive validation rules
+to catch and report the exceptions. Validation rules are usually developed during the 
+exploratory data analysis and training of the model. Some metrics that can be used are, for instance,
+the number of missing or unseen features or ratio of data points that fail each validation rule.
+
