@@ -295,3 +295,62 @@ The availability of the data may not affect the precision of the ML model but it
     Amount of delay time between each batch of data
     Total minutes, hours, or days, without data in the pipeline
     Number of times that data is delivered behind schedule
+    
+
+-"The most basic aspects of model performance  / KD Nuggets
+
+is whether it is getting requests and how quickly it is producing results. 
+No model will give good results if you don’t ask for them. 
+And results are no good unless you actually get them in good time.
+
+To monitor whether requests are arriving, you need to record the arrival each incoming request together with 
+the name of the machine where the request has landed and an accurate timestamp. 
+It is typically a bit better to record this data to a persistent stream on a distributed platform because 
+log files can disappear if a machine goes down. It is also better to record
+request arrival and completion as separate events 
+so that you can distinguish failure to respond from lack of requests.
+
+As a first cut, we can compute the distribution of the reported elapsed times. 
+For latencies, the best way to do this is by using a non-uniform histogram.
+We can compute such a histogram for each, say, five minute interval. To monitor performance, we can accumulate
+a background over a fairly long period of time and plot the recent results against that background distribution.
+
+These histograms can also be compared using more advanced, automated techniques based on comparing the counts 
+in corresponding bins. One good way to do this is to use a statistical method known as the G-test. 
+
+Are the results any good? Are they right? We have no real idea.
+All we know so far is that requests are arriving and results are being produced at historically plausible levels and speeds. 
+
+As nice as real-time ground truth feedback may be, there are lots of use cases where this just isn’t possible. 
+For instance, we may not know even slightly whether a detected fraud is really just that for days or weeks.
+There are still things that we can do to detect problems quickly, however.
+Lots of models produce some sort of score or set of scores. Often these represent some kind of probability estimate. 
+The method, then is to store digests of the score distribution every minute or so tagged with model version and such. 
+There are two popular ways to compare distributions.
+
+Nothing sings like a canary
+In general, the more we know about what a model should be doing and the more specific we can be about comparing
+against reference behavior, the quicker we can reliably detect changes. This is the motivation behind using a canary model.
+The idea is that we send every request to the current production model as usually, 
+but we also keep an older version of the model around and send every (or nearly every) request
+to that older version as well. The older model is called a canary.
+Because we are sending the exact same requests to both models and because the canary is a model that does nearly the same 
+thing that we want the current model to do, we can compare the output of the two models request by request
+to get a very specific idea about whether the new model is behaving as expected.
+
+A canary model is also very handy when we are fielding a potential challenger to our current champion. 
+If we are trying to quantify the risk of rolling out this new challenger to replace our current champion.
+(you can analyze where the new model failed and the specifics of what is different)
+
+This article has walked through a range of near real-time monitoring techniques for machine learning models
+starting with monitors that look purely at the gross operational characteristics 
+of request rate and response times.
+Those are often very good for detecting systems level problems in evaluating requests.
+
+For cases where we don’t know exactly what our model should output, 
+we talked about methods for looking for changes in score distributions by comparing 
+to the past performance of the model or by comparing to a canary model.
+
+
+
+
