@@ -373,3 +373,23 @@ Repeated manual tasks are boring and error-prone.
 The pipeline should also be capable of managing versioned artifacts for at least every model 
 that is supposed to be deployed in production. This is necessary for rollbacks and A/B tests in production.
 
+---Sacred 
+is a tool to help you configure, organize, log and reproduce experiments. 
+It is designed to do all the tedious overhead work that you need to do around your actual experiment in order to:
+
+    keep track of all the parameters of your experiment
+    easily run your experiment for different settings
+    save configurations for individual runs in a database
+    reproduce your results
+    
+-Omniboard is a web dashboard for the Sacred machine learning experiment management tool.
+
+It connects to the MongoDB database used by Sacred and helps in visualizing the experiments and metrics / logs 
+collected in each experiment.     https://vivekratnavel.github.io/omniboard/#/
+
+-One particular technical challenge often faced and highlighted is how to ensure that the same data transformations 
+that are applied during training are also applied on prediction input. 
+This includes constants that were computed during training (e. g. for normalization). Consider this early on in your
+planning phase. If you are using TensorFlow, for example, take a look at TensorFlow Transform which addresses this challenge.
+
+
