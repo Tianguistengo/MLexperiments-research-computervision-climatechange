@@ -352,5 +352,24 @@ we talked about methods for looking for changes in score distributions by compar
 to the past performance of the model or by comparing to a canary model.
 
 
+-"Tracking Experiments 
+– Storing the model code, hyperparameters, and result metrics of every experiment is important 
+to be able to discuss results, decide in which direction to go next or reproduce experiments. The simplest format 
+for this could be a shared spreadsheet, but more sophisticated options are available
+– though they often come with additional
+requirements for the rest of the pipeline. 
+As an example, here is a screenshot from MLflow`s experiment tracking server UI
 
+-"Scalability 
+– If you invest into building an ML pipeline, you may want to eliminate the need to rebuild it 
+just because it can’t handle increasing volumes of data or the demands of a growing team of data scientists. 
+Make sure that the pipeline is scalable by choosing building blocks that are scalable themselves.
+
+-Automation – Even when a lot of steps are performed manually in the beginning, 
+make sure that all steps can be automated later on via APIs or certain tools. 
+Repeated manual tasks are boring and error-prone.
+
+-Model and Code Versioning – Versioning the model code is essential for reproducing training runs. 
+The pipeline should also be capable of managing versioned artifacts for at least every model 
+that is supposed to be deployed in production. This is necessary for rollbacks and A/B tests in production.
 
