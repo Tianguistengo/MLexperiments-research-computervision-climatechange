@@ -406,3 +406,23 @@ test, package, stage, deploy, static analysis and much more.
 
 Jenkins achieves Continuous Integration with the help of plugins. 
 Plugins allows the integration of Various DevOps stages.
+
+-" What is an Objective Function?
+
+Definition: The objective function is a mathematical term that describes how different variables contribute
+to a certain value that is being sought to be optimized.
+
+The objective function shows us how each of these inputs or variables contributes
+to the value that is being optimized.
+
+
+--Automated Machine Learning Hyperparameter Tuning in Python
+A complete walk through using Bayesian optimization for automated hyperparameter tuning in Python
+
+As a brief primer, Bayesian optimization finds the value that minimizes an objective function by 
+building a surrogate function (probability model) based on past evaluation results of the objective. 
+The surrogate is cheaper to optimize than the objective, 
+so the next input values to evaluate are selected by applying a criterion to the surrogate (often Expected Improvement). 
+Bayesian methods differ from random or grid search in that they use past evaluation results to choose the next values
+to evaluate. The concept is: limit expensive evaluations 
+of the objective function by choosing the next input values based on those that have done well in the past.
