@@ -460,17 +460,45 @@ This metadata is calculated during the model scoring and then used for monitorin
 The basic implementation for monitoring can follow different approaches with the most popular being
 logging analytics (Kibana, Grafana, Splunk etc).
 
-any sign of degradation can be dealt with by reverting to the previous model.
-
+Any sign of degradation can be dealt with by reverting to the previous model.
 A chain of responsibility pattern can be used to chain the different versions together.
 
 
+-"Cross cutting concerns. 
+A ML application, 
+like any other application, has some common functionality that spans across layers/pipelines.
+
+The cross cutting concerns are normally centralised in one place, which increases the application’s modularity. 
+They are often managed by other teams in the organisation or are off-the-shelf / thrid-party products. 
+Dependency injection is the best way to inject these in the relevant places in the code.
+
+The most important concerns to be addressed, in our use-case are:
+
+• Notifications
+• Scheduling
+• Logging Framework (and Alert mechanism)
+• Exception Management
+• Configuration Service
+• Data Service (to expose querying in a data store)
+• Auditing
+• Data Lineage
+• Caching
+• Instrumentation
+
+
+--Data lineage is generally defined as a kind of data life cycle that includes the data's origins
+and where it moves over time.
+This term can also describe what happens to data as it goes through diverse processes. Data lineage can help
+with efforts to analyze how information is used and to track key bits of information that serve a particular purpose.
 
 
 
+--"Python tricks:
 
-
-
+-Lambda- is a method to compose a function in one line for one-time use. 
+Performance suffers if the functions are called multiple times.
+On the other hand, -map- applies a function to all elements in a list, 
+whereas -filter- gets a subset of elements in a set that meets a user-defined condition.
 
 
 
