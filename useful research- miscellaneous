@@ -426,3 +426,53 @@ so the next input values to evaluate are selected by applying a criterion to the
 Bayesian methods differ from random or grid search in that they use past evaluation results to choose the next values
 to evaluate. The concept is: limit expensive evaluations 
 of the objective function by choosing the next input values based on those that have done well in the past.
+
+--In a pub/sub model, any message published to a topic is immediately received by all of the subscribers to the topic.
+Pub/sub messaging can be used to enable 
+event-driven architectures, or to decouple applications in order to increase performance, reliability and scalability.
+
+--More than one models can be deployed at any time to enable safe transition between old and new models — i.e. when
+deploying a new model, the services need to keep serving prediction requests.
+
+-- model scoring and model serving es hacer inferencias / predicciones
+
+--Depending on the use-case, scores can also be delivered to the client asynchronously i.e. independently of the request:
+• Push: Once the scores are generated, they are pushed to the caller as a notification.
+• Poll: Once the scores are generated, they are stored in a low read-latency database;
+the caller periodically polls the database for available predictions.
+
+In order to minimise the time the system takes to serve the scoring when it receives the request, two methods are employed:
+• the input features are stored in a low-read latency in-memory data store,
+• predictions precomputed in an offline batch-scoring job are cached for easy access 
+[this is depending on the use-case, as offline predictions might not be relevant].
+
+-- "Any ML solution requires a well-defined performance monitoring solution. 
+An example of information that we might want to see for model serving applications includes:
+• model identifier,
+• deployment date/time,
+• number of times the model has been served,
+• average/min/max model serving times,
+• distribution of features used.
+• predicted vs. actual/observed results.
+
+This metadata is calculated during the model scoring and then used for monitoring.
+
+The basic implementation for monitoring can follow different approaches with the most popular being
+logging analytics (Kibana, Grafana, Splunk etc).
+
+any sign of degradation can be dealt with by reverting to the previous model.
+
+A chain of responsibility pattern can be used to chain the different versions together.
+
+
+
+
+
+
+
+
+
+
+
+
+
