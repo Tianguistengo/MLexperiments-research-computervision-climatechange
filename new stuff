@@ -1,0 +1,26 @@
+
+- andrew ng "Better Than Backprop
+
+End-to-end backpropagation and labeled data are the peanut butter and chocolate of deep learning. 
+However, recent work suggests that neither is necessary to train effective neural networks to represent complex data. 
+What’s new: Sindy Löwe, Peter O’Connor, and Bastiaan Veeling propose Greedy InfoMax (GIM),
+an unsupervised method for learning to extract features that trains only one layer at a time.
+
+Key insight: The information bottleneck theory (IB) suggests that neural networks work by
+concentrating information like a data-compression algorithm. In data compression,
+the amount of information retained is measured in mutual information (MI) between original and compressed versions. 
+IB says that neural nets maximize MI between each layer’s input and output. Thus GIM reframes learning
+as a self-supervised compression problem. Unlike earlier MI-based approaches, it optimizes each layer separately.
+
+
+    GIM uses the previous layer’s output as the next layer’s input to train each layer independently. 
+    This differs from the usual backpropagation in which all layers learn at once.
+    
+    The researchers devised a task that teaches layers to extract features that maximize MI.
+    Given a subsequence of input data that has been compressed according to the current weights, 
+    the layer predicts the next element in the compressed sequence, choosing from a random selection drawn 
+    from the input including the correct choice. High success demonstrates that the layer is able to compress the input.
+    
+    The process effectively removes redundancy between nearby regions of the input. 
+    For example, a recording of a song’s chorus may repeat several times, 
+    so it’s possible to represent the recording without capturing the repetitions.
