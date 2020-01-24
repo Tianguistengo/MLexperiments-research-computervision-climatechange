@@ -24,3 +24,9 @@ as a self-supervised compression problem. Unlike earlier MI-based approaches, it
     The process effectively removes redundancy between nearby regions of the input. 
     For example, a recording of a song’s chorus may repeat several times, 
     so it’s possible to represent the recording without capturing the repetitions.
+    
+    
+    --- MLPerf
+    
+Fair and useful benchmarks for measuring -training and inference- performance of ML hardware, software, and services.
+
