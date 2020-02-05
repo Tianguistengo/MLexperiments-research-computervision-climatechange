@@ -33,9 +33,19 @@ as a self-supervised compression problem. Unlike earlier MI-based approaches, it
  
  
  -----Black box problem
- One solution is to build machine-learning systems that show their workings: so-called glassbox—as opposed to black-box—AI. 
+" One solution is to build machine-learning systems that show their workings: so-called glassbox—as opposed to black-box—AI. 
  Glassbox models are typically much-simplified versions of a neural network in which it is easier to track
  how different pieces of data affect the model. It's a tricky balance, however. 
  Too much transparency can lead to information overload. 
 
-Visualize this: Another approach is to include visualizations that show a few key properties of the model and its underlying data. However it’s not clear if they really help: 
+Visualize this: Another approach is to include visualizations that show a few key properties of the model
+and its underlying data. However it’s not clear if they really help.
+
+So-called interpretable or explainable AI (XAI) aims to help people understand what features 
+in the data a neural network is actually learning. 
+
+In a new study, researchers found that people who used one of two popular interpretability tools didn’t actually 
+understand them but trusted them anyway. In fact, use of the tools led to incorrect assumptions
+about the data and the models, and instilled a false confidence that made participants more trigger-happy
+about model deployment. This phenomenon is known as “automation bias”—and it could be increasing people’s chance of
+using AI that’s inaccurate or biased. This is exactly the opposite effect of what XAI is trying to do in the first place. 
