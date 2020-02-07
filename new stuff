@@ -48,4 +48,18 @@ In a new study, researchers found that people who used one of two popular interp
 understand them but trusted them anyway. In fact, use of the tools led to incorrect assumptions
 about the data and the models, and instilled a false confidence that made participants more trigger-happy
 about model deployment. This phenomenon is known as “automation bias”—and it could be increasing people’s chance of
-using AI that’s inaccurate or biased. This is exactly the opposite effect of what XAI is trying to do in the first place. 
+using AI that’s inaccurate or biased. This is exactly the opposite effect of what XAI is trying to do in the first place.
+
+
+-  from mit review 
+"Facebook has a new way to track the images used to train a model.
+The technique involves making imperceptible tweaks to images to create a kind of watermark.
+Every model makes its own distinct mark, and the mark doesn’t impair the image classifier’s overall accuracy. 
+This allows researchers to more easily match up models with the images that were used to train them 
+in large-scale systems with complicated data pipelines.
+
+Facebook calls the technique “radioactive data” 
+because it is analogous to the use of radioactive markers in medicine, which show up in the body under x-ray.
+Highlighting what data has been used to train an AI model makes them more transparent.
+It could help flag potential sources of bias 
+or reveal when a data set was used without permission or for inappropriate purposes. " very cool!
