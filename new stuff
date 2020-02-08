@@ -74,3 +74,21 @@ For example, it changes the sentence “The characters, cast in impossibly contr
 are totally estranged from reality” to “The characters, cast in impossibly engineered circumstances,
 are fully estranged from reality.”
 We see no difference, but AI interprets the sentences completely differently.
+
+
+--"" Medication madness. According to the FDA, serious adverse drug interactions are estimated to kill 
+more than 100,000 hospitalized people in the US every year.
+But avoiding such interactions during drug development is laborious and expensive. 
+It involves intensive testing and clinical trials to catalogue all the proposed drug’s possible chemical interactions
+with existing ones.
+
+Now a new AI system could make this easier by predicting the interactions
+between two drugs based only on their chemical structure. 
+The researchers first developed a new way to represent the 3D chemical structures of drugs in a character format
+that could be read by a neural network. The drug melatonin, for example, is represented by “CC(=O)NCCC1=CNc2c1cc(OC)cc2.”
+
+They then translated a database of known drug interactions into this format
+and used it to train a neural network. The resulting system predicts the probability 
+that two drugs will have an adverse interaction and shows the particular parts of the molecule 
+that contributed to that prediction. When the researchers tested their system on two common drug interaction data sets,
+it performed better than state-of-the-art results. Read more here.
