@@ -63,3 +63,14 @@ because it is analogous to the use of radioactive markers in medicine, which sho
 Highlighting what data has been used to train an AI model makes them more transparent.
 It could help flag potential sources of bias 
 or reveal when a data set was used without permission or for inappropriate purposes. " very cool!
+
+
+--"" New software can now fool the AI behind Alexa and Siri.
+Software called TextFooler can now trick natural-language processing (NLP) systems into misunderstanding text 
+just by replacing certain words in a sentence with synonyms. 
+Developed by a team at MIT, it looks for the words that are most important to an NLP classifier
+and replaces them with a synonym that a human would find natural. 
+For example, it changes the sentence “The characters, cast in impossibly contrived situations, 
+are totally estranged from reality” to “The characters, cast in impossibly engineered circumstances,
+are fully estranged from reality.”
+We see no difference, but AI interprets the sentences completely differently.
