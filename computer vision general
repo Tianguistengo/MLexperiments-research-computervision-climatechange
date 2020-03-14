@@ -1,2 +1,4 @@
 Part of the problem is a bottleneck at the heart of traditional sensors, which capture a huge amount of visual data, 
 regardless of whether or not it is useful for classifying an image. Crunching all that data slows things down.
+
+--------------------http://szeliski.org/Book/
