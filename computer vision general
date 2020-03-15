@@ -3,7 +3,7 @@ regardless of whether or not it is useful for classifying an image. Crunching al
 
 --------------------http://szeliski.org/Book/
 
--In Image processing, blob detection refers to modules that are aimed at detecting points and/or regions in the image 
+-In Image processing, *blob detection* refers to modules that are aimed at detecting points and/or regions in the image 
 that differ in properties like 
 brightness or color compared to the surrounding.
 ... It is used to obtain regions of interest for further processing.
