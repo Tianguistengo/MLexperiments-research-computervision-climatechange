@@ -7,3 +7,8 @@ regardless of whether or not it is useful for classifying an image. Crunching al
 that differ in properties like 
 brightness or color compared to the surrounding.
 ... It is used to obtain regions of interest for further processing.
+
+-Pyramid, or pyramid representation, is a type of multi-scale signal representation developed by the computer vision, 
+image processing and signal processing communities, in which a signal or an image is subject to 
+repeated smoothing and subsampling. 
+Pyramid representation is a predecessor to scale-space representation and multiresolution analysis. 
