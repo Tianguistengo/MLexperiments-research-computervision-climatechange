@@ -12,3 +12,6 @@ brightness or color compared to the surrounding.
 image processing and signal processing communities, in which a signal or an image is subject to 
 repeated smoothing and subsampling. 
 Pyramid representation is a predecessor to scale-space representation and multiresolution analysis. 
+
+Stereo matching is the process of taking two or more images and estimating a 3D model of the scene 
+by finding matching pixels in the images and converting their 2D positions into 3D depths.
