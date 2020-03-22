@@ -4,3 +4,13 @@
 Ridge regression should be your first choice.
 
 -Logistic regression is for classficiation, not regression. 
+
+- property DataFrame.values¶
+
+    Return a Numpy representation of the DataFrame.
+
+    Warning
+
+    We recommend using DataFrame.to_numpy() instead.
+
+    Only the values in the DataFrame will be returned, the axes labels will be removed.
