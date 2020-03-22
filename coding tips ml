@@ -5,7 +5,7 @@ Ridge regression should be your first choice.
 
 -Logistic regression is for classficiation, not regression. 
 
-- property DataFrame.values¶
+- property DataFrame.values
 
     Return a Numpy representation of the DataFrame.
 
@@ -23,3 +23,7 @@ Ridge regression should be your first choice.
 # Print the tuned parameters and score
 print("Tuned Logistic Regression Parameters: {}".format(logreg_cv.best_params_)) 
 print("Best score is {}".format(logreg_cv.best_score_))
+
+
+-Note that RandomizedSearchCV will never outperform GridSearchCV. 
+Instead, it is valuable because it saves on computation time.
