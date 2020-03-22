@@ -1,3 +1,6 @@
 
 
-- (regulatization) Lasso is great for feature selection, but when building regression models, Ridge regression should be your first choice.
+- (regulatization) Lasso is great for feature selection, but when building regression models, 
+Ridge regression should be your first choice.
+
+-Logistic regression is for classficiation, not regression. 
