@@ -17,3 +17,4 @@ Ridge regression should be your first choice.
     
     
  -the greater the AUC (aread under the curve) the better the model
+  If the AUC is greater than 0.5, the model is better than random guessing. Always a good sign! 
