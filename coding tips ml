@@ -14,3 +14,6 @@ Ridge regression should be your first choice.
     We recommend using DataFrame.to_numpy() instead.
 
     Only the values in the DataFrame will be returned, the axes labels will be removed.
+    
+    
+ -the greater the AUC (aread under the curve) the better the model
