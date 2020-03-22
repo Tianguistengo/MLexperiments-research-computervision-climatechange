@@ -18,3 +18,8 @@ Ridge regression should be your first choice.
     
  -the greater the AUC (aread under the curve) the better the model
   If the AUC is greater than 0.5, the model is better than random guessing. Always a good sign! 
+
+-After computing the GridSeachCV, I not just want the best params but also the best score:
+# Print the tuned parameters and score
+print("Tuned Logistic Regression Parameters: {}".format(logreg_cv.best_params_)) 
+print("Best score is {}".format(logreg_cv.best_score_))
