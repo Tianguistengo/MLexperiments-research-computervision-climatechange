@@ -52,3 +52,7 @@ imp = Imputer(missing_values='NaN', strategy='most_frequent', axis=0)
 
 -"
 You can use the .fit() and .predict() methods on pipelines just as you did with your classifiers and regressors"
+
+-" ROC (receiver operating characteristic) Curve
+
+A curve of true positive rate vs. false positive rate at different classification thresholds. See also AUC.
