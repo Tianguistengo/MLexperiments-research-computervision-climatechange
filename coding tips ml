@@ -32,3 +32,6 @@ Instead, it is valuable because it saves on computation time.
 print ("Hello, I am {} years old !".format(18))
 
 -Exploratory data analysis should always be the precursor to model building.
+
+-axis=0 means columns
+axis=1 means rows
