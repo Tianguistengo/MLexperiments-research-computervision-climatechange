@@ -35,3 +35,12 @@ print ("Hello, I am {} years old !".format(18))
 
 -axis=0 means columns
 axis=1 means rows
+
+
+-"
+# Convert '?' to NaN
+df[df == '?'] = np.nan
+
+# Print the number of NaNs
+print(df.isnull().sum())
+"
