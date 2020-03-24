@@ -30,3 +30,5 @@ Instead, it is valuable because it saves on computation time.
 
 - format()  function https://www.geeksforgeeks.org/python-format-function/
 print ("Hello, I am {} years old !".format(18))
+
+-Exploratory data analysis should always be the precursor to model building.
