@@ -49,3 +49,6 @@ print(df.isnull().sum())
 "    # Setup the Imputation transformer: imp
 imp = Imputer(missing_values='NaN', strategy='most_frequent', axis=0)
 "
+
+-"
+You can use the .fit() and .predict() methods on pipelines just as you did with your classifiers and regressors"
