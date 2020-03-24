@@ -44,3 +44,8 @@ df[df == '?'] = np.nan
 # Print the number of NaNs
 print(df.isnull().sum())
 "
+
+--imputation == transformation
+"    # Setup the Imputation transformer: imp
+imp = Imputer(missing_values='NaN', strategy='most_frequent', axis=0)
+"
