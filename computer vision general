@@ -20,3 +20,5 @@ by finding matching pixels in the images and converting their 2D positions into 
 
 -"For many applications of image processing, color information doesn't help us
 identify important edges or other features." exceptions apply (for faces, colour usually is a good indicator, apparently).
+
+-Thresholding (separating between foreground and background) is the simplest method of image segmentation.
