@@ -29,6 +29,17 @@ to check multiple methods and see
 for ourselves what the best option is. 
 It returns a figure comparing the outputs of different global thresholding methods.
 
--A Gaussian filter can blur an image to reduce noise and improve the likelihood of detecting something specific 
+-A Gaussian filter can blur (reduce sharpness) an image to reduce noise and improve the likelihood of detecting something specific 
 (e.g. edges, pero no creo que aplique a todo).
+
+-Through the following code, you calculate the range of the pixels intensities in the histogram,
+and so, the contrast of the image!
+
+In [1]: np.min(clock_image)
+Out[1]: 99
+
+In [2]: np.max(clock_image)
+Out[2]: 247
+
+247-99=148 is the contrast
 
