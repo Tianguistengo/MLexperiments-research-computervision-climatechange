@@ -22,3 +22,4 @@ by finding matching pixels in the images and converting their 2D positions into 
 identify important edges or other features." exceptions apply (for faces, colour usually is a good indicator, apparently).
 
 -Thresholding (separating between foreground and background) is the simplest method of image segmentation.
++ You should use local thresholding instead of global if the image has a wide variation of background intensity.
