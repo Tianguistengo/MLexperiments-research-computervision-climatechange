@@ -43,3 +43,10 @@ Out[2]: 247
 
 247-99=148 is the contrast
 
+-# Use histogram equalization to improve the contrast
+         xray_image_eq =  exposure.equalize_hist(chest_xray_image)
+         
+-"Amazing! You have increased the contrast of the image using an algorithm for local contrast enhancement,
+that uses histograms computed over different tile regions of the image.
+Local details can therefore be enhanced even in regions that are darker or lighter than the rest of the image."
+
