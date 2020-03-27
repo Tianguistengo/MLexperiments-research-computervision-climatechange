@@ -52,4 +52,8 @@ Local details can therefore be enhanced even in regions that are darker or light
 
 -"Remember that aliasing is an effect that causes different signals, in this case pixels,
 to become indistinguishable or distorted." (and hence anti-aliasing hace que no se distorsionen si las resize/rescale)
++anti aliasing preserves the quality (to an extent) but loses sharpness)
+
+# Rescale with anti aliasing
+rescaled_with_aa = rescale(rotated_cat_image, 1/4, anti_aliasing=True, multichannel=True) multichannel means is a colour pic
 
