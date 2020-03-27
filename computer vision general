@@ -28,3 +28,7 @@ In fact, scikit-image provides us with a function (from skimage.filters import t
 to check multiple methods and see 
 for ourselves what the best option is. 
 It returns a figure comparing the outputs of different global thresholding methods.
+
+-A Gaussian filter can blur an image to reduce noise and improve the likelihood of detecting something specific 
+(e.g. edges, pero no creo que aplique a todo).
+
