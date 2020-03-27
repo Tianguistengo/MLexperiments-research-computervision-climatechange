@@ -50,3 +50,6 @@ Out[2]: 247
 that uses histograms computed over different tile regions of the image.
 Local details can therefore be enhanced even in regions that are darker or lighter than the rest of the image."
 
+-"Remember that aliasing is an effect that causes different signals, in this case pixels,
+to become indistinguishable or distorted." (and hence anti-aliasing hace que no se distorsionen si las resize/rescale)
+
