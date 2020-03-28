@@ -57,3 +57,6 @@ to become indistinguishable or distorted." (and hence anti-aliasing hace que no 
 # Rescale with anti aliasing
 rescaled_with_aa = rescale(rotated_cat_image, 1/4, anti_aliasing=True, multichannel=True) multichannel means is a colour pic
 
+-2 morphological operations"
+Dilation: adds pixels from the boundaries of objetcs
+Erosion: removes pixels from the boundaries of objects
