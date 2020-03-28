@@ -57,6 +57,17 @@ to become indistinguishable or distorted." (and hence anti-aliasing hace que no 
 # Rescale with anti aliasing
 rescaled_with_aa = rescale(rotated_cat_image, 1/4, anti_aliasing=True, multichannel=True) multichannel means is a colour pic
 
--2 morphological operations"
+-2 morphological operations"  (them both are useful to remove noise[among other benefits])
 Dilation: adds pixels from the boundaries of objetcs
 Erosion: removes pixels from the boundaries of objects
+(pro tip, erosion is useful for removing minor white noise.)
+
+
+-Inpainting 
+is the process of reconstructing lost or deteriorated parts of images and videos.
+
+
+
+
+
+
