@@ -21,7 +21,8 @@ by finding matching pixels in the images and converting their 2D positions into 
 -"For many applications of image processing, color information doesn't help us
 identify important edges or other features." exceptions apply (for faces, colour usually is a good indicator, apparently).
 
--Thresholding (separating between foreground and background) is the simplest method of image segmentation.
+-Thresholding 
+(separating between foreground and background) is the simplest method of image segmentation.
 + You should use local thresholding instead of global if the image has a wide variation of background intensity.
 +As we saw in the video, not being sure about what thresholding method to use isn't a problem.
 In fact, scikit-image provides us with a function (from skimage.filters import try_all_threshold)
@@ -69,6 +70,42 @@ is the process of reconstructing lost or deteriorated parts of images and videos
 -Denoising filters (total variation vs bilateral)
 Since we prefer to preserve the edges in the image, we'll use the bilateral denoising filter.
 total variation reduces noise by reducing variance
+
+-The total amount of pixel is its resolution. Given by Height×Width.
+
+Use .shape from NumPy to check the width and height of the image.
+
+In [1]: np.shape(face_image)
+Out[1]: (265, 191, 3)
+
+face_image is 265 * 191 = 50,615 pixels
+
+
+- Superpixel Segmentation (create pixel regions on the image).
+You reduced the image from 50,615 pixels to 400 regions! 
+Much more computationally efficient for, for example, face detection ML models.
+(how much quality, important info, do we lose?)
+
+# Obtain the segmentation with 400 regions
+segments = slic(face_image, n_segments= 400)
+
+# Put segments ON TOP of original image to compare
+segmented_image = label2rgb(segments,face_image, kind='avg')  tienes que poner primero segmnets y luego face_image
+
+- A contour 
+is an outline formed by multiple points joined together.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
