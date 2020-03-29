@@ -108,6 +108,11 @@ like the shapes. (((mmmmm most?)
 
 -"Canny"== standard edge detection method
 
+If we want to detect less edges (say, just the outer edge of a coin and not the inside)
+we can increase the Gaussian filter to add more noise and detect less edges.
+In the canny function, this can be accessed by the sigma= 
+
+(the bigger the sigma value [Gaussian filter], the less edges are detected)
 
 
 
