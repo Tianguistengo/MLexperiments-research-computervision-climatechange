@@ -3,7 +3,8 @@ regardless of whether or not it is useful for classifying an image. Crunching al
 
 --------------------http://szeliski.org/Book/
 
-A crash course on NumPy for images (skimages) https://scikit-image.org/docs/dev/user_guide/numpy_images.html
+A crash course on NumPy for images (skimages)
+https://scikit-image.org/docs/dev/user_guide/numpy_images.html
 
 
 --------------------------------------------------------------------------------------------
@@ -101,7 +102,11 @@ segmented_image = label2rgb(segments,face_image, kind='avg')  tienes que poner p
 is an outline formed by multiple points joined together.
 
 
+-Representing an image by its edges 
+has the advantage that the amount of data is reduce significantly while retaining most of the image information,
+like the shapes. (((mmmmm most?)
 
+-"Canny"== standard edge detection method
 
 
 
