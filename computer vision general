@@ -114,7 +114,7 @@ In the canny function, this can be accessed by the sigma=
 
 (the bigger the sigma value [Gaussian filter], the less edges are detected)
 
-
+-Harris corner detection (popoular corner detection method)
 
 
 
