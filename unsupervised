@@ -69,8 +69,18 @@ Normalizer() rescales EACH SAMPLE
 can be agglomerative (put dif units into a bigger group)
 or divisive (the opposite)
 
+"the LINKAGE method defines how the distance between clusters is measured. 
+In complete linkage, the distance between clusters is the distance between the furthest points of the clusters.
+In single linkage, the distance between clusters is the distance between the closest points of the clusters.
+Different linkage, different hierarchical clustering!
 
+-Flat 
 
+Flat clustering is where the scientist tells the machine how many categories to cluster the data into.
+
+Hierarchical
+
+Hierarchical clustering is where the machine is allowed to decide how many clusters to create based on its own algorithms.
 
 
 
