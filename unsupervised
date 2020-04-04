@@ -52,7 +52,10 @@ print(model.inertia_)
 A good rule of thumb is to choose an "elbow" (a piont where intertia starts to decrease more slowly)
 in the intertia plot (not too many clusters but not too few either).
 
-
+-on feature scaling:
+StandardScaler (sklearn)
+transforms each features to have mean 0 and variance 1
+features are said to be "standardized"
 
 
 
