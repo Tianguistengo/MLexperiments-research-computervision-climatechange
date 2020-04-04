@@ -40,3 +40,34 @@ such as grouping customers by purchasing behaviour.
 Some of the common clustering algorithms are hierarchical clustering, Gaussian mixture models,
 and K-means clustering. The last one is considered one of the simplest unsupervised learning algorithms,
 wherein data is split into k distinct clusters based on distance to the centroid of a cluster. ""
+
+
+-Inertia:
+
+It measures how spread out the clusters are (the lower {the more together points are} the better).
+How far samples are from the centroid.
+
+print(model.inertia_)
+
+A good rule of thumb is to choose an "elbow" (a piont where intertia starts to decrease more slowly)
+in the intertia plot (not too many clusters but not too few either).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
