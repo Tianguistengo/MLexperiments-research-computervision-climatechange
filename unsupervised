@@ -57,11 +57,17 @@ StandardScaler (sklearn)
 transforms each features to have mean 0 and variance 1
 features are said to be "standardized"
 
+"Note that Normalizer() is different to StandardScaler().
+While StandardScaler() standardizes FEATURES 
+(such as the features of the fish data from the previous exercise)
+by removing the mean and scaling to unit variance,
+Normalizer() rescales EACH SAMPLE
+- here, each company's stock price - independently of the other. 
 
 
-
-
-
+-Hierarchical clustering 
+can be agglomerative (put dif units into a bigger group)
+or divisive (the opposite)
 
 
 
