@@ -116,6 +116,8 @@ In the canny function, this can be accessed by the sigma=
 
 -Harris corner detection (popoular corner detection method)
 
+-Make processes more computationally efficient with 
+unsupervised superpixel segmentation. 
 
 
 
