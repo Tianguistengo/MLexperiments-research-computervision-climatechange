@@ -4,3 +4,4 @@ Machine Learning Experiments
 
 
 A.G. stands for Aurelien Geron
+Findings from DataCamp and other resources are included
