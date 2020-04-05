@@ -83,7 +83,13 @@ Hierarchical
 Hierarchical clustering is where the machine is allowed to decide how many clusters to create based on its own algorithms.
 
 
+-     t-SNE
 
+Maps samples to 2D space (or 3D)
+great for inspecting datasets
+
+-"Matplotlib allows you to adjust the TRANSPARENCY of a graph plot using the ALPHA attribute. 
+By default, alpha=1. If you want to make the graph plot more transparent, then you can make alpha less than 1
 
 
 
