@@ -104,8 +104,10 @@ to unconver them  --- range(pca.n_components)
 
 The first principal component of the data is the direction in which the data varies the most. 
 
+PCA(n_components=2) tells the model to keep only the FIRST 2 PCA features (the ones with the highest variance)
 
-
+-"TruncatedSVD 
+is able to perform PCA on sparse arrays in csr_matrix format, such as word-frequency arrays.
 
 
 
