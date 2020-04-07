@@ -501,6 +501,6 @@ On the other hand, -map- applies a function to all elements in a list,
 whereas -filter- gets a subset of elements in a set that meets a user-defined condition.
 
 
-
+--A model has high VARIANCE if it is very sensitive to (small) changes in the training data.
 
 
