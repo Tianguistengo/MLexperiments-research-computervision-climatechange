@@ -94,5 +94,27 @@ By default, alpha=1. If you want to make the graph plot more transparent, then y
 -Dimensionality reduction
 Remove less-informative "noisy" features, and keep the important/informative ones.
 
+-PCA
+principal components = directions of variance
+PCA aligns principal components with the axes
+
+instrinsic dimension = number of PCA features with a high varianace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
