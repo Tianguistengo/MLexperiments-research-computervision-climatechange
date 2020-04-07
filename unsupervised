@@ -95,10 +95,14 @@ By default, alpha=1. If you want to make the graph plot more transparent, then y
 Remove less-informative "noisy" features, and keep the important/informative ones.
 
 -PCA
+"
 principal components = directions of variance
 PCA aligns principal components with the axes
 
-instrinsic dimension = number of PCA features with a high varianace
+instrinsic dimension = number of PCA features with a high varianace 
+to unconver them  --- range(pca.n_components) 
+
+The first principal component of the data is the direction in which the data varies the most. 
 
 
 
