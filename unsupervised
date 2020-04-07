@@ -110,7 +110,20 @@ PCA(n_components=2) tells the model to keep only the FIRST 2 PCA features (the o
 is able to perform PCA on sparse arrays in csr_matrix format, such as word-frequency arrays.
 
 
+-NMF = non-negative matrix factorization   (another dimensionality reduction technique)
 
+NMF, unlike PCA, is interpretable (and hence easier to understand)
+(extra info: intepreation is done by multyplying components by feature values and adding up,
+this calculation can also be expressed as a product of matrices, hence the name 'matrix factorization')
+
+Requires all sample features to be non-negative 
+(word frequency, images encoded as arrays, audio spectograms, purchases, etc)
+
+Must always specify n_components
+
+NMF decomposes samples as sum of its parts
+(documentas as combinations of common themes)
+(images as combinations of common patterns)
 
 
 
