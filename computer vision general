@@ -120,7 +120,10 @@ In the canny function, this can be accessed by the sigma=
 unsupervised superpixel segmentation. 
 
 
-
+-The matplotlib function imshow() 
+creates an image from a 2-dimensional numpy array. 
+The image will have one square for each element of the array. 
+The color of each square is determined by the value of the corresponding array element and the color map used by imshow() 
 
 
 
