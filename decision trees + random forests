@@ -134,13 +134,41 @@ while the boundaries produced by the classification tree divide the feature spac
 
 -Criteria to measure the impurity of a node: Gini coefficient, entropy.
 
--IG=Information Gain (what every split wishes to maximize)
+Most of the time, the gini index and entropy lead to the same results. The GINI INDEX is slightly faster to compute
+and is the default criterion used in the DecisionTreeClassifier model of scikit-learn.
+
+-IG=Information Gain (what every split wishes to maximize) 
+/ splitting an internal node always involves maximizing information gain!
 
 If the information gain obtained by splitting a node is NULL, the node is declared a leaf.
 (except if you have a max_depth=2, then all nodes having a depth of 2 will be declared leaves,
 even if their IG is not null)
 
 -An unconstrained tree has no max depth
+
+- min_samples_leaf is the minimum number of samples required to be at a leaf node. 
+This parameter is similar to min_samples_splits, 
+however, this describe the minimum number of samples at the leafs, the base of the tree.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
