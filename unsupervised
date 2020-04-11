@@ -125,6 +125,12 @@ NMF decomposes samples as sum of its parts
 (documentas as combinations of common themes)
 (images as combinations of common patterns)
 
+"Take a moment to look through the plots and notice how NMF has expressed its result as a sum of the components!
+
+"Unlike NMF, PCA doesn't learn the parts of things. 
+Its components do not correspond to topics (in the case of documents) or to parts of images, when trained on images. 
+After submitting the answer, notice that the components of PCA do not represent meaningful parts of images of LED digits!
+
 
 
 
