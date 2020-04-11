@@ -509,6 +509,9 @@ you can't use the .loc[] or iloc[] accessors to select specific rows or columns.
 -Cosine similarity
 higher values means more similarity
 
+Cosine similarity measures the similarity between two vectors of an inner product space.
+It is measured by the cosine of the angle between two vectors
+
 # Compute cosine similarities: similarities
 similarities = df.dot(artist)      dot es cosine similarities
 
