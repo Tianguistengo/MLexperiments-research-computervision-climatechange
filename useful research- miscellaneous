@@ -518,10 +518,27 @@ similarities = df.dot(artist)      dot es cosine similarities
 -The first step in the pipeline, MaxAbsScaler, transforms the data so that all
 features have the same influence on the model, regardless of how many different artists they've listened to.
 
--
+-The GENERALIZATION ERROR tells you how well the model generalizes to unseen data.
+(our goal is to try to minimize it)
+
+-2 types cross-validation
+K-Fold CV
+Hold-Out CV
+
+CV is a great technique to get an estimate of a model's performance without affecting the test set.
+
+CV can't comput normal MSE so you have to use its negative scoring
+
+cross_val_score(dt, X_train, y_train, cv=10, 
+                       scoring='neg_mean_squared_error',
 
 
 
+-     n_jobs= -1  (minus 1/ to exploit all available CPUs for computation)
+
+
+-If the train and test error are similar probably the model is underfitting.
+If the test error is higher than the train error, the model is probably overfitting.
 
 
 
