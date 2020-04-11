@@ -150,6 +150,15 @@ even if their IG is not null)
 This parameter is similar to min_samples_splits, 
 however, this describe the minimum number of samples at the leafs, the base of the tree.
 
+High Variance- overfitting
+
+High Bias- underfitting
+
+-To reduce the complexity of a model (meaning you have high variance problems)
+try reducing the maximum tree depth
+or increasing the maximum samples per leaf.
+ (or gather more data so that you model doesn't overfit the old one)
+
 
 
 
