@@ -91,3 +91,8 @@ adding the previous predictors underfitted predictions to the ensemble, ensuring
 The difference lies in what it does with the underfitted values of its predecessor.
 Contrary to AdaBoost, which tweaks the instance weights at every interaction, 
 this method tries to fit the new predictor to the --residual errors-- made by the previous predictor.
+
+
+-------------------------------
+
+
