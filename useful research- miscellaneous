@@ -509,10 +509,13 @@ you can't use the .loc[] or iloc[] accessors to select specific rows or columns.
 -Cosine similarity
 higher values means more similarity
 
+# Compute cosine similarities: similarities
+similarities = df.dot(artist)      dot es cosine similarities
+
 -The first step in the pipeline, MaxAbsScaler, transforms the data so that all
 features have the same influence on the model, regardless of how many different artists they've listened to.
 
-
+-
 
 
 
