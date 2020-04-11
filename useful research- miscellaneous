@@ -503,4 +503,41 @@ whereas -filter- gets a subset of elements in a set that meets a user-defined co
 
 --A model has high VARIANCE if it is very sensitive to (small) changes in the training data.
 
--'Remember that since samples is a NumPy array, you can't use the .loc[] or iloc[] accessors to select specific rows or columns.
+-'Remember that since 'samples' is a NumPy array, 
+you can't use the .loc[] or iloc[] accessors to select specific rows or columns.
+
+-Cosine similarity
+higher values means more similarity
+
+-The first step in the pipeline, MaxAbsScaler, transforms the data so that all
+features have the same influence on the model, regardless of how many different artists they've listened to.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
