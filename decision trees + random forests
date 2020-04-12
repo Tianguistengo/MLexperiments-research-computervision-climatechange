@@ -173,7 +173,11 @@ or increasing the maximum samples per leaf.
  (or gather more data so that you model doesn't overfit the old one)
 
 
+-Tree-based models allow measuring the importance of each feature in predicting,
+How much the tree nodes use a particular feature (weighted average in training and predicting)
+TO REDUCE IMPURITY.   feature_importance_
 
+-A decision tree with a maximum depth of one is a decision-stump
 
 
 
