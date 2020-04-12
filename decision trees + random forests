@@ -121,6 +121,19 @@ between features and labels
 
 They don-t require feature scaling
 
+Easy to interpret its results
+
+You don't need a lot of feature preprocessing
+No need to standardize or normalize features
+
+LIMITATIONS of CARTs:
+For classification they only produce orthogonal decision boundaries
+Sensitive to small variations in the data set
+High variance: unconstrained CARTs can overfit the data
+
+^solutin: ensemble methods
+
+
 -A node is a question or a prediction
 
 -Root: first node
