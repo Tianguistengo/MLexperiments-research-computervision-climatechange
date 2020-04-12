@@ -95,4 +95,37 @@ this method tries to fit the new predictor to the --residual errors-- made by th
 
 -------------------------------
 
+Ensemble learning reduces the tendency to memorize noise
+
+the best ensemble is when models are skillful in differente ways 
+and compensate for the weaknesses of the others.
+
+   Voting Classifier 
+   -same training set, different algorithms
+
+   BAGGING (Bootstrap aggregation)
+   -one algorithm, different subsets of the training set
+
+
+Bagging reduces the variance of individual models in the ensemble
+
+Bagging classificators aggregate predictions by mayority voting 
+Bagging regressors aggregate predictions by averaging 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
