@@ -113,6 +113,47 @@ Bagging classificators aggregate predictions by mayority voting
 Bagging regressors aggregate predictions by averaging 
 
 
+Out of Bag (OOB) represent the around 37% instances that were not sampled by the bagging model
+Since they were not seen by the model, they can be used to test it's performance (OOB evaluation).
+
+OOB evaluation is good to get a SECOND/ADDITIONAL performance metric (apart from the test set accuracy score)
+without resorting to cross-validation
+
+Inside the bagging classifier add the parameter       oob_score = True  
+
+
+-------Random Forests
+
+-Unlike bagging (which can use different models as its base estimator [logistic reg, neural nets, KNN,etc..]),
+Random Forests only use Decision Trees.
+
+Bootstrap samples have the same size as the trainig set (bagging has subsets)
+
+"RF introduces more randomization than bagging becuase it only d features can be samples at each node WITHOUT REPLACEMENT
+(where d is a portion of the total number of features)
+[in scikit learn the default for d is the square root of the total number of features, e.g. 10 for 100)
+
+Each tree added to the ensemble is trained on a dif bootstrap sample from the data set
+
+
+-------------Boosting
+
+"
+Many predictors are trained and each predictor LEARNS FROM THE ERRORS OF ITS PREDECESSOR
+Many weak learners are combined to form as strong one
+Ensemble of predictors are trained SEQUENTIALLY
+
+2 popular ones: AdaBoost and Gradient Boosting
+
+-AdaBoost (adaptive boosting)
+
+
+
+
+
+
+
+
 
 
 
