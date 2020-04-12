@@ -541,9 +541,11 @@ cross_val_score(dt, X_train, y_train, cv=10,
 If the test error is higher than the train error, the model is probably overfitting.
 
 
+-" What is STRATIFY in Train_test_split?
+In this context, stratification means that the train_test_split method returns 
+training and test subsets that have the SAME PROPORTIONS OF CLASS LABELS as the input dataset.
 
-
-
+-"  Given that this dataset is imbalanced, you'll be using the ROC AUC score as a metric instead of accuracy.
 
 
 
