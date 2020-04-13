@@ -548,7 +548,17 @@ training and test subsets that have the SAME PROPORTIONS OF CLASS LABELS as the 
 -"  Given that this dataset is imbalanced, you'll be using the ROC AUC score as a metric instead of accuracy.
 
 
+- Parameters= learn from data through training
 
+Hyperparameters= defined by the engineer prior to training
+
+- Metrics of perfomance: 
+
+Accuracy for classifiers
+
+R-squared for regressors
+
+A model generalization performance is evaluated using cross-validation
 
 
 
