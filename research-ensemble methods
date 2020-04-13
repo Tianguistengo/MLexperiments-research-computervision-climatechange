@@ -155,7 +155,7 @@ In contrast to AdaBoost, the weights of the training instances are not tweaked.
 Instead, each predictor is trained using the RESIDUAL ERRORS of its predecessor as LABELS.
 
 "In gradient boosting, SHRINKAGE,
-the prediction of each tree in the ensembled is shrinked after it is multipled by a learning rate (eta [between 0-1]).
+==the prediction of each tree in the ensemble is shrinked after it is multipled by the learning rate (eta [between 0-1]).
 
 Similar to AdaBoost, there is a trade-off between eta and number of estimators,
 Decreasing the learning rate needs to be compensated by increasing the number of estimators 
@@ -165,11 +165,18 @@ if we want to achieve a good performance.
 
 
 
+----Stochastic gradient boosting
 
+Normal gradient boosting is too intense computationally 
+and some CARTs may use the same split points on the same features
 
+-In SGB, each cart is trained on a RANDOM SUBSET of the training data (not the whole training data)
 
+Instances AND features are sampled without replacement == more diversity in the ensemble (more variance-resistance)
 
+Not all features are considered when a split is made.
 
+Tree is trained, residual errors computed- these are multiped by the learning rate (eta) and fed to the next tree.
 
 
 
