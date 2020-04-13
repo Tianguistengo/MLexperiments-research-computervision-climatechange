@@ -147,6 +147,22 @@ Ensemble of predictors are trained SEQUENTIALLY
 
 -AdaBoost (adaptive boosting)
 
+Give more weight to errors when it passes to the next predictor
+
+-Gradient Boosting
+
+In contrast to AdaBoost, the weights of the training instances are not tweaked.
+Instead, each predictor is trained using the RESIDUAL ERRORS of its predecessor as LABELS.
+
+"In gradient boosting, SHRINKAGE,
+the prediction of each tree in the ensembled is shrinked after it is multipled by a learning rate (eta [between 0-1]).
+
+Similar to AdaBoost, there is a trade-off between eta and number of estimators,
+Decreasing the learning rate needs to be compensated by increasing the number of estimators 
+if we want to achieve a good performance.
+
+(formula)    y pred = y1 + residual r1 + residual r2 + ....+ residual r N
+
 
 
 
