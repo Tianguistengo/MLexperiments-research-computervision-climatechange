@@ -129,7 +129,7 @@ Random Forests only use Decision Trees.
 
 Bootstrap samples have the same size as the trainig set (bagging has subsets)
 
-"RF introduces more randomization than bagging becuase it only d features can be samples at each node WITHOUT REPLACEMENT
+"RF introduces more randomization than bagging because only d features can be samples at each node WITHOUT REPLACEMENT
 (where d is a portion of the total number of features)
 [in scikit learn the default for d is the square root of the total number of features, e.g. 10 for 100)
 
@@ -139,7 +139,7 @@ Each tree added to the ensemble is trained on a dif bootstrap sample from the da
 -------------Boosting
 
 "
-Many predictors are trained and each predictor LEARNS FROM THE ERRORS OF ITS PREDECESSOR
+Many predictors are trained SEQUENTIALLY and each predictor LEARNS FROM THE ERRORS OF ITS PREDECESSOR
 Many weak learners are combined to form as strong one
 Ensemble of predictors are trained SEQUENTIALLY
 
@@ -173,6 +173,7 @@ and some CARTs may use the same split points on the same features
 -In SGB, each cart is trained on a RANDOM SUBSET of the training data (not the whole training data)
 
 Instances AND features are sampled without replacement == more diversity in the ensemble (more variance-resistance)
+(subsampling instances and features)
 
 Not all features are considered when a split is made.
 
