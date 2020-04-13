@@ -567,6 +567,9 @@ The best cross-validationa accuracy can be found usingthe attribute  .best_score
 
 And the best model can be extracted using the attibute .best_estimator_
 
+(knowing the best model allows you to predict the test set labels
+and evaluate the test set RMSE)
+
 To finish, best_model.score(X_test,y_test)
 
 To fit the model to the whole training set, refit=True in the GridSeachCV parameters (that is the default)
