@@ -545,12 +545,35 @@ If the test error is higher than the train error, the model is probably overfitt
 In this context, stratification means that the train_test_split method returns 
 training and test subsets that have the SAME PROPORTIONS OF CLASS LABELS as the input dataset.
 
--"  Given that this dataset is imbalanced, you'll be using the ROC AUC score as a metric instead of accuracy.
+-"  Given that this dataset is IMBALANCED, 
+you'll be using the ROC AUC score as a metric instead of accuracy.
 
 
 - Parameters= learn from data through training
 
 Hyperparameters= defined by the engineer prior to training
+for tuning these (GridSearch, Random Search, Bayesian optimization, Genetic algorithms, etc..)
+
+-Hyperparameter tuning
+
+for a decision tree     print(dt.get_params())  
+to get a dictionarty with the hyperparameters names
+
+To extract the best hyperparameters after using GridSearchCV or any other CV model
+use the .best_params attribute 
+(trained_model.best_params_)
+
+The best cross-validationa accuracy can be found usingthe attribute  .best_score_  
+
+And the best model can be extracted using the attibute .best_estimator_
+
+To finish, best_model.score(X_test,y_test)
+
+To fit the model to the whole training set, refit=True in the GridSeachCV parameters (that is the default)
+
+Hyperparameter tuning is computationally expensive (and sometimes it only gets you slim improvements)
+
+For ensembles, you can tune the hyperparameters of the models AND of the ensemble
 
 - Metrics of perfomance: 
 
@@ -559,6 +582,8 @@ Accuracy for classifiers
 R-squared for regressors
 
 A model generalization performance is evaluated using cross-validation
+
+-Verbose = print information about the process during training
 
 
 
