@@ -588,8 +588,7 @@ A model generalization performance is evaluated using cross-validation
 
 -Verbose = print information about the process during training
 
-
-
+-Mean square error-- you square each error and take the average of that as a measure of model quality.
 
 
 
