@@ -1,1 +1,47 @@
 
+Deep learning is able to account for the INTERACTIONS between features
+(the more nodes in the hidden layers, the more interactions we are able to capture).
+
+An activation function (which converts a node's input into its output)
+allows the model to capture non-linearities (tanh, ReLu, etc..)
+
+ReLu
+"This function takes a single number as an input, returning 0 if the input is negative, 
+and the input if the input is positive.
+
+Here are some examples:
+relu(3) = 3
+relu(-3) = 0
+
+-Deep nets make internal representations of the patterns in the data
+that are useful to make predictions
+
+They partially remove the need for feature engineering and manually creative better predictive features.
+
+Deep learning is also called representation learning.
+
+As data moves through hidden layers, increasingly complex patterns and representations are learned.
+
+-The loss function aggregates all of the errors into a single score.
+
+- a SLOPE (as in the tangent line next to a weight in a chart that we use to know where the next step
+of the gradient descent should go to) == a DERIVATIVE (calculus)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
