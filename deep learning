@@ -28,9 +28,12 @@ As data moves through hidden layers, increasingly complex patterns and represent
 of the gradient descent should go to) == a DERIVATIVE (calculus)
 
 
+-Gradient Descent
 
+Gradient == an array of slopes
 
-
+After "calculating the slopes, it's time to use those slopes to improve a model.
+If you add the slopes to the weights, you will move in the right direction. 
 
 
 
