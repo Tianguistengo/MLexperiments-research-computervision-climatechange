@@ -98,17 +98,34 @@ Each time you go through the entire data is called an 'EPOCH'
                Apply backpropagation and gradient descent to your data to update the weights
                
                Scaling data before fitting can help the optimization process
+               
+               model.fit -> Remember that the first argument is the predictive features (predictors),
+               and the data to be predicted (target) is the second argument.
                       
                       -PREDICT
 
 
 
--a DENSE layer means all the nodes in one layer connect to all the nodes in the next layer
+-a DENSE layer means all the nodes in one layer connect to all the nodes in the next layer.
+other layers are Dropout, Flatten, Conv2D, MaxPool2D
 
--a SEQUANTIAL model means a layer has only connections or weights to the layer coming directly after it
-(other models have more exotic structures)
+-a SEQUENTIAL model means a layer has only connections or weights to the layer coming directly after it
+(other models have more exotic structures).
 
-
+ 
+ 
+ ------- CLASSIFICATION
+ 
+ -Loss function is (most commonly) 'categorical_crossentropy' instead of MSE
+ (in math is LogLoss==lower score is better).
+ 
+ -Add         metrics= ['accuracy']      to the compile step
+  for easier to understand diagnostics
+  
+ -Ouput layer has 2 nodes instead of 1 (one for each possible outcome),
+ and uses a 'softmax' activation function.
+ 
+ from keras.utils import    to_categorical    to get 0 and 1 
 
 
 
