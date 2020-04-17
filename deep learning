@@ -72,16 +72,34 @@ Each time you go through the entire data is called an 'EPOCH'
 
 - Keras
            4 steps
-                      -Specify the architecture
+                      -SPECIFY THE ARCHITECTURE
                
                We need to load the data first because we need to know how many columns there are 
                and we need this information because the number of colums is the number of nodes in the input layer
-               # Save the number of columns in predictors: n_cols
-                       n_cols = numpy_matrix.shape[1]
+               # Save the number of columns in n_cols:
+               
+                       n_cols = data_matrix.shape[1]
                        
-                      -Compile
-                      -Fit
-                      -Predict
+                      -COMPILE
+                      
+               --->Specify the optimizer
+               
+               ADAM is an excellent choice as yout go-to optimizer
+               (ADJUSTS THE LEARNING RATE as it does gradient descent
+               to ensure reasonable values throughout the weight optimization process)
+               
+               --->Specify the loss function
+               
+               mean squared error is common for regression
+               
+                             
+                      -FIT
+                      
+               Apply backpropagation and gradient descent to your data to update the weights
+               
+               Scaling data before fitting can help the optimization process
+                      
+                      -PREDICT
 
 
 
