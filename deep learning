@@ -35,6 +35,67 @@ Gradient == an array of slopes
 After "calculating the slopes, it's time to use those slopes to improve a model.
 If you add the slopes to the weights, you will move in the right direction. 
 
+We use prediction erros to calculate slopes
+
+
+
+-Backpropagation
+
+Tries to deduce the slopes to update weights efficiently (going from the OUTput to the INput)
+{estimate the slope OF THE LOSS FUNCTION with respect to EACH WEIGHT in the network)
+
+
+Each time you generate predictions using forward propagation, 
+you update the weights using backward propagation.
+
+3 things we multiply to get the slopes associated with any weight:
+   -node value feeding into that weight
+   -slope of the activation function for the node being fed into (1 for any node receiving a positive value as input)
+   -slope of the loss function with respect to the output node
+
+
+-RECAP (forward and backwarward propagation + gradient descent
+     -Start with random weights
+     -Do forward propagation to get a prediction
+     -Use backpropagation to estimate the slope OF THE LOSS FUNCTION with respect to EACH WEIGHT in the network
+     -Multiply that slope by a learning rate, and subtract from the current weights
+     -Keep doing that until you reach the flat part 
+
+
+-For computational efficiency, calculate slopes on a subset of the data (or a batch, meaning, STOCHASTIC GRADIENT DESCENT)
+{gradient descent uses the whole training data for calculating each slope}
+for each update of the weights
+and use a DIFFERENT BATCH  to calculate the next udpate.
+Once all data is used, start from the beginning again.
+Each time you go through the entire data is called an 'EPOCH'
+
+
+- Keras
+           4 steps
+                      -Specify the architecture
+               
+               We need to load the data first because we need to know how many columns there are 
+               and we need this information because the number of colums is the number of nodes in the input layer
+               # Save the number of columns in predictors: n_cols
+                       n_cols = numpy_matrix.shape[1]
+                       
+                      -Compile
+                      -Fit
+                      -Predict
+
+
+
+-a DENSE layer means all the nodes in one layer connect to all the nodes in the next layer
+
+-a SEQUANTIAL model means a layer has only connections or weights to the layer coming directly after it
+(other models have more exotic structures)
+
+
+
+
+
+
+
 
 
 
