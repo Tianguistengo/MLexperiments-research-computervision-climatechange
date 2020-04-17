@@ -26,5 +26,26 @@ Some of the most important unsupervised learning algorithms:
 — Eclat
 
 
-Self-training with Noisy Student improves ImageNet classification
+-Self-training with Noisy Student improves ImageNet classification
 https://arxiv.org/abs/1911.04252?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&utm_content=80984419&_hsenc=p2ANqtz-8uTBb8iElUUB1-PtwhrLwcwyixcDm8YH1BQjtTCkZXpG1qW6-GZedGCLY8gu_sT41XSGJ--OCoEBIxItP0wCZNDvzpfg&_hsmi=80984419
+
+
+
+-Google taught this robotic dog to learn new tricks BY IMITATING A REAL ONE
+
+Google researchers are using imitation learning to teach autonomous robots 
+how to pace, spin, and move in more agile ways.
+
+What they did: Using a data set of motion capture data recorded from various sensors attached to a dog, 
+the researchers taught a quadruped robot named Laikago 
+several different movements that are hard to achieve through traditional hand-coded robotic controls.
+
+
+
+
+
+
+
+
+
+
