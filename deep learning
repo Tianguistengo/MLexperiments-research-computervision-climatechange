@@ -163,18 +163,40 @@ Long Short-Term Memory cells address this issue. (also changing your activation 
 Compare to exploding gradient problem.
 
 
-- Model validation
+-----> Model validation
 
 neural nets are usually so large that we don't really need to do k-fold cross validation,
 a single run over the database would be large enough
 
-Early Stopping 
-(patience is how many epochs can the model go without improving before we stop training)
+-Early Stopping 
+(patience=  , is how many epochs can the model go without improving before we stop training)
+(3 is resonable, 1 no because sometimes it keeps improving after 1 bad one)
+if you have a logic for when to stop (early stopping) you can set a higher # of maximum epochs to see if it learns better
+(epochs=20, in the fit step) by default, keras trains for 10 epochs
 
-validaton split (in the fit step) + define metrics= (in the compile step, 'accuracy' for classification)
+from keras.callbacks import EarlyStopping
+
+# Compile the model
+model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
+
+# Define early_stopping_monitor
+early_stopping_monitor = EarlyStopping(patience=2)
+
+# Fit the model
+model.fit(predictors, target, epochs=30, validation_split=0.3,callbacks=[early_stopping_monitor])
 
 
+-validaton split (in the fit step) + define metrics= (in the compile step, 'accuracy' for classification)
 
+model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
+model.fit(predictors,target,validation_split=0.3)
+
+-now that we have cool ways of measuring performance (namely VALIDATION LOSS after doing ^)
+we can experiment with 
+                            -different architectures
+                            -more or fewer layers
+                            -layers with more or fewer nodes
+                            -etc.
 
 
 
