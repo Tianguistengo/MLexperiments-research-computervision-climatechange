@@ -144,6 +144,41 @@ predictions = model.predict(data_to_predict_with)
 predicted_prob_true = predictions[:,1]
 
 
+-a common learning reate is 0.01
+
+- the DYING NEURON PROBLEM
+once a node starts getting negative inputs, it may continue getting only negative inputs.
+It's contributing nothing to the network and the neuron is regarded as dead
+
+
+-"  Vanishing Gradient Problem
+
+
+The tendency for the gradients of early hidden layers of some deep neural networks to become surprisingly flat (low).
+Increasingly lower gradients result in increasingly smaller changes to the weights on nodes in a deep neural network, 
+leading to little or no learning. 
+Models suffering from the vanishing gradient problem become difficult or impossible to train.
+Long Short-Term Memory cells address this issue. (also changing your activation function)
+
+Compare to exploding gradient problem.
+
+
+- Model validation
+
+neural nets are usually so large that we don't really need to do k-fold cross validation,
+a single run over the database would be large enough
+
+Early Stopping 
+(patience is how many epochs can the model go without improving before we stop training)
+
+validaton split (in the fit step) + define metrics= (in the compile step, 'accuracy' for classification)
+
+
+
+
+
+
+
 
 
 
