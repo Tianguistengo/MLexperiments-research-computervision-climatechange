@@ -129,7 +129,19 @@ other layers are Dropout, Flatten, Conv2D, MaxPool2D
 
 
 
+You want to SAVE,  RELOAD, and PREDICT   with your model
 
+from keras.model import load_model
+
+model.save('model_file.h5')  h5 is short for the model format normally used 
+
+my_model=load_model('my_model.h5')
+
+# Calculate predictions: predictions
+predictions = model.predict(data_to_predict_with)
+
+# Calculate predicted probability of survival: predicted_prob_true
+predicted_prob_true = predictions[:,1]
 
 
 
