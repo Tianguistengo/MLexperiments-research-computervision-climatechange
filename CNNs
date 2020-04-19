@@ -22,3 +22,33 @@ from keras.callbacks import ReduceLROnPlateau
 
 
 sns.set(style='white', context='notebook', palette='deep')
+
+
+---------------------------------------------
+
+-The computer does not see the image, it sees an arry of numbers
+
+- [red,green,blue] that's the order, so [0,1,0] it's only green.
+
+-low numbers==darker, high numbers==brighter
+
+"Neural networks expect the labels of classes in a dataset to be organized in a ONE-HOT ENCODER manner: 
+each row in the array contains zeros in all columns, except the column corresponding to a unique label, which is set to 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
