@@ -200,6 +200,15 @@ we can experiment with
 
 
 
+---> Model capacity
+
+similar to overfitting and underfitting,
+model capacity is a model's ability to capture predictive patterns in your data
+
+more model capacity (more hidden layers, mode nodes) == more overfitting
+
+-Start with a simple network and get the validation score,
+keep adding capacity as long as the score keeps improving.
 
 
 
