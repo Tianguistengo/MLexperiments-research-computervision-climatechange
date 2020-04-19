@@ -56,3 +56,12 @@ You can use the .fit() and .predict() methods on pipelines just as you did with 
 -" ROC (receiver operating characteristic) Curve
 
 A curve of true positive rate vs. false positive rate at different classification thresholds. See also AUC.
+
+
+-To loop through a set of code a specified number of times, we can use the ----range()---- function.
+When you use a range loop you are saying that you want to count one by one from one number until you hit another.
+
+-The ELSE keyword in a for loop specifies a block of code to be executed when the loop is finished:
+
+
+
