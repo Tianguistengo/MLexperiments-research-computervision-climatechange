@@ -35,12 +35,22 @@ sns.set(style='white', context='notebook', palette='deep')
 "Neural networks expect the labels of classes in a dataset to be organized in a ONE-HOT ENCODER manner: 
 each row in the array contains zeros in all columns, except the column corresponding to a unique label, which is set to 1.
 
+-
+# Reshape test data
+test_data = test_data.reshape(10, 784)
 
+# Evaluate the model
+model.evaluate(test_data, test_labels)
 
+-the KERNEL defines the feature that we are looking for
+kernel=np.array([-1,1])
 
+After the convolution is done (with a kernel that tells it what to look for),
+the resulting array is called a ----- "FEATURE MAP"-----,
+because it contains a map of the locations in the image that match the features represented by the kernel.
 
-
-
+-The convolution of an image with a kernel 
+summarizes a part of the image as the sum of the multiplication of that part of the image with the kernel.
 
 
 
