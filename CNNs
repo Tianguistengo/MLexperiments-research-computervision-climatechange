@@ -83,6 +83,8 @@ model.fit(train_data, train_labels,
           validation_split=0.2, 
           epochs=3, batch_size=10)
           
+ -
+          
 
 
 
