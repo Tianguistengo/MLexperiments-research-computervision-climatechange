@@ -52,6 +52,55 @@ because it contains a map of the locations in the image that match the features 
 -The convolution of an image with a kernel 
 summarizes a part of the image as the sum of the multiplication of that part of the image with the kernel.
 
+-The output of each unit in this layer is a convolution of a kernel over the previous layer 
+(if it's the first layer then its over the image input).
+
+-A normal dense layer has one weight for each pixel in the image,
+but a convolutional layer, has only one weight for each pixel IN THE KERNEL.
+
+- the FLATTEN layer, acts as a connector between the convolution and dense layer.
+The convolution layer hands the feature map and the flatten layer gives it to the dense layer(which acts as an output layer
+with the softmax activation function).
+
+-Convolutional networks for classification are constructed from a sequence of convolutional layers (for image processing) 
+and fully connected (Dense) layers (for readout). 
+
+"
+-# Initialize the model object
+model = Sequential()
+
+# Add a convolutional layer
+model.add(Conv2D(10, kernel_size=3, activation='relu', 
+               input_shape=(img_rows,img_cols,1)))   ----> the one is for the channel( 1 in this case = B/W)
+               
+ # Compile the model 
+model.compile(optimizer='adam', 
+              loss='categorical_crossentropy', 
+              metrics=['accuracy'])
+
+# Fit the model on a training set
+model.fit(train_data, train_labels, 
+          validation_split=0.2, 
+          epochs=3, batch_size=10)
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
