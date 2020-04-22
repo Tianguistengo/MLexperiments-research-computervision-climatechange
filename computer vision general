@@ -135,3 +135,9 @@ Originally a watermark is a more or less transparent image or text that has been
 another image to either protect the original image, or to make it harder to copy the item 
 e.g. money watermarks or stamp watermarks.
 
+-"
+Inpainting is the process of ---reconstructing lost or deteriorated parts of images and videos---. 
+In the museum world, in the case of a valuable painting, this task would be carried out by a skilled art conservator
+or art restorer. In the digital world,
+inpainting refers to the application of sophisticated algorithms
+to replace lost or corrupted parts of the image data
