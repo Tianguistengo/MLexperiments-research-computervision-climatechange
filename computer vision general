@@ -167,3 +167,8 @@ or in other words blur the image, see Convolution process.
 The Brightness of an object should remain unchanged after convolution, see Flux Brightness and magnitude. 
 Therefore, it is important that the sum of all the pixels of the PSF be unity. 
 The PSF image also has to have an odd number of pixels on its sides so one pixel can be defined as the center.
+
+
+-Shape completion, the problem of --estimating the complete geometry of objects from partial observations--,
+lies at the core of many vision and robotics applications.
+In this work, we propose Point Completion Network (PCN), a novel learning-based approach for shape completion. 
