@@ -141,3 +141,29 @@ In the museum world, in the case of a valuable painting, this task would be carr
 or art restorer. In the digital world,
 inpainting refers to the application of sophisticated algorithms
 to replace lost or corrupted parts of the image data
+
+-The Fourier transform (FT) decomposes a function (often a function of time, or a signal) into its constituent frequencies. 
+A special case is the expression of a musical chord in terms of the volumes and frequencies of its constituent notes. 
+The term Fourier transform refers to both the frequency domain representation
+and the mathematical operation that 
+associates the frequency domain representation to a function of time. 
+
+- Point spread function
+
+"
+Assume we have a ‘point’ source, or a source that is far smaller than the maximum resolution (a pixel).
+When we take an image of it, it will ‘spread’ over an area. 
+To quantify that spread, we can define a ‘function’. 
+This is how the point spread function or the PSF of an image is defined. 
+
+This ‘spread’ can have various causes, for example in ground based astronomy, due to the atmosphere.
+In practice we can never surpass the ‘spread’ due to the diffraction of the lens aperture.
+Various other effects can also be quantified through a PSF. 
+For example, the simple fact that we are sampling in a discrete space, namely the pixels, 
+also produces a very small ‘spread’ in the image.
+
+Convolution is the mathematical process by which we can apply a ‘spread’ to an image,
+or in other words blur the image, see Convolution process. 
+The Brightness of an object should remain unchanged after convolution, see Flux Brightness and magnitude. 
+Therefore, it is important that the sum of all the pixels of the PSF be unity. 
+The PSF image also has to have an odd number of pixels on its sides so one pixel can be defined as the center.
