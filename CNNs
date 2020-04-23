@@ -161,15 +161,43 @@ model.evaluate(test_data,test_labels,batch_size=10)
 
 ---------------
 
+How do we use the best parameters BEFORE the network starts overfitting?
+
+from keras.callbacks import ModelCheckpoint
+(stores the weights of a network at the end of each epoch of learning)
+{will only overwrite the weights if the validation loss decreases}
+[if the network overfits, the weights will be stored for the epoch at which validaton loss was the smallest)
+
+the checkpoint object is stored in a list
+and passes as input when fitting the model
+
+to use the best weights learned, we need to initialize the model again
+# Load the weights from file
+model.load_weights('weights.hdf5')
+
+# Predict from the first three images in the test data
+model.predict(test_data[:3])
 
 
 
 
+-----Plot the learning curves
 
+import matplotlib.pyplot as plt
 
+# Train the model and store the training object
+training = model.fit(train_data, train_labels, validation_split=0.2, epochs=3, batch_size=10)
 
+# Extract the history from the training object
+history = training.history
 
+# Plot the training loss 
+plt.plot(history['loss'])
+# Plot the validation loss
+plt.plot(history['val_loss'])
 
+# Show the figure
+plt.show()
 
 
 
