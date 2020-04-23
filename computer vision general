@@ -172,3 +172,15 @@ The PSF image also has to have an odd number of pixels on its sides so one pixel
 -Shape completion, the problem of --estimating the complete geometry of objects from partial observations--,
 lies at the core of many vision and robotics applications.
 In this work, we propose Point Completion Network (PCN), a novel learning-based approach for shape completion. 
+
+
+-A photo’s EXIF data contains a ton of information about your camera,
+and potentially where the picture was taken (GPS coordinates). 
+That means, if you’re sharing images, there’s a lot of details others can glean from them.
+
+EXIF stands for Exchangeable Image File Format.
+Every time you take a picture with your digital camera or phone,
+a file (typically a JPEG) is written to your device’s storage. 
+In addition to all the bits dedicated to the actual picture, it records a considerable amount of 
+supplemental metadata as well. This can include date, time, camera settings, and possible copyright information. 
+You can also add further metadata to EXIF, such as through photo processing software.
