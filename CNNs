@@ -200,7 +200,11 @@ plt.plot(history['val_loss'])
 plt.show()
 
 
-
+------> PADDING
+Padding does something pretty clever to solve this: 
+pad the edges with extra, “fake” pixels (usually of value 0, hence the oft-used term “zero padding”).
+This way, the kernel when sliding can allow the original edge pixels to be at its center, 
+while extending into the fake pixels beyond the edge, producing an output the same size as the input.
 
 
 
