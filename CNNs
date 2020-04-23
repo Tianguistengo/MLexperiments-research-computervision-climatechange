@@ -283,3 +283,53 @@ Added after each layer whose outputs we want normalized:
 
 
 
+- INTERPRETING THE MODEL
+
+after compiling and training  ---model.layers---   to see a list of layer objects
+
+to see the first layer   conv1 = model.layers[0]
+
+to see the weights       weights1 = conv1.get_weights()
+
+
+example 
+
+# Load the weights into the model
+model.load_weights('weights.hdf5')
+
+# Get the first convolutional layer from the model
+c1 = model.layers[0]
+
+# Get the weights of the first convolutional layer
+weights1 = c1.get_weights()
+
+# Pull out the first channel of the first kernel in the first layer
+kernel = weights1[0][...,0, 0]
+print(kernel)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
