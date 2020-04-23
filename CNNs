@@ -206,6 +206,51 @@ pad the edges with extra, “fake” pixels (usually of value 0, hence the oft-u
 This way, the kernel when sliding can allow the original edge pixels to be at its center, 
 while extending into the fake pixels beyond the edge, producing an output the same size as the input.
 
+---> STRIDES
+Often when running a convolution layer, you want an output with a lower size than the input.
+This is commonplace in convolutional neural networks, where the size of the spatial dimensions 
+are reduced when increasing the number of channels. 
+One way of accomplishing this is by using a pooling layer (eg. taking the 
+average/max of every 2×2 grid to reduce each spatial dimensions in half).
+Yet another way to do is is to use a stride.
+
+More modern networks, such as the ResNet architectures entirely forgo pooling layers in their internal layers, 
+in favor of strided convolutions when --NEEDING TO REDUCE THEIR OUTPUT SIZES---.
+
+-- A FILTER is a collection of kernels.
+So this is where a key distinction between terms comes in handy: 
+whereas in the 1 channel case, where the term filter and kernel are interchangeable, 
+in the general case (3 channels), they’re actually pretty different. 
+Each filter actually happens to be a collection of kernels,
+--with there being one kernel for every single input channel to the layer--, and each kernel being unique.
+
+Each of the kernels of the filter “slides” over their respective input channels, producing a processed version of each. 
+
+Each of the per-channel processed versions are then summed together to form one channel. 
+The kernels of a filter each produce one version of each channel,
+and the filter as a whole produces one overall output channel.
+
+-A essential design choice of any CNN architecture is that the input sizes grow smaller and smaller from
+the start to the end of the network, while the number of channels grow deeper. 
+This, as mentioned earlier, is often done through strides or pooling layers. 
+Locality determines what inputs from the previous layer the outputs get to see. 
+The RECEPTIVE FIELD determines what area of the original input to the entire network the output gets to see.
+
+The idea of a strided convolution is that we only process slides a fixed distance apart,
+and skip the ones in the middle. From a different point of view,
+we only keep outputs a fixed distance apart, and remove the rest.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
