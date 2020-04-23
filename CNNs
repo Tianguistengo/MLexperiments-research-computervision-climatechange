@@ -242,12 +242,40 @@ we only keep outputs a fixed distance apart, and remove the rest.
 
 
 
+-REGULARIZATION  (2 techniques)
+
+
+1) DROPOUT
+"
+In each step of learning, we choose a random subset of the units (in one or many layers), and ignore it.
+(ignore it both in the forward pass and backprograpation step of the network)
+
+It works great because it allows us to train many different networks on different parts of the data.
+(and if one part of the network becomes very sensitive to data, others will compensate for it)
+(also prevents different units in the network to become overly correlated)
+(if one unit learns to prefer horizontal lines, another will prefer verticals)
+(the kernels will be more different from each other)
+
+In Keras, dropout is implemented as a layer
+and add it after the layer for which we want the units ignored
+and specify the proportions of the units we want ignored in each learning step.
+
+------->   model.add(Dropout(0.25))
 
 
 
+2) Batch Normalization
+
+Rescale the outputs
+(so that it always has 0 mean and standard deviation of 1 in ever batch of training)
+
+Added after each layer whose outputs we want normalized:
+
+-----> model.add(BatchNormalization())
 
 
-
+ (sometimes dropout and batch normalization do not work well TOGETHER!
+ "THE DISHARMONY OF BATCH NORMALIZATION AND DROPOUT")
 
 
 
