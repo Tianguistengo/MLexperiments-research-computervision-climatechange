@@ -244,6 +244,76 @@ which is a little bit less senstive to outliers, we can also use MSE (used in tr
 It is also useful to plot the model before fitting it
 
 
+-Once you've defined an input layer and an output layer, you can build a Keras model. 
+The model object is how you tell Keras where the model starts and stops: where data comes in and where predictions come out.
+
+# Input/dense/output layers
+from keras.layers import Input, Dense
+input_tensor = Input(shape=(1,))
+output_tensor = Dense(1)(input_tensor)
+
+# Build the model
+from keras.models import Model
+model = Model(input_tensor, output_tensor)
+
+
+"The final step in creating a model is compiling it.
+Now that you've created a model, you have to compile it before you can fit it to data. 
+This finalizes your model, freezes all its settings, and prepares it to meet some data!
+
+Loss function depends on the problem at hand.
+Mean squared error is a common loss function and will optimize for predicting the mean, as is done in least squares regression.
+Mean absolute error optimizes for the median and is used in quantile regression. 
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_absolute_error')
+
+Now that you've compiled the model, take a look a the result of your hard work! 
+You can do this by looking at the model summary, as well as its plot.
+
+# Import the plotting function
+from keras.utils import plot_model
+import matplotlib.pyplot as plt
+
+# Summarize the model
+model.summary()
+
+# Plot the model
+plot_model(model, to_file='model.png')
+
+# Display the image
+data = plt.imread('model.png')
+plt.imshow(data)
+plt.show()
+
+# Now fit the model
+model.fit(games_tourney_train['seed_diff'], 
+          games_tourney_train['score_diff'],
+          epochs=1,
+          batch_size=128,
+          validation_split=0.1,
+          verbose=True)
+
+# Load the X variable from the test data
+X_test = games_tourney_test['seed_diff']
+
+# Load the y variable from the test data
+y_test = games_tourney_test['score_diff']
+
+# Evaluate the model on the test data
+print(model.evaluate(X_test, y_test, verbose=False))
+
+<script.py> output:
+    10.06973339669147        --> good 
+
+
+
+
+
+
+
+
+
 
 
 
