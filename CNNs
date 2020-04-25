@@ -291,6 +291,8 @@ to see the first layer   conv1 = model.layers[0]
 
 to see the weights       weights1 = conv1.get_weights()
 
+"One way to interpret models is to examine the properties of the kernels in the convolutional layers. In this exercise,
+you will extract one of the kernels from a convolutional neural network with weights that you saved in a hdf5 file.
 
 example 
 
@@ -306,6 +308,66 @@ weights1 = c1.get_weights()
 # Pull out the first channel of the first kernel in the first layer
 kernel = weights1[0][...,0, 0]
 print(kernel)
+
+
+"One of the ways to interpret the weights of a neural network is to see 
+how the kernels stored in these weights "see" the world. 
+That is, ---what properties of an image are emphasized by this kernel. ---
+In this exercise, we will do that ---by convolving an image with the kernel and visualizing the result.---
+
+('kernel', 'convolution', and 'model' were defined in the past exercise)
+
+import matplotlib.pyplot as plt
+
+# Convolve with the fourth image in test_data
+#Use the convolution() function to convolve the extracted kernel with the first channel of the fourth item in the image array.
+out = convolution(test_data[3, :, :, 0], kernel)
+
+# Visualize the result
+plt.imshow(out)
+plt.show()
+
+
+
+------------take-aways--------------
+
+-conv nets excel at classification
+
+-training set, validation set, test set
+
+- CNNs == large number of parameters, large amounts of data usually required 
+
+- For reducing the # of parameters:  strided convolutions, pooling layers.
+
+- Improve your model: regularization, 
+
+-Understanding your model: model monitoring, interpreting the parameters.
+
+"-Residual networks, connections that skip several layers, 
+they are called residual because network will use these skipped connections 
+to compute the difference between the input of a stack of layers and their output.
+
+Learning this difference, or residual, turns out to often be easier than learning the output. 
+
+
+-Transfer Learning, an already trained network is adapted to a new task.
+Great strategy for cases where you don't have a lot of data.
+
+-Fully Convolutional Networks, takes an image as an input and outputs another image.
+(e.g. find the part of an image that contains a particular kind of object, like a dog, 
+doing segmentation rather than classification )
+[it does first several conv layers and then several deconv layers)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
