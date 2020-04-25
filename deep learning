@@ -211,6 +211,47 @@ more model capacity (more hidden layers, mode nodes) == more overfitting
 keep adding capacity as long as the score keeps improving.
 
 
+-------------advanced-----------------
+
+-Layers are used to construct deep learning models, 
+TENSORS,  are used to define the --data flow-- through the model
+
+- if the input data has 10 columns, you define an Input layer with a shape of (10,).
+ The input layer allows your model to load data.
+
+# Load layers
+from keras.layers import Input, Dense
+
+# Input layer
+input_tensor = Input(shape=(1,))
+
+# Dense layer
+output_layer = Dense(1)
+
+# Connect the dense layer to the input_tensor
+output_tensor = output_layer(input_tensor)
+
+"Output layers are simply Dense layers! 
+Output layers are used to reduce the dimension of the inputs to the dimension of the outputs. 
+
+
+
+-In the compile step, we choose an optimize and a loss function,
+for keras model, MEAN ABSOLUTE ERROR, is a good general-purpose error function 
+which is a little bit less senstive to outliers, we can also use MSE (used in traditional linear regression).
+
+-Before fitting,            model.summary()           to get a good overview.
+It is also useful to plot the model before fitting it
+
+
+
+
+
+
+
+
+
+
 
 
 
