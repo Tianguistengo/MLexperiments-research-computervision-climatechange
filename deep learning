@@ -307,14 +307,54 @@ print(model.evaluate(X_test, y_test, verbose=False))
     10.06973339669147        --> good 
 
 
+-----------
+
+-CATEGORICAL EMBEDDINGS are an advance type of layer available only in deep learning libraries.
+Useful for dealing with high cardinality categorical data, text data.
+
+To map the interger teams IDs to a decimal rating, we will use an embedding layer
+
+Embeddings add another dimension to your data (apart from rows and columns) so we need to flatten it
+to return to a 2D       flatten_tensor = Flatten() (embed_tensor)
+
+"The embedding layer is a lot like a dictionary, but your model learns the values for each key.
+
+# Imports
+from keras.layers import Embedding
+from numpy import unique
+
+# Count the unique number of teams
+n_teams = unique(games_season['team_1']).shape[0]
+
+# Create an embedding layer
+team_lookup = Embedding(input_dim=n_teams,
+                        output_dim=1,         cuz we just want 1 number to come out
+                        input_length=1,       cuz it's just 1 number coming in
+                        name='Team-Strength')
+                        
+# Imports
+from keras.layers import Input, Embedding, Flatten
+from keras.models import Model
+
+# Create an input layer for the team ID
+teamid_in = Input(shape=(1,))
+
+# Lookup the input in the team strength embedding layer
+strength_lookup = team_lookup(teamid_in)         ==        embedding(input layer)
+
+# Flatten the output
+strength_lookup_flat = Flatten()(strength_lookup)    ==    Flatten () (embedding layer)
+
+# Combine the operations into a single, re-usable model
+team_strength_model = Model(teamid_in, strength_lookup_flat, name='Team-Strength-Model')
 
 
+" The team strength lookup has three components: an input, an embedding layer, and a flatten layer that creates the output.
 
+If you wrap these three layers in a model with an input and output, 
+you can re-use that stack of three layers at multiple places.
 
-
-
-
-
+Note again that the weights for all three layers will be shared everywhere we use them.
 
 
 
