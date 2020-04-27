@@ -3,3 +3,6 @@ Anything before, and anything after the root domain should be ignored. Focus on 
 
 https://www.apple.---->com-support.it/<------
 
+It’s becoming more common for criminals to try and disguise the root domain with a SUBDOMAIN.
+We know this can be confusing.
+
