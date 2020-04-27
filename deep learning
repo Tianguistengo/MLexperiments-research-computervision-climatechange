@@ -357,7 +357,7 @@ you can re-use that stack of three layers at multiple places.
 Note again that the weights for all three layers will be shared everywhere we use them.
 
 
-
+-
 
 
 
