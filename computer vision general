@@ -184,3 +184,44 @@ a file (typically a JPEG) is written to your device’s storage.
 In addition to all the bits dedicated to the actual picture, it records a considerable amount of 
 supplemental metadata as well. This can include date, time, camera settings, and possible copyright information. 
 You can also add further metadata to EXIF, such as through photo processing software.
+
+
+
+
+"---->Preserving Detail in Image Inputs
+
+Given real-world constraints on memory and processing time, images are often downsampled before they’re fed 
+into a neural network. 
+But the process removes fine details, and that degrades accuracy. 
+A new technique squeezes images with less compromise.
+
+What’s new: 
+Researchers at the Alibaba DAMO Academy and Arizona State University led by Kai Xu
+--reduce the memory needed for image processing --by using a technique inspired by JPEG image compression.
+
+Key insight: 
+JPEG removes information the human eye won’t miss by describing patterns of pixels as frequencies. 
+Successive color changes from pixel to pixel are higher frequencies, while monochromatic stretches are lower frequencies. 
+---By cutting frequencies that have little visual effect, ---
+the algorithm compresses images with minimal impact on image quality.
+The researchers employed a similar strategy to reduce input data without losing information critical to learning.
+
+How it works: The researchers transformed images into the frequency domain, 
+selected frequencies to remove, and fed the reduced frequency representation into ResNet-50 and MobileNet V2 models.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
