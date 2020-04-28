@@ -101,3 +101,11 @@ It’s really snowballed.
 —Vincent Cate, who lives on the island of Anguilla, 
 which has become an unlikely benefactor of the AI boom because of its domain name “.ai”
 
+
+---Double descent ---
+occurs when a model’s performance changes in unpredictable ways
+as the amount of training data or number of parameters crosses a certain threshold. 
+The error falls as expected with additional data or parameters, but then rises, drops again, and may take further turns. 
+Preetum Nakkiran and
+collaborators at Harvard, Stanford, and Microsoft found a way to eliminate double descent in some circumstances.
+
