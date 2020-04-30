@@ -360,7 +360,7 @@ Note again that the weights for all three layers will be shared everywhere we us
 - SHARED LAYERS
 
 They allow you to define an operation, and then apply the exact same operation (with the exact same weights)
-to different inputs. 
+to different inputs.
 
 
 
