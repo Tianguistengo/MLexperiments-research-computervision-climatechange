@@ -312,12 +312,19 @@ print(model.evaluate(X_test, y_test, verbose=False))
 -CATEGORICAL EMBEDDINGS are an advance type of layer available only in deep learning libraries.
 Useful for dealing with high cardinality categorical data, text data.
 
-To map the interger teams IDs to a decimal rating, we will use an embedding layer
+To map the interger teams IDs to a decimal rating, we will use an embedding layer.
 
 Embeddings add another dimension to your data (apart from rows and columns) so we need to flatten it
 to return to a 2D       flatten_tensor = Flatten() (embed_tensor)
 
 "The embedding layer is a lot like a dictionary, but your model learns the values for each key.
+
+from G glossary "An embedding is a categorical feature represented as a continuous-valued feature.
+Typically, an embedding is a translation of a high-dimensional vector into a low-dimensional space. 
+
+Embedding layers maps integers to floats.
+
+
 
 # Imports
 from keras.layers import Embedding
@@ -357,7 +364,9 @@ you can re-use that stack of three layers at multiple places.
 Note again that the weights for all three layers will be shared everywhere we use them.
 
 
-- SHARED LAYERS
+
+
+----->  SHARED LAYERS
 
 They allow you to define an operation, and then apply the exact same operation (with the exact same weights)
 to different inputs.
@@ -502,6 +511,55 @@ model.fit([games_season['team_1'], games_season['team_2'], games_season['home']]
 # Evaluate the model on the games_tourney dataset
 print(model.evaluate([games_tourney['team_1'], games_tourney['team_2'], games_tourney['home']],
                games_tourney['score_diff'], verbose=False))
+
+
+
+----->Summarizing and plotting models
+
+Keras models can have non-trainable parameters that are fixed and do not change,
+and trainable parameters that are learned from the data when the model is fit.
+
+Models with more trainable parameters and more flexible (and prone to overfitting).
+
+A model-s trainable parametres are usually in its Dense layers.
+
+Embedding layers often add a large number of trainable parameters to a model.
+(because each unique value of the embedding input gets a parameter for its output)
+
+model.summary()
+
+
+
+plotting: 
+
+# Imports
+import matplotlib.pyplot as plt
+from keras.utils import plot_model
+
+# Plot the model
+plot_model(model, to_file='model.png')
+
+# Display the image
+data = plt.imread('model.png')
+plt.imshow(data)
+plt.show()
+
+
+
+
+--------> Stacking models
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
