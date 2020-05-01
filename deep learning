@@ -549,7 +549,13 @@ plt.show()
 
 --------> Stacking models
 
+Using the predictions of one model as an input to another model.
 
+Used in Kaggle competitoins to yield some of the most accurate results.
+
+"When stacking, it's important to use different datasets for each model.
+
+If you input dataset is --purely numeric--, you can put multiple inputs in a single input layer.
 
 
 
