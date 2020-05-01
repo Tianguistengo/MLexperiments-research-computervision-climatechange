@@ -559,6 +559,64 @@ If you input dataset is --purely numeric--, you can put multiple inputs in a sin
 
 
 
+You'll use the prediction from the regular season model as an input to the tournament model. 
+This is a form of "model stacking."
+
+To start, take the regular season model from the previous lesson, and predict on the tournament data.
+Add this prediction to the tournament data as a new column.
+
+# Predict
+games_tourney['pred'] = model.predict([games_tourney['team_1'],
+                                             games_tourney['team_2'],
+                                             games_tourney['home']])
+
+With the new column 'pred' you now have --three numeric columns-- in the tournament dataset: 
+'seed_diff', 'home', and 'pred'.
+Now, you will create a neural network that uses a single input layer to process all three of these numeric inputs.
+
+# Create an input layer with 3 columns
+input_tensor = Input((3,))
+
+# Pass it to a Dense layer with 1 unit
+output_tensor = Dense(1)(input_tensor)
+
+# Create a model
+model = Model(input_tensor, output_tensor)
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_absolute_error')
+
+Now your model is ready to meet some data!
+
+Now that you've enriched the tournament dataset and built a model to make use of the new data,
+fit that model to the tournament data.
+
+Note that this model has only one input layer that is capable of handling all 3 inputs, 
+so it's inputs and outputs do not need to be a list.
+
+# Fit the model
+model.fit(games_tourney_train[['home','seed_diff', 'pred',]],
+          games_tourney_train['score_diff'],
+          epochs=1,
+          verbose=True)
+
+# Evaluate the model on the games_tourney_test dataset
+print(model.evaluate(games_tourney_test[['home', 'seed_diff', 'prediction']],
+               games_tourney_test['score_diff'], verbose=False))
+
+<script.py> output:
+    9.07315489498804   -----> good
+
+
+
+
+--------------> Two-output models
+
+Make predictions for 2 targets at once
+
+The only difference between a 2 output model and a 1 output model is the size of the output layer
+
+
 
 
 
