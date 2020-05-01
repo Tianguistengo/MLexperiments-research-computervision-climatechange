@@ -362,6 +362,81 @@ Note again that the weights for all three layers will be shared everywhere we us
 They allow you to define an operation, and then apply the exact same operation (with the exact same weights)
 to different inputs.
 
+You can also share models, not just layers.
+When you have a model, you can re-use that model to share that sequence of steps
+for different input layers.
+
+# Load the input layer from keras.layers
+from keras.layers import Input
+
+# Input layer for team 1
+team_in_1 = Input(shape=(1,),name='Team-1-In')
+
+# Separate input layer for team 2
+team_in_2 = Input(shape=(1,),name='Team-2-In')
+
+"
+Since we already have a team_strength_model and an input layer for each team, 
+we can lookup the team inputs in the shared team strength model. The two inputs will share the same weights.
+
+# Lookup team 1 in the team strength model
+team_1_strength = team_strength_model(team_in_1)
+
+# Lookup team 2 in the team strength model
+team_2_strength = team_strength_model(team_in_2)
+
+Now your model knows how strong each team is.
+
+
+
+
+-----> MERGE LAYERS:
+
+Merge layers allow you to defined advance, non-sequential   network topologies
+
+- Add, Substract, and Multiply layers  need to have the same shape
+
+-Concatenate layers, do not.
+
+
+"Now that you've looked up how "strong" each team is, 
+subtract the team strengths to determine which team is expected to win the game.
+
+The subtract layer will combine the weights from the two layers by subtracting them.
+
+# Import the Subtract layer from keras
+from keras.layers import Subtract
+
+# Create a subtract layer using the inputs from the previous exercise
+score_diff = Subtract()([team_1_strength, team_2_strength])
+
+"Now that you have your two inputs (team id 1 and team id 2) and output (score difference), 
+you can wrap them up in a model so you can use it later for fitting to data and evaluating on new data.
+
+from keras.models import Model
+
+# Subtraction layer from previous exercise
+score_diff = Subtract()([team_1_strength, team_2_strength])
+
+# Create the model
+model = Model([team_in_1, team_in_2], score_diff)
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_absolute_error')
+
+Now your model is finalized and ready to fit to data.
+
+Next step is fit, evaluate, and predict.
+
+
+
+
+
+
+
+
+
+
 
 
 
