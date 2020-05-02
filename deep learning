@@ -617,6 +617,38 @@ Make predictions for 2 targets at once
 
 The only difference between a 2 output model and a 1 output model is the size of the output layer
 
+To fit a model with 2 outputs, you use a data set with 2 columns for the y variable
+y = data_set [ ['column 1', 'column2'] ]
+model.fit (x,y,epochs = 500)
+
+now that the model is fit, we can take a look at what it learned:
+model.get_weights()
+output would be   array [ weights, weights]
+                  array [bias, bias]
+
+
+# Define the input
+input_tensor = Input((2,))
+
+# Define the output
+output_tensor = Dense (2)(input_tensor)  ----> we can see the 2 output here
+
+# Create a model
+model = Model(input_tensor,output_tensor)
+
+# Compile the model
+model.compile(optimizer='adam',loss='mean_absolute_error')
+
+# Fit the model
+model.fit(games_tourney_train[['seed_diff', 'pred']],
+  		  games_tourney_train[['score_1', 'score_2']],
+  		  verbose=True,
+  		  epochs= 100,
+  		  batch_size=16384)
+        
+        
+
+
 
 
 
