@@ -113,6 +113,7 @@ other layers are Dropout, Flatten, Conv2D, MaxPool2D
 (other models have more exotic structures).
 
  
+ - from keras.models import load_model     --> allows me to reopen/use models I created in the past
  
  ------- CLASSIFICATION
  
