@@ -1,0 +1,77 @@
+from jason brownlee and vitaly bushaev
+
+The choice of optimization algorithm for your deep learning model can mean the difference
+between good results in minutes, hours, and days.
+
+Adam is an optimization algorithm that can be used instead of the classical stochastic gradient descent procedure 
+to update network weights iterative based in training data.
+
+Adam is an adaptive learning rate optimization algorithm 
+that’s been designed specifically for training deep neural networks. First published in  2015.
+
+The algorithms leverages the power of-- adaptive learning rates-- methods
+to --find individual learning rates for each parameter. --
+It also has advantages of Adagrad,
+which works really well in settings with sparse gradients, but struggles in non-convex optimization of neural networks,
+and RMSprop,
+which tackles to resolve some of the problems of Adagrad and works really well in on-line settings. 
+
+Adam can be looked at as a combination of RMSprop and Stochastic Gradient Descent with momentum. 
+It --uses the squared gradients to scale the learning rate-- like RMSprop 
+and it --takes advantage of momentum--
+by using moving average of the gradient instead of gradient itself --like SGD with momentum.--
+Let’s take a closer look at how it works.
+
+Adam is an adaptive learning rate method, which means,-- it computes individual learning rates for different parameters.--
+Its name is derived from adaptive moment estimation, and the reason it’s called that is because 
+--Adam uses estimations of first and second moments of gradient to adapt the learning rate for each weight 
+of the neural network.--
+Now, what is moment ?
+N-th moment of a random variable is defined as the expected value of that variable to the power of n.
+
+The first moment is mean, 
+and the second moment is uncentered variance 
+(meaning we don’t subtract the mean during variance calculation). 
+
+Here I list some of the properties of Adam, for proof that these are true refer to the paper.
+
+    1. Actual step size taken by the Adam in each iteration is approximately bounded the step size hyper-parameter. 
+    This property add intuitive understanding to previous unintuitive learning rate hyper-parameter.
+    
+    2.Step size of Adam update rule is invariant to the magnitude of the gradient, 
+    which helps a lot when going through areas with tiny gradients (such as saddle points or ravines). 
+    In these areas SGD struggles to quickly navigate through them.
+    
+    3.Adam was designed to combine the advantages of Adagrad, which works well with sparse gradients,
+    and RMSprop, which works well in on-line settings.
+    Having both of these enables us to --use Adam for broader range of tasks. --
+    Adam can also be looked at as ---the combination of RMSprop and SGD with momentum.---
+
+
+Adam is definitely one of the best optimization algorithms for deep learning and its popularity is growing very fast.
+While people have noticed some problems with using Adam in certain areas,
+researches continue to work on solutions to bring Adam results to be on par with --SGD with momentum.--
+
+Momentum or SGD with momentum
+is method which helps accelerate gradients vectors in the right directions, thus leading to faster converging.
+ Instead of using only the gradient of the current step to guide the search, 
+ --momentum also accumulates the gradient of the past steps to determine the direction to go. --
+ Momentum is a heavy ball rolling down the same hill. 
+ The added inertia acts both as a smoother and an accelerator, 
+ dampening oscillations and causing us to barrel through narrow valleys, small humps and local minima.
+
+   - Adaptive Gradient Algorithm (AdaGrad) 
+    that maintains a per-parameter learning rate that improves performance on problems with sparse gradients 
+    (e.g. natural language and computer vision problems).
+   
+  - Root Mean Square Propagation (RMSProp)
+   that also maintains per-parameter learning rates that are adapted based on 
+   the average of recent magnitudes of the gradients for the weight (e.g. how quickly it is changing). 
+   This means the algorithm does well on online and non-stationary problems (e.g. noisy).
+
+
+
+
+
+
+
