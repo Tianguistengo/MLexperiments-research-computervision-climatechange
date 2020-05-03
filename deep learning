@@ -688,6 +688,8 @@ games_tourney_test[['score_1','score_2']], verbose=False))
 
 ---------> Single model for classification and regression
 
+
+
 This is another example of a model with 2 outputs
 
 Input layer --> Regression Output /Dense  -->  Classification Output (Sigmoid)  /Dense
@@ -695,6 +697,10 @@ Input layer --> Regression Output /Dense  -->  Classification Output (Sigmoid)  
 For the classification output layer, I use the regression model prediction as input.
 
 With 2 output models, each output needs it's own loss function.
+
+The purpose of having 2 outputs is not just to have 2 answers, 
+but for answer #2 to using the finding of answer #1 as input. 
+(usually the first one is the easier which then helps the 2nd one with a more complex task)
 
 
 # Create an input layer with 2 columns
@@ -708,6 +714,91 @@ output_tensor_2 = Dense(1, activation='sigmoid', use_bias=False)(output_tensor_1
 
 # Create a model with 2 outputs
 model = Model(input_tensor, [output_tensor_1, output_tensor_2])
+
+
+# Import the Adam optimizer
+from keras.optimizers import Adam
+
+# Compile the model with 2 losses and the Adam optimzer with a higher learning rate
+(notice how ther are 2 loss functions and Adam is initialized without '' and with a customized learning rate
+
+model.compile(loss=['mean_absolute_error', 'binary_crossentropy'], optimizer=Adam(0.01))
+
+# Fit the model to the tournament training data, with 2 inputs and 2 outputs
+model.fit(games_tourney_train[['seed_diff', 'pred']],
+          [games_tourney_train[['score_diff']], games_tourney_train[['won']]],
+          epochs=10,
+          verbose=True,
+          batch_size=16384)
+
+We fitted a model that is both a classifier and a regressor!
+
+
+Inspect the model (II)
+
+"Now we should take a look at the weights for this model. 
+In particular, note the last weight of the model. 
+This weight converts the predicted score difference to a predicted win probability.
+If you multiply the predicted score difference by the last weight of the model and then apply the sigmoid function,
+you get the win probability of the game.
+
+# Import the sigmoid function from scipy
+from scipy.special import expit as sigmoid
+
+# Weight from the model
+weight = 0.14
+
+# Print the approximate win probability predicted close game
+print(sigmoid(1 * weight + 0))    cero because earlier we specified use_bias=False
+
+# Print the approximate win probability predicted blowout game
+print(sigmoid(10 * weight + 0))
+
+So sigmoid(1 * 0.14) is 0.53, which represents a pretty close game 
+and sigmoid(10 * 0.14) is 0.80, which represents a pretty likely win. 
+In other words, if the model predicts a win of 1 point,
+it is less sure of the win than if it predicts 10 points.   Who says neural networks are black boxes?
+
+
+# Evaluate the model on new data
+print(model.evaluate(games_tourney_test[['seed_diff', 'pred']],
+               [games_tourney_test[['score_diff']], games_tourney_test[['won']]], verbose=False))
+               
+  <script.py> output:
+    [9.685116468970456, 9.11585681592647, 0.5692595753503676]
+first one is the sum of both loss functions, seond is regression loss, third one is classification loss
+This model is both a good regressor and a good classifier!
+
+
+
+
+----------->  Wrap-up
+
+---Shared layers are incredibly useful when you want to compare 2 things---
+
+-Share models are known as ----Siamese Networks----
+(used to calculate things like document SIMILARITY, using a shared embedding layer
+and a LSTM [long-short term memory]{commonly used for text analysis}, and then comparing the LSTM outputs.
+Since both documents are encodded with the same embedding layer and the same LSTM layer, 
+the model uses a representation of the documentas that can be used to compare them.
+
+-You can make networks that understand both text and images simulataneously.
+
+-SKIP CONNECTIONS , simplify the optimization of neural networks.
+These make it a lot easier for the adam optimizer to find the global minimum of the network's loss function.
+
+"In Keras, implementing a skip connection is as simple as using a Concatenate layer
+to concatenate the inputs to the deep network's outputs
+right before the final output layer.
+
+output_tensor = Concatenate () ([input_tensor, hidden_tensor])
+
+
+-Multiple input networks are especially useful when you want to process
+different types of data within your model.
+
+-For NUMERIC data, such as home vs away (1,0), we skip the embedding layer
+and pass the input directly to the output.
 
 
 
