@@ -408,6 +408,9 @@ Merge layers allow you to defined advance, non-sequential   network topologies
 
 -Concatenate layers, do not.
 
+-Concatenate layers are good for combining multiple inputs into a single layer 
+to predict a single output.
+
 
 "Now that you've looked up how "strong" each team is, 
 subtract the team strengths to determine which team is expected to win the game.
