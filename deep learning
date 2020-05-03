@@ -311,7 +311,7 @@ print(model.evaluate(X_test, y_test, verbose=False))
 -----------
 
 -CATEGORICAL EMBEDDINGS are an advance type of layer available only in deep learning libraries.
-Useful for dealing with high cardinality categorical data, text data.
+Useful for dealing with --high cardinality categorical data--, text data.
 
 To map the interger teams IDs to a decimal rating, we will use an embedding layer.
 
@@ -861,7 +861,11 @@ assign a name to this layer
 input = Input(shape=(5,), name= 'Inputs')
 
 
-
+-
+input_layer = Input(shape=(2,))
+output = Dense (2) (input_layer)
+model = Model (input_layer, output)
+print (output)
 
 
 
