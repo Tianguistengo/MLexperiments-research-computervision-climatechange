@@ -800,12 +800,35 @@ different types of data within your model.
 -For NUMERIC data, such as home vs away (1,0), we skip the embedding layer
 and pass the input directly to the output.
 
+-For fitting and evaluating you need to use lists  data[] and double lists[[]] for multiple inputs/outputs
+
+----Practice
+
+-
+inputs = Input (shape= (3,) )       if it's a layer it uses the 'shape' 
+                                    if it's a tensor it uses just the number  Input( (3,) )
+dense_layer = Dense (1)
+
+output = dense_layer (inputs)
+
+print(output)
 
 
 
+-     merged_in = Substract() ([in_1,in_2])
 
 
 
+- 
+I have a model (embed_model)  with an embedding layer  
+
+Now I want to connect this model to a new input (new_in)
+
+new_in = Input (shape = (3,0) )
+
+new_embeddings = embed_model (new_in)
+
+print (new_embeddings)
 
 
 
