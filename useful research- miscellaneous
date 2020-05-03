@@ -592,9 +592,33 @@ A model generalization performance is evaluated using cross-validation
 
 
 
+-LogLoss :
+Logarithmic loss (related to cross-entropy)
+measures the performance of a classification model where the prediction input is a probability value between 0 and 1. 
 
+Scipy: 
+a Python-based ecosystem of open-source software for mathematics, science, and engineering.
+In particular, these are some of the core packages:
 
-
+    NumPy
+    Base N-dimensional array package
+    
+    pandas
+    Data structures & analysis
+    
+    SciPy library
+    Fundamental library for scientific computing
+    
+    Matplotlib
+    Comprehensive 2-D plotting
+    
+    IPython
+    Enhanced interactive console
+    
+    SymPy
+    Symbolic mathematics
+    
+   
 
 
 
