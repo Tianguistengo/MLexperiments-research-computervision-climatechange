@@ -646,7 +646,68 @@ model.fit(games_tourney_train[['seed_diff', 'pred']],
   		  epochs= 100,
   		  batch_size=16384)
         
-        
+# Print the model's weights
+print(model.get_weights())
+
+# Print the column means of the training data
+print(games_tourney_train.mean())
+
+The input layer will have 4 weights: 2 for each input times 2 for each output.
+The output layer will have 2 weights, one for each output.
+
+Notice that both output weights are about ~72.
+This is because, on average, a team will score about 72 points in the tournament.
+
+<script.py> output:
+    [array([[ 0.13067713, -0.10371894],
+           [ 0.38644195, -0.35632333]], dtype=float32), 
+     array([72.38115, 72.38473], dtype=float32)]
+     
+    season        1.998074e+03
+    team_1        5.556771e+03
+    team_2        5.556771e+03
+    home          0.000000e+00
+    seed_diff     0.000000e+00
+    score_diff    0.000000e+00
+    score_1       7.162128e+01
+    score_2       7.162128e+01
+    won           5.000000e-01
+    pred         -1.625470e-14
+    dtype: float64
+
+
+Now that we've fit your model and inspected it's weights to make sure it makes sense,
+let's evaluate it on the tournament test set to see how well it performs on new data.
+
+# Evaluate the model on the tournament test data
+print(model.evaluate(
+    games_tourney_test[['seed_diff','pred']],
+games_tourney_test[['score_1','score_2']], verbose=False))
+
+
+
+---------> Single model for classification and regression
+
+This is another example of a model with 2 outputs
+
+Input layer --> Regression Output /Dense  -->  Classification Output (Sigmoid)  /Dense
+
+For the classification output layer, I use the regression model prediction as input.
+
+With 2 output models, each output needs it's own loss function.
+
+
+# Create an input layer with 2 columns
+input_tensor = Input((2,))
+
+# Create the first output
+output_tensor_1 = Dense(1, activation='linear', use_bias=False)(input_tensor)
+
+# Create the second output (use the first output as input here)
+output_tensor_2 = Dense(1, activation='sigmoid', use_bias=False)(output_tensor_1)
+
+# Create a model with 2 outputs
+model = Model(input_tensor, [output_tensor_1, output_tensor_2])
 
 
 
