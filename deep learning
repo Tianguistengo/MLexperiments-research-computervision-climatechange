@@ -802,6 +802,10 @@ and pass the input directly to the output.
 
 -For fitting and evaluating you need to use lists  data[] and double lists[[]] for multiple inputs/outputs
 
+-Keras 'Functional API' allows you to define shared layers while the Sequential API does not.
+
+
+
 ----Practice
 
 -
@@ -829,6 +833,41 @@ new_in = Input (shape = (3,0) )
 new_embeddings = embed_model (new_in)
 
 print (new_embeddings)
+
+
+-
+Merge 2 input layers usind Add ()
+
+merged_in = Add () ([ in_1, in_2])
+
+-To calculate the slope
+slope = 2 * input_data * error
+
+-Correct order
+Sequential (), add, compile, fit
+
+-
+model.evaluate( [test_1,test_2] , test_labels)
+
+-
+model = Sequential()
+
+model.add(Dense(100,activation='relu, input_shape = (n_cols,)))
+print (model.layers)
+
+-
+assign a name to this layer
+
+input = Input(shape=(5,), name= 'Inputs')
+
+
+
+
+
+
+
+
+
 
 
 
