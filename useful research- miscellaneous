@@ -628,7 +628,7 @@ In particular, these are some of the core packages:
 That is why, let's look at the columns of the test dataset and compare it to the train columns. 
 Additionally, let's explore the format of the sample submission.
 
--Determine your problem: classification, regression, etc..
+-Determine your problem: classification, regression, ranking etc..
 
  train.hist(['sales'])  --> sales being the target variable
  plt.show()
@@ -664,10 +664,13 @@ Ranking  ( Mean Average Precision at K (MAPK, MAP@K)
 
 
 
+-To measure the quality of the models you will use Mean Squared Error (MSE).
+It's available in sklearn.metrics as mean_squared_error() 
+and it takes two arguments: true values and predicted values.
 
+- overfit is when the test error is higher thant the training error
 
-
-
+'What type of data are we dealing with? tabular data, time series, images, text?
 
 
 
