@@ -670,7 +670,44 @@ and it takes two arguments: true values and predicted values.
 
 - overfit is when the test error is higher thant the training error
 
-'What type of data are we dealing with? tabular data, time series, images, text?
+--
+1. Type of data-- are we dealing with: tabular data, time series, images, text?
+
+data = pd.read_csv('cool_beans.csv')
+print ('Cool beans shape:', data.shape)
+print ( data.columns.tolist() )
+data.target_variable.value_counts ()   if your target variable is divided into categories, you'd see them here
+
+
+2. Problem type--  Classification, Regression, Ranking, etc..
+3. Evaluation metric -- MAE,MSE, F1 score, LogLoss, ROC AUC etc..   most of them in sklearn.metrics
+4. Exploratory Data Analysis
+
+
+---- Exploratory Data Analysis
+
+-Size of the dataset
+
+-Properties of the target variable
+(there might be a class imbalance in the classification problem 
+or a skewed distribution in the regression problem)
+
+-Properties of the features
+(finding a pattern between features and target variables is intersting here)
+
+-Generate ideas for feature engineering
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
