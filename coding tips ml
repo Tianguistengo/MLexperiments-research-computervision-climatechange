@@ -63,5 +63,55 @@ When you use a range loop you are saying that you want to count one by one from 
 
 -The ELSE keyword in a for loop specifies a block of code to be executed when the loop is finished:
 
+-round () to round a float to an interger
+
+-True es 1 y False es 0
+
+-sorted ()  los ordena de menor a mayor
+
+-help(len) opens up the documentation from inside the IPython Shell for the len() function
+
+-numpy.column_stack() function is used to stack 1-D arrays as columns into a 2-D array.
+It takes a sequence of 1-D arrays and stack them as columns to make a single 2-D array.
+
+import numpy as geek 
+  
+# input array 
+in_arr1 = geek.array(( 1, 2, 3 )) 
+print ("1st Input array : \n", in_arr1)  
+  
+in_arr2 = geek.array(( 4, 5, 6 )) 
+print ("2nd Input array : \n", in_arr2)  
+  
+# Stacking the two arrays  
+------>out_arr = geek.column_stack((in_arr1, in_arr2)) 
+print ("Output stacked array:\n ", out_arr) 
+Output:
+
+1st Input array : 
+ [1 2 3]
+2nd Input array : 
+ [4 5 6]
+------->Output stacked array:
+  [[1 4]
+ [2 5]
+ [3 6]]
+
+
+- np.corrcoef      Return correlation coefficients.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
