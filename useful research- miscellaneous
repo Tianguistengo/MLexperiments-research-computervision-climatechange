@@ -621,6 +621,56 @@ In particular, these are some of the core packages:
    
 
 
+-----------> Kaggle competitions
+
+"Before making any progress in the competition, you should get familiar with the expected output.
+
+That is why, let's look at the columns of the test dataset and compare it to the train columns. 
+Additionally, let's explore the format of the sample submission.
+
+-Determine your problem: classification, regression, etc..
+
+ train.hist(['sales'])  --> sales being the target variable
+ plt.show()
+ then you an see the histogram showing that is a continuous variable == regression
+
+-To select multiple columns, we need to use double BRACKETS [[]]
+
+-Your goal is to read the test data, make predictions, and save these 
+in the format specified in the "sample_submission.csv" file. 
+
+-
+# Read test and sample submission data
+test = pd.read_csv('test.csv')
+sample_submission = pd.read_csv('sample_submission.csv')
+
+# Show the head() of the sample_submission
+print(sample_submission.head())
+
+# Get predictions for the test set (and add them to the new colum 'sales' in the test data set)
+test['sales'] = rf.predict(test[['store', 'item']])
+
+# Write test predictions using the sample_submission format
+test[['id', 'sales']].to_csv('kaggle_submission.csv', index=False)
+
+
+-->Competition metrics
+
+Clasification    ( Area Under the ROC curve (AUC),   F1 Score (F1),   LogLoss )
+
+Regression  ( Mean Absolute Error (MAE), Mean Squared Error (MSE), 
+
+Ranking  ( Mean Average Precision at K (MAPK, MAP@K)
+
+
+
+
+
+
+
+
+
+
 
 
 
