@@ -409,7 +409,7 @@ Plugins allows the integration of Various DevOps stages.
 
 -" What is an Objective Function?
 
-Definition: The objective function is a mathematical term that describes how different variables contribute
+Definition: The objective function is a mathematical term that describes --how different variables contribute--
 to a certain value that is being sought to be optimized.
 
 The objective function shows us how each of these inputs or variables contributes
@@ -417,6 +417,7 @@ to the value that is being optimized.
 
 
 --Automated Machine Learning Hyperparameter Tuning in Python
+
 A complete walk through using Bayesian optimization for automated hyperparameter tuning in Python
 
 As a brief primer, Bayesian optimization finds the value that minimizes an objective function by 
@@ -677,6 +678,11 @@ data = pd.read_csv('cool_beans.csv')
 print ('Cool beans shape:', data.shape)
 print ( data.columns.tolist() )
 data.target_variable.value_counts ()   if your target variable is divided into categories, you'd see them here
+                                     if there is a class imbalance you'd see it here (there are class balancing methods)
+
+data.describe ()   (count, mean, std, min, max, etc..)
+
+import matplotlib.pyplot as plt
 
 
 2. Problem type--  Classification, Regression, Ranking, etc..
@@ -697,7 +703,18 @@ or a skewed distribution in the regression problem)
 
 -Generate ideas for feature engineering
 
+# Calculate the ride distance
+train['distance_km'] = haversine_distance(train)    hav dist is a customized function to calculate distance between
+                                                         'pick_up' location and 'drop_off'
+# Draw a scatterplot
+plt.scatter(x=train['fare_amount'], y=train['distance_km'], alpha=0.5)
+plt.xlabel('Fare amount')
+plt.ylabel('Distance, km')
+plt.title('Fare amount based on the distance')
 
+# Limit on the distance
+plt.ylim(0, 50)    para no incluir outliers
+plt.show()
 
 
 
