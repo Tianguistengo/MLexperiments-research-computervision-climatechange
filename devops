@@ -1,0 +1,10 @@
+"Today, one of the big factors that can affect the accuracy of deployed models is if the data 
+being used to generate predictions differs from data used to train the model.
+
+For example, changing economic conditions could drive new interest rates affecting home purchasing predictions. 
+------This is called concept drift,------
+whereby the patterns the model uses to make predictions no longer apply. 
+SageMaker Model Monitor automatically detects concept drift in deployed models and provides detailed alerts 
+that help identify the source of the problem.
+All models trained in SageMaker automatically emit key metrics that can be collected and viewed in SageMaker Studio.
+From inside SageMaker Studio you can configure data to be collected, how to view it, and when to receive alerts.
