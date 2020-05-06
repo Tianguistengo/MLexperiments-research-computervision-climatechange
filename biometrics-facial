@@ -11,3 +11,10 @@ focused on issues of accuracy and bias, but more recently, the debate has turned
 skin color detection (Exer- cise 2.8) 
 and simple blob features Section 14.1.1; 
 they do not rely on edge detection.
+
+-In-variance detection (i.e. Rotated Face Detection, Large or Small Face Detection)
+
+-Residual Network (ResNet) : As we have seen that brain regions V5 and V6 receives direct connections from V1;
+in the same way the Residual Network works. 
+It skips connections and /or jumps over the layers. It is done to avoid the problem of Vanishing Gradient.
+
