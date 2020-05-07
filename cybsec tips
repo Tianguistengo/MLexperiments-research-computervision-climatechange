@@ -50,6 +50,40 @@ simply --bookmark-- these pages for quick access, negating the need to click on 
 You can, quite literally, become a hero simply by backing up important files. 
 If we all did this, ransomware would become ineffective and would most likely disappear altogether.
 
+-You can check where links lead by hovering over them with your mouse. 
+The true destination will usually be displayed in the bottom left corner of your browser.
+
+-Use VirusTotal.com if you’re ever presented with a shortened link, or you’re unsure about the legitimacy of a link, 
+file or a website (security professionals use it all the time). 
+Simply copy and paste the link, or upload the file, into the site’s search bar to see its true destination
+and/or to get an indication of whether or not it’s safe to open. 
+https://www.virustotal.com/#/home/upload
+
+
+-Files ending .exe, .vbs and .scr all perform an action when opened.
+If you see a file that contains any of these extensions, 
+especially if what you think you are opening is meant to be a read only file,
+such as a document, photo or video,
+be cautious.
+
+Macros are small pieces of code contained in Microsoft Office files. 
+They’re sometimes used to distribute malware via seemingly legitimate Microsoft Office files. 
+When using Microsoft Office files, keep the following in mind:
+
+   - Do not enable Macros within a Microsoft file (such as Office, Powerpoint or Word)
+    unless you know what they’re going to do (ie, you’re a developer).
+   
+   -Macro-enabled documents will have an ‘m’ in their file extension (.dotm, .xlsm, .pptm).
+    
+    -Turning off ‘Protected View’ mode may enable macros.
+
+Be sure to enable the ‘Show file extensions’ option on your computer. 
+Doing so allows you to check file types before opening them.
+
+
+
+
+
 
 
 
