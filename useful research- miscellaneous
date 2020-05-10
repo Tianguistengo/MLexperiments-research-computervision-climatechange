@@ -718,6 +718,50 @@ plt.show()
 
 
 
+------K-Fold and Stratified K-Fold validation
+
+"As you've just noticed, you have a pretty different target variable distribution among the folds due to the random splits.
+It's not crucial for this particular competition, but could be an issue for the classification competitions 
+with the highly imbalanced target variable.
+
+To overcome this, let's implement the stratified K-fold strategy with the stratification on the target variable.
+Now you see that --both size and target distribution-- are the same among the folds.
+The general rule is to prefer Stratified K-Fold over usual K-Fold in any classification problem. 
+Next, more on other cross-validation strategies.
+
+- DATA LEAKAGE
+Leakage is when a model seems accurate until you test with real-world data/in a real-world setting
+
+*Leak in --features--: using data that will not be available in the real setting.
+*Leak in --validation strategy--: validation strategy differ from the real-world situation
+(like a validarion for time series data where you are relying on future data you don't have yet).
+
+
+- Model Validation 
+
+from sklearn.model_selection import TimeSeriesSplit
+import numpy as np
+
+# Sort train data by date
+train = train.sort_values('date')
+
+# Initialize 3-fold time cross-validation
+kf = TimeSeriesSplit(n_splits=3)
+
+# Get MSE scores for each cross-validation split   ,  For simplicity, you're given get_fold_mse() function 
+that for each cross-validation split fits a Random Forest model and returns a list of MSE scores by fold. 
+mse_scores = get_fold_mse(train, kf)
+
+print('Mean validation MSE: {:.5f}'.format(np.mean(mse_scores)))
+print('MSE by fold: {}'.format(mse_scores))
+print('Overall validation MSE: {:.5f}'.format(np.mean(mse_scores) + np.std(mse_scores))) 
+------>  este ^  standard deviation te da una mejor idea de el overall MSE
+
+
+
+
+
+
 
 
 
