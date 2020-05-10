@@ -29,6 +29,14 @@ returning a value between 0 and 1.
 
 In some neural networks, the sigmoid function acts as the activation function.
 
+The sigmoid function is used for the -->  two-class logistic regression, 
+whereas the softmax function is used for the -->  multiclass logistic regression
+
+Getting to the point, the basic practical difference between Sigmoid and Softmax
+is that while both give output in [0,1] range,
+softmax ensures that the sum of outputs along channels (as per specified dimension) is 1 i.e., they are probabilities.
+Sigmoid just makes output between 0 to 1.
+
 
 
 
