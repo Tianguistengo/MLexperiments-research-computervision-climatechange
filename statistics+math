@@ -22,7 +22,9 @@ The derivative at the point is the slope of the tangent.
 
 
 
------>  Sigmoid Function by google glossary
+----->  Sigmoid Function 
+by google glossary
+(s-shaped , used by biological neurons)
 
 A function that maps logistic or multinomial regression output (log odds) to probabilities,
 returning a value between 0 and 1. 
