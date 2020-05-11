@@ -18,6 +18,36 @@ What makes it really luring is it’s ---> dynamic computation graph paradigm. <
 Don’t worry if the last line doesn’t make sense to you now.
 But take my word that it makes --> debugging neural networks way easier. <--
 
+>>>>PyTorch is easier to learn and lighter to work with, and hence,
+is relatively better for passion projects and building rapid prototypes.
+
+TensorFlow has adopted PyTorch innovations and PyTorch has adopted TensorFlow innovations. 
+>>>>Notably, now both languages can run in a >>> dynamic eager execution mode >>>>or a static graph mode.
+Both frameworks are open source, but PyTorch is Facebook's baby and TensorFlow is Google's baby.
+
+In the recent NerulIPS conference,
+PyTorch was in 166 papers and TensorFlow was in 74. 
+PyTorch went from being in fewer papers than TensorFlow in 2018 to more than doubling TensorFlow’s number in 2019.
+
+TensorFlow is still mentioned in many more >>>job listings that PyTorch, but the gap is closing.
+PyTorch has taken the lead in usage in >>>>research papers at top conferences 
+and almost closed the gap in Google search results. 
+TensorFlow remains three times more common in usage according to the most recent Stack Overflow Developer Survey.
+
+On 1st October 2019, the first stable version of TF2.0 was released.
+The new features include tight integration with Keras,
+Eager Execution as default (finally 😅), 
+functions and not sessions, 
+Multi-GPU support and much more. 
+>>>Another beautiful feature is tf.function decorator, 
+>>>that converts a block of code into optimized graphs thus providing faster execution.
+
+(pro tf)Comparing tensorflow to pytorch is like comparing a car to an engine block.
+It tricks you into just comparing the engine parts and not even considering the stuff around it.
+
+
+
+
 
 The reason why we use --> Numpy <-- is because it’s much faster than Python lists at doing matrix ops.
 Why? Because it does most of the heavy lifting in C.
