@@ -29,7 +29,7 @@ by google glossary
 A function that maps logistic or multinomial regression output (log odds) to probabilities,
 returning a value between 0 and 1. 
 
-In some neural networks, the sigmoid function acts as the activation function.
+In some neural networks, the sigmoid function acts as the >>activation function.
 
 The sigmoid function is used for the -->  two-class logistic regression, 
 whereas the softmax function is used for the -->  multiclass logistic regression
@@ -41,8 +41,10 @@ Sigmoid just makes output between 0 to 1.
 
 
 
-
-
+----CUDA
+CUDA (Computer Unified Device Architecture)
+is NVIDIA's parallel computing architecture 
+that enables dramatic increases in computing performance by harnessing the power of the GPU.
 
 
 
