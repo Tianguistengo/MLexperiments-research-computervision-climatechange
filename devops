@@ -45,6 +45,14 @@ Multi-GPU support and much more.
 (pro tf)Comparing tensorflow to pytorch is like comparing a car to an engine block.
 It tricks you into just comparing the engine parts and not even considering the stuff around it.
 
+At their core, PyTorch and Tensorflow are >>>auto-differentiation frameworks. 
+That is, they >>allow one to take the derivative of some function.
+However, there are many ways to enable auto-differentiation, 
+and the particular implementation that most modern ML frameworks choose is called “reverse-mode auto-differentiation”,
+more commonly known as “backpropagation”. 
+This implementation turns out to be extremely efficient for taking the derivative of neural networks.
+
+However, things change for computing higher order derivatives (Hessian/Hessian Vector Products).
 
 
 
