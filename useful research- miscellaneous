@@ -759,12 +759,134 @@ print('Overall validation MSE: {:.5f}'.format(np.mean(mse_scores) + np.std(mse_s
 
 
 
+---> Modeling stage
+
+Circle loop of steps: preprocess data -> create new features -> improve models -> apply tricks
+
+Tweak one thing at a time otherwise you won't know what changed the validatio for the better or worse.
+
+
+--->Feature engineering
+
+The process of creating new features.
+It helps our model get better information to better predict the target variable.
+
+New features may come from domain knowledge, prior experience, or EDA.
+
+Types of features: Numerical, Categorical, Datetime, Coordiantes, Text, Images, etc..
+
+It's better to create new features for train and test data >>simultaneously.
+After the features are created, 
+split the data back into the train and test DataFrames. 
+Here it's done using pandas' isin() method.
+
+# Concatenate train and test together
+taxi = pd.concat([train, test])
+
+# Convert pickup date to datetime object
+taxi['pickup_datetime'] = pd.to_datetime(taxi['pickup_datetime'])
+
+# Create a day of week feature
+taxi['dayofweek'] = taxi['pickup_datetime'].dt.dayofweek
+
+# Create an hour feature
+taxi['hour'] = taxi['pickup_datetime'].dt.hour
+
+# Split back into train and test
+new_train = taxi[taxi['id'].isin(train['id'])]
+new_test = taxi[taxi['id'].isin(test['id'])]
+
+^^  "Now you know how to perform feature engineering 
+for train and test DataFrames simultaneously.
+Having considered numerical and datetime features,
+move forward to master feature engineering for categorical ones!
+
+
+
+--> Categorical features
+
+" The majority of ML models don't accept string values or categoricla features automatically
+so we need to pre-process the categorical features into meaningful numbers (encode them).
+
+--LABEL ENCODING
+from sklearn.preprocessing import LabelEncoder
+
+>map each category into an integer number
+
+A=0, B=1, C=2,.... blue=0,green=1, ...
+
+# Concatenate train and test together
+houses = pd.concat([train, test])
+
+# Label encoder
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+
+# Create new features
+houses['RoofStyle_enc'] = le.fit_transform(houses['RoofStyle'])
+houses['CentralAir_enc'] = le.fit_transform(houses['CentralAir'])
+
+# Look at new features
+print(houses[['RoofStyle', 'RoofStyle_enc', 'CentralAir', 'CentralAir_enc']].head())
+
+DOWNSIDE is that it assumes there is a ranking dependency between the categories 
+(might harm linear models but not tree-based ones)
+
+
+
+to solve that ^^^^^^^
+
+--ONE-HOT ENCODING
+
+>> we create a separate column for every of the categories
+and we put a 1 if the category is chosen and 0 en the rest of the columns
+
+00010
+00100
+01000
+
+>>>pandas'  get_dummies()  method
+
+downside == if the feature has a lot of differente categories 
+(if feature has 1,000 different categories then we'll get 1,000 columns)
+
+
+# Concatenate train and test together
+houses = pd.concat([train, test])
+
+# Create One-Hot encoded features
+ohe = pd.get_dummies(houses['RoofStyle'], prefix='RoofStyle')
+
+# drop the initial feature
+df.drop('RoofStyle', axis=1, inplace=True)
+
+# CONCATENATE OHE features to houses
+houses = pd.concat([houses, ohe], axis=1)
+
+# Look at OHE features
+weirid -- print(houses[[col for col in houses.columns if 'RoofStyle' in col]].head(3))
+
+Remember to drop the initial string column, 
+because models will not handle it automatically.
+
+
+
+--BINARY FEATURES (one type of categorical features)
+
+categorial features with only 2 possible values
+
+for binary features we always apply label encoding
+first category = 0   second category = 1
 
 
 
 
+-- there is a long list of other categorical features encoders
+(like target encoder, widely used at kaggle, 
 
 
+--TARGET ENCODER
+secret kaggle sauce
 
 
 
