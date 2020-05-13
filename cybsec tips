@@ -91,15 +91,5 @@ Think about how many lyrics you know for songs or poems. Clearly, remembering a 
 
 
 
----iframes sec
-The HTTP X-XSS-Protection response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong Content-Security-Policy that disables the use of inline JavaScript ('unsafe-inline'), they can still provide protections for users of older web browsers that don't yet support CSP.
-
-    Chrome has removed their XSS Auditor
-    Firefox have not, and will not implement X-XSS-Protection
-    Edge have retired their XSS filter
-
-This means that if you do not need to support legacy browsers, it is recommended that you use Content-Security-Policy without allowing unsafe-inline scripts instead.
-
-
 
 
