@@ -888,10 +888,12 @@ first category = 0   second category = 1
 --TARGET ENCODER
 secret kaggle sauce
 
+high cardinality categorical features (features that have large number of category values(at least 10) )
 
+just as the label encoder does, it creates a single column,
+but it also introduces the correlation between the categories and the target variable.
 
-
-
+most common type of target encoder, mean target encoder
 
 
 
