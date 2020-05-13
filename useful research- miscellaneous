@@ -895,7 +895,27 @@ but it also introduces the correlation between the categories and the target var
 
 most common type of target encoder, mean target encoder
 
+"
+First of all, you will create a function that implements mean target encoding. 
+Remember that you need to develop the two following steps:
 
+    -Calculate the mean on the train, apply to the test
+    -Split train into K folds. Calculate the out-of-fold mean for each fold, apply to this particular fold
+
+Each of these steps will be implemented in a separate function:
+test_mean_target_encoding() and train_mean_target_encoding(), respectively.
+
+The final function mean_target_encoding() takes as arguments: 
+the train and test DataFrames, 
+the name of the categorical column to be encoded,
+the name of the target column and a smoothing parameter alpha. 
+It returns two values: a new feature for train and test DataFrames, respectively.
+
+You need to add smoothing to avoid overfitting. So, add α
+parameter to the denominator in train_statistics calculations.
+
+You need to treat new categories in the test data. 
+So, pass a global mean as an argument to the fillna() method.
 
 
 
