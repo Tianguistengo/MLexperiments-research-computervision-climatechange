@@ -873,7 +873,19 @@ print (output)
 
 
 
+-----> Pytorch 
 
+The scientific computing aspect of Pytorch 
+is primarily a result of Pytorch's tensor library 
+and associated tensor operations.
+
+    To deal with hyper-planes in a 14-dimensional space, 
+    visualize a 3-D space and say ‘fourteen’ to yourself very loudly. Everyone does it —Geoffrey Hinton
+
+This is where PyTorch’s autograd comes in. 
+It abstracts the complicated mathematics and helps us “magically” calculate gradients of high dimensional curves 
+with only a few lines of code. This post attempts to describe the magic of autograd.
+https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95
 
 
 
