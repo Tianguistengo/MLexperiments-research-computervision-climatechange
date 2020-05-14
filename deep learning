@@ -879,13 +879,90 @@ The scientific computing aspect of Pytorch
 is primarily a result of Pytorch's tensor library 
 and associated tensor operations.
 
+At their core, all DL frameworks have 2 featues
+a tensor library (torch)
+and a package for computing derivatives (torch.autograd)
+
+https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95
+
+
     To deal with hyper-planes in a 14-dimensional space, 
     visualize a 3-D space and say ‘fourteen’ to yourself very loudly. Everyone does it —Geoffrey Hinton
 
 This is where PyTorch’s autograd comes in. 
 It abstracts the complicated mathematics and helps us “magically” calculate gradients of high dimensional curves 
 with only a few lines of code. This post attempts to describe the magic of autograd.
-https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95
+
+
+Tensors: 
+In simple words, its just an      -->  n-dimensional array in PyTorch. 
+
+On setting .requires_grad = True
+they start forming a backward graph that tracks every operation applied on them to calculate the gradients
+using something called a dynamic computation graph (DCG).
+
+"    Note: By PyTorch’s design, gradients can only be calculated for -->floating point tensors which is 
+why I’ve created a -->float type numpy array before making it a gradient enabled PyTorch tensor
+
+
+Autograd:
+This class is an engine to calculate derivatives 
+(Jacobian-vector product to be more precise). 
+It records a graph of all the operations performed on a gradient enabled tensor 
+and creates an acyclic graph called the dynamic computational graph.
+
+The leaves of this graph are input tensors and the roots are output tensors.
+Gradients are calculated by tracing the graph from the root to the leaf and multiplying every gradient
+using the --> chain rule.
+
+Backpropagation: 
+is used to calculate the gradients of the loss with respect to the input weights 
+to later update the weights and eventually reduce the loss.
+
+In a way, back propagation is just fancy name for the chain rule — Jeremy Howard
+
+The change in the loss 
+for a small change in an input weight is called the gradient of that weight
+and is calculated using backpropagation. 
+The gradient is then used to update the weight 
+using a learning rate to overall reduce the loss and train the neural net.
+
+This is done in an iterative way.
+For each iteration, several gradients are calculated
+and something called a computation graph is built for storing these gradient functions.
+PyTorch does it by building a Dynamic Computational Graph (DCG). 
+
+
+
+Dynamic Computational graph:
+
+Gradient enabled tensors (variables) along with functions (operations)
+combine to create the dynamic computational graph.
+
+The flow of data and the operations applied to the data are defined at runtime 
+hence constructing the computational graph dynamically. 
+
+>>This graph is made dynamically by the autograd class under the hood.
+
+To stop PyTorch from tracking the history and forming the backward graph, 
+the code can be wrapped inside with torch.no_grad(): 
+>>> It will make the code run faster whenever gradient tracking is not needed.
+
+
+
+Backward() function:
+
+Backward is the function which actually calculates the gradient
+by passing it’s argument (1x1 unit tensor by default) through the backward graph 
+all the way up to every leaf node traceable from the calling root tensor. 
+
+The calculated gradients are then stored in .grad of every leaf node.
+Remember, the backward graph is already made dynamically during the forward pass.
+Backward function only calculates the gradient using the already made graph and stores them in leaf nodes.
+
+ The dimension of tensor passed into .backward() 
+ must be the same as the dimension of the 
+ tensor whose gradient is being calculated. 
 
 
 
