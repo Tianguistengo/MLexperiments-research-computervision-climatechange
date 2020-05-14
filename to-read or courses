@@ -6,7 +6,12 @@ https://blog.keras.io/building-powerful-image-classification-models-using-very-l
 
 PYTHON    -->   https://www.hackerearth.com/practice/python/getting-started/input-and-output/tutorial/
 
-PYTORCH 60 min intro   https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html
+PYTORCH 60 min intro (plus rest of official tutorials)
+https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html
+
+Pytorch channel in youtube has good vids too
+
+Torchvision   https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html
 
 https://www.fast.ai/
 
@@ -15,3 +20,5 @@ fast ai recommended curses for python https://forums.fast.ai/t/recommended-pytho
 Geoff Hinton 
 A Simple Framework for Contrastive Learning of Visual Representations
 https://arxiv.org/abs/2002.05709
+
+
