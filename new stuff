@@ -109,3 +109,32 @@ The error falls as expected with additional data or parameters, but then rises, 
 Preetum Nakkiran and
 collaborators at Harvard, Stanford, and Microsoft found a way to eliminate double descent in some circumstances.
 
+
+-
+Probabilistic Programming Languages
+
+https://towardsdatascience.com/a-gentle-introduction-to-probabilistic-programming-languages-ba9105d9cbce
+
+"Conceptually, probabilistic programming languages(PPLs) are domain-specific languages
+that describe probabilistic models 
+and the mechanics to perform inference in those models.
+The magic of PPL relies on combining the inference capabilities of probabilistic methods 
+with the representational power of programming languages.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
