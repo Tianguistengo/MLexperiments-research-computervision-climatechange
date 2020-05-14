@@ -965,6 +965,18 @@ Backward function only calculates the gradient using the already made graph and 
  tensor whose gradient is being calculated. 
 
 
+(((((((((data augmentation is good to prevent overfitting
+and import torvision.transforms as T can help you do data aug very easily)))))))))
+
+
+
+
+
+
+
+
+
+
 
 
 
