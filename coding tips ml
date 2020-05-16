@@ -100,9 +100,13 @@ Output:
 
 - np.corrcoef      Return correlation coefficients.
 
+- (1. , 7. , 11. )  the dots after the number indicate that the numbers are floats 
 
+> type(2.)
+float
 
-
+> type(2)
+int
 
 
 
