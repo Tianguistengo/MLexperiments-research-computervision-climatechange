@@ -263,6 +263,73 @@ Let’s look at each of these.
 and
 give us an instance of the torch.Tensor class.
 
+torch.Tensor() and torch.tensor() --copy-- their input data 
+while torch.as_tensor() and torch.from_numpy() --share-- their input data in memory with the original input object. 
+
+Share Data 	Copy Data
+torch.as_tensor() 	torch.tensor()
+torch.from_numpy() 	torch.Tensor()
+
+This sharing just means that the --actual data in memory-- exists in a single place.
+As a result, any changes that occur in the underlying data >> will be reflected in both objects,
+the torch.Tensor and the numpy.ndarray.
+
+Sharing data is more efficient and uses less memory than copying data 
+because the data is not written to two locations in memory.
+
+If we have a torch.Tensor and we want to convert it to a numpy.ndarray, we do it like so:
+
+> print(o3.numpy())
+> print(o4.numpy())
+[0 2 3]
+[0 2 3]
+
+ This establishes that torch.as_tensor() and torch.from_numpy() both >>share memory with their input data.
+ However, which one should we use, and how are they different?
+
+The torch.from_numpy() function only accepts numpy.ndarrays, 
+while the torch.as_tensor() function accepts a wide variety of array-like objects 
+including other PyTorch tensors.
+
+For this reason, torch.as_tensor() is the winning choice in the memory sharing game.
+
+Best options for creating tensors in PyTorch
+Given all of these details, these two are the best options:
+
+    torch.tensor()
+    torch.as_tensor()
+
+The torch.tensor() call is the sort of go-to call, 
+while torch.as_tensor() should be employed when tuning our code for performance. 
+
+ Some things to keep in mind about memory sharing (it works where it can):
+
+    Since >numpy.ndarray objects are allocated on the CPU,
+    the as_tensor() function must copy the data from the CPU to the GPU when a GPU is being used.
+    
+    The memory sharing of as_tensor() doesn’t work with built-in Python data structures like lists.
+    
+    The as_tensor() call requires developer knowledge of the sharing feature.
+    This is necessary so we don’t inadvertently make an unwanted change 
+    in the underlying data without realizing the change impacts multiple objects.
+    
+    The as_tensor() performance improvement will be greater
+    if there are a lot of back and forth operations between numpy.ndarray objects and tensor objects. 
+    However, if there is just a single load operation, 
+    there shouldn’t be much impact from a performance perspective.
+
+
+Wrapping up
+
+At this point, we should now have a better understanding of
+the  > PyTorch tensor creation options. 
+
+We’ve learned about factory functions 
+and we’ve seen how memory sharing vs copying can impact performance and program behavior. 
+
+
+
+
 
  Now, let’s create our tensors with each of these options 1-4, and have a look at what we get:
 
@@ -371,6 +438,21 @@ is that PyTorch tensors give us a concrete implementation
 that we can work with in code.
 
 
+
+ GPU can be slower than CPU
+
+We said that we can selectively run our computations on the GPU or the CPU,
+but why not just run every computation on the GPU?
+Isn’t a GPU faster than a CPU?
+
+>>> The answer is that a GPU is only faster for particular (specialized) tasks. 
+One issue that we can run into is bottlenecks that slow our performance. 
+
+For example, moving data from the CPU to the GPU is costly, 
+so in this case, the overall performance might be slower >>  if the computation task is a simple one. 
+
+Remember, the GPU works well for >> tasks that can be broken into many smaller tasks,
+and if a compute task is already small, we won’t have much to gain by moving the task to the GPU.
 
 
 
