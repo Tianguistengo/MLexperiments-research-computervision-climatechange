@@ -883,6 +883,8 @@ At their core, all DL frameworks have 2 featues
 a tensor library (torch)
 and a package for computing derivatives (torch.autograd)
 
+Able to create a training loop for your own workflow. And that is the beauty of Pytorch.
+
 https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95
 
 
