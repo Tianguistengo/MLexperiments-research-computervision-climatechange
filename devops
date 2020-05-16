@@ -251,6 +251,7 @@ Creating tensors using data
 
 These are the primary ways of >>>  creating tensor objects (instances of the torch.Tensor class),
 with data (array-like) in PyTorch:
+(four ways to create a torch.Tensor object:)
 
     torch.Tensor(data)
     torch.tensor(data)
@@ -261,6 +262,120 @@ Let’s look at each of these.
 >> They all accept some form of data 
 and
 give us an instance of the torch.Tensor class.
+
+
+ Now, let’s create our tensors with each of these options 1-4, and have a look at what we get:
+
+> o1 = torch.Tensor(data)
+> o2 = torch.tensor(data)
+> o3 = torch.as_tensor(data)
+> o4 = torch.from_numpy(data)
+
+> print(o1)
+> print(o2)
+> print(o3)
+> print(o4)
+tensor([1., 2., 3.])
+tensor([1, 2, 3], dtype=torch.int32)
+tensor([1, 2, 3], dtype=torch.int32)
+tensor([1, 2, 3], dtype=torch.int32)
+
+All of the options (o1, o2, o3, o4) 
+appear to have produced the same tensors except for the first one.
+The first option (o1) has dots after the number indicating that the numbers are floats,
+while the next three options have a type of int32. 
+
+ Uppercase/lowercase: torch.Tensor() vs torch.tensor()
+
+Notice how the first option torch.Tensor() has an uppercase T 
+while the second option torch.tensor() has a lowercase t. 
+What’s up with this difference?
+
+The first option with the uppercase T is the --constructor-- of the torch.Tensor class,
+and the second option is what we call a --factory function--
+that constructs torch.Tensor objects 
+and returns them to the caller. 
+
+You can think of the torch.tensor() function
+as a factory that builds tensors given some parameter inputs.
+
+Factory functions are a software design pattern >>for creating objects. 
+
+But which way is better between these two? 
+The answer is that ----> it’s fine to use either one. 
+However, the factory function torch.tensor() has better documentation and more configuration options, 
+so it gets the winning spot at the moment. 
+
+
+torch.Tensor() and torch.tensor() >  --copy-- their input data 
+while torch.as_tensor() and torch.from_numpy() >  --share-- their input data in memory with the original input object. 
+
+
+  > Creation options   WITHOUT DATA
+
+Here are some other creation options that are available.
+
+>We have the torch.eye() function
+which returns a 2-D tensor with ones on the diagonal and zeros elsewhere.
+The name eye() is connected to the idea of an identity matrix ,
+which is a square matrix with ones on the main diagonal and zeros everywhere else.
+
+ print(torch.eye(2))
+tensor([
+    [1., 0.],
+    [0., 1.]
+])
+
+
+>We have the torch.zeros() function 
+that creates a tensor of zeros with the shape of specified shape argument. 
+
+ This task is a breeze if we are using numpy.ndarrays,
+ so congratulations if you are already familiar with NumPy. 
+
+print(torch.zeros([2,2]))
+tensor([
+    [0., 0.],
+    [0., 0.]
+])
+
+Similarly, we have the torch.ones() function that creates a tensor of ones.
+
+> print(torch.ones([2,2]))
+tensor([
+    [1., 1.],
+    [1., 1.]
+])
+
+ We also have the torch.rand() function that creates a tensor with a shape of the specified argument whose values are random.
+
+> print(torch.rand([2,2]))
+tensor([
+    [0.0465, 0.4557],
+    [0.6596, 0.0941]
+])
+
+This is a small subset of the available creation functions that don’t require data. Check with the PyTorch documentation for the full list. 
+
+
+
+In PyTorch, we transfer a tensor t to a GPU with:
+t.cuda()
+
+
+
+
+PyTorch tensors as we have seen are ---instances--- of the > torch.Tensor  PyTorch class. 
+The difference between the abstract concept of a tensor and a PyTorch tensor 
+is that PyTorch tensors give us a concrete implementation 
+that we can work with in code.
+
+
+
+
+
+
+
 
 
 
