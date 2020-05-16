@@ -49,7 +49,7 @@ PyTorch has taken the lead in usage in >>>>research papers at top conferences
 and almost closed the gap in Google search results. 
 TensorFlow remains three times more common in usage according to the most recent Stack Overflow Developer Survey.
 
-On 1st October 2019, the first stable version of TF2.0 was released.
+" On 1st October 2019, the first stable version of TF2.0 was released.
 The new features include tight integration with Keras,
 Eager Execution as default (finally 😅), 
 functions and not sessions, 
@@ -157,6 +157,119 @@ This gradient can be accessed by calling the .grad attribute.
 This is basically the gradient computed up to this particular node,
 and the gradient of the every subsequent node, can be computed by multiplying the edge weight 
 with the gradient computed at the node just before it.
+
+
+-
+Tensors 
+
+PyTorch Tensors Explained - Neural Network Programming - deeplizard
+
+"
+ PyTorch tensors are instances of the >>>>  torch.Tensor Python class. 
+ We can create a torch.Tensor object >> using the class constructor like so:
+
+> t = torch.Tensor()
+> type(t)
+torch.Tensor
+
+This creates an empty tensor (tensor with no data), but we'll get to adding data in just a moment.
+
+Tensor attributes:
+
+First, let’s look at a few tensor attributes. Every torch.Tensor has these attributes:
+
+  >  torch.dtype
+  >  torch.device
+  >  torch.layout
+
+Looking at our Tensor t, we can see the following default attribute values:
+
+> print(t.dtype)
+> print(t.device)
+> print(t.layout)
+torch.float32
+cpu
+torch.strided
+
+
+
+Tensors have a >>>>torch.dtype
+
+The dtype, which is torch.float32 in our case, 
+specifies the type of the data that is contained within the tensor. 
+Tensors contain uniform (of the same type) numerical data with one of these types: 
+
+
+Data type 	            dtype 	        CPU tensor 	       GPU tensor
+32-bit floating point 	torch.float32 	torch.FloatTensor 	torch.cuda.FloatTensor
+64-bit floating point 	torch.float64 	torch.DoubleTensor torch.cuda.DoubleTensor
+16-bit floating point 	torch.float16 	torch.HalfTensor 	 torch.cuda.HalfTensor
+8-bit integer (unsigned) torch.uint8 	torch.ByteTensor 	 torch.cuda.ByteTensor
+8-bit integer (signed)  torch.int8 	  torch.CharTensor 	 torch.cuda.CharTensor
+16-bit integer (signed) 	torch.int16 	torch.ShortTensor 	torch.cuda.ShortTensor
+32-bit integer (signed) 	torch.int32 	torch.IntTensor 	  torch.cuda.IntTensor
+64-bit integer (signed) 	torch.int64 	torch.LongTensor  	torch.cuda.LongTensor
+
+
+ >>> Tensors have a torch.device
+
+The device, cpu in our case, specifies the device (CPU or GPU) 
+where the tensor's data is >> allocated.
+This determines where tensor computations for the given tensor will be performed.
+
+PyTorch supports the use of multiple devices, and they are specified using an index like so:
+
+> device = torch.device('cuda:0')
+> device
+device(type='cuda', index=0)
+
+
+If we have a device like the above, we can create a tensor on the device
+by passing the device to the tensor’s constructor. 
+
+One thing to keep in mind about using multiple devices
+> is that tensor operations between tensors must happen between tensors that exists on the same device.
+
+Using multiple devices is typically something we will do as we become more advanced users
+
+
+
+>>  Tensors have a torch.layout
+
+The layout, strided in our case, specifies >> how the tensor is stored in memory.
+To learn more about stride check here.
+
+
+As neural network programmers, we need to be aware of the following:
+
+ >>   Tensors contain data of a uniform type (dtype).
+ >>   Tensor computations between tensors depend on the .dtype and the .device 
+ (tensos have to have same dtype and be on same device).
+
+Let’s look now at the common ways of creating tensors using data in PyTorch.
+Creating tensors using data
+
+These are the primary ways of >>>  creating tensor objects (instances of the torch.Tensor class),
+with data (array-like) in PyTorch:
+
+    torch.Tensor(data)
+    torch.tensor(data)
+    torch.as_tensor(data)
+    torch.from_numpy(data)
+
+Let’s look at each of these.
+>> They all accept some form of data 
+and
+give us an instance of the torch.Tensor class.
+
+
+
+
+
+
+
+
+
 
 
 
