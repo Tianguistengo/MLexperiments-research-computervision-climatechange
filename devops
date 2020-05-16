@@ -244,7 +244,7 @@ As neural network programmers, we need to be aware of the following:
 
  >>   Tensors contain data of a uniform type (dtype).
  >>   Tensor computations between tensors depend on the .dtype and the .device 
- (tensos have to have same dtype and be on same device).
+ (tensors have to have same dtype and be on the same device).
 
 Let’s look now at the common ways of creating tensors using data in PyTorch.
 Creating tensors using data
@@ -266,15 +266,15 @@ give us an instance of the torch.Tensor class.
 torch.Tensor() and torch.tensor() --copy-- their input data 
 while torch.as_tensor() and torch.from_numpy() --share-- their input data in memory with the original input object. 
 
-Share Data 	Copy Data
-torch.as_tensor() 	torch.tensor()
-torch.from_numpy() 	torch.Tensor()
+Share Data 	          Copy Data
+torch.as_tensor() 	   torch.tensor()
+torch.from_numpy() 	   torch.Tensor()
 
 This sharing just means that the --actual data in memory-- exists in a single place.
 As a result, any changes that occur in the underlying data >> will be reflected in both objects,
 the torch.Tensor and the numpy.ndarray.
 
-Sharing data is more efficient and uses less memory than copying data 
+>Sharing data is more efficient and uses less memory than copying data 
 because the data is not written to two locations in memory.
 
 If we have a torch.Tensor and we want to convert it to a numpy.ndarray, we do it like so:
@@ -291,7 +291,7 @@ The torch.from_numpy() function only accepts numpy.ndarrays,
 while the torch.as_tensor() function accepts a wide variety of array-like objects 
 including other PyTorch tensors.
 
-For this reason, torch.as_tensor() is the winning choice in the memory sharing game.
+For this reason, >>>   torch.as_tensor() is the winning choice in the memory sharing game.
 
 Best options for creating tensors in PyTorch
 Given all of these details, these two are the best options:
@@ -299,8 +299,12 @@ Given all of these details, these two are the best options:
     torch.tensor()
     torch.as_tensor()
 
-The torch.tensor() call is the sort of go-to call, 
+ ->>  torch.tensor() call is the sort of --go-to-- call, 
 while torch.as_tensor() should be employed when tuning our code for performance. 
+
+
+torch.tensor(d) copies d      and torch.as_tensor(d) shares memory with d.
+
 
  Some things to keep in mind about memory sharing (it works where it can):
 
@@ -328,6 +332,14 @@ We’ve learned about factory functions
 and we’ve seen how memory sharing vs copying can impact performance and program behavior. 
 
 
+type inference 
+is when the .tensor / .as_tensor / .from_numpy  guess what dtype the input data is.
+Note that the dtype > can also be explicitly set for these calls by specifying the dtype as an argument:
+(a configuration option that the constructor (Tensor, capital T) does not have.
+
+> torch.tensor(data, dtype=torch.float32)
+> torch.as_tensor(data, dtype=torch.float32)
+
 
 
 
@@ -336,7 +348,7 @@ and we’ve seen how memory sharing vs copying can impact performance and progra
 > o1 = torch.Tensor(data)
 > o2 = torch.tensor(data)
 > o3 = torch.as_tensor(data)
-> o4 = torch.from_numpy(data)
+> o4 = torch(data)
 
 > print(o1)
 > print(o2)
