@@ -904,6 +904,10 @@ using something called a dynamic computation graph (DCG).
 "    Note: By PyTorch’s design, gradients can only be calculated for -->floating point tensors which is 
 why I’ve created a -->float type numpy array before making it a gradient enabled PyTorch tensor
 
+RANK of a tensor
+is the number of dimensions within the tensor (2d array, 2d tensor, nd array, nd tensor ,etc..)
+(how many indixes are required to access an specific element in the tensor)
+
 
 Autograd:
 This class is an engine to calculate derivatives 
