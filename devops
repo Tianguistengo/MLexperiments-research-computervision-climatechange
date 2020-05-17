@@ -485,7 +485,18 @@ But if you do, then Pytorch will probably be a lot smoother of a ride.
 
 
 
+Ignite vs Lightning 
 
+At a base level, lightning implements distributed GPU, multi-node, 16-bit,
+auto-checkpoint and resubmit for cluster training. 
+>>The learning curve with lightning is also lower since it doesn’t make unnecessary wrappings.
+
+Further, lightning is also very thoroughly documented and well tested as is ignite.
+
+Basically, if you want to retain 99% of the control and are ok not having to deal with your own
+training loop, checkpointing, distributing, etc... then lighting is for you.
+It’s designed to give academics the most control without oversimplifying
+or making a whole new library someone has to learn.
 
 
 
