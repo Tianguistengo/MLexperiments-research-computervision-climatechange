@@ -469,12 +469,19 @@ and if a compute task is already small, we won’t have much to gain by moving t
 
 
 
+""In pytorch, you are required to know the input and output sizes of each of the layers,
+but this is one of the easier aspects which one can get the hang of quite quickly. 
+You don’t have to deal with building an abstract computational graph 
+which you can’t see inside of for debugging.
 
+Another plus for Pytorch is the smoothness in which you can go back and forth
+between Torch Tensors and Numpy arrays. 
+If you need to implement something custom, then going back and forth between TF tensors and Numpy arrays can be a pain, 
+requiring the developer to have a solid understanding of TensorFlow sessions.
 
-
-
-
-
+Of course, if you never have to implement anything fancy, then Keras will do just fine
+as you won’t run into any TensorFlow road blocks.
+But if you do, then Pytorch will probably be a lot smoother of a ride.
 
 
 
