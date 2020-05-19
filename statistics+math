@@ -85,6 +85,15 @@ is a technique that provides fault tolerance for computing systems.
 It basically consists of saving a snapshot of the application's state,
 so that applications can restart from that point in case of failure.
 
+-
+In computer science, Monte Carlo tree search (MCTS) 
+is a heuristic search algorithm for some kinds of decision processes, 
+most notably those employed in game play. 
+MCTS was introduced in 2006 for computer Go.
+It has been used in other board games like chess and shogi,
+games with incomplete information such as bridge and poker,
+as well as in turn-based-strategy video games
+
 
 --- 
 NAIVES BAYES
