@@ -499,6 +499,48 @@ It’s designed to give academics the most control without oversimplifying
 or making a whole new library someone has to learn.
 
 
+Lightning
+
+This is where lightning differs though. >> In PyTorch, you write the for loop yourself 
+which means you have to remember to call the correct things in the right order 
+— this leaves a lot of room for bugs.
+
+The Lightning Trainer
+The trainer is how we abstract the boilerplate code.
+
+
+# The dataloaders handle shuffling, batching, etc...
+mnist_train = DataLoader(mnist_train, batch_size=64)
+
+Full Training loop in Lightning
+
+The lightning version is EXACTLY the same except:
+
+    The core ingredients have been organized by the LightningModule
+    The training/validation loop code has been abstracted by the Trainer
+
+
+Highlights
+
+Let’s call out a few key points
+
+    Without Lightning, the PyTorch code is allowed to be in arbitrary parts. With Lightning, this is structured.
+    It is the same exact code for both except that it’s structured in Lightning. (worth saying twice lol).
+    As the project grows in complexity, your code won’t because Lightning abstracts out most of it.
+    You retain the flexibility of PyTorch because you have full control over the key points in training. For instance, you could have an arbitrarily complex training_step such as a seq2seq
+
+- bonus feature
+tensorboard logs (yup! you had to do nothing to get this)
+{Log using 5 other alternatives to Tensorboard}
+
+
+-TensorBoard 
+is a tool for providing the measurements and visualizations needed during the machine learning workflow.
+It enables tracking experiment metrics 
+like loss and accuracy, visualizing the model graph, 
+projecting embeddings to a lower dimensional space, and much more.
+
+
 
 
 
