@@ -13,3 +13,23 @@ To read:
 
 https://braininspired.co/course/
 https://braininspired.co/bibliography/
+
+
+
+
+-
+Listening to the Brain
+
+AI has added an unlikely language to its catalog of translation capabilities: brain waves.
+What’s new: Joseph Makin led a group from the University of California San Francisco to render a person's neural signals as English text while the person read a sentence aloud. Sometimes the system produced gibberish. For instance, it translated brain waves representing, “the woman is holding a broom” into “the little is giggling giggling.” But much of its output was very close to the spoken words: “The ladder was used to rescue the cat and the man” came out as “which ladder will be used to rescue the cat and the man.”
+Key insight: Brain activity isn’t spoken or readable in the usual sense, but it has structural similarities to language.
+How it works: Patients undergoing surgery for epilepsy had electrodes attached to the cortical surface. The researchers captured neural activity while the speaker read a sentence and discarded signals with the lowest strength. A model learned to translate the brain waves into a transcript. 
+
+    Brain scans often detect signals at different times relative to when they began. A convolutional filter applied across time captured the signals within a time window to account for mistimings.
+    A recurrent neural network learned to extract key features of a sequence of filtered brain activity one time window at a time. After that RNN extracted the features of an entire sequence, a second RNN learned to reconstruct the spoken sentence one word at a time based on the features and the previously predicted word.
+    During training, another network predicted features of the sentence’s sound based on the extracted features. This additional task helped the first RNN to extract brainwave features most closely related to the sentence.
+
+Results: The researchers evaluated their method by word error rate (WER) between true and predicted sentences. Trained on one person reading 50 distinct sentences, the network achieved a 3 percent WER. The network vastly outperformed the previous state of the art, which scored 60 percent WER measured on a different dataset.
+Yes, but: The researchers tested their network on a larger vocabulary than previous methods. Still, the vocabulary was small: only around 250 words. Classifying a brain wave as one of 250 words is easier than recognizing it among the 170,000 in the English language.
+Why it matters: The ability to find words in brain waves cracks open a sci-fi Pandora's box. It's worth emphasizing that the researchers read brain waves associated with speech, not necessarily thought. Yet it's amazing that the same learning algorithm works for both brain-to-language and language-to-language translations.
+We’re thinking: We look forward to upgrading Alexa from voice recognition to mind reading (except for the annoying detail of implanting electrodes in our brains).
