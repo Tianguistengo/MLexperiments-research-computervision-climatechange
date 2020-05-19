@@ -47,6 +47,43 @@ is NVIDIA's parallel computing architecture
 that enables dramatic increases in computing performance by harnessing the power of the GPU.
 
 
+-
+16 bit precision
+
+ revision of IEEE 754, published in 2008, defines a floating point format that occupies only 16 bits. 
+ Known as binary16, it is primarily intended to reduce storage and memory bandwidth requirements. 
+ Since it provides only "half" precision, its use for actual computation is problematic.
+ 
+  It is intended for storage of floating-point values in applications where
+  >higher precision is not essential for performing arithmetic computations. 
+  
+  
+  
+  -
+  What is Gradient Clipping?
+
+Gradient clipping is a technique to >>> prevent exploding gradients.
+There are many ways to compute gradient clipping,
+but a common one is to rescale gradients so that their norm is at most a particular value. 
+
+With gradient clipping, pre-determined gradient threshold be introduced,
+and  then gradients norms that exceed this threshold are scaled down to match the norm.  
+This prevents any gradient to have norm greater than the threshold and thus the gradients are clipped. 
+
+There is an introduced bias in the resulting values from the gradient, 
+but gradient clipping can keep things stable. 
+
+Why is this Useful?
+Training recurrent neural networks can be very difficult. 
+>>Two common issues with training recurrent neural networks are vanishing gradients and exploding gradients.
+
+
+-
+Checkpointing
+
+is a technique that provides fault tolerance for computing systems. 
+It basically consists of saving a snapshot of the application's state,
+so that applications can restart from that point in case of failure.
 
 
 --- 
