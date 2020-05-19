@@ -53,4 +53,21 @@ https://modelzoo.co/
 
 
 
+-
+https://arxiv.org/abs/2003.10580?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&utm_content=87877396&_hsenc=p2ANqtz-_ZL2dcAL98Qqiwx1e4NnPu9XvPQ8qz51EW3UEeJB3SIV5X17W94YLUh7KAuKZLiT7uGvcoQAhxBSTp-fWcxkTI4ZTt7Q&_hsmi=87877396
 
+
+Flexible Teachers, Smarter Students
+
+Human teachers can teach more effectively by adjusting their methods in response to student feedback. It turns out that teacher networks can do the same.
+What’s new: Hieu Pham led joint work by Carnegie Mellon and Google Brain that trained teacher models (larger, pretrained networks) to educate student models (smaller networks that learn from the teacher’s predictions) more effectively by observing and adjusting to student performance. The method’s name, Meta Pseudo Labels, refers to meta-learning: in this case, learning from predictions that have been tweaked to optimize their educational value rather than their accuracy. Pseudo labels are teacher classifications, either binary or values between 0 and 1, that a student learns to re-create.
+Key insight: A teacher may generate predictions showing that one dog looks more like a wolf than a cat, while another dog falls in between. But its pseudo label “dog” doesn’t capture that difference. For instance, a model considering two images may output [0.8, 0.2, 0.0] and [0.6, 0.2, 0.2] to express its confidence that they depict a dog, wolf, or cat. Both classifications reflect high confidence that the image is a dog, but they contain more nuanced information. Rather than receiving only the highest-confidence classifications, the student will learn better if the teacher adjusts its predictions to exaggerate, say, the dogishness of wolfish dogs. For example, the teacher may change [0.8, 0.2, 0.0] to [0.9, 0.1, 0.0].
+How it works: WideResNet-28-2 and ResNet 50 teachers taught EfficientNet students how to recognize images from CIFAR-10 , SVHN, and ImageNet.
+
+    The student learns from a minibatch of images classified by the teacher. Then the student makes predictions on some of the validation set. The teacher learns to minimize the student’s validation loss. The student learns from the teacher’s prediction distribution, so backpropagation can update the teacher based on student errors. Then the process repeats for the next minibatch.
+    It may take many training steps before the teacher learns a better distribution. (As any teacher will tell you, the longer students are confused, the less they learn, and the more the teacher must adjust.) The teacher also learns from a small amount of labeled data in the validation set to prevent mis-teaching the student early in training.
+    Training the teacher on the validation set may look like a bad idea, but the student is never directly exposed to the validation set’s labels. The teacher’s additional knowledge helps the student generalize without overfitting the validation set.
+
+Results: Meta Pseudo Labels produced a student with higher ImageNet accuracy (86.9 percent) than a supervised model (84.5 percent). The improvements remained when using a limited number of labels from each dataset, where MPL achieved CIFAR-10 accuracy of 83.7 percent compared with a supervised model’s 82.1, and SVHN accuracy to 91.9 percent compared with 88.2. 
+Why it matters: Student-teacher training began as a compression technique. But lately Noisy Student and Meta Pseudo Labels are making it a competitive approach to training models that generalize.
+We’re thinking: At deeplearning.ai, we aim to keep improving our instruction based on student feedback — but please make your feedback differentiable.
