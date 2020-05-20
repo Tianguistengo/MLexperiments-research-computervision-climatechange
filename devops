@@ -487,6 +487,10 @@ But if you do, then Pytorch will probably be a lot smoother of a ride.
 
 Ignite vs Lightning 
 
+I really like PyTorch and I'm not alone. However, there is one aspect where PyTorch is not too user-friendly.
+PyTorch does not have a nice high-level fit function, i.e. a fit interface like scikit-learn or keras.
+That is the complaint I hear most often about PyTorch.
+
 At a base level, lightning implements distributed GPU, multi-node, 16-bit,
 auto-checkpoint and resubmit for cluster training. 
 >>The learning curve with lightning is also lower since it doesn’t make unnecessary wrappings.
