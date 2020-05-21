@@ -485,6 +485,31 @@ But if you do, then Pytorch will probably be a lot smoother of a ride.
 
 
 
+pytorch
+"
+3) Easy to debug networks. Any time you find any problem with the network,
+just use something like print("avg_pool", avg_pool.size()) in the forward pass 
+to check the sizes of the layer and you will debug the network easily.
+
+4) You can return multiple outputs from the forward layer.
+This is pretty helpful in the Encoder-Decoder architecture 
+where you can return both the encoder and decoder output. 
+Or in the case of autoencoder where you can 
+return the output of the model and the hidden layer embedding for the data.
+
+5) Pytorch tensors work in a very similar manner to numpy arrays. 
+For example, I could have used Pytorch Maxpool function to write the
+maxpool layer but
+max_pool, _ = torch.max(h_gru, 1) 
+will also work.
+
+6) You can set up different layers with different initialization schemes.
+Something you won’t be able to do in Keras. 
+For example, in the below network I have changed the initialization scheme of my LSTM layer. 
+The LSTM layer has different initializations for biases, input layer weights, and hidden layer weights.
+
+
+
 Ignite vs Lightning 
 
 I really like PyTorch and I'm not alone. However, there is one aspect where PyTorch is not too user-friendly.
