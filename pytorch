@@ -542,5 +542,31 @@ It enables tracking experiment metrics
 like loss and accuracy, visualizing the model graph, 
 projecting embeddings to a lower dimensional space, and much more.
 
+-
+Tensor operations:
+
+
+    Reshaping operations
+    Element-wise operations
+    Reduction operations
+    Access operations
+
+Reshaping operations--- gave us the ability to position our elements along particular axes.
+
+Element-wise operations ----allow us to perform operations on elements BETWEEN two tensors. 
+
+Reduction operations ------allow us to perform operations on elements WITHIN a single tensor. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
