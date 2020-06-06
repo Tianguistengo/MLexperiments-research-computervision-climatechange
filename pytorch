@@ -557,6 +557,37 @@ Element-wise operations ----allow us to perform operations on elements BETWEEN t
 
 Reduction operations ------allow us to perform operations on elements WITHIN a single tensor. 
 
+Access operations ---  the ability to ACCESS data from WITHIN the tensor. 
+
+
+ Common tensor reduction operations
+
+> t.sum()
+tensor(8.)
+
+> t.prod()
+tensor(0.)
+
+> t.mean()
+tensor(.8889)
+
+> t.std()
+tensor(1.1667)
+
+
+When we call the argmax() method on a tensor,
+the tensor is reduced to a new tensor that contains an index value
+indicating where the max value is inside the tensor.
+
+In practice, we often use the argmax() function on a network’s output prediction tensor,
+to determine which category has the highest prediction value. 
+(and this is because each index of the output tensor
+typically corresponds to a particular prediction category/class)
+
+
+
+
+
 
 
 
