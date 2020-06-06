@@ -1,6 +1,10 @@
 ----------->   Pytorch
 
+bibliography
 https://towardsdatascience.com/getting-started-with-pytorch-part-1-understanding-how-automatic-differentiation-works-5008282073ec
+deeplizard.com 
+https://pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html
+
 
 What makes it really luring is it’s ---> dynamic computation graph paradigm. <---
 Don’t worry if the last line doesn’t make sense to you now.
@@ -585,12 +589,82 @@ to determine which category has the highest prediction value.
 typically corresponds to a particular prediction category/class)
 
 
+--
+ To prepare our data, 
+ we'll be following what is loosely known as an ETL process.
+
+    Extract data from a data source.
+    Transform data into a desirable format.
+    Load data into a suitable structure.
 
 
+    Extract –     Get the Fashion-MNIST image data from the source.
+    Transform –   Put our data into tensor form.
+    Load –        Put our data into an object to make it easily accessible.
+
+ For these purposes, PyTorch provides us with two classes:
+ 
+Class 	                      Description
+
+torch.utils.data.Dataset 	   An abstract class for representing a dataset.
+
+torch.utils.data.DataLoader 	Wraps a dataset and provides access to the underlying data. 
 
 
+ PyTorch Dataset class
+
+To get an instance of the FashionMNIST dataset using torchvision, we just create one like so:
+
+train_set = torchvision.datasets.FashionMNIST(
+    root='./data'
+    ,train=True
+    ,download=True
+    ,transform=transforms.Compose([
+        transforms.ToTensor()
+    ])
+)
+
+Note that the root argument used to be './data/FashionMNIST', however, it has since changed due to torchvision updates.
+
+We specify the following arguments:
+Parameter 	Description
+root 	     The location on disk where the data is located.
+train     	If the dataset is the training set
+download  	If the data should be downloaded.
+transform 	A composition of transformations that should be performed on the dataset elements.
+
+Since we want our images to be transformed into tensors, 
+we use the built-in transforms.ToTensor() transformation, 
+and since this dataset is going to be used for training, we’ll name the instance train_set.
+
+When we run this code for the first time, the Fashion-MNIST dataset will be downloaded locally. 
+Subsequent calls check for the data before downloading it. 
+Thus, we don't have to worry about double downloads or repeated network calls.
+PyTorch DataLoader class
+
+To create a DataLoader wrapper for our training set, we do it like this:
+
+train_loader = torch.utils.data.DataLoader(train_set
+    ,batch_size=1000
+    ,shuffle=True
+)
+
+We just pass train_set as an argument.
+Now, we can leverage the loader for tasks that would otherwise be pretty complicated to implement by hand:
+
+    batch_size (1000 in our case)
+    shuffle (True in our case)
+    num_workers (Default is 0 which means the main process will be used)
 
 
+--
+ The torchvision package, 
+ gives us access to the following resources:
+
+    Datasets (like MNIST and Fashion-MNIST)
+    Models (like VGG16)
+    Transforms
+    Utils
 
 
 
