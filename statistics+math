@@ -103,3 +103,22 @@ to predict the path (moves) that should be taken by the policy to reach the fina
 NAIVES BAYES
 
 why is it called naives?
+
+
+---
+Difference between gradients and derivatives
+
+The gradient is a vector; it points in the direction of steepest ascent.
+
+The directional derivative is a number; it is the rate of change when your point in ℝ3
+moves in that direction. 
+
+Be careful that directional derivative of a function is a scalar while gradient is a vector.
+
+The only difference between derivative and directional derivative is the definition of those terms. Remember:
+
+    Directional derivative is the instantaneous rate of change (which is a scalar) of 𝑓(𝑥,𝑦)
+     in the direction of the unit vector 𝑢
+
+   Derivative is the rate of change of 𝑓(𝑥,𝑦)
+   , which can be thought of the slope of the function at a point (𝑥0,𝑦0).
