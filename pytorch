@@ -668,6 +668,136 @@ Now, we can leverage the loader for tasks that would otherwise be pretty complic
 
 
 
+--
+Resizing: If you want to resize/reshape tensor, you can use torch.view:
+
+x = torch.randn(4, 4)
+y = x.view(16)
+z = x.view(-1, 8)   # the size -1 is inferred from other dimensions
+print(x.size(), y.size(), z.size())
+
+Out:
+
+torch.Size([4, 4]) torch.Size([16]) torch.Size([2, 8])
+
+
++++++++++++      100+ Tensor operations   https://pytorch.org/docs/stable/torch.html
+
+
+-
+Converting a Torch Tensor to a NumPy array and vice versa is a breeze.
+
+The Torch Tensor and NumPy array will share their underlying memory locations (if the Torch Tensor is on CPU), 
+and changing one will change the other.
+
+b = a.numpy()
+print(b)
+
+and from numpy to tensor
+
+import numpy as np
+a = np.ones(5)
+b = torch.from_numpy(a)
+
+
+
+CUDA Tensors
+
+Tensors can be moved onto any device using the .to method.
+
+
+
+--
+Autograd
+
+The autograd package provides automatic differentiation for all operations on Tensors. 
+It is a define-by-run framework,
+which means that your backprop is defined by how your code is run,
+and that every single iteration can be different.
+
+torch.Tensor   --->is the central class of the package. 
+If you set its attribute .requires_grad as True, it starts to track all operations on it. 
+When you finish your computation you can call .backward() and have all the gradients computed automatically.
+The gradient for this tensor will be accumulated into .grad attribute.
+
+To stop a tensor from tracking history, you can call .detach() 
+to detach it from the computation history, and to prevent future computation from being tracked.
+
+To prevent tracking history (and using memory),
+you can also wrap the code block in with torch.no_grad():. 
+This can be particularly helpful when evaluating a model 
+because the model may have trainable parameters with requires_grad=True, but for which we don’t need the gradients.
+
+There’s one more class which is very important for autograd implementation - a  --->   Function.
+
+Tensor and Function    -->  are interconnected and build up an acyclic graph, 
+that encodes a complete history of computation. 
+Each tensor has a   .grad_fn    attribute that references a Function that has created the Tensor 
+(except for Tensors created by the user - their grad_fn is None).
+
+If you want to compute the derivatives, you can call .backward() on a Tensor. 
+If Tensor is a scalar (i.e. it holds a one element data), you don’t need to specify any arguments to backward(),
+however, if it has more elements, you need to specify a gradient argument that is a tensor of matching shape.
+
+import torch
+
+Create a tensor and set requires_grad=True to track computation with it
+
+x = torch.ones(2, 2, requires_grad=True)
+print(x)
+
+Do a tensor operation:
+
+y = x + 2
+print(y)
+
+Out:
+
+tensor([[3., 3.],
+        [3., 3.]], grad_fn=<AddBackward0>)
+
+y was created as a result of an operation, so it has a grad_fn.
+
+print(y.grad_fn)
+
+Out:
+
+<AddBackward0 object at 0x7f1d35f45ef0>
+
+
+.requires_grad_( ... )
+changes an existing Tensor’s requires_grad flag in-place. 
+The input flag defaults to False if not given.
+
+
+
+Generally speaking, torch.autograd is an engine for computing ---->  vector-Jacobian product.
+
+
+
+class
+torch.autograd.Function
+
+
+    Records operation history and defines formulas for differentiating ops.
+
+    Every operation performed on Tensor s creates a new function object, that performs the computation,
+    and records that it happened. The history is retained in the form of a DAG of functions,
+    with edges denoting data dependencies (input <- output). 
+    Then, when backward is called, the graph is processed in the topological ordering,
+    by calling backward() methods of each Function object, and passing returned gradients on to next Function s.
+
+    Normally, the only way users interact with functions is by creating subclasses and defining new operations. 
+    This is a recommended way of extending torch.autograd.
+
+
+
+
+
+
+
+
+
 
 
 
