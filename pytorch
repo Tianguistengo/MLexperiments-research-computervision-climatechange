@@ -837,6 +837,11 @@ The dimension of tensor passed into .backward()
 must be the same as the dimension of the tensor whose gradient is being calculated.
 
 
+- A dataloader 
+creates batches of the dataset and shuffles them
+
+
+
 ---
 Neural networks
 
