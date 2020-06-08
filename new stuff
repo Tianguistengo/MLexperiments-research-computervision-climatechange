@@ -171,6 +171,29 @@ Until better small-data algorithms emerge, GAN-based simulation looks like an ex
 
 
 
+--
+One-shot learning
+
+https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d
+
+ There are applications wherein we neither have enough data for each class and the total number classes is huge 
+ as well as dynamically changing. 
+ Thus, the cost of data collection and periodical re-training is -->  too high.
+ 
+ 
+
+
+--
+Siamese networks
+
+Typically the similarity score is squished between 0 and 1 using a sigmoid function;
+wherein 0 denotes no similarity and 1 denotes full similarity. 
+Any number between 0 and 1 is interpreted accordingly.
+
+
+
+
+
 
 
 
