@@ -257,4 +257,45 @@ Kihyuk Sohn, David Berthelot, Chun-Liang Li, Zizhao Zhang, Nicholas Carlini, Eki
 
 
 
+---
+
+Q Learning
+
+
+Q-learning is an off policy reinforcement learning algorithm 
+that seeks to find the best action to take given the current state. 
+
+It’s considered off-policy because the q-learning function learns from actions that are outside the current policy,
+like taking random actions, and therefore a policy isn’t needed. 
+
+More specifically, q-learning seeks to learn a policy that maximizes the total reward.
+
+The ‘q’ in q-learning stands for quality. 
+Quality in this case represents how useful a given action is in gaining some future reward.
+
+Create a q-table
+When q-learning is performed we create what’s called a q-table or matrix 
+that follows the shape of [state, action] and we initialize our values to zero.
+We then update and store our q-values after an episode. 
+This q-table becomes a reference table for our agent to select the best action based on the q-value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
