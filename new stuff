@@ -192,14 +192,68 @@ Any number between 0 and 1 is interpreted accordingly.
 
 
 
+--
+
+Deep Double Descent
+
+OpenAI
+
+We show that the double descent phenomenon occurs in CNNs, ResNets, and transformers: performance first improves,
+then gets worse, and then improves again with increasing model size, data size, or training time. 
+This effect is often avoided through careful regularization.
+While this behavior appears to be fairly universal, we don’t yet fully understand why it happens,
+and view further study of this phenomenon as an important research direction.
+
+Moreover, we show that double descent occurs not just as a function of model size,
+but also as a function of the number of training epochs. 
+
+We unify the above phenomena by defining a new complexity measure 
+we call the effective model complexity 
+and conjecture a generalized double descent with respect to this measure. 
+
+Furthermore, our notion of model complexity allows us to identify certain regimes 
+where increasing (even quadrupling) the number of train samples 
+actually hurts test performance.
 
 
 
+---
+
+Life long ML
+Chen and Lei
+
+Lifelong Machine Learning or Lifelong Learning (LL) is an advanced machine learning (ML) paradigm 
+that learns continuously, accumulates the knowledge learned in the past,
+and uses/adapts it to help future learning and problem solving. 
+In the process, the learner becomes more and more knowledgeable and better and better at learning.
 
 
 
+__
+Semi supervised learning
 
+FixMatch: Simplifying Semi-Supervised Learning with Consistency and Confidence
 
+Kihyuk Sohn, David Berthelot, Chun-Liang Li, Zizhao Zhang, Nicholas Carlini, Ekin D. Cubuk, Alex Kurakin, Han Zhang, Colin Raffel
+
+    Semi-supervised learning (SSL) provides an effective means of leveraging unlabeled data
+    to improve a model's performance.
+    In this paper, we demonstrate the power of a simple combination of two common SSL methods:
+    consistency regularization and pseudo-labeling.
+    
+    Our algorithm, FixMatch, first generates pseudo-labels
+    using the model's predictions on weakly-augmented unlabeled images.
+    
+    >>For a given image, the pseudo-label is only retained if the model produces a high-confidence prediction.
+    The model is then trained to predict the pseudo-label when fed a strongly-augmented version of the same image.
+    Despite its simplicity, we show that FixMatch achieves state-of-the-art performance 
+    across a variety of standard semi-supervised learning benchmarks,
+    including 94.93% accuracy on CIFAR-10 with 250 labels and 88.61% accuracy with 40 -- just 4 labels per class.
+    
+    Since FixMatch bears many similarities to existing SSL methods 
+    that achieve worse performance, we carry out an extensive ablation study
+    to tease apart the experimental factors that are most important to FixMatch's success.
+    We make our code available at this https URL. 
 
 
 
