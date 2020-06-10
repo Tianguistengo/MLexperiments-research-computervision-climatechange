@@ -299,7 +299,77 @@ tf.keras.layers.Lambda(
     # Add a customized layer to compute the absolute difference between the encodings
     L1_layer = Lambda(lambda tensors:K.abs(tensors[0] - tensors[1]))
     L1_distance = L1_layer([encoded_l, encoded_r])
+    
+    
+    --
+    Lambda functions
+    
+    Python and other languages like Java, C#, and even C++ have had lambda functions added to their syntax,
+    whereas languages like LISP or the ML family of languages, Haskell, OCaml, and F#, use lambdas as a core concept.
 
+>>Python lambdas are little, anonymous functions, 
+subject to a more restrictive but more concise syntax than regular Python functions.
+
+By the end of this article, you’ll know:
+
+    How Python lambdas came to be
+    How lambdas compare with regular function objects
+    How to write lambda functions
+    Which functions in the Python standard library leverage lambdas
+    When to use or avoid Python lambda functions
+    
+    History
+
+Alonzo Church formalized lambda calculus,
+a language based on pure abstraction, in the 1930s. 
+Lambda functions are also referred to as lambda abstractions, 
+a direct reference to the abstraction model of Alonzo Church’s original creation.
+
+Lambda calculus can encode any computation. 
+It is Turing complete, but contrary to the concept of a Turing machine, it is pure and >>does not keep any state.
+
+Functional languages
+get their origin in mathematical logic and lambda calculus,
+while imperative programming languages
+embrace the state-based model of computation invented by Alan Turing.
+The two models of computation, lambda calculus and Turing machines, can be translated into each another.
+This equivalence is known as the Church-Turing hypothesis.
+
+Functional languages directly inherit the lambda calculus philosophy,
+adopting a declarative approach of programming that emphasizes abstraction,
+data transformation, composition, and purity (no state and no side effects).
+Examples of functional languages include Haskell, Lisp, or Erlang.
+
+By contrast, the Turing Machine led to imperative programming found in languages like Fortran, C, or Python.
+
+The imperative style consists of programming with statements,
+driving the flow of the program step by step with detailed instructions.
+This approach promotes mutation and requires managing state.
+
+Python is not inherently a functional language,
+but it adopted some functional concepts early on. 
+In January 1994, map(), filter(), reduce(), and the lambda operator were added to the language.
+
+The following terms may be used interchangeably depending on the programming language type and culture:
+
+    Anonymous functions
+    Lambda functions
+    Lambda expressions
+    Lambda abstractions
+    Lambda form
+    Function literals
+
+For the rest of this article after this section, you’ll mostly see the term lambda function.
+
+Taken literally, an anonymous function is a function without a name.
+In Python, an anonymous function is created with the lambda keyword. 
+More loosely, it may or not be assigned a name.
+Consider a two-argument anonymous function defined with lambda but not bound to a variable.
+The lambda is not given a name:
+
+>>> lambda x, y: x + y
+
+The function above defines a lambda expression that takes two arguments and returns their sum.
 --
 
 Deep Double Descent
