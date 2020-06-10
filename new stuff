@@ -282,15 +282,99 @@ This q-table becomes a reference table for our agent to select the best action b
 
 
 
+--
+Graph Deep Learning (GDL) 
+Graph Neural Network (GNN)
+https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
 
+The black arrows on the edges represent the kind of relationship between the nodes.
+It shows whether a relationship is mutual or one-sided.
+The two different kinds of graphs are 
+---directed (connection direction matters between nodes)
+----- undirected (connection order doesn’t matter). 
+Directed graphs can be unidirectional or bidirectional in nature.
 
+A graph can represent many things — social media networks, molecules, etc.
+Nodes can be thought of as users/products/atoms 
+while the edges represent connections (following/usually-purchased-with/bonds). 
+A social media graph may look like this with nodes as users and edges as connections
 
+Each node has a set of features defining it. 
+In the case of social network graphs, this could be age, gender, country of residence, political leaning, and so on. 
+Each edge may connect nodes together that have similar features. (yo/ necessarily similar? nah, otras relaciones tmb)
+It shows some kind of interaction or relationship between them.
 
+Message Passing
+Once the conversion of nodes and edges are completed,
+the graph performs Message Passing between the nodes. 
+This process is also called Neighbourhood Aggregation 
+because it involves pushing messages (aka, the embeddings) 
+from surrounding nodes around a given reference node, through the directed edges. (feed forward nns)
 
+Once you perform the Neighbourhood Aggregation/Message Passing procedure a few times,
+you obtain a completely new set of embeddings for each nodal recurrent unit.
 
+Through the timesteps/rounds of Message Passing, 
+the nodes know more about their own information (features) and that of neighbouring nodes. 
+This creates an even more accurate representation of the entire graph.
 
+For further processing in higher layers of a pipeline, or simply to represent the graph,
+you can take all the embeddings and sum them up together
+to get vector H that represents the whole graph.
 
+((To summarise this step, we sum together the final vector representations
+of all nodal recurrent units (order-invariant,of course)
+use this resulting vector as inputs to other pipelines
+or to simply represent the graph.))
 
+GNNs are fairly simple to use. In fact, implementing them involved four steps.
+
+    1.Given a graph, we first convert the nodes to recurrent units
+    and the edges to feed-forward neural networks.
+    2.Then we perform Neighbourhood Aggregation (Message Passing, if that sounds better) 
+    for all nodes n number of times.
+    3.Then we sum over the embedding vectors of all nodes 
+    to get graph representation H.
+    4.Feel free to pass H into higher layers
+    or use it to represent the graph’s unique properties!
+
+Why Graph Neural Networks?
+Now that we know how Graph Neural Networks work, why would we want to apply/use them?
+In the case of social media graphs, GNNs are great at content recommendation. 
+When a user follows other users with a similar taste in political leaning (for example), 
+GNNs can be used for node classification
+to predict if a certain piece of content on the site 
+can be sent to the news feed of said user.
+
+When suggesting “who to follow”, systems can take into account the industry of the user 
+and provide potential connections — edge classification.
+
+There are also great resources to learn about GDL algorithms 
+and different ways to capture lots of sequential and spatial aspects from graph representations.
+
+https://github.com/rusty1s/pytorch_geometric
+https://pytorch-geometric.readthedocs.io/
+https://www.dgl.ai/
+http://geometricdeeplearning.com/
+
+Geometric Learning
+In the last decade, Deep Learning approaches (e.g. Convolutional Neural Networks and Recurrent Neural Networks)
+allowed to achieve unprecedented performance on a broad range of problems
+coming from a variety of different fields (e.g. Computer Vision and Speech Recognition).
+
+Despite the results obtained, 
+research on DL techniques has mainly focused so far on data defined on Euclidean domains (i.e. grids).
+
+Nonetheless, in a multitude of different fields, such as: Biology, Physics, Network Science,
+Recommender Systems and Computer Graphics; 
+one may have to deal with data defined on non-Euclidean domains (i.e. graphs and manifolds).
+
+The adoption of Deep Learning in these particular fields has been lagging behind until very recently,
+primarily since the non-Euclidean nature of data 
+makes the definition of basic operations (such as convolution) rather elusive.
+
+Geometric Deep Learning deals in this sense 
+with the extension of Deep Learning techniques to graph/manifold structured data.
 
 
 
