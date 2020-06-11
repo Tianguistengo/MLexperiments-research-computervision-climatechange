@@ -264,6 +264,57 @@ NameError: 'spam'
 (Pdb)
 
 
+--
+Numpy
+
+NumPy’s main object is the homogeneous multidimensional array.
+It is a table with same type elements, 
+i.e, integers or string or characters (homogeneous), usually integers. 
+
+In NumPy, dimensions are called axes.
+The number of axes is called the rank.
+
+
+Some of the important attributes of a NumPy object are:
+
+    Ndim: displays the dimension of the array
+    Shape: returns a tuple of integers indicating the size of the array
+    Size: returns the total number of elements in the NumPy array
+    Dtype: returns the type of elements in the array, i.e., int64, character
+    Itemsize: returns the size in bytes of each item
+    Reshape: Reshapes the NumPy array
+
+NumPy array elements can be accessed using indexing. Below are some of the useful examples:
+
+    A[2:5] will print items 2 to 4. Index in NumPy arrays starts from 0
+    A[2::2] will print items 2 to end skipping 2 items
+    A[::-1] will print the array in the reverse order
+    A[1:] will print from row 1 to end
+    
+Since Machine Learning requires lots of scientific calculations, 
+it is much better to use NumPy’s ndarray, which provides a lot of convenient and optimized 
+implementations of essential mathematical operations on vectors.
+
+Vectorized operations perform faster than
+matrix manipulation operations performed using loops in python. 
+
+ndarray slices are actually views on the same data buffer. 
+If you modify it, it is going to modify the original ndarray as well.
+
+
+The way multidimensional arrays are accessed using NumPy 
+is different from how they are accessed in normal python arrays.
+The generic format in NumPy multi-dimensional arrays is:
+
+Array[row_start_index  :  row_end_index, column_start_index  :  column_end_index]
+
+
+
+
+
+
+
+
 
 
 
