@@ -219,7 +219,18 @@ the following is the correct function from the pandas package to import a CSV fi
 
 read_csv()
 
+--
+Pickle Module
 
+Python pickle module is used for serializing and de-serializing
+a Python object structure.
+
+Any object in Python can be pickled so that it can be saved on disk. 
+What pickle does is that it “serializes” the object first before writing it to file.
+Pickling is a way to convert a python object (list, dict, etc.)
+into a character stream.
+The idea is that this character stream contains all the information necessary to reconstruct
+the object in another python script.
 
 
 
