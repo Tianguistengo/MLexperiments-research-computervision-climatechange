@@ -233,6 +233,38 @@ The idea is that this character stream contains all the information necessary to
 the object in another python script.
 
 
+--
+pdb — The Python Debugger
+
+Source code: Lib/pdb.py
+
+The module pdb defines an interactive source code debugger for Python programs.
+It supports setting (conditional) breakpoints and single stepping at the source line level,
+inspection of stack frames, source code listing, and evaluation of arbitrary Python code
+in the context of any stack frame. 
+It also supports post-mortem debugging
+and can be called under program control.
+
+The debugger is extensible – it is actually defined as the class Pdb.
+This is currently undocumented but easily understood by reading the source.
+The extension interface uses the modules bdb and cmd.
+
+The debugger’s prompt is (Pdb). Typical usage to run a program under control of the debugger is:
+>>>
+
+>>> import pdb
+>>> import mymodule
+>>> pdb.run('mymodule.test()')
+> <string>(0)?()
+(Pdb) continue
+> <string>(1)?()
+(Pdb) continue
+NameError: 'spam'
+> <string>(1)?()
+(Pdb)
+
+
+
 
 
 
