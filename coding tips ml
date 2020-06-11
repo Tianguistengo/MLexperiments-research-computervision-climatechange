@@ -130,6 +130,100 @@ Hadley Wickham later defined "Tidy Data" as data sets that are arranged such tha
 each variable is a column and each observation (or case) is a row.
 
 
+--
+Consider the Pandas DataFrame score below.
+Identify any missing data, printing True for missing values, and False for non-missing values.
+
+    id  math  physics
+0  101  90.0     88.0
+1  102   NaN     89.0
+2  103  85.0      NaN
+
+Complete the code to return the output
+
+>>>score.isnull()
+
+
+
+--
+An online games platform would like to assign a special status 
+to their users based on the number of experience points (xp) that users have.
+The user_xp DataFrame contains the user_ids and xp per user. 
+Use Pandas method to create a new status column that indicates a user's special status.
+The bins and labels have been defined for you based on the xp status table.
+
+-- xp status
+[0 - 125 000)        Bronze
+[125 000 - 250 000)  Silver
+[250 000 - 375 000)  Gold
+[375 000 - 500 000)  Platinum
+[500 000 - inf)      Diamond
+
+Complete the code to return the output
+
+import pandas as pd
+
+bins = [0, 125000, 250000, 375000, 500000, float('inf')]
+labels = ["bronze", "silver", "gold", "platinum", "diamond"]
+
+
+user_xp['status'] = pd.cut(user_xp['xp'], bins=bins, labels=labels)
+
+user_xp.head()
+
+Expected Output
+
+
+   user_id      xp    status
+   
+0  1520965  292382      gold
+1  1577585   45308    bronze
+2   706833  493393  platinum
+3  1303891  342382      gold
+4   650641  127259    silver
+
+
+--
+Consider the Pandas DataFrame df below. 
+Change the data type of the column height to integer.
+
+      name  height
+0  Heather   160.3
+1    Chris   175.1
+2      Eva   165.4
+
+Complete the code to return the output
+
+df.height.astype('int64')
+
+
+--
+You have imported the food data and now want to view the first few rows to perform a quick visual inspection of the data.
+Print the first 5 rows of the data.
+
+print(food.head())
+
+--
+import the JSON file data.json >> as a Pandas DataFrame.
+
+
+import json
+import pandas as pd
+
+x = pd.read_json('data.json')
+
+
+
+--
+the following is the correct function from the pandas package to import a CSV file
+
+read_csv()
+
+
+
+
+
+
 
 
 
