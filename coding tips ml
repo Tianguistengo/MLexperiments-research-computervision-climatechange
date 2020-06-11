@@ -111,7 +111,23 @@ int
 
 
 
+--
+The following statements are true of a tidy (also known as "long-format") dataset?
 
+    Each variable must have its own column.
+    Each observation must have its own row.
+    
+tidy data is an alternative name for the common statistical form called a model matrix 
+or data matrix. A data matrix is defined in [1] as follows:
+
+    A standard method of displaying a multivariate set of data 
+    is in the form of a data matrix in which rows correspond to sample individuals 
+    and columns to variables, 
+    so that the entry in the ith row and jth column gives the value of the jth variate
+    as measured or observed on the ith individual.
+
+Hadley Wickham later defined "Tidy Data" as data sets that are arranged such that
+each variable is a column and each observation (or case) is a row.
 
 
 
