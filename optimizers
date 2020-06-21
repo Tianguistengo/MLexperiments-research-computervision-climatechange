@@ -52,20 +52,27 @@ Adam is definitely one of the best optimization algorithms for deep learning and
 While people have noticed some problems with using Adam in certain areas,
 researches continue to work on solutions to bring Adam results to be on par with --SGD with momentum.--
 
-Momentum or SGD with momentum
-is method which helps accelerate gradients vectors in the right directions, thus leading to faster converging.
+-->>Momentum or SGD with momentum
+
+is method which helps accelerate gradients vectors in the right directions,
+thus leading to faster converging.
+
  Instead of using only the gradient of the current step to guide the search, 
  --momentum also accumulates the gradient of the past steps to determine the direction to go. --
+ 
  Momentum is a heavy ball rolling down the same hill. 
+ 
  The added inertia acts both as a smoother and an accelerator, 
  dampening oscillations and causing us to barrel through narrow valleys, small humps and local minima.
 
    - Adaptive Gradient Algorithm (AdaGrad) 
-    that maintains a per-parameter learning rate that improves performance on problems with sparse gradients 
+    that maintains a per-parameter learning rate 
+    that improves performance on problems with sparse gradients 
     (e.g. natural language and computer vision problems).
    
   - Root Mean Square Propagation (RMSProp)
-   that also maintains per-parameter learning rates that are adapted based on 
+   that also maintains per-parameter learning rates 
+   >that are adapted based on 
    the average of recent magnitudes of the gradients for the weight (e.g. how quickly it is changing). 
    This means the algorithm does well on online and non-stationary problems (e.g. noisy).
 
