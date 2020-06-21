@@ -555,7 +555,24 @@ Geometric Deep Learning deals in this sense
 with the extension of Deep Learning techniques to graph/manifold structured data.
 
 
+--
+A Theory of Fermat Paths for Non-Line-of-Sight Shape Reconstruction
 
+We present a novel theory of Fermat paths of light
+between a known visible scene and an unknown object not in the line of sight of a transient camera. 
+
+These light paths either obey specular reflection or are reflected by the object’s boundary,
+and hence encode the shape of the hidden object.
+
+We prove that Fermat paths correspond to discontinuitiesin the transient measurements. 
+We then derive a novel constraint 
+that relates the spatial derivatives of the path lengths at these discontinuities to the surface normal.
+
+Based on this theory, we present an algorithm, called Fermat Flow, 
+to es-timate the shape of the non-line-of-sight object.
+
+Our method allows, for the first time, accurate shape recovery of com-plex objects,
+ranging from diffuse to specular, that are hid-den around the corner as well as hidden behind a diffuser.
 
 
 
