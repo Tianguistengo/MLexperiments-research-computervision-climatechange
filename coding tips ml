@@ -309,7 +309,16 @@ The generic format in NumPy multi-dimensional arrays is:
 Array[row_start_index  :  row_end_index, column_start_index  :  column_end_index]
 
 
+--
 
+When to rebase? When to Merge?
+
+If the feature branch you are getting changes from is shared with other developers,
+rebasing is not recommended, because the rebasing process will create inconsistent repositories. 
+For individuals, rebasing makes a lot of sense.
+
+If you want to see the history completely same as it happened, you should use merge.
+>>Merge preserves history whereas rebase rewrites it.
 
 
 
