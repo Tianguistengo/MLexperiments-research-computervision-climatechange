@@ -322,11 +322,36 @@ If you want to see the history completely same as it happened, you should use me
 
 
 
+--
+
+
+    The way multidimensional arrays are accessed using NumPy 
+    is different from how they are accessed in normal python arrays. 
+    The generic format in NumPy multi-dimensional arrays is:
+
+Array[row_start_index:row_end_index, column_start_index: column_end_index]
 
 
 
+--
 
+What is Pandas?
 
+Similar to NumPy, Pandas is one of the most widely used python libraries in data science. 
+It provides high-performance, easy to use structures and data analysis tools.
+
+Unlike NumPy library which provides >>> objects for multi-dimensional arrays, 
+Pandas provides in-memory >>2d table object called Dataframe.
+It is like a spreadsheet with column names and row labels.
+
+Hence, with 2d tables, pandas is capable of providing many additional functionalities 
+like creating pivot tables, computing columns based on other columns and plotting graphs.
+
+Like NumPy, Pandas also provide the basic mathematical functionalities like addition, subtraction and conditional operations and broadcasting.
+
+Pandas dataframe object represents a spreadsheet with cell values, column names, and row index labels. 
+A Dataframe can be visualized as dictionaries of Series.
+Dataframe rows and columns are simple and intuitive to access. Pandas also provide SQL-like functionality to filter, sort rows based on conditions. 
 
 
 
