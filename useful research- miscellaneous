@@ -929,9 +929,22 @@ While weight decay is an additional term in the weight update rule
 if no other update is scheduled.
 
 
+Weight regularization provides an approach to reduce the overfitting 
+of a deep learning neural network model on the training data 
+and improve the performance of the model on new data, 
+such as the holdout test set.
 
+There are multiple types of weight regularization, 
+such as L1 and L2 vector norms, and each requires a hyperparameter that must be configured.
 
+Keras provides a weight regularization API that allows you to
+>> add a penalty for weight size to the loss function.
 
+Three different regularizer instances are provided; they are:
+
+    L1: Sum of the absolute weights.
+    L2: Sum of the squared weights.
+    L1L2: Sum of the absolute and the squared weights.
 
 
 
