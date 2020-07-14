@@ -122,3 +122,43 @@ The only difference between derivative and directional derivative is the definit
 
    Derivative is the rate of change of 𝑓(𝑥,𝑦)
    , which can be thought of the slope of the function at a point (𝑥0,𝑦0).
+   
+   
+   -------
+   
+    Church–Turing thesis (also known as computability thesis)
+    
+     is a hypothesis about >>the nature of computable functions. 
+     
+     It states that a function on the natural numbers can be calculated by an effective method if and only if it is computable by a Turing machine.
+   
+   The Church-Turing thesis (CTT)
+   underlies tantalizing open questions concerning >>the fundamental place of computing in the physical universe.
+   
+   For example, is every physical system computable?
+   Is the universe essentially computational in nature? 
+   What are the implications for computer science of recent speculation about physical uncomputability? 
+   Does CTT place a fundamental logical limit on what can be computed, a computational "barrier" that cannot be broken,
+   no matter how far and in what multitude of ways computers develop? 
+   Or could new types of hardware, based perhaps on quantum or relativistic phenomena, lead to radically new computing paradigms 
+   that do breach the Church-Turing barrier, in which the uncomputable becomes computable, in an upgraded sense of "computable"?
+   
+   Before addressing these questions, we first look back to the 1930s to consider how Alonzo Church and Alan Turing formulated, and sought to justify, 
+   their versions of CTT. With this necessary history under our belts, 
+   >we then turn to today's dramatically more powerful versions of CTT.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
