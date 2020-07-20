@@ -147,6 +147,33 @@ The only difference between derivative and directional derivative is the definit
    their versions of CTT. With this necessary history under our belts, 
    >we then turn to today's dramatically more powerful versions of CTT.
    
+   ---
+   
+   What is quantization?
+
+Quantization isn’t something new, it has been around for decades since the creation of digital electronics. 
+When we take photo on our cellphone, the real world scene which is analog is captured by the camera and digitized into computer files. 
+
+Quantization is part of that process that convert a continuous data (can be infinitely small or big)
+to discrete numbers within a fixed range, say numbers 0, 1, 2, .., 255 which are commonly used in digital image files.
+
+In deep learning, quantization generally refers to converting from floating point (with dynamic range of the order of 1^-38 to 1x10³⁸)
+to fixed point integer (e.g. 8-bit integer between 0 and 255).
+
+Some information will be lost in quantization 
+but researches show that with tricks in training, the loss in accuracy is manageable.
+
+Why quantization?
+
+There are two main reasons.
+Deep neural network consists of many parameters which are known as weights, for example, the famous VGG network has over 100 million parameters!! 
+In many scenarios, the bottleneck of running deep neural network is in transferring the weights and data between main memory and compute cores. 
+
+Therefore, as opposed to GPU that have one large shared pool of memory,
+modern AI chips have a lot of local memories around the compute cores to minimize the data transfer latency.
+
+Now, by using 8-bit integer rather than 32-bit, we instantly speed up the memory transfer by 4x!
+This also bring other benefits that accompanies smaller file size i.e. less memory storage, faster download time etc.
    
    
    
