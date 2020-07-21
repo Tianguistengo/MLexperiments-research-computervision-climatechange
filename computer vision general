@@ -221,6 +221,61 @@ anesthetized cat so that she can’t move and shown the images of line at differ
 
 
 
+--
+
+Resolution. 
+
+Image resolution is typically described in PPI,
+which refers to how many pixels are displayed per inch of an image. 
+
+Higher resolutions mean that there more pixels per inch (PPI), 
+resulting in more pixel information and creating a high-quality, crisp image.
+
+--
+
+>>>>>Lossy Compression
+
+Lossy compression involves eliminating some of the data in your image.
+Because of this, it means you might see degradation (reduction in quality or what some refer to as pixelated).
+
+So you have to be careful by how much you’re reducing your image.
+Not only due to quality, but also because you can’t reverse the process.
+
+Of course, one of the great benefits of lossy compression and why it’s one of the most popular compression methods 
+is that you can reduce the file size by a very large amount.
+
+    JPEGs and GIFs are both lossy image formats.
+    JPEGs are great for sites needing fast load times as you can adjust the quality level for a good balance of quality and file size.
+    
+    
+
+>>>>>Lossless Compression
+
+Lossless compression, unlike lossy, doesn’t reduce the quality of the image. 
+How is this possible? It’s usually done by removing unnecessary metadata (automatically generated data produced by the device capturing the image). 
+
+However, the biggest drawback to this method is that you won’t see a significant reduction in file size. 
+In other words, it will take up a lot of disk space over time.
+
+    RAW, BMP, GIF, and PNG are lossless image formats.
+    You can perform a lossless compression on your desktop using tools such as Photoshop, FileOptimizer, or ImageOptim.
+    Some plugins will apply Gzip compression to images (minify them).
+
+If we do a little comparison of lossy compression rates, 
+we can see that when using lossless compression you don’t lose any quality whatsoever. 
+However, the file size of the image was only reduced by 10.84%. This is compared to over 90% when using lossy compression.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
