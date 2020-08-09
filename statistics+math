@@ -175,8 +175,69 @@ modern AI chips have a lot of local memories around the compute cores to minimiz
 Now, by using 8-bit integer rather than 32-bit, we instantly speed up the memory transfer by 4x!
 This also bring other benefits that accompanies smaller file size i.e. less memory storage, faster download time etc.
    
-   
-   
+
+--
+
+Tarski's    undefinability theorem
+
+
+Tarski's undefinability theorem, stated and proved by Alfred Tarski in 1933, 
+is an important limitative result in mathematical logic, 
+the foundations of mathematics, and in formal semantics. 
+
+Informally, the theorem states that arithmetical truth cannot be defined in arithmetic.
+
+The theorem applies more generally to any sufficiently strong formal system, 
+showing that 
+>>> truth in the standard model of the system 
+>>>cannot be defined within the system. 
+
+--
+
+The Halting problem -- Turing
+
+In computability theory, the halting problem is >>the problem of determining,
+from a description of an arbitrary computer program and an input, 
+>>whether the program will finish running, or continue to run forever. 
+
+Alan Turing proved in 1936 that 
+>a general algorithm to solve the halting problem for all possible program-input pairs 
+>cannot exist.
+ 
+ 
+--
+
+Gödel's incompleteness theorems 
+
+
+are two theorems of mathematical logic that 
+>>demonstrate the inherent limitations of every formal axiomatic system capable of modelling basic arithmetic. 
+
+These results, published by Kurt Gödel in 1931, are important both in mathematical logic and in the philosophy of mathematics. 
+The theorems are widely, but not universally, interpreted as 
+>>showing that Hilbert's program to find a complete and consistent set of axioms for all mathematics is impossible.
+
+1. The first incompleteness theorem states that 
+>>no consistent system of axioms 
+whose theorems can be listed by an effective procedure (i.e., an algorithm) 
+>>is capable of proving all truths about the arithmetic of natural numbers. 
+
+For any such consistent formal system, 
+there will always be statements about natural numbers that are true, 
+>but that are unprovable within the system. 
+
+
+2.The second incompleteness theorem, an extension of the first, 
+>>shows that the system cannot demonstrate its own consistency.
+
+
+Employing a diagonal argument, 
+Gödel's incompleteness theorems were the first of several closely related theorems
+>>on the limitations of formal systems.
+
+>They were followed by Tarski's undefinability theorem on the formal undefinability of truth,
+>Church's proof that Hilbert's Entscheidungsproblem is unsolvable, 
+>and Turing's theorem that there is no algorithm to solve the halting problem
    
    
    
