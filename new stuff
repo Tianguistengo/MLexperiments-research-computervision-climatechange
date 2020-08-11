@@ -376,6 +376,8 @@ Deep Double Descent
 
 OpenAI
 
+https://openai.com/blog/deep-double-descent/
+
 We show that the double descent phenomenon occurs in CNNs, ResNets, and transformers: performance first improves,
 then gets worse, and then improves again with increasing model size, data size, or training time. 
 This effect is often avoided through careful regularization.
