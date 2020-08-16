@@ -34,3 +34,28 @@ is the best available path to machine intelligence.
 
 11. Deep learning works like magic with enough high-quality data. 
 When examples are scarce, though, researchers are using simulation to fill the gap.
+
+12. using-neural-networks-to-solve-advanced-mathematics-equations
+https://ai.facebook.com/blog/using-neural-networks-to-solve-advanced-mathematics-equations/
+
+What’s next for equation-solving AI
+
+Our model currently works on problems with a single variable, and we plan to expand it to multiple-variable equations. 
+This approach could also be applied to other mathematics- and logic-based fields, such as physics,
+potentially leading to software that assists scientists in a broad range of work.
+
+But our system has broader implications for the study and use of neural networks. 
+By discovering a way to use deep learning where it was previously seen as unfeasible,
+this work suggests that other tasks could benefit from AI. 
+
+Whether through the further application of NLP techniques to domains that haven’t traditionally been associated with languages, 
+or through even more open-ended explorations of pattern recognition in new or seemingly unrelated tasks, 
+the perceived limitations of neural networks may be limitations of imagination, not technology.
+
+
+
+
+
+
+
+
