@@ -254,10 +254,27 @@ and answers "Yes" or "No" according to whether the statement is universally vali
 , i.e., valid in every structure satisfying the axioms. 
    
    
+  --
+  
+  Using-neural-networks-to-solve-advanced-mathematics-equations
+  
+https://ai.facebook.com/blog/using-neural-networks-to-solve-advanced-mathematics-equations/
+
+Building this data set required us to incorporate a range of data cleaning and generation techniques.
+For our symbolic integration equations, for example, we flipped the translation approach around:
+Instead of generating problems and finding their solutions, 
+we generated solutions and found their problem (their derivative), 
+which is a much easier task. 
+
+This approach of generating problems from their solutions — what engineers sometimes refer to as trapdoor problems — 
+made it feasible to create millions of integration examples. 
+Our resulting translation-inspired data set consists of roughly 100M paired examples,
+with subsets of integration problems as well as first- and second-order differential equations.
    
    
    
    
    
    
-   
+
+
