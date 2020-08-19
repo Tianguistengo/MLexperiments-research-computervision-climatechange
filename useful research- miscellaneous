@@ -947,6 +947,28 @@ Three different regularizer instances are provided; they are:
     L1L2: Sum of the absolute and the squared weights.
 
 
+--
+
+Regularization 
+
+The word regularize means to make things regular or acceptable.
+This is exactly why we use it for. Regularizations are techniques used to 
+>reduce the error by fitting a function appropriately on the given training set and 
+>avoid overfitting. 
+
+
+
+--
+
+Gaussian noise
+
+Gaussian noise are the deviations created in the target variables from the actual obtained output value,
+which follows the Gaussian distribution.
+
+This is done to represent the scenario of any real world dataset, 
+as no data is perfect without any noise component.
+
+
 
 
 
