@@ -1,3 +1,58 @@
 
 -https://agage.mit.edu/about/our-mission
 
+
+-
+https://www.sciencedirect.com/science/article/pii/S030626191931685X
+
+Highlights
+
+•
+
+    The first large labeled methane leak video dataset (GasVid) was collected.
+•
+
+    The first deep-learning-based methane detection method (GasNet) was developed.
+•
+
+    The first detection probability curve of automatic detection system was generated.
+•
+
+    Our automated technology simplifies the leak detection survey with high accuracy.
+•
+
+    The deep learning model was optimized to achieve highest detection accuracy.
+
+Abstract
+
+In a climate-constrained world, it is crucial to reduce natural gas methane emissions,
+which can potentially offset the climate benefits of replacing coal with gas.
+
+Optical gas imaging (OGI) 
+is a widely-used method to detect methane leaks, but is labor-intensive and cannot provide leak detection results without operators’ judgment. 
+
+In this paper, we develop a computer vision approach for OGI-based leak detection using convolutional neural networks (CNN)
+trained on methane leak images to enable automatic detection. 
+
+First, we collect ∼1 M frames of labeled videos of methane leaks from different leaking equipment, 
+covering a wide range of leak sizes (5.3–2051.6 g CH4/h) and imaging distances (4.6–15.6 m).
+
+Second, we examine different background subtraction methods to extract the methane plume in the foreground. 
+
+Third, we then test three CNN model variants, collectively called GasNet, to detect plumes in videos. 
+We assess the ability of GasNet to perform leak detection by comparing it to a baseline method 
+that uses an optical-flow based change detection algorithm.
+
+We explore the sensitivity of results to the CNN structure, with a moderate-complexity variant performing best across distances. T
+he generated detection probability curves show that the detection accuracy 
+(fraction of leak and non-leak images correctly identified by the algorithm) can reach as high as 99%, 
+the overall detection accuracy can exceed 95% across all leak sizes and imaging distances. 
+Binary detection accuracy exceeds 97% for large leaks (∼710 g CH4/h) imaged closely (∼5–7 m). 
+
+The GasNet-based computer vision approach could be deployed in OGI surveys
+for automatic vigilance of methane leak detection with high accuracy in the real world.
+
+
+
+--
+https://towardsdatascience.com/deep-learning-and-carbon-emissions-79723d5bc86e
