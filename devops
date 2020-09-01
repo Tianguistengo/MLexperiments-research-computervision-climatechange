@@ -85,6 +85,51 @@ used in serverless and microservices architectures.
 In a pub/sub model, any message published to a topic is immediately received by all of the subscribers to the topic.
 
 
+---
+
+https://mlinproduction.com/lessons-learned-from-15-years-of-monitoring-machine-learning-in-production/
+
+    Lesson #1 – Monitoring performance metrics isn’t enough. You need to monitor input distributions.
+
+After a week of tedious investigations, they discovered a huge drift in the data of the incoming requests, 
+due to campaigns encouraging new target audiences for loans. The model issued predictions for this new audience, despite the fact that 
+1) no labels existed for the newly targeted segments 
+and 2) its data distribution differed so significantly from the training dataset that the model’s predictions were irrelevant.
+
+You need to measure and monitor all relevant aspects of your model to detect issues at the right time, including:
+
+    -the model input distribution and its drift level
+    -metrics describing model inference, as these could be proxies for detecting strange model behavior, which can lead to unexpected results!
+
+
+
+    Lesson #2 – Automatic retraining is not (necessarily) the solution
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
