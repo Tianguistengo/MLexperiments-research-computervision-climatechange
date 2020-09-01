@@ -28,6 +28,31 @@ https://aws.amazon.com/sagemaker/
 
 
 
+---
+
+https://mlinproduction.com/why-is-it-important-to-monitor-machine-learning-models/
+
+In traditional software, we explicitly plan for and express how a system should react in specific circumstances. 
+This is accomplished by writing automated tests to ensure applications perform as expected.
+
+In contrast, the power of machine learning lies in how it generalizes from historical experience 
+and reacts to new unseen data without us explicitly describing each case.
+
+
+Since we can’t explicitly test for all of the possible cases a machine learning system will see,
+we need to continuously monitor that system to ensure it’s operating effectively.
+
+
+
+Monitoring machine learning systems is about monitoring the quality of decision making that the system enables. T
+he quality of predictions is a function of many things including:
+
+    1. The quality of the data fed to models at inference time. 
+    Monitoring an ML system isn’t just about monitoring a model; it also involves monitoring all the data sources fed to the model.
+
+
+
+
 
 
 
