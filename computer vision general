@@ -278,7 +278,25 @@ SNR is defined as the ratio of signal power to the noise power, often expressed 
 A ratio higher than 1:1 (greater than 0 dB) indicates more signal than noise. 
 
 
+--
 
+EXIF data
+
+Such stored data is called “EXIF Data”, and it is comprised of a range of settings such as
+ISO speed, shutter speed, aperture, white balance, camera model and make, date and time, lens used, focal length, and much more.
+
+Being able to read such data can be of great importance not only for beginners but also for other photographers who want to find out 
+what settings and tools were used to create a particular photograph.
+
+Unfortunately, 
+though, the only web-friendly (in terms of size) file format that can handle EXIF is JPEG, 
+which means that you often cannot read the data from other image formats such as GIF and PNG.
+
+In addition, some photographers choose to strip EXIF data from their images to protect their work and their style, 
+while others do it to save website traffic (yes, EXIF does add up to the size of the file). 
+
+Those, who leave this data in their images either have no idea that they even have it, 
+or they intentionally leave it like I do – for others to see and possibly learn from.
 
 
 
