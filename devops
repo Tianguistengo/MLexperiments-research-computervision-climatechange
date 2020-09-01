@@ -50,7 +50,39 @@ he quality of predictions is a function of many things including:
     1. The quality of the data fed to models at inference time. 
     Monitoring an ML system isn’t just about monitoring a model; it also involves monitoring all the data sources fed to the model.
 
+    2. Modeling assumptions remaining relatively constant – 
+    Models learn relationships between inputs and outputs from historical data. Since the real world is dynamic, 
+    these relationships are constantly changing. 
+    This means that model performance naturally degrades with time.
+    Models must adapt to changing conditions, but detecting these changes depends on robust, continuous monitoring.
+    
+    3. The robustness and stability of predictions – 
+    It’s understood that input features to machine learning models are not independent. 
+    Hence, changes in any part of the system, including hyper-parameters, learning settings, 
+    sampling methods, convergence thresholds, and data selection, can cause unpredictable changes to model output. 
+    This is known as CACE: Changing Anything Changes Everything.
+ 
+ ---------
+ 
+ Pickle 
+ converts a Python object to a bitstream 
+ and allows it to be stored to disk and reloaded at a later time. 
+ 
+ It provides a good format to store machine learning models 
+ provided that their intended applications are also built-in python.
+ 
 
+ONNX,the Open Neural Network Exchange Format,
+is an open format that supports the storing and porting of predictive models across libraries and languages.
+Most deep learning libraries support it, and sklearn also has a library extension to convert their model to ONNX’s format.
+
+---
+
+Publish/subscribe messaging, or pub/sub messaging,
+is a form of asynchronous service-to-service communication 
+used in serverless and microservices architectures. 
+
+In a pub/sub model, any message published to a topic is immediately received by all of the subscribers to the topic.
 
 
 
