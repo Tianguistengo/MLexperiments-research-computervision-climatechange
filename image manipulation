@@ -1,0 +1,14 @@
+https://link.springer.com/article/10.1186/s13635-016-0047-y
+
+Abstract
+
+Double JPEG compression detection has received considerable attention in blind image forensics. 
+However, only few techniques can provide automatic localization.
+To address this challenge, this paper proposes a double JPEG compression detection algorithm based on a convolutional neural network (CNN). 
+
+The CNN is designed to classify histograms of discrete cosine transform (DCT) coefficients, 
+which differ between single-compressed areas (tampered areas) and double-compressed areas (untampered areas).
+
+The localization result is obtained according to the classification results.
+Experimental results show that the proposed algorithm performs well in double JPEG compression detection and forgery localization, 
+especially when the first compression quality factor is higher than the second.
