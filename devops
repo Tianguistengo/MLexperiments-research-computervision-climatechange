@@ -106,10 +106,30 @@ You need to measure and monitor all relevant aspects of your model to detect iss
     Lesson #2 – Automatic retraining is not (necessarily) the solution
     
 
+----
 
+from Medium -Viktor B
 
+Reproducibility. 
+Key to providing a high-quality service is the ability to easily retrain a model with updated versions of the dataset. 
+This means dataset versioning and automation for model retraining is needed.
+Reproducibility is also needed to exactly recreate decisions made by production models in the development environment 
+to understand why certain decisions were made 
+and analyze cases where the model does not behave as expected.
 
+QA. 
+All releases to production have to be quality assessed from --both-- ML and engineering viewpoints. 
+This limits the possibility to quickly iterate and evaluate experimental workflows in the production environment,
+but is important for data security and integrity.
 
+Release documentation. 
+Releases are documented in order to trace model versions, 
+serving application and underlying container versions, 
+datasets used for model training and evaluation. 
+This is a requirement for compliant release management 
+and also helps to analyze suspicious decisions made by models in production.
+
+ML depends on a stable infrastructure and tooling for running training, labeling and evaluation jobs 
 
 
 
