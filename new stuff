@@ -599,7 +599,19 @@ to study the role of lucky sparse subnetworks and initializations (“lottery ti
 
 
 
+--
+https://gizmodo.com/this-algorithm-might-make-facial-recognition-obsolete-1844591686
 
+ By swapping out or distorting some of these pixels,
+ the face might still be recognizable to you or me, 
+ but it would register as an entirely different person to just about every popular facial recognition algo. 
+ 
+ According to the team’s research, this “cloaking” technique managed to fool the facial recognition systems
+ peddled by Microsoft, Amazon, and Google 100% of the time.
+
+If you want to give this algo a whirl yourself, the good news is that the U. Chicago team has the Fawkes program 
+freely available for download on their website. If you have a picture you want to protect from snoopers or scrapers, 
+you can load them into Fawkes, which then jumbles those unseen pixels in about 40 seconds per photograph, according to the researchers. 
 
 
 
