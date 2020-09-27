@@ -614,7 +614,17 @@ freely available for download on their website. If you have a picture you want t
 you can load them into Fawkes, which then jumbles those unseen pixels in about 40 seconds per photograph, according to the researchers. 
 
 
+---
 
+A critical analysis of self-supervision, or what we can learn from a single image
+Yuki M. Asano, Christian Rupprecht, Andrea Vedaldi
+
+    We look critically at popular self-supervision techniques for learning deep convolutional neural networks without manual labels.
+    We show that three different and representative methods, BiGAN, RotNet and DeepCluster,
+    can learn the first few layers of a convolutional network from a single image 
+    as well as using millions of images and manual labels, provided that strong data augmentation is used. 
+    
+    However, for deeper layers the gap with manual supervision cannot be closed even if millions of unlabelled images are used for training.
 
 
 
