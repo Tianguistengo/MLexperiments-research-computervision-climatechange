@@ -273,7 +273,26 @@ with subsets of integration problems as well as first- and second-order differen
    
    
    
+   --
    
+   FLOPS
+   
+   Short for floating-point operations per second, 
+   a common benchmark measurement for rating the speed of microprocessors. 
+   
+   Floating-point operations include any operations that involve fractional numbers. 
+   Such operations, which take much longer to compute than integer operations, occur often in some applications.
+
+Most modern microprocessors include a floating-point unit (FPU),
+which is a specialized part of the microprocessor responsible for executing floating-point operations. 
+The FLOPS measurement, therefore, actually measures the speed of the FPU. 
+One of the most common benchmark tests used to measure FLOPS is called Linpack.
+
+Many experts feel that FLOPS is not a relevant measurement because it fails to take into account factors 
+such as the condition under which the microprocessor is running (e.g., heavy or light loads) 
+and which exact operations are included as floating-point operations. 
+For this reason, a consortium of vendors created the Standard Performance Evaluation Corporation (SPEC), 
+which provides more meaningful benchmark values. 
    
    
 
