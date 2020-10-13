@@ -298,11 +298,37 @@ while others do it to save website traffic (yes, EXIF does add up to the size of
 Those, who leave this data in their images either have no idea that they even have it, 
 or they intentionally leave it like I do – for others to see and possibly learn from.
 
+-----
 
+Image GPT
 
+https://openai.com/blog/image-gpt/
 
+From language GPT to image GPT
 
+In language, unsupervised learning algorithms that rely on word prediction (like GPT-2 and BERT) have been extremely successful, 
+achieving top performance on a wide array of language tasks.
+One possible reason for this success is that instances of downstream language tasks appear naturally in text: 
+questions are often followed by answers (which could help with question-answering)
+and passages are often followed by summaries (which could help with summarization). 
 
+In contrast, sequences of pixels do not clearly contain labels for the images they belong to.
+
+Even without this explicit supervision, 
+there is still a reason why GPT-2 on images might work: a sufficiently large transformer trained on next pixel prediction 
+might eventually learn to generate diverse
+samples with clearly recognizable objects. 
+
+Once it learns to do so, an idea known as 
+---->“Analysis by Synthesis”
+suggests that the model will also know about object categories. 
+
+Many early generative modelswere motivated by this idea, and more recently, 
+BigBiGAN37 was an example which produced encouraging samples and features. 
+
+In our work, we first show that better generative models achieve stronger classification performance. 
+Then, through optimizing GPT-2 for generative capabilities, we achieve top-level classification performance in many settings, 
+providing further evidence for analysis by synthesis.
 
 
 
