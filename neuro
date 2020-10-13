@@ -33,3 +33,27 @@ Results: The researchers evaluated their method by word error rate (WER) between
 Yes, but: The researchers tested their network on a larger vocabulary than previous methods. Still, the vocabulary was small: only around 250 words. Classifying a brain wave as one of 250 words is easier than recognizing it among the 170,000 in the English language.
 Why it matters: The ability to find words in brain waves cracks open a sci-fi Pandora's box. It's worth emphasizing that the researchers read brain waves associated with speech, not necessarily thought. Yet it's amazing that the same learning algorithm works for both brain-to-language and language-to-language translations.
 We’re thinking: We look forward to upgrading Alexa from voice recognition to mind reading (except for the annoying detail of implanting electrodes in our brains).
+
+
+----
+
+Sparse coding
+
+http://www.scholarpedia.org/article/Sparse_coding
+
+Sparse coding is the representation of items by the strong activation of a relatively small set of neurons. 
+For each stimulus, this is a different subset of all available neurons. 
+
+Mammalian brains consist of billions of neurons, each capable of independent electrical activity. 
+Information in the brain is represented by the pattern of activation of this large neural population, forming a neural code. 
+The neural code defines what pattern of neural activity corresponds to each represented information item.
+In the sensory system, such items may indicate the presence of a stimulus object or the value of some stimulus parameter,
+assuming that each time this item is represented the neural activity pattern will be the same or at least similar.
+
+
+
+
+
+
+
+
