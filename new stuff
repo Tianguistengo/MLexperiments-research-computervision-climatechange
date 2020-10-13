@@ -662,9 +662,7 @@ The scaling method introduced in paper is named -->compound scaling
 and suggests that instead of scaling only one model attribute out of depth, width, and resolution; 
 -->strategically scaling all three of them together delivers better results.
 
-
 Compound scaling
-
 --->Compound scaling method uses a compound co-efficient ø to scale width, depth, and resolution together.
 
 
