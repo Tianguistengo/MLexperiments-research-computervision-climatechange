@@ -630,7 +630,42 @@ Yuki M. Asano, Christian Rupprecht, Andrea Vedaldi
 
 
 
+----
+Efficient Nets
 
+
+Image Classification with EfficientNet: -----> Better performance with computational efficiency
+Anand Borad
+https://medium.com/analytics-vidhya/image-classification-with-efficientnet-better-performance-with-computational-efficiency-f480fdb00ac6
+
+In May 2019, two engineers from Google brain team named Mingxing Tan and Quoc V. Le 
+published a paper called “EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks”. 
+The core idea of publication was about strategically scaling deep neural networks 
+but it also introduced a new family of neural nets, EfficientNets.
+
+EfficientNets, as the name suggests are very much efficient computationally
+and also achieved state of art result on ImageNet dataset which is 84.4% top-1 accuracy.
+
+So, in this article, we will discuss EfficientNets in detail but first, we will talk about the core idea introduced in the paper, 
+-->model scaling.
+
+Model scaling is about scaling the existing model in terms of model depth, model width, and less popular input image resolution
+to improve the performance of the model. 
+Depth wise scaling is most popular amongst all, e.g. ResNet can be scaled from Resnet18 to ResNet200. 
+Here ResNet10 has 18 residual blocks and can be scaled for depth to have 200 residual blocks.
+
+ResNet200 delivers better performance than ResNet18 and thus, manually scaling works pretty well. 
+But there is one problem with traditional manual scaling method, after a certain level, scaling doesn’t improve performance.
+It starts to affect adversely by degrading performance.
+
+The scaling method introduced in paper is named -->compound scaling 
+and suggests that instead of scaling only one model attribute out of depth, width, and resolution; 
+-->strategically scaling all three of them together delivers better results.
+
+
+Compound scaling
+
+--->Compound scaling method uses a compound co-efficient ø to scale width, depth, and resolution together.
 
 
 
