@@ -360,7 +360,16 @@ doing segmentation rather than classification )
 
 
 
+------
 
+Squeeze and Excitation Block
+
+When CNN creates output feature map from a convolutional layer, it gives equal weightage to each of channels.
+
+Squeeze and excitation (SE) block is a method to give weightage to each channel instead of treating them all equally.
+
+SE block gives the output of shape (1 x 1 x channels) which specifies the weightage for each channel 
+and the great thing is that neural network can learn this weightage by itself like other parameters.
 
 
 
