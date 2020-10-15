@@ -295,5 +295,11 @@ For this reason, a consortium of vendors created the Standard Performance Evalua
 which provides more meaningful benchmark values. 
    
    
+   ---
+   
+    Scalar functions
+    
+    (sometimes referred to as User-Defined Functions / UDFs)
+    return a single value as a return value, not as a result set.
 
 
