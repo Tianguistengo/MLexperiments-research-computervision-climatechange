@@ -302,4 +302,18 @@ which provides more meaningful benchmark values.
     (sometimes referred to as User-Defined Functions / UDFs)
     return a single value as a return value, not as a result set.
 
+--
+re capsule networks 
+
+Vectors help because the help us encode more information, 
+and not just any kind of information, relational and relative information.
+
+Imagine that instead of taking just the scalar activation of a feature (like a CNN does), 
+we considered its vector containing something like  [likelihood, orientation, size]. 
+
+The original scalar version might work something like the diagram on the left;
+it detects a face even though the eyes and lips are huge relative to the face (95% likelihood)! 
+
+Capsules on the other hand due to their richer vector information 
+see that the sizes of the features are different and therefore output a lower likelihood for the detection of the face! 
 
