@@ -320,12 +320,20 @@ see that the sizes of the features are different and therefore output a lower li
 ---
 Fourier 
 
-In mathematics, Fourier analysis 
+In mathematics, 
+>Fourier analysis 
 is the study of the way general functions may be represented or approximated
 by sums of simpler trigonometric functions.
 
-a Fourier transform 
+>a Fourier transform 
 is a mathematical transform that decomposes a function into its constituent frequencies,
 such as the expression of a musical chord 
 in terms of the volumes and frequencies of 
 its constituent notes.
+
+What are Fourier transforms used for?
+The Fourier Transform is an important image processing tool 
+which is used to decompose an image into its sine and cosine components. 
+
+The output of the transformation represents the image in the Fourier or frequency domain,
+while the input image is the spatial domain equivalent.
