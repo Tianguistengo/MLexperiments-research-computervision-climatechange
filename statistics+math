@@ -337,3 +337,50 @@ which is used to decompose an image into its sine and cosine components.
 
 The output of the transformation represents the image in the Fourier or frequency domain,
 while the input image is the spatial domain equivalent.
+
+
+----------
+
+Sine, Cosine and Tangent
+
+https://www.mathsisfun.com/sine-cosine-tangent.html
+
+Sine, Cosine and Tangent (often shortened to sin, cos and tan) are each a ratio of sides of a right angled triangle
+
+To calculate them:
+
+Divide the length of one side by another side
+Example: What is the sine of 35°?
+
+triangle with 2.8, 4.0 and 4.9 sides
+
+sin(35°) 	= Opposite / Hypotenuse
+
+2.8 / 4.9
+  	= 0.57...
+
+Size Does Not Matter
+
+The triangle can be large or small and the ratio of sides stays the same.
+
+Only the angle changes the ratio.
+
+
+Why are these functions important?
+
+    >>Because they let us work out angles when we know sides
+   >> And they let us work out sides when we know angles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
