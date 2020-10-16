@@ -332,7 +332,14 @@ providing further evidence for analysis by synthesis.
 
 
 
+-----
+What are Fourier transforms used for?
 
+The Fourier Transform is an important image processing tool 
+which is used to decompose an image into its sine and cosine components. 
+
+The output of the transformation represents the image in the Fourier or frequency domain,
+while the input image is the spatial domain equivalent.
 
 
 
