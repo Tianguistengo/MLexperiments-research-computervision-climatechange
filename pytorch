@@ -1,9 +1,14 @@
 ----------->   Pytorch
 
 bibliography
+
 https://towardsdatascience.com/getting-started-with-pytorch-part-1-understanding-how-automatic-differentiation-works-5008282073ec
 deeplizard.com 
 https://pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html
+
+Course 
+
+https://www.coursera.org/learn/deep-neural-networks-with-pytorch/home/welcome
 
 
 What makes it really luring is it’s ---> dynamic computation graph paradigm. <---
