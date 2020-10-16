@@ -317,3 +317,15 @@ it detects a face even though the eyes and lips are huge relative to the face (9
 Capsules on the other hand due to their richer vector information 
 see that the sizes of the features are different and therefore output a lower likelihood for the detection of the face! 
 
+---
+Fourier 
+
+In mathematics, Fourier analysis 
+is the study of the way general functions may be represented or approximated
+by sums of simpler trigonometric functions.
+
+a Fourier transform 
+is a mathematical transform that decomposes a function into its constituent frequencies,
+such as the expression of a musical chord 
+in terms of the volumes and frequencies of 
+its constituent notes.
