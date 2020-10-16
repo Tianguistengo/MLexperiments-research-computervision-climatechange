@@ -1063,5 +1063,29 @@ There were many examples of AI researchers' belated learning of this bitter less
 
 
 
+-----
+Kernel trick
+
+The red and blue balls cannot be separated by a straight line
+as they are randomly distributed and this, in reality, is how most real life problem data are -randomly distributed.
+
+In machine learning, a “kernel” is usually used to refer to the kernel trick, 
+a method of using a linear classifier to solve a non-linear problem.
+
+It entails transforming linearly inseparable data like 
+to linearly separable ones. 
+
+The kernel function is what is applied on each data instance 
+to map the original non-linear observations into a higher-dimensional space 
+in which they become separable.
+
+Using the dog breed prediction example again, kernels offer a better alternative. 
+Instead of defining a slew of features, 
+you define a single kernel function to compute similarity between breeds of dog. 
+
+You provide this kernel, 
+together with the data and labels to the learning algorithm,
+and out comes a classifier.
+
 
 
