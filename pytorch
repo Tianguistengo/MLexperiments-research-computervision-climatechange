@@ -899,6 +899,34 @@ The -1 can represent any size. However, be careful because you can set only one 
 
 
 
+---
+
+# Convert a numpy array to a tensor
+
+numpy_array = np.array([0.0, 1.0, 2.0, 3.0, 4.0])
+new_tensor = torch.from_numpy(numpy_array)
+
+Converting a tensor to a numpy is also supported in PyTorch. The syntax is shown below:
+
+back_to_numpy = new_tensor.numpy()
+
+back_to_numpy and new_tensor still point to numpy_array. 
+As a result if we change numpy_array both back_to_numpy and new_tensor will change. 
+
+
+
+Pandas Series can also be converted by using the numpy array that is stored in pandas_series.values.
+
+# Convert a panda series to a tensor
+
+pandas_series=pd.Series([0.1, 2, 0.3, 10.1])
+
+new_tensor=torch.from_numpy(pandas_series.values)
+
+
+
+
+
 
 
 
