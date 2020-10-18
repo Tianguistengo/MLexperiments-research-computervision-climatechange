@@ -417,6 +417,18 @@ torch.dot(a,b)
 
 
 
+----
+
+linspace
+
+A useful function for plotting mathematical functions is "linspace". 
+
+>>Linspace returns evenly spaced numbers over a specified interval. 
+
+We specify the starting point of the sequence, the ending point of the sequence, 
+and the parameter ”steps" indicates the number of samples to generate
+
+torch.linspace(-2,2, steps=5)
 
 
 
