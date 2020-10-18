@@ -372,10 +372,42 @@ Why are these functions important?
    >> And they let us work out sides when we know angles
 
 
+---
+
+Hadamard product (or just product)
+
+In mathematics, the Hadamard product is a binary operation 
+that takes two matrices of the same dimensions and produces another matrix of the same dimension as the operands, 
+where each element i, j 
+is the product of elements i, j of the original two matrices. 
+
+a= [1,3]
+b= [2,4]
+
+A ∘ B = [1*2, 3*4] = [2,12]
+
+The resultant vector consists of the ---entry wise product--- of u and v.
+
+In Pytorch, we can also perform Hadamard product
+with just 1 line of code and assign it to a variable z. 
+
+z= a*b
 
 
+----
 
+Dot product
 
+The dot product is a single number
+>>> that represents how similar the two vectors are.
+
+We multiply the first component from v and u.
+We then multiply the second component and >> add the result together.
+
+The result is a number that represents how similar the two vectors are. 
+
+a= [1,3]
+b= [2,4]
 
 
 
