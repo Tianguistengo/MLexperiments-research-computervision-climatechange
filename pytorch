@@ -863,6 +863,38 @@ If you have a single sample, just use input.unsqueeze(0) to add a fake batch dim
 
 
 
+------
+IBM course
+
+The elements in the list that will be converted to tensor
+>must have the same type.
+
+The tensor_obj.size() 
+helps you to find out the size of the tensor_obj. 
+
+The tensor_obj.ndimension() 
+shows the dimension of the tensor object.
+
+----
+
+The tensor_obj.view(row, column)
+
+>>is used for reshaping a tensor object.
+
+What if you have a tensor object with torch.Size([5]) as a new_float_tensor as shown in the previous example?
+After you execute new_float_tensor.view(5, 1), the size of new_float_tensor will be torch.Size([5, 1]).
+This means that the tensor object new_float_tensor has been reshaped from a one-dimensional tensor object with 5 elements 
+to a two-dimensional tensor object with 5 rows and 1 column.
+
+What if you have a tensor with dynamic size but you want to reshape it? 
+
+>>>> You can use -1 to do just that.
+
+# Introduce the use of -1 in tensor_obj.view(row, column) method
+
+twoD_float_tensor = new_float_tensor.view(-1, 1)
+
+The -1 can represent any size. However, be careful because you can set only one argument as -1.
 
 
 
