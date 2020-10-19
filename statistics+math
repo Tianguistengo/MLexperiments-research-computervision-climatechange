@@ -417,6 +417,16 @@ torch.dot(a,b)
 
 
 
+
+# Calculate dot product of u, v
+
+u = torch.tensor([1, 2])
+v = torch.tensor([3, 2])
+
+print("Dot Product of u, v:", torch.dot(u,v))
+
+The result is tensor(7). The function is 1 x 3 + 2 x 2 = 7.
+
 ----
 
 linspace
