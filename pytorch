@@ -924,6 +924,66 @@ pandas_series=pd.Series([0.1, 2, 0.3, 10.1])
 new_tensor=torch.from_numpy(pandas_series.values)
 
 
+---
+
+# Set all elements in numpy array to zero 
+numpy_array[:] = 0
+
+---
+
+The method item() 
+returns the value of this tensor as a standard Python number. This only works for one element.
+
+this_tensor[1].item()
+gives you the number index 1
+
+-----
+
+we can use the method  tolist() 
+to return a list
+
+torch_to_list=this_tensor.tolist()
+
+---
+
+#Calculate the mean for math_tensor
+
+mean = math_tensor.mean()
+
+---
+
+#Calculate the standard deviation for math_tensor
+
+standard_deviation = math_tensor.std()
+
+---
+
+Max and Min
+
+Now, you'll review another two useful methods:
+
+tensor_obj.max() 
+and 
+tensor_obj.min(). 
+
+These two methods are used for finding the maximum value and the minimum value in the tensor.
+
+--
+torch.linspace()
+
+A useful function for plotting mathematical functions is torch.linspace()
+torch.linspace() returns evenly spaced numbers over a specified interval.
+You specify the starting point of the sequence and the ending point of the sequence.
+The parameter steps indicates the number of samples to generate. Now, you'll work with steps = 5.
+
+
+len_5_tensor = torch.linspace(-2, 2, steps = 5)
+print ("First Try on linspace", len_5_tensor)
+
+First Try on linspace tensor([-2., -1.,  0.,  1.,  2.])
+
+
+
 
 
 
