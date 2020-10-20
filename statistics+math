@@ -444,5 +444,26 @@ and the parameter ”steps" indicates the number of samples to generate
 
 torch.linspace(-2,2, steps=5)
 
+---
 
+Eigenvalues and eigenvectors
+
+wiki
+"Characteristic root" redirects here.
+
+In linear algebra, an eigenvector or characteristic vector 
+of a linear transformation is a nonzero vector that changes by a scalar factor 
+when that -linear- transformation is applied to it. 
+
+The corresponding eigenvalue, often denoted by λ {\displaystyle \lambda } \lambda ,[1] 
+is the factor by which the eigenvector is --scaled.
+
+Geometrically, an eigenvector, 
+corresponding to a real nonzero eigenvalue, 
+>points in a direction in which it is stretched by the transformation 
+
+>and the eigenvalue is the factor by which it is stretched. 
+
+
+If the eigenvalue is negative, the direction is reversed.
 
