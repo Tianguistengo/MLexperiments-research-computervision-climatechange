@@ -982,10 +982,78 @@ print ("First Try on linspace", len_5_tensor)
 
 First Try on linspace tensor([-2., -1.,  0.,  1.,  2.])
 
+---
 
+number of dimensions 
+is also referred to as 
+rank
 
+--
 
+.numel
+number of elements in a tensor 
 
+--
+
+matix multiplication of 2D tensors 
+
+torch.mm(A,B)
+
+--
+
+# Convert tensor to numpy array; 
+
+twoD_numpy = twoD_tensor.numpy()
+
+#Convert numpy array to tensor
+
+new_twoD_tensor = torch.from_numpy(twoD_numpy)
+
+-----
+
+# Try to convert the Panda Dataframe to tensor
+
+df = pd.DataFrame({'a':[11,21,31],'b':[12,22,312]})
+
+print("Pandas Dataframe to numpy: ", df.values)
+print("Type BEFORE converting: ", df.values.dtype)
+
+print("================================================")
+
+>> new_tensor = torch.from_numpy(df.values)
+print("Tensor AFTER converting: ", new_tensor)
+print("Type AFTER converting: ", new_tensor.dtype)
+
+Pandas Dataframe to numpy:  
+[[ 11  12]
+ [ 21  22]
+ [ 31 312]]
+Type BEFORE converting:  int64
+================================================
+Tensor AFTER converting:  
+tensor([[ 11,  12],
+        [ 21,  22],
+        [ 31, 312]])
+Type AFTER converting:  torch.int64
+
+# Practice: try to convert Pandas Series to tensor
+
+df = pd.DataFrame({'A':[11, 33, 22],'B':[3, 3, 2]})
+converted_tensor = torch.tensor(df.values)
+
+-----------
+
+indexing and slicing 
+
+indexing
+2 ways of doing it
+print("What is the value on 2nd-row 3rd-column? ", tensor_example[1, 2])
+print("What is the value on 2nd-row 3rd-column? ", tensor_example[1][2])
+
+slicing 
+2 ways of doing it
+print("What is the value on 1st-row first two columns? ", tensor_example[0, 0:2])
+print("What is the value on 1st-row first two columns? ", tensor_example[0][0:2])
 
 
 
