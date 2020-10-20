@@ -374,7 +374,7 @@ Why are these functions important?
 
 ---
 
-Hadamard product (or just product)
+Hadamard product (or just product or element-wise product)
 
 In mathematics, the Hadamard product is a binary operation 
 that takes two matrices of the same dimensions and produces another matrix of the same dimension as the operands, 
