@@ -132,7 +132,27 @@ and also helps to analyze suspicious decisions made by models in production.
 ML depends on a stable infrastructure and tooling for running training, labeling and evaluation jobs 
 
 
+-------
 
+Regularity in checkpointing
+
+You can save a considerable amount of time during your deep learning experiments
+if you set up model checkpointing correctly. 
+
+Generally, model checkpointing refers to >> saving your network model during the training process. 
+
+It can vary strategically. For example, one very common model checkpointing strategy is
+to record where the validation loss stops to decrease
+during the model training process 
+along with the training loss 
+and save the weights of the corresponding model.
+
+This is known as model checkpointing.
+
+As you keep prototyping through your deep learning experiments, 
+you would be able to reuse these checkpointed models 
+and this will definitely prevent you from having to repeat a training process(s) 
+all over from scratch which might have taken hours/days. 
 
 
 
