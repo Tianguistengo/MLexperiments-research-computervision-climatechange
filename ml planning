@@ -1,0 +1,87 @@
+
+https://machinelearningmastery.com/plan-run-machine-learning-experiments-systematically/
+
+a simple approach to plan and manage your machine learning experiments.
+
+With this approach, you will be able to:
+
+    Stay on top of the most important questions and findings in your project.
+    Keep track of what experiments you have completed and would like to run.
+    Zoom in on the data preparations, models, and model configurations that give the best performance.
+
+-------------
+
+https://www.oreilly.com/radar/the-unreasonable-importance-of-data-preparation/
+
+
+
+why data preparation is particularly important for reanalyzing data,
+
+>and why you should stay focused on the question you hope to answer.
+
+Your models are only as good as the data you feed them. 
+This is the      >>> garbage in, garbage out principle
+flawed data going in leads to flawed results, algorithms, and business decisions.
+
+example self driving cars-
+if such an algorithm is trained in an environment with cars driven by humans, 
+how can you expect it to perform well on roads with other self-driving cars?
+
+Beyond the autonomous driving example described, the “garbage in” side of the equation can take many forms
+for example, 
+incorrectly entered data, 
+poorly packaged data, 
+not representative data
+and data collected incorrectly,
+
+
+ drawing attention to thinking carefully about what you hope to get out of the data, 
+ what question you hope to answer, 
+ what biases may exist, a
+ nd what you need to correct before jumping in with an analysis.
+ With the right mindset, you can get a lot out of analyzing existing data
+
+Data can be low-quality if:
+
+    It doesn’t fit your question or its collection wasn’t carefully considered;
+    
+    It’s erroneous (it may say “cicago” for a location),
+    inconsistent (it may say “cicago” in one place and “Chicago” in another),
+    or missing;
+    
+    It’s good data but --packaged-- in an atrocious way—
+    e.g., it’s stored across a range of siloed databases in an organization;
+    
+    It requires human labeling to be useful 
+    (such as manually labeling emails as “spam” or “not” for a spam detection algorithm).
+
+>Automating data preparation 
+won’t necessarily remove such bias, 
+but it will make it systematic, discoverable, auditable, unit-testable, and correctable. 
+
+The third point above speaks more generally to the need for 
+>automation around all parts of the data science workflow.
+
+Model results will then be less reliant on individuals making hundreds of micro-decisions.
+An added benefit is that the work will be reproducible and robust.
+
+For the increasing number of real-time algorithms in production, 
+humans need to be taken out of the loop at runtime as much as possible 
+(and perhaps be kept in the loop more as algorithmic managers).
+
+it’s important to recognize that we’ve done pretty well at democratizing
+data collection and gathering, modeling, and data reporting, 
+but what remains stubbornly difficult is the whole process of >>preparing the data.
+
+
+
+
+
+
+
+
+
+
+
+
+
