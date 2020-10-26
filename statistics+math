@@ -467,3 +467,25 @@ corresponding to a real nonzero eigenvalue,
 
 If the eigenvalue is negative, the direction is reversed.
 
+
+
+---------
+
+A p-value is a measure of the probability 
+that an observed difference could have occurred just by random chance. 
+
+The lower the p-value, the greater the statistical significance of the observed difference. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
