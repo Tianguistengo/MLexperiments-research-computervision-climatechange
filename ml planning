@@ -167,6 +167,44 @@ with virtually no additional work!
 
 
 
+Data versioning
+
+In real-life projects, data is changing over time. Some typical situations include:
+
+    new images are added,
+    labels are improved,
+    mislabeled/wrong data is removed,
+    new data tables are discovered,
+    new features are engineered and processed,
+    validation and testing datasets change to reflect the production environment.
+
+For the vast majority of use cases whenever new data comes in,
+you can save it in a new location and log this location and a hash of the data. 
+
+Even if the data is very large, for example when dealing with images, 
+you can create a smaller metadata file with image paths and labels and track changes of that file.
+
+A wise man once told me:
+
+    “Storage is cheap, training a model for 2 weeks on an 8-GPU node is not.”
+
+And if you think about it, logging this information doesn’t have to be rocket science.
+
+exp.set_property('data_path', 'DATASET_PATH')
+exp.set_property('data_version', md5_hash('DATASET_PATH'))
+
+You can calculate hash yourself,
+use a simple data versioning extension 
+or outsource hashing to a full-blown data versioning tool like DVC.
+
+
+
+
+
+
+
+
+
 
 
 
