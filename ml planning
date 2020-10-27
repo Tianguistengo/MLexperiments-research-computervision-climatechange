@@ -8,6 +8,31 @@ With this approach, you will be able to:
     Stay on top of the most important questions and findings in your project.
     Keep track of what experiments you have completed and would like to run.
     Zoom in on the data preparations, models, and model configurations that give the best performance.
+    
+Only experiments that are planned are set-up and run 
+and their order ensures that the most important experiments are run first.
+
+You will be surprised at how much such a simple approach can free up your time
+and get you thinking deeply about your project.
+    
+These are just an example from the last project I worked on. I recommend adapting these to your own needs.
+
+    Sub-Project: A subproject may be a group of ideas you are exploring, a technique, a data preparation, and so on.
+    Context: The context may be the specific objective such as beating a baseline, tuning, a diagnostic, and so on.
+    Setup: The setup is the fixed configuration of the experiment.
+    Name: The name is the unique identifier, perhaps the filename of the script.
+    Parameter: The parameter is the thing being varied or looked at in the experiment.
+    Values: The value is the value or values of the parameter that are being explored in the experiment.
+    Status: The status is the status of the experiment, such as planned, running, or done.
+    Skill: The skill is the North Star metric that really matters on the project, like accuracy or error.
+    Question: The question is the motivating question the experiment seeks to address.
+    Finding: The finding is the one line summary of the outcome of the experiment, the answer to the question.
+
+I cannot say how much time this approach has saved me. 
+And the number of >assumptions 
+that it proved wrong in the pursuit of getting top results.
+
+
 
 -------------
 
@@ -74,9 +99,29 @@ data collection and gathering, modeling, and data reporting,
 but what remains stubbornly difficult is the whole process of >>preparing the data.
 
 
+---------------------
 
 
+https://neptune.ai/blog/experiment-management
 
+
+    So I was developing a machine learning model with my team 
+    and within a few weeks of extensive experimentation, we got promising results…
+
+    …unfortunately, we couldn’t tell exactly what performed best
+    because we didn’t track feature versions, didn’t record the parameters, 
+    and used different environments to run our models…
+
+    …after a few weeks, we weren’t even sure what we have actually tried so we needed to rerun pretty much everything”
+
+
+Experiment management in the context of machine learning is a process of tracking experiment metadata like:
+
+    code versions
+    data versions
+    hyperparameters
+    environment
+    metrics
 
 
 
