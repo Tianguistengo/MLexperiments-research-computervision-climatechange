@@ -124,6 +124,51 @@ Experiment management in the context of machine learning is a process of trackin
     metrics
 
 
+Tracking hyperparameters
+
+Every machine learning model or pipeline needs hyperparameters.
+Those could be learning rate, number of trees or a missing value imputation method.
+Failing to keep track of hyperparameters can result in weeks of wasted time looking for them or retraining models.
+
+The good thing is, keeping track of hyperparameters can be really simple. 
+Let’s start with the way people tend to define them and then we’ll proceed to hyperparameter tracking:
+
+Config files
+Typically a .yaml file that contains all the information that your script needs to run. For example:
+
+Command line + argparse
+You simply pass your parameters to your script as arguments:
+
+Parameters dictionary in main.py
+You put all of your parameters in a dictionary inside your script:
+
+Magic numbers all over the place
+Whenever you need to pass a parameter you simply pass a value of that parameter.
+
+We all do that sometimes but it is not a great idea especially if someone will need to take over your work.
+
+Ok, so I do like .yaml configs and passing arguments from the command line (option 1 and 2),
+but anything other than magic numbers is fine.
+>>What is important is that you log those parameters for every experiment.
+
+If you decide to pass all parameters as the script arguments make sure to log them somewhere. 
+It is easy to forget, so using an experiment management tool that does this automatically can save you here. 
+
+There is nothing so painful as to have a perfect script on perfect data version producing perfect metrics 
+only to discover that you don’t remember what are the hyperparameters that were passed as arguments
+
+Note:
+A bonus of having your hyperparameters abstracted away entirely (option 1 and 2)
+is that you implicitly turn your training and evaluation scripts into an objective function 
+that you can optimize automatically:
+That means you can use readily available libraries 
+and run hyperparameter optimization algorithms 
+with virtually no additional work! 
+
+
+
+
+
 
 
 
