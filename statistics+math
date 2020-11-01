@@ -400,10 +400,19 @@ z= a*b
 
 ----
 
-Dot product  --   matrix multiplication .mm .matmul
+Dot product  --  inner product ---   torch.dot()
 
 The dot product is a single number
 >>> that represents how similar the two vectors are.
+
+between two vectors of the >>>  same size. 
+One thing to keep in mind is that the dot product only works if the vectors are of the same size.
+If not, it will spit out an error complaining about inconsistent number of elements.
+
+The first element of t1 is multiplied with the first element of t2 
+and the second element of t1 is multiplied with the second element of t2 and so on and so forth. 
+>>These products are then summed together. 
+Note that a dot product between 2 vectors always returns a scalar value.
 
 We multiply the first component from v and u.
 We then multiply the second component and >> add the result together.
@@ -431,7 +440,178 @@ print("Dot Product of u, v:", torch.dot(u,v))
 
 The result is tensor(7). The function is 1 x 3 + 2 x 2 = 7.
 
+-----
+
+torch.mm()
+
+torch.mm() is responsible for multiplication between 2 matrices. 
+Similar to vector multiplication, matrix multiplication makes use of dot product and requires the matrices to have certain sizes.
+(but not the same sizes, as torch.dot() requires, rather,
+The number of columns of the first matrix must be equal to the number of rows of the second matrix.
+Each row of the first matrix will be >>transposed >>and multiplied against each column in the second matrix. 
+
+This is basically a vector multiplication where each row in the first matrix is transposed
+to make sure it has the same dimension as each column in the second matrix.
+
+For example, the dot product is valid 
+if the first matrix has a dimension of (3, 2) 
+and the second matrix has a dimension of (2, 2). 
+But not the other way around. 
+
+A bunch of words might not help much, so let's look at a couple of examples.
+
+
+In [5]:
+
+# Example 1 - working
+
+t1 = torch.tensor([
+    [1, 2, 3],
+    [1, 2, 3]
+])
+t2 = torch.tensor([
+    [1, 2],
+    [1, 2],
+    [1, 2]
+])
+
+torch.mm(t1, t2)
+
+
+Out[5]:
+
+tensor([[ 6, 12],
+        [ 6, 12]])
+
+
+
+Example below shows that it is important to make sure 
+the rows of the first matrix 
+have the same number of entries as 
+the columns of the second matrix.
+
+
+In [7]:
+
+# Example 3 - breaking (to illustrate when it breaks)
+t1 = torch.tensor([
+    [1, 2, 3],
+    [1, 2, 3]
+])
+
+torch.mm(t1, t1)
+
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-7-36387735bdb2> in <module>
+      5 ])
+
+
+
+
+Example 2 (below) uses the same arguments as example 1,
+>except that the order of the arguments is swapped.
+
+We can see that swapping the order results in a completely different outcome. 
+
+So, unlike the dot product between 2 vectors,
+matrix multiplication is not commutative; t1 x t2 != t2 x t1.
+
+
+In [6]:
+
+# Example 2 - working
+torch.mm(t2, t1)
+
+Out[6]:
+
+tensor([[3, 6, 9],
+        [3, 6, 9],
+        [3, 6, 9]])
+
+
+
 ----
+
+ torch.matmul ()
+ is more general as depending on the inputs, it can correspond to dot, mm or bmm.
+ 
+
+This function performs multiplication, 
+>>>>but it is not limited to certain shapes of tensors. (like .dot (same size) or .mm (first matrix rows = second metrix colums) are)
+
+torch.matmul() allows us to do multiplication for different ranks of tensors.
+This function behaves according to the dimensionality of the input tensors. 
+For instance, if both arguments are vectors of the same size, it will behave exactly like torch.dot().
+
+If both arguments are matrices, it will perform matrix multiplication similar to torch.mm(). 
+
+It also supports multiplication between a scalar and a matrix, 
+by converting the scalar value into a rank-2 tensor so these 2 tensors will be compatible. 
+
+>>>>In other words, it supports broadcasting. 
+
+
+In [9]:
+
+# Example 2 - working
+t1 = torch.randn(2)
+t2 = torch.randn(2, 3)
+
+torch.matmul(t1, t2)
+
+Out[9]:
+
+tensor([1.0438, 0.5157, 1.9654])
+
+
+
+In the above example, t1 is a scalar value and t2 is a matrix. 
+The way matmul handles this is by pre-pending a 1 to the dimension of t1 so the new dimension becomes (1, 2).
+
+It is now compatible with t2 that has a dimension of (2, 3).
+The pre-pended 1 is removed after multiplication is performed.
+
+https://dev.to/aishahsofea/linear-algebra-operations-with-pytorch-1bma
+
+
+----
+
+torch.transpose()
+
+Sometimes the tensor that we have is not the shape or dimension that we desire,
+and this happens a lot. 
+So this is where transposing an array or a matrix comes in handy.
+
+One of the applications is when doing an operation within matrices itself,
+which I mentioned earlier in torch.mm() section.
+
+In terms of a matrix, transposing can be thought of as flipping the elements over the diagonal axis. 
+
+torch.transpose() accepts 3 arguments; 
+first argument being the tensor,
+second and third arguments being the dimensions that we want to swap.
+
+
+In [11]:
+
+# Example 1 - working
+t1 = torch.tensor([
+    [1, 2],
+    [3, 4]
+])
+
+torch.transpose(t1, 0, 1)
+
+Out[11]:
+
+tensor([[1, 3],
+        [2, 4]])
+
+
+ 
+
+-------
 
 linspace
 
