@@ -975,6 +975,17 @@ Backward function only calculates the gradient using the already made graph and 
 and import torvision.transforms as T can help you do data aug very easily)))))))))
 
 
+----------
+
+Datacamp
+
+Random tensors 
+are very important in neural networks.
+
+Parameters 
+of the neural networks
+are typically initialized with 
+random weights (random tensors).
 
 
 
