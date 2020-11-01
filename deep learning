@@ -988,7 +988,10 @@ are typically initialized with
 random weights (random tensors).
 
 
+--
 
+Neural networks are essentially computational graphs
+and they become one when using code.
 
 
 
