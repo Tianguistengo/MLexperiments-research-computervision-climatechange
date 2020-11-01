@@ -400,7 +400,7 @@ z= a*b
 
 ----
 
-Dot product
+Dot product  --   matrix multiplication .mm .matmul
 
 The dot product is a single number
 >>> that represents how similar the two vectors are.
