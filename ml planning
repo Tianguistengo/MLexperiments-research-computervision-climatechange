@@ -250,6 +250,73 @@ play with OpenCV to add an augmentation step that makes your images look a bit f
  the change might help — but it may be better to try easier things first.
 
 
+-----
+
+Implement
+Build only what you need to build, and do it fast
+
+You know what to try, and you’ve made it simple for yourself, now it’s just a matter of implementing… “just”.
+
+The goal of this phase is to prototype rapidly so that you can measure the results,
+learn from them, 
+and go back around the cycle quickly. 
+
+For that reason, we recommend focusing on building just what’s needed for your current experiment.
+
+Note that while your goal is to learn quickly rather than polish everything, 
+your work still needs to be correct 
+and so you should check that the code works as expected -frequently.
+
+
+------
+
+When you code up a new model, start from a similar existing implementation.
+
+Many research papers now have freely available code 
+— so try to get code before reimplementing an idea from a paper as there are often undocumented details.
+This will save you hours/days of work.
+If possible, for any problem, we recommend going through these successive steps:
+
+    Find an implementation of a model solving a similar problem.
+    Reproduce the implementation locally in the conditions of the existing model (same dataset and hyperparameters).
+    Slowly tweak the implementation of the model and the data pipeline to match your needs.
+    Rewrite any parts needed.
+
+Write tests to check whether your gradients, tensor values, and input data and labels  -->> are properly formatted. 
+
+Do this as you are setting up your model initially, 
+that way if you catch an error once, you will never have to deal with it again.
+
+
+
+-----
+
+Measure 
+
+Print out your test results 
+and any other metrics (e.g., production constraints)
+you need to decide whether you’re ready to ship.
+
+If your performance improved somewhat, you might be on the right track. 
+In this case, now might be a good time to clean up any components you know are working well
+and make sure that the experiment can be reproduced by others in your team.
+
+On the other hand, if performance became worse or didn’t improve enough,
+you’ll need to decide 
+whether to try again (going back to the analysis phase)
+or to abandon your current idea. 
+
+These decisions are easier to make
+>>>> if each cycle of the ML Loop is relatively cheap: 
+you haven’t put too much energy into making your code perfect, 
+and another attempt won’t take too long 
+— — so you can decide what to do based on the risk and value of the idea
+instead of sunk cost.
+
+
+
+
+
 
 
 
