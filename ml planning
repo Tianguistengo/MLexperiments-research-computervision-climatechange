@@ -198,6 +198,56 @@ use a simple data versioning extension
 or outsource hashing to a full-blown data versioning tool like DVC.
 
 
+----------
+
+https://mlpowered.com/posts/how-to-deliver-on-machine-learning-projects/
+
+Tips
+
+Depending on your diagnosis, here are a number of common sets of solutions.
+
+If you need to tune the optimizer to better fit the data:
+
+    For numerical optimizers, try adjusting the learning rate or momentum settings. 
+ Starting with a small momentum (0.5) is usually easiest to get working.
+ 
+    Try different initialization strategies, or start from a pre-trained model.
+    
+    Try a type of model that is easier to tune. 
+ In deep learning, residual networks or networks with batch normalization may be simpler to train.
+
+If the model is unable to fit the training data well:
+
+    Use a larger or more expressive model class. 
+ For example, when using decision trees you could make the trees deeper.
+    
+    Check the examples the model gets wrong on the training set for labeling errors, missing fields, etc.
+ Investing time in training data cleanup can improve results significantly.
+
+If the model isn’t generalizing to the development set:
+
+    Add more training data. 
+ Note that it may be important to focus on adding training examples similar to classes of errors seen in the development set.
+   
+   Augment your data with novel samples generated from real training examples. 
+For example, if you notice your tree detector consistently performs poorly on foggy images, 
+play with OpenCV to add an augmentation step that makes your images look a bit foggy.
+
+    Search over a wider or finer-grained range of hyper-parameters 
+ to ensure you find the model that performs best on the development set.
+ 
+    Try a different form of regularization 
+ (such as weight decay, dropout for neural networks, or pruning for decision trees).
+ 
+    Try a different model class. 
+ A different type of model can alter how well you fit your data and how well it generalizes,
+ so it is difficult to know when this will work. 
+ One advantage of deep learning is that there is a wide range of 
+ “building block” neural network components you can easily try out. 
+ If you’re using a traditional model (such as a decision tree or gaussian mixture model),
+ switching model classes is much more involved. 
+ If the assumptions embodied by the new model are more correct,
+ the change might help — but it may be better to try easier things first.
 
 
 
