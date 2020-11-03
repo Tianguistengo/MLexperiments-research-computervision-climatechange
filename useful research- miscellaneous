@@ -1122,6 +1122,63 @@ have higher knowledge capacity than small models,
 this capacity might not be fully utilized.
 
 
+-------
+
+Attention
+
+Harshall Lambda
+
+The seq2seq models is normally composed of an encoder-decoder architecture,
+where the encoder processes the input sequence and encodes/compresses/summarizes the information 
+into a context vector (also called as the “thought vector”) of a fixed length.
+
+This representation is expected to be a good summary of the entire input sequence. 
+The decoder is then initialized with this context vector, 
+using which it starts generating the transformed output.
+
+A critical and apparent disadvantage of this fixed-length context vector design 
+>> is the incapability of the system to remember longer sequences.
+
+Often is has forgotten the earlier parts of the sequence 
+once it has processed the entire the sequence. 
+
+>>>>The attention mechanism was born to resolve this problem.
+
+In the traditional Seq2Seq model, 
+we discard all the intermediate states of the encoder
+and use only its final states (vector) to initialize the decoder.
+This technique works good for smaller sequences,
+however as the length of the sequence increases, 
+a single vector becomes a bottleneck 
+and it gets very difficult to summarize long sequences into a single vector. 
+This observation was made empirically as it was noted that 
+the performance of the system decreases drastically 
+as the size of the sequence increases.
+
+The central idea behind Attention
+>is not to throw away those intermediate encoder states 
+>but to utilize all the states in order to construct the context vectors 
+required by the decoder to generate the output sequence.
+
+As human beings we are quickly able to understand these mappings 
+between different parts of the input sequence 
+and corresponding parts of the output sequence.
+However its not that straight forward for artificial neural network to automatically detect these mappings.
+
+Thus the Attention mechanism is developed to
+“learn” these mappings 
+through Gradient Descent and Back-propagation.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
