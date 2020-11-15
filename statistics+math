@@ -657,9 +657,32 @@ that an observed difference could have occurred just by random chance.
 The lower the p-value, the greater the statistical significance of the observed difference. 
 
 
+----
+
+A natural number 
+
+is an integer greater than 0. 
+Natural numbers begin at 1 and increment to infinity: 1, 2, 3, 4, 5, etc.
+
+Natural numbers are also called "counting numbers" because they are used for counting. 
+For example, if you are timing something in seconds, 
+you would use natural numbers (usually starting with 1).
+
+When written, natural numbers do not have a decimal point (since they are integers), 
+but large natural numbers may include commas, e.g. 1,000 and 234,567,890. 
+
+Natural numbers will never include a minus symbol (-) because they cannot be negative.
 
 
+----
 
+Real numbers
+
+The type of number we normally use, such as 1, 15.82, −0.1, 3/4, etc.
+
+Positive or negative, large or small, whole numbers or decimal numbers are all Real Numbers.
+
+They are called "Real Numbers" because they are not Imaginary Numbers.
 
 
 
