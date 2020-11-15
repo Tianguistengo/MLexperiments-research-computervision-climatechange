@@ -1170,7 +1170,16 @@ Thus the Attention mechanism is developed to
 through Gradient Descent and Back-propagation.
 
 
+-----
+Naive Bayes
 
+In statistics, Naive Bayes classifiers 
+are a family of simple "probabilistic classifiers" 
+based on applying Bayes' theorem 
+with strong independence assumptions (naive) between the features. 
+
+They are among the simplest Bayesian network models, 
+but coupled with Kernel density estimation, they can achieve higher accuracy levels.
 
 
 
