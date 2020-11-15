@@ -412,12 +412,14 @@ If not, it will spit out an error complaining about inconsistent number of eleme
 The first element of t1 is multiplied with the first element of t2 
 and the second element of t1 is multiplied with the second element of t2 and so on and so forth. 
 >>These products are then summed together. 
+
 Note that a dot product between 2 vectors always returns a scalar value.
 
 We multiply the first component from v and u.
-We then multiply the second component and >> add the result together.
+We then multiply the second component      and >> add the result together.
 
-The result is a number that represents how similar the two vectors are. 
+The result is 
+>>>>a number that represents how similar the two vectors are. 
 
 a= [1,3]
 b= [2,4]
@@ -538,7 +540,8 @@ tensor([[3, 6, 9],
  
 
 This function performs multiplication, 
->>>>but it is not limited to certain shapes of tensors. (like .dot (same size) or .mm (first matrix rows = second metrix colums) are)
+>>>>but it is not limited to certain shapes of tensors. 
+(like .dot (same size) or .mm (first matrix rows = second metrix colums) are)
 
 torch.matmul() allows us to do multiplication for different ranks of tensors.
 This function behaves according to the dimensionality of the input tensors. 
