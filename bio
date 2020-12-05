@@ -1,4 +1,5 @@
 AlphaFold
+https://deepmind.com/blog/article/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology
 
 In his acceptance speech for the 1972 Nobel Prize in Chemistry, Christian Anfinsen famously postulated that, 
 in theory, a protein’s amino acid sequence should fully determine its structure. 
@@ -6,3 +7,65 @@ in theory, a protein’s amino acid sequence should fully determine its structur
 This hypothesis sparked a five decade quest to be able to computationally 
 predict a protein’s 3D structure 
 based solely on its 1D amino acid sequence.
+
+A major challenge, however, is that
+the number of ways a protein could theoretically fold 
+before settling into its final 3D structure 
+is astronomical. 
+Yet in nature, proteins fold spontaneously, some within milliseconds
+– a dichotomy sometimes referred to as Levinthal’s paradox.
+
+These exciting results open up the potential for biologists to
+use computational structure prediction 
+as a core tool in scientific research. 
+
+Our methods may prove especially helpful for important classes of proteins, 
+such as membrane proteins, 
+that are very difficult to crystallise 
+and therefore challenging to experimentally determine.
+
+“AlphaFold’s astonishingly accurate models have allowed us to solve a protein structure we were stuck on for close to a decade, 
+relaunching our effort to understand 
+-> how signals are transmitted across cell membranes.”
+
+In the meantime, we’re also looking into how protein structure predictions
+could contribute to our understanding of specific diseases with a small number of specialist groups, for example by 
+helping to identify proteins that have malfunctioned
+and to reason about how they interact. 
+These insights could enable more precise work on drug development, 
+complementing existing experimental methods to find promising treatments faster.
+
+As well as accelerating understanding of known diseases,
+we’re excited about the potential for these techniques to explore the hundreds of millions of proteins
+we don’t currently have models for 
+– a vast terrain of unknown biology. 
+
+Since DNA specifies the -amino acid sequences- 
+that comprise protein structures, 
+the genomics revolution has made it possible to read -protein sequences- from the natural world at massive scale
+– with 180 million protein sequences and counting in the Universal Protein database (UniProt). 
+
+In contrast, given the experimental work needed to go 
+from sequence to structure, 
+only around 170,000 protein structures are in the Protein Data Bank (PDB). 
+
+Among the undetermined proteins may be some with new and exciting functions 
+and – just as a telescope helps us see deeper into the unknown universe – 
+techniques like AlphaFold may help us find them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
