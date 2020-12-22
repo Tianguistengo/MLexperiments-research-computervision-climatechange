@@ -751,6 +751,50 @@ which incorporates negative label suppression into an off-the-shelf semi-supervi
 In three popular image classification benchmarks, our approach claims higher efficiency in utilizing the limited amount of annotations.
 
 
+------
+
+Relational inductive biases, deep learning, and graph networks   (combinatorial generalization)
+
+https://arxiv.org/pdf/1806.01261.pdf
+
+The  following  is  part  position  paper,  part  review,  and  part  unification. 
+We  argue  that combinatorial generalization 
+must be a top priority for AI to achieve human-like abilities,
+and that structured representations and computations are key to realizing this objective. 
+
+Just as biology uses nature and nurture cooperatively,
+we reject the false choice between “hand-engineering”and “end-to-end” learning, 
+and instead advocate for an approach which benefits from their complementary strengths. 
+
+We explore how using relational inductive biases 
+within deep learning architectures 
+can facilitate learning about entities, relations, and rules for composing them.  
+
+We present a new building block for the AI toolkit with a strong relational inductive bias
+—the graph network—
+which generalizes and extends various approaches for neural networks that operate on graphs,
+and provides a straightforward interface 
+for manipulating structured knowledge and producing structured behaviors.  
+
+We discuss how graph networks can support relational reasoning and combinatorial generalization, 
+laying the foundation for more sophisticated, interpretable,and flexible patterns of reasoning.  
+
+As a companion to this paper,  we have also released anopen-source software library for building graph networks, 
+with demonstrations of how to use them in practice.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
