@@ -785,11 +785,34 @@ with demonstrations of how to use them in practice.
 
 
 
+---------------------
+
+DNA computing
+
+https://interestingengineering.com/what-is-dna-computing-how-does-it-work-and-why-its-such-a-big-deal
+
+The reason this generated excitement was that DNA structures are cheap, relatively easy to produce, and scalable. 
+There is no limit to the power that DNA computing can theoretically have 
+since its power increases the more molecules you add to the equation 
+and unlike silicon transistors which can perform a single logical operation at a time,
+these DNA structures can theoretically perform as many calculations at a time as needed to solve a problem 
+and do it all at once.
+
+The problem however, is speed.
+Even though it took moments for Adleman’s solution to the traveling salesman problem to be encoded into his DNA strands in the test tube,
+it took days of filtering out bad solutions to find the optimal solution he was looking for
+—after meticulous preparation for this single computation.
+
+Still, the concept was a sound one and the potential for incredible gains 
+in storage capacity
+and computational speeds was obvious.
+This kicked off two decades of research into how to create practical DNA computing a reality.
 
 
-
-
-
+As demonstrated with Adleman’s paper (1994), 
+the major advantage of DNA computing over classical computing—and even quantum computing to an extent—
+>>>>>> is that it can perform countless calculations in parallel. 
+This idea of parallel computing isn’t new and has been mimicked in classical computing for decades.
 
 
 
