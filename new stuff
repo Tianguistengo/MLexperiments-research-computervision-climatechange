@@ -815,6 +815,50 @@ the major advantage of DNA computing over classical computing—and even quantum
 This idea of parallel computing isn’t new and has been mimicked in classical computing for decades.
 
 
+https://www.wired.com/story/finally-a-dna-computer-that-can-actually-be-reprogrammed/
+
+But there’s a problem: The molecular circuits built so far have no flexibility at all. 
+Today, using DNA to compute is “like having to build a new computer out of new hardware just to run a new piece of software,”
+says computer scientist David Doty. So Doty, a professor at UC Davis, and his colleagues set out to see
+what it would take to implement a DNA computer that was in fact 
+> reprogrammable.
+
+They showed it’s possible to use a simple trigger
+to coax the same basic set of DNA molecules 
+into implementing numerous different algorithms.
+
+“There was >> algorithmic self-assembly before, 
+but not to this degree of complexity.”
+
+In electronic computers like the one you’re using to read this article, 
+bits are the binary units of information that tell a computer what to do. 
+They represent the discrete physical state of the underlying hardware, 
+usually the presence or absence of an electrical current. 
+
+These bits, or rather the electrical signals implementing them,
+are passed through circuits made up of logic gates, 
+which perform an operation on one or more input bits 
+and produce one bit as an output.
+
+By combining these simple building blocks over and over, 
+computers are able to run remarkably sophisticated programs.
+The idea behind DNA computing is to substitute 
+chemical bonds
+for electrical signals 
+and nucleic acids 
+for silicon 
+to create biomolecular software. 
+
+According to Erik Winfree, a computer scientist at Caltech and a co-author of the paper,
+molecular algorithms 
+leverage the natural information processing capacity baked into DNA,
+but rather than letting nature take the reins, he says,
+“computation controls the growth process.”
+
+
+
+
+
 
 
 
