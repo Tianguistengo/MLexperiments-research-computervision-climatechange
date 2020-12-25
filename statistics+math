@@ -694,7 +694,49 @@ Sigma - the summation symbol
 
 https://www.hec.ca/en/cams/help/topics/The_summation_symbol.pdf
 
+--------
 
+Hypergraph
+
+are like simple graphs,
+except that instead of having edges that only connect 2 vertices, 
+their edges are sets of any number of vertices. 
+
+This happens to mean that all graphs are just a subset of hypergraphs.
+
+As Qiaochu says, hyperedges are absurdly general. 
+Likewise, the notion of data. 
+To make this useful, one needs to constrain the form the hyperedges take.
+
+What is nice is that the need to constrain the way that state is represented 
+is perfectly matched with the need in useful programming languages
+to contrain the representation of data, 
+and furthermore,
+one can often cleanly map the programming-driven constraints 
+into reasonable constraints on the hypergraphs.
+
+The idea crops up again and again the literature on 
+graph transformations. 
+
+A general comment here is that a hypergraph is an absurdly general object;
+it's basically an element of the power set of the power set of a set. 
+
+For example, topologies and measurable spaces are both (technically) 
+special cases of hypergraphs. 
+So any theorems or applications
+necessarily need to focus on special cases. 
+
+Here are two partial explanations 
+for why algorithms based on hypergraphs are less common than algorithms based on graphs.
+
+1. Some polynomial-time algorithms for graphs 
+turn into NP-complete problems
+when you try to generalize them to hypergraphs 
+(e.g., finding a perfect matching). 
+
+2. We often use graphs to model >> symmetric binary relations, 
+and symmetric binary relations appear much more frequently 
+than symmetric ternary relations (and beyond).
 
 
 
