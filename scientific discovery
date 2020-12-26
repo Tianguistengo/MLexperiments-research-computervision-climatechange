@@ -3,3 +3,73 @@ The Master Algorithm: Here, the books’ central hypothesis is presented:
     ‘All knowledge — past, present, and future — 
     can be deduced from data 
     by a single, universal learning algorithm.’
+
+-----------------
+https://blogs.sciencemag.org/pipeline/archives/2019/10/02/automated-discovery
+
+
+I think that the classification scheme in the paper is a useful one to start to deal with these objections.
+They divide scientific discoveries impacted by automation into three categories: 
+
+1. physical matter (a drug candidate, a new metal alloy, new crystal form, etc.),
+
+2. processes (such as new chemical reactions), 
+
+3. models (new laws, rules of thumb, correlations, and connections). 
+
+The authors argue that all three of these are fundamentally 
+>>search problems
+– they just differ in the knowledge space being searched, 
+which is a process of validation and feedback. 
+
+That holds whether you’re talking about a hypothesis-first (Popperian) mode of discovery 
+or an observation-first (Baconian) one; 
+the difference between the two is (to a large extent) 
+where you enter that cycle of observation and experimentation.
+
+The paper makes the key point that in every example of machine-aided discovery so far, 
+>>the search space has been far larger 
+than what was (or even could be) explored. 
+
+When you look closer, >>>>>    it’s human input that has narrowed the terms and the search space.
+
+The authors also note the three factors that are enabling automation in all of these classes 
+– access to large amounts of data, 
+-the increasing computing power to process it all, 
+-the advances in hardware to mechanically manipulate the physical tools of experimentation
+
+Now one gets to the question of just how automated/autonomous things really are (or really can get):
+
+    Here, we propose a set of questions to ask when evaluating the extent to which a discovery process or workflow is autonomous: 
+    
+    (i) How broadly is the goal defined? 
+    (ii) How constrained is the search/design space? 
+    (iii) How are experiments for validation/feedback selected? 
+    (iv) How superior to a brute force search is navigation of the design space?
+    (v) How are experiments for validation/feedback performed? 
+    (vi) How are results organized and interpreted? 
+    (vii) Does the discovery outcome contribute to broader scientific knowledge?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
