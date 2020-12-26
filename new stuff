@@ -856,7 +856,60 @@ but rather than letting nature take the reins, he says,
 “computation controls the growth process.”
 
 
+-------
+6.2.2 Self-Training (Bootstrapping)
 
+Mahendra and Schmdi
+
+Self-training, sometimes also referred to as bootstrapping or pseudo-labels, 
+is an iterative method where a deep neural network is first developed in a supervised fashion on the labelled data. 
+
+This neural network is then used to provide (pseudo) labels to the unlabelled data, 
+which can then be used in conjunction with the labelled data to train a new, more accurate neural network. 
+
+This approach often works well and can even be repeated to get further improvements. 
+There are a couple of common details in implementation — often when adding the neural network pseudo-labelled data, 
+we only keep the most confidently pseudo-labelled examples. 
+
+These pseudo-labelled examples may also be used for 
+training with a different objective function 
+compared to the labelled data. 
+
+Other variants, including mean teacher [225],
+temporal ensembling [119]
+and the recent MixMatch [19]
+also primarily use the self-training approach, but incorporate elements of consistency (see below).
+
+There are nice open sourced implementations of these methods,
+such as https://github.com/CuriousAI/mean-teacher for mean teacher 
+and https://github.com/google- research/mixmatch and
+https://github.com/YU1ut/MixMatch-pytorch for MixMatch.
+
+
+6.2.3 Enforcing Consistency (Smoothness)
+
+An important theme in many semi-supervised methods has been to
+provide supervision on the unlabelled data 
+through enforcing consistency. 
+
+If a human was given two images A and B, 
+where B was a slightly perturbed version of A (maybe blurred, maybe some pixels obscured or blacked out), 
+they would give these images the same label — consistency. 
+
+We can also apply this principle to >>> provide feedback to our neural network on the unlabelled data,
+combining it with the labelled data predictions as in multitask learning (Section 5.3)
+to form a semi-supervised learning algorithm. 
+
+A popular method on enforcing consistency is virtual adversarial training [155],
+which enforces consistency across carefully chosen image perturbations.
+
+Another paper, unsupervised data augmentation [251], 
+uses standard data augmentation techniques such as cutout [44]
+for images and back translation for text [206] 
+to perturb images and enforces consistency across them. 
+
+[265] uses consistency constraints 
+along with other semi-supervised and self-supervised techniques in its full algorithm.
 
 
 
