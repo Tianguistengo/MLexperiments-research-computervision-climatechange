@@ -71,3 +71,53 @@ How it works: WideResNet-28-2 and ResNet 50 teachers taught EfficientNet student
 Results: Meta Pseudo Labels produced a student with higher ImageNet accuracy (86.9 percent) than a supervised model (84.5 percent). The improvements remained when using a limited number of labels from each dataset, where MPL achieved CIFAR-10 accuracy of 83.7 percent compared with a supervised model’s 82.1, and SVHN accuracy to 91.9 percent compared with 88.2. 
 Why it matters: Student-teacher training began as a compression technique. But lately Noisy Student and Meta Pseudo Labels are making it a competitive approach to training models that generalize.
 We’re thinking: At deeplearning.ai, we aim to keep improving our instruction based on student feedback — but please make your feedback differentiable.
+
+
+-----------
+
+How to Learn from Others:
+Transfer Machine Learning 
+with Additive Regression Models
+to Improve Sales Forecasting
+
+https://arxiv.org/abs/2005.10698
+
+In a variety of business situations, the introduction or improvement of machine learning approaches is impaired 
+> as these cannot draw on existing analytical models. 
+
+However, in many cases similar problems may have already been solved elsewhere
+>> but the accumulated analytical knowledge cannot be tapped to solve a new problem, 
+e.g., because of privacy barriers. For the particular purpose of sales forecasting for similar entities, 
+we propose a transfer machine learning approach based on 
+>> additive regression models 
+that lets new entities benefit from models of existing entities.
+
+We evaluate the approach on a rich, multi-year dataset of multiple restaurant branches.
+We differentiate the options to simply 
+transfer models from one branch to another ("zero shot") 
+or to transfer and adapt them. 
+
+We analyze feasibility and performance against several forecasting benchmarks.
+The results show the potential of the approach to 
+>> exploit the collectively available analytical knowledge. 
+
+Thus, we contribute an approach that is generalizable 
+beyond sales forecasting and the specific use case in particular. 
+In addition, we demonstrate its feasibility for a typical use case as well as the potential for improving forecasting quality.
+These results should inform academia, as they 
+>> help to leverage knowledge across various entities, 
+and have immediate practical application in industry. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
