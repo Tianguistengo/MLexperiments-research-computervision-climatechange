@@ -54,7 +54,8 @@ Now one gets to the question of just how automated/autonomous things really are 
 ---------------
 Maithra Raghu and Eric Schmid
 
-From Predictions to Understanding 
+1. From Predictions to Understanding 
+
 One fundamental difference between scientific questions and core machine learning problems is the 
 emphasis of science on understanding the underlying mechanisms.
 
@@ -70,10 +71,13 @@ and may be of broader interest for e.g. aiding model debugging and preemptively 
 
 There has been significant work on both tools to understand 
 what features of the input are most critical to the output prediction, 
-as well as techniques to directly analyze the hidden representations of the neural network models, 
+as well as techniques to 
+>>> directly analyze the hidden representations 
+of the neural network models, 
 which can reveal important properties of the underlying data.
 
-Complex Transformations of Input Data 
+2. Complex Transformations of Input Data 
+
 In many scientific domains, the amount of generated data, particularly visual data 
 (e.g. fluorescence microscopy, spatial sequencing, specimen videos [177, 97]) has grown dramatically, 
 and there is an urgent need for 
@@ -84,7 +88,7 @@ can be highly effective for such settings, for example, using a deep neural netw
 identify the nuclei in images of cells, 
 or a pose estimation system to rapidly label behaviors seen in videos of mice for neuroscience analysis.
 
-Prediction Problems
+3. Prediction Problems
 We can also think of this predictive use case as 
 >>>>>getting the model to learn a target function,
 in our example, mapping from input visual features to the cancer/no cancer output.
@@ -97,7 +101,18 @@ For instance, we might use a deep learning model to (black-box) simulate a compl
 (e.g. climate modelling), that is very challenging to explicitly model.
 
 
+6.2.4 Co-training
 
+Another way to provide feedback on unlabelled data
+is to train two (many) neural network models, >> each on a different view of the raw data.
+
+For example, with text data, each model might see a different part of the input sentence. 
+These models can then be given feedback to be maximally consistent with each other,
+or with a different model which sees all of the data, 
+or even used for self-training,
+with each different model providing pseudo labels on the instances it is most confident on.
+
+This post https://ruder.io/semi-supervised/ gives a nice overview of different co-training schemes.
 
 
 
