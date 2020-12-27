@@ -115,6 +115,116 @@ with each different model providing pseudo labels on the instances it is most co
 This post https://ruder.io/semi-supervised/ gives a nice overview of different co-training schemes.
 
 
+------------
+Uni camb
+
+robot-scientist-becomes-first-machine-to-discover-new-scientific-knowledge
+2009
+https://www.cam.ac.uk/research/news/robot-scientist-becomes-first-machine-to-discover-new-scientific-knowledge
+
+"As we start to consider living systems in a holistic manner, 
+the complexity of such systems 
+means that it will become increasingly difficult for scientists 
+to formulate hypotheses unaided. 
+
+Thus it will be necessary
+for human and robot scientists to work together 
+to achieve the goals of biological research.
+
+"It is not the management and analysis of complex data 
+that is the big deal about Adam, 
+it is the ability of the machine to reason with those data 
+>>>>>and make proposals about how a living thing works."
+
+Prof Ross King, who led the research at Aberystwyth University, said: 
+"Ultimately we hope to have teams of human and robot scientists working together in laboratories. 
+Because biological organisms are so complex 
+it is important that the details of biological experiments (y yo diria mined tambien) are recorded in great detail. 
+This is difficult and irksome for human scientists, but easy for Robot Scientists."
+
+
+
+Artificially-intelligent Robot Scientist ‘Eve’ could boost search for new drugs
+2015
+https://www.cam.ac.uk/research/news/artificially-intelligent-robot-scientist-eve-could-boost-search-for-new-drugs
+
+>>>>>>>> they describe how the robot can help identify promising new drug candidates for
+>>>>>>>.malaria and neglected tropical diseases such as African sleeping sickness and Chagas’ disease.
+
+Eve, an artificially-intelligent ‘robot scientist’ 
+could make drug discovery
+faster 
+and much cheaper.
+
+Discovered that a compound shown to have anti-cancer properties 
+might also be used in the fight against malaria.
+
+[Eve's artificial intelligence] reduces the 
+costs,
+uncertainty, 
+and time involved in drug screening.
+
+They can automatically 
+develop and test hypotheses to explain observations, 
+run experiments using laboratory robotics, 
+interpret the results to amend their hypotheses, 
+and then repeat the cycle, 
+automating high-throughput hypothesis-led research. 
+
+Robot scientists are also well suited to 
+>> recording scientific knowledge: 
+as the experiments are conceived 
+and executed 
+automatically by computer, 
+it is possible to completely capture
+and digitally curate 
+>> all aspects of the scientific process.
+
+ help identify promising new drug candidates 
+ 
+ Eve exploits its artificial intelligence to 
+ learn from early successes in her screens 
+ and select compounds that have a high probability of being active 
+ against the chosen drug target.
+ 
+  A smart screening system, 
+  based on genetically engineered yeast, is used.
+  This allows Eve to exclude compounds that are toxic to cells 
+  and select those that block the action of the parasite protein while leaving any equivalent human protein unscathed. 
+  This reduces the costs, uncertainty, and time involved in drug screening.
+
+Eve is designed to automate early-stage drug design. 
+First, she systematically tests each member from a large set of compounds 
+in the standard brute-force way of conventional mass screening. 
+
+The compounds are screened against assays (tests) designed to be automatically engineered, 
+and can be generated much faster and more cheaply than the bespoke assays that are currently standard. 
+
+This enables more types of assay to be applied, 
+more efficient use of screening facilities to be made, 
+and thereby increases the probability of a discovery within a given budget.
+ 
+ 
+To test the viability of the approach, 
+the researchers developed assays targeting key molecules from parasites 
+responsible for diseases such as malaria, Chagas’ disease and schistosomiasis 
+and tested against these a library of approximately 1,500 clinically approved compounds. 
+
+Through this, Eve showed that a compound that has previously been investigated as an anti-cancer drug
+inhibits a key molecule known as DHFR in the malaria parasite. 
+
+Drugs that inhibit this molecule are currently routinely used to protect against malaria,
+and are given to over a million children; 
+however, the emergence of strains of parasites resistant to existing drugs means that 
+the search for new drugs is becoming increasingly more urgent.
+
+“Despite extensive efforts, no one has been able to find a new antimalarial 
+that targets DHFR and is able to pass clinical trials,” adds Professor King.
+
+“Eve’s discovery could be even more significant than just demonstrating a new approach to drug discovery.”
+
+
+
 
 
 
