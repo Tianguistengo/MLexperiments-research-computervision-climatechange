@@ -10,16 +10,18 @@ The Master Algorithm: Here, the books’ central hypothesis is presented:
  
  ---------------
  
- The ability to explore the world in the hope of learning - active learning
+ The ability to EXPLORE THE WORLD
+ in the hope/with the task of learning - active learning
  
  We don't learn pixels, we learn fuzzy high level abstractons
  we need ai to generate features at the level of unobserverd latent variables 
  
  -------
  
- GANs
+ GANs (but not only) 
  
- estiamte and maximize mutual information 
+ estimate and maximize 
+ MUTUAL INFORMATION
  
  ------------
  
