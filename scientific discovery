@@ -321,6 +321,11 @@ from the massive body of scientific literature in a collective manner,
 ----------
 https://www.graphcore.ai/posts/why-artificial-intelligence-will-allow-us-to-make-new-scientific-discoveries
 
+Why AI will enable new scientific discoveries
+
+Andrew Briggs
+is Professor of Nanomaterials in the Department of Materials at the University of Oxford
+
 In materials science, as in other branches of experimental science such as drug discovery,
 we are able to obtain ever larger amounts of data from ever more sophisticated experiments and modelling. 
 And yet 
@@ -341,12 +346,33 @@ The key advances in AI that we are currently exploring to make this possible are
 reinforcement learning 
 and Bayesian optimisation.
 
+Uncertainty, 
+which could be reduced by acquiring more data,
+but the data are costly to acquire. 
+How should we choose what experiment to do next?
 
+>>These same methods can also be used to optimise a system for a given set of criteria.
+By analysing the results of new experiments and new material discoveries,
+>>we can further tune our approaches, 
+saving time, money and improving outcomes.
 
+ Initially this can be applied to prototypes which have already been made, 
+ but eventually it can be applied to >> the whole design 
+ and even to >> the manufacturing process. 
+ 
+ This could make a significant difference in the cost of production for advanced materials.
 
+(AI) will allow us to 
+> understand 
+>and explore 
+>the use 
+>of new materials 
+>and new techniques. 
 
-
-
-
+More importantly, 
+new machine learning techniques applied to scientific discovery will quickly 
+>>enable complex research challenges 
+to be addressed that could never be solved by humans alone working 
+within feasible time limits and resources.
 
 
