@@ -318,10 +318,28 @@ from the massive body of scientific literature in a collective manner,
 >>>>>and point towards a generalized approach to the mining of scientific literature.
 
 
+----------
+https://www.graphcore.ai/posts/why-artificial-intelligence-will-allow-us-to-make-new-scientific-discoveries
 
+In materials science, as in other branches of experimental science such as drug discovery,
+we are able to obtain ever larger amounts of data from ever more sophisticated experiments and modelling. 
+And yet 
+>>> the choice of what data to collect, 
+>>> and the process of how best to analyse it, 
+at times seem like a cottage industry compared to the sophistication of internet searches at Google or Baidu. 
+Our current approaches to data in science fall well short of 
+the advanced machine learning techniques social media platforms use to recognize the friend in a photo.
 
+I predict that by 2025, 
+AI will be as ubiquitous for >> running experiments 
+as computers are today for controlling instrumentation and logging data. 
 
+The paradigm shift will be from AI used for analysing the data which has already been obtained, 
+>>> to AI deciding what to measure next. 
 
+The key advances in AI that we are currently exploring to make this possible are
+reinforcement learning 
+and Bayesian optimisation.
 
 
 
