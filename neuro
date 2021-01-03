@@ -50,10 +50,40 @@ The neural code defines what pattern of neural activity corresponds to each repr
 In the sensory system, such items may indicate the presence of a stimulus object or the value of some stimulus parameter,
 assuming that each time this item is represented the neural activity pattern will be the same or at least similar.
 
+------------------
+
+Leveraging Unstructured Statistical Knowledge in a Probabilistic Language of Thought
+
+Alexander K. Lew1,Michael Henry Tessler2,Vikash K. Mansinghka2, andJoshua B. Tenenbaum2
+{alexlew, tessler, vkm, jbt}@mit.edu1Department of Electrical Engineering and Computer Science, MIT2Department of Brain and Cognitive Sciences, MIT
 
 
 
+Abstract
+One hallmark of human reasoning is that we can bring to bear a diverse web of common-sense knowledge in any situation.
+The vastness of our knowledge poses a challenge for the practical implementation of reasoning systems 
+as well as for our cognitive theories – how do people represent their common-sense knowledge?  
 
+On the one hand,  our best models of sophisticated reasoning are top-down,  
+making use primarily of symbolically-encoded knowledge.  
 
+On the other, much of our understanding of the statistical properties of our environment
+may arise in a bottom-up fashion, 
+for example through associationist learning mechanisms. 
+Indeed, recent advances in AI have enabled the development of billion-parameter language models
+that can scour for patterns in gigabytes of text from the web,
+picking up a surprising amount of common-sense knowl-edge along the way
+—but they fail to learn the structure of co-herent reasoning. 
+
+We propose combining these approaches, 
+by embedding  language-model-backed  primitives  
+into  a  state-of-the-art probabilistic programming language (PPL). 
+
+On two open-ended  reasoning  tasks,  we  show  that  our  PPL  models with neural knowledge components 
+characterize the distribution of human responses more accurately than the neural language models alone, 
+raising interesting questions about 
+how people might use language as an interface to common-sense knowledge,
+and suggesting that building probabilistic models with neural language-model components
+may be a promisin gapproach for more human-like AI.
 
 
