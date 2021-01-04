@@ -811,8 +811,27 @@ Specifically, each node is represented by the aggregation of its neighborhood.
 Thus, even if a new node unseen during training time appears in the graph,
 it can still be properly represented by its neighboring nodes. 
 
+------
 
+Combinatorial optimization
 
+wiki
+
+is a topic that consists of finding an optimal object 
+from a finite set of objects.[1] 
+
+In many such problems, exhaustive search is not tractable.
+It operates on the domain of those optimization problems 
+in which the set of feasible solutions is discrete or can be reduced to discrete,
+and in which the goal is to find the best solution. 
+
+Typical problems are the travelling salesman problem ("TSP"), 
+the minimum spanning tree problem ("MST"), 
+and the knapsack problem. 
+
+Combinatorial optimization is the process of 
+searching for maxima (or minima) of an objective function F 
+whose domain is a discrete but large configuration space (as opposed to an N-dimensional continuous space). 
 
 
 
