@@ -421,9 +421,42 @@ Over the years, Arrowsmith has had limited effect, but Swanson’s early foray s
 Although Swanson’s efforts were fully manual,
 such a process can indeed be automated to help uncover knowledge that scientists might not have discovered yet.
 
+------
+Limits of deep learning
+
+Lex & F Chollet
+
+ you've talked about local versus extreme generalization 
+ 
+ you mentioned the neural
+networks don't generalize well humans do
+
+so there's this gap so and you've also
+00:26
+mentioned that generalization extreme
+00:28
+generalization requires something like a
+00:30
+reasoning to fill those gaps 
 
 
+it's not obvious but I
+think it's doable
 
+there is no hard limitations to
+what you can learn with a deep neural network as long as 
+the search space is rich enough is flexible enough
+and as long as 
+you have this dense sampling of the input cross output space
+
+the problem is that you know distance
+sampling could mean anything from 10,000
+examples to like trillions and trillions 
+
+
+think what kind of problems can be
+solved by getting a huge amounts of data
+and thereby creating a dense mapping
 
 
 
