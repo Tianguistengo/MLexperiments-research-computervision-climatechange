@@ -12,3 +12,38 @@ But it seems to suggest that a
 mix of approaches
 —along with some new ideas—
 will be needed to take AI forward.
+
+-------------
+
+https://www.wired.com/story/ai-pioneer-algorithms-understand-why/
+
+Understanding cause and effect would make existing AI systems smarter and more efficient.
+A robot that understands that dropping things causes them to break 
+would not need to toss dozens of vases onto the floor 
+to see what happens to them.
+
+Bengio says the analogy extends to self driving cars. 
+“Humans don't need to live through many examples of accidents to drive prudently,” he says. 
+>>They can just imagine accidents, 
+>>“in order to prepare mentally if it did actually happen.”
+
+>>>>>>>>>>The question is how to give AI systems this ability.
+
+At his research lab, Bengio is working on a version of deep learning 
+capable of recognizing simple cause-and-effect relationships. 
+He and colleagues recently posted a research paper outlining the approach. 
+They used a dataset that maps causal relationships between real-world phenomena, 
+such as smoking and lung cancer, 
+>>in terms of probabilities. 
+They also generated synthetic datasets of causal relationships.
+
+The algorithm in the paper essentially forms a hypothesis 
+about which variables are causally related, 
+and then tests how changes to different variables fit the theory. 
+
+The fact that smoking is not only related to cancer but actually causes it, for instance, 
+should still be apparent even if cancer is correlated with other factors, such as hospital visits.
+
+A robot might eventually use this approach to form a hypothesis 
+about what happens when it drops something, 
+and then confirm its hunch when it sees several things smash to the floor.
