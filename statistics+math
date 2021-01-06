@@ -833,5 +833,11 @@ Combinatorial optimization is the process of
 searching for maxima (or minima) of an objective function F 
 whose domain is a discrete but large configuration space (as opposed to an N-dimensional continuous space). 
 
+--------------
 
+Simpson's paradox,
+
+which also goes by several other names, is a phenomenon in probability and statistics,
+in which a trend appears in several different groups of data 
+but disappears or reverses when these groups are combined.
 
