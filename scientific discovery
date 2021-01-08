@@ -543,9 +543,18 @@ Scientific intuition inspired by machine learning generated hypotheses
 
 PascalFriederich, MarioKrenn, Isaac Tamblyn,andAla ́nAspuru-Guzik
 
->>>>>>>>>>>chingos de good papers en REFERENCES
+>>>>>>>>>>>chingos de good papers en REFERENCES  -> subraye los que se ven buenos
 
+A key challenge lies in >> the design of experiments
+which creates certain desired quantum systems. 
 
+The difficulty arises from >>counter-intuitive quantum phenomena, 
+which raises the question of >> whether human intuition is the best way to design new experiments. 
+
+Several studies have therefore developed automated and machine-learning augmented approaches 
+>for the design of experiments [39–44]. 
+The goal in our approach is to tackle this challenge in a completely different way, 
+>> namely by improving the scientist’s intuition about these systems.
 
 
 
