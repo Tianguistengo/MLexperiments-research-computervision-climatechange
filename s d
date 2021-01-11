@@ -639,10 +639,51 @@ In many cases these hand-engineered features
 and understanding of the underlying physical processes. 
 
 
+In general, while methods exist for learning a classifier while ignoring predefined aspects of the input,
+we wish to emphasize that our goal is slightly different: 
+we wish to learn “over and above” the information extant in the predefined features. 
+In a sense we wish to 
+>>fit the residual left after predicting the label with the known feature. 
+That is distinct from the methods such as that by Kim et al. (2019)
+above which focus on ignoring the predefined features altogether.
 
 
+5. Related Work
 
+The goal of augmenting neural representations with external feature spaces, 
+with or without inducing independence, has been studied to some extent in various domains.
 
+Most of these works have attempted to either remove certain biases from the learned representation, 
+or to improve its robustness in domain adaptation tasks.
+
+In the computer vision domain, 
+
+Kim et al. (2019) propose a mutual information regularization term 
+that encourages the network to ’unlearn’ a predefined bias attribute. 
+
+Wang et al. (2019) employ an adversarial approach 
+to remove a protected attribute (e.g. gender) from the input space,
+yielding a “debiased” dataset. 
+
+Singh et al. (2020) propose a loss term that penalizes overlap between class activation mappings of two co-occurring classes,
+mitigating spurious correlations. While they do succeed in learning a more robust representation of their target classes,
+their process still requires having prior knowledge about the label co-occurrence.
+
+Atzmon et al. (2020) model object-attribute pairs 
+by means of the intervention that has generated the image. 
+They also apply HSIC to induce independence between object and attribute embeddings.
+
+In natural language processing, 
+
+there is a long tradition of injecting external knowledge to models.
+
+For example, Kiperwasser and Goldberg (2016) aims to extract a complementary representation
+for a known hand-crafted feature set. The boosted performance 
+presented in the above work suggests that complementary information is indeed learned,
+but there might be redundancy between this complementary representation and the hand crafted features
+as no notion of independence is enforced.
+
+Elazar and Goldberg (2018) adversarially remove demographic attributes from a text corpus.
 
 
 
