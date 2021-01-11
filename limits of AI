@@ -12,3 +12,14 @@ a speciﬁcation of a dataset,
 a cost function, 
 an optimization procedure 
 and a model.
+
+------------
+Computational limits of deep learning
+
+https://www.csail.mit.edu/news/computational-limits-deep-learning
+
+A new project led by MIT researchers argues that deep learning is reaching its computational limits, 
+which they say will result in one of two outcomes: 
+
+1. deep learning being forced towards less computationally-intensive methods of improvement, 
+2. or else machine learning being pushed towards techniques that are more computationally-efficient than deep learning.
