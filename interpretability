@@ -16,6 +16,50 @@ It’s easy to miss the subtle difference with interpretability, but consider it
 interpretability is about being able to discern the mechanics without necessarily knowing why. 
 Explainability is being able to quite literally explain what is happening.
 
+Techniques and methods for improving machine learning interpretability
+
+While questions of transparency and ethics may feel abstract for the data scientist on the ground, there are, in fact, 
+a number of practical things that can be done to improve an algorithm’s interpretability and explainability.
+
+>Algorithmic generalization
+The first is to improve generalization. This sounds simple, but it isn’t that easy.
+When you think most machine learning engineering is applying algorithms in a very specific way 
+to uncover a certain desired outcome, the model itself can feel like a secondary element - it’s simply a means to an end.
+However, by shifting this attitude to consider the overall health of the algorithm, and the data on which it is running,
+you can begin to set a solid foundation for improved interpretability.
+
+-Pay attention to feature importance
+This should be obvious, but it’s easily missed. Looking closely at the way the various features of your algorithm
+have been set is a practical way to actually engage with a diverse range of questions, from business alignment to ethics.
+Debate and discussion over how each feature should be set might be a little time-consuming,
+but having that tacit awareness that different features have been set in a certain way is nevertheless an important step 
+in moving towards interpretability and explainability.
+
+-LIME: Local Interpretable Model-Agnostic Explanations
+While the techniques above offer practical steps that data scientists can take,
+LIME is an actual method developed by researchers to gain greater transparency on what’s happening inside an algorithm.
+The researchers explain that LIME can explain “the predictions of any classifier in an interpretable and faithful manner, 
+>>by learning an interpretable model locally around the prediction.”
+
+What this means in practice is that the LIME model develops an approximation of the model 
+by testing it out to see what happens when certain aspects within the model are changed. 
+>>>Essentially it’s about trying to recreate the output from the same input through a process of experimentation.
+
+-DeepLIFT (Deep Learning Important Features)
+DeepLIFT is a useful model in the particularly tricky area of deep learning.
+It works through a form of backpropagation:
+it takes the output, then attempts to pull it apart
+by ‘reading’ the various neurons that have gone into developing that original output.
+
+Essentially, it’s a way of digging back into the feature selection inside of the algorithm (as the name indicates).
+
+-Layer-wise relevance propagation
+Layer-wise relevance propagation is similar to DeepLIFT, 
+in that it works backwards from the output, identifying the most relevant neurons within the neural network until you return to the input (say, for example, an image). If you want to learn more about the mathematics behind the concept, this post by Dan Shiebler is a great place to begin.
+Adding complexity to tackle complexity: can it improve transparency?
+
+The central problem with both explainability and interpretability is that you’re adding an additional step in the development process. Indeed, you’re probably adding multiple steps. From one perspective, this looks like you’re trying to tackle complexity with even greater complexity.
+
 -----------
 
 "using deep networks for scientific discovery in physiological signals"
