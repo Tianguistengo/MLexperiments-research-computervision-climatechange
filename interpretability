@@ -1,0 +1,30 @@
+https://www.kdnuggets.com/2018/12/machine-learning-explainability-interpretability-ai.html
+
+dif between interpretability and explainability
+
+Interpretability 
+is about the extent to which a cause and effect can be observed within a system. 
+Or, to put it another way, it is the extent to which you are able to predict what is going to happen, 
+given a change in input or algorithmic parameters. 
+It’s being able to look at an algorithm and go yep, I can see what’s happening here.
+
+Explainability, 
+meanwhile, is the extent to which the internal mechanics of a machine or deep learning system 
+can be explained in human terms. 
+
+It’s easy to miss the subtle difference with interpretability, but consider it like this: 
+interpretability is about being able to discern the mechanics without necessarily knowing why. 
+Explainability is being able to quite literally explain what is happening.
+
+-----------
+
+"using deep networks for scientific discovery in physiological signals"
+
+p.16
+Building efficient interpretable systems 
+is one of the major obstacles to deployment of machine learning models in healthcare (Tonekaboni et al., 2019). 
+Some studies have attempted to interpret the decisions made by their black-box models. 
+For 2D imaging data, Rajpurkar et al. (2017) >> inspect class activation mappings of their derived model
+to gain trust in its predictions. 
+For 1D ECG data, Goodfellow et al. (2018b) >> inspect neural activations 
+and find correlates between decision rules of experts and deep networks.
