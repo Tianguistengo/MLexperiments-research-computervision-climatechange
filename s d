@@ -100,6 +100,20 @@ Now one gets to the question of just how automated/autonomous things really are 
 ---------------
 Maithra Raghu and Eric Schmid
 
+>> techniques to use deep learning with less data and better interpret these complex models 
+ — two central considerations for many scientific use cases.
+ 
+  a significant obstacle in beginning to use deep learning is simply knowing where to start.
+  The vast research literature, 
+  coupled with the enormous number of underlying models, 
+  tasks and training methods makes it very difficult to identify which techniques might be most appropriate to try, 
+  or the best way to start implementing them.
+  
+   From the perspective of aiding scientific applications, the survey describes in detail:
+   (i) methods to use deep learning with less data (self-supervision, semi-supervised learning, and others)
+   and (ii) techniques for interpretability and representation analysis (for going beyond predictive tasks).
+   These are two exciting and rapidly developing research areas, and are also of particular significance to possible scientific use cases.
+ 
 1. From Predictions to Understanding 
 
 One fundamental difference between scientific questions and core machine learning problems is the 
