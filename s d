@@ -685,9 +685,54 @@ as no notion of independence is enforced.
 
 Elazar and Goldberg (2018) adversarially remove demographic attributes from a text corpus.
 
+6. discussion
 
+In this work we presented a new method for exploring to what degree Deep Neural Network representations 
+replicate existing knowledge in terms of feature engineering for physiological signals.
 
+This method can further be used to discover new knowledge embedded within the representations of neural networks,
+by removing the traces of existing features from the learned representation 
+enabling greater focus on potentially novel features.
 
+After validating our method indeed succeeds in learning representations which are 
+independent and non-redundant 
+with respect to given hand engineered features,
+
+>>> Re ECG, , it is impressive to find that DNNs can automatically discover what took years of human research. 
+On the other hand it is perhaps disappointing to see that current DNN models cannot tell us much new 
+about the ECG signal in as much as it relates to AF. 
+
+We further show that our method could in principle be used to discover new signals,
+by showing how, once the RR features are removed, the activation focuses strongly on the P-Wave section,
+discovering its importance for classifying AF. 
+
+Second, we show in EEG signals that our method can help focus the attention of researchers
+on potentially interesting signal attributes.
+Simulating a situation where a researcher has a hypothesis about the existence of a signature of a physiological event
+(eye movement) in the EEG trace and the ability to locate such events in a separate signal (EOG in our case),
+we show how applying our method can focus the activation signal around a hypothesized event,
+>>helping the researchers validate their hypothesis.
+
+Limitations 
+
+1. The framework we propose is relevant mostly to local features due to the nature of the Class Activation Maps. 
+
+2. Class activation mappings require a specific kind of architecture: 
+feature maps must directly precede softmax layers, so it is only applicable to a particular kind of CNN architecture 
+performing global average pooling over convolutional maps immediately prior to prediction. 
+
+3.Furthermore, the real challenge of feature discovery is not nearly solved by our method.
+A domain expert needs to translate the activation templates and come up with interpretable functions 
+or scientific understanding that capture the exposed pattern.
+
+Future Work 
+
+We wish to extend our work to apply to >>global features more easily. 
+More broadly, we would like to be able to interface with a much broader spectrum of methods 
+for explaining and understanding DNNs, >>instead of relying heavily on CAMs.
+
+We also believe this approach can be extended to other physiological signals and possibly to other modalities
+such as images to drive scientific discovery and hypothesis testing.
 
 
 
