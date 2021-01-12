@@ -124,17 +124,19 @@ which can reveal important properties of the underlying data.
 
 2. Complex Transformations of Input Data 
 
-In many scientific domains, the amount of generated data, particularly visual data 
+In many scientific domains, >>the amount of generated data, particularly visual data 
 (e.g. fluorescence microscopy, spatial sequencing, specimen videos [177, 97]) has grown dramatically, 
-and there is an urgent need for 
+>>and there is an urgent need for 
 efficient analysis 
 and automated processing. 
+
 Deep learning techniques, which are capable of many complex transformations of data, 
 can be highly effective for such settings, for example, using a deep neural network based segmentation model to automatically
 identify the nuclei in images of cells, 
 or a pose estimation system to rapidly label behaviors seen in videos of mice for neuroscience analysis.
 
 3. Prediction Problems
+
 We can also think of this predictive use case as 
 >>>>>getting the model to learn a target function,
 in our example, mapping from input visual features to the cancer/no cancer output.
@@ -143,7 +145,7 @@ Using deep learning in this way also encapsulates
 >> settings where the target function is very complex, 
 with no mathematical closed form or logical set of rules that describe how to go from input to output. 
 
-For instance, we might use a deep learning model to (black-box) simulate a complex process
+For instance, we might use a deep learning model to (black-box) >> simulate a complex process
 (e.g. climate modelling), that is very challenging to explicitly model.
 
 
@@ -159,6 +161,7 @@ or even used for self-training,
 with each different model providing pseudo labels on the instances it is most confident on.
 
 This post https://ruder.io/semi-supervised/ gives a nice overview of different co-training schemes.
+
 
 
 ------------
