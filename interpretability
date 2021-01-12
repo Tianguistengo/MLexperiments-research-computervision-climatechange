@@ -72,3 +72,27 @@ For 2D imaging data, Rajpurkar et al. (2017) >> inspect class activation mapping
 to gain trust in its predictions. 
 For 1D ECG data, Goodfellow et al. (2018b) >> inspect neural activations 
 and find correlates between decision rules of experts and deep networks.
+
+
+-------------
+Maithra Raghu and Eric Schmid
+
+
+7. Interpretability Model Inspection and Representation Analysis
+
+Many standard applications of deep learning (and machine learning more broadly) focus on 
+>prediction — learning to output specific target values given an input.
+
+Scientific applications, on the other hand, are often focused on 
+>understanding — identifying underlying mechanisms giving rise to observed patterns in the data.
+the ultimate goal remains to understand what attributes give rise to these observations.
+
+To answer these kinds of questions, we can turn to interpretability techniques. 
+
+Interpretability methods are sometimes equated to a fully understandable, step-by-step explanation of the model’s decision process. 
+Such detailed insights can often be intractable, especially for complex deep neural network models. 
+
+Instead, research in interpretability focuses on a much broader suite of techniques that can provide insights 
+ranging from (rough) >>feature attributions — determining what input features matter the most, 
+to >>model inspection — determining what causes certain neurons in the network to fire. 
+In fact, these two examples also provide a rough split in the type of interpretability method.
