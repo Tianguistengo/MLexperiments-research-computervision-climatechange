@@ -841,3 +841,17 @@ which also goes by several other names, is a phenomenon in probability and stati
 in which a trend appears in several different groups of data 
 but disappears or reverses when these groups are combined.
 
+-----------
+
+Naive Bayes
+
+In statistics, Naive Bayes classifiers 
+are a family of simple "probabilistic classifiers" 
+based on applying Bayes' theorem 
+with strong independence assumptions (naive) between the features. 
+
+They are among the simplest Bayesian network models, 
+but coupled with Kernel density estimation, they can achieve higher accuracy levels.
+
+
+
