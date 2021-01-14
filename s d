@@ -103,6 +103,12 @@ Maithra Raghu and Eric Schmid
 >> techniques to use deep learning with less data and better interpret these complex models 
  — two central considerations for many scientific use cases.
  
+ >> 3 ways deep learning can help
+ 
+ 1. Prediction problems -> mapping inputs to outputs
+ 2. From prediction to understanding -> understand properites of the data, features, hidden representations. How the model works.
+ 3. Complex transformations of input data -> for efficient analysis and automated processing of petabytes of scientific data
+ 
   a significant obstacle in beginning to use deep learning is simply knowing where to start.
   The vast research literature, 
   coupled with the enormous number of underlying models, 
