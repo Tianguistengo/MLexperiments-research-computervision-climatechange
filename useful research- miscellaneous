@@ -1171,15 +1171,49 @@ through Gradient Descent and Back-propagation.
 
 
 -----
-Naive Bayes
+Neuro-Symbolic AI
 
-In statistics, Naive Bayes classifiers 
-are a family of simple "probabilistic classifiers" 
-based on applying Bayes' theorem 
-with strong independence assumptions (naive) between the features. 
+Logic and semantic reasoning
 
-They are among the simplest Bayesian network models, 
-but coupled with Kernel density estimation, they can achieve higher accuracy levels.
+https://www.digitaltrends.com/cool-tech/neuro-symbolic-ai-the-future/
+
+The “symbolic” part of the name refers to the first mainstream approach to creating artificial intelligence.
+From the 1950s through the 1980s, symbolic A.I. ruled supreme. To a symbolic A.I. researcher, 
+>intelligence is based on humans’ ability to understand the world around them by forming internal symbolic representations.
+>They then create rules for dealing with these concepts, 
+and these rules can be formalized in a way that captures everyday knowledge.
+
+ Provided that this is the case, symbolic A.I. researchers (no neuro simbolic)
+ believe that those same rules about the organization of the world could be discovered and then codified,
+ in the form of an algorithm, for a computer to carry out.
+
+Computer systems based on symbolic A.I. hit the height of their powers (and their decline) in the 1980s.
+>This was the decade of the so-called “expert system” 
+>which attempted to use rule-based systems to solve real-world problems
+
+Neural networks work differently to symbolic A.I. because they’re data-driven, rather than rule-based.
+
+Neural nets don't work well for edge cases, rare classes, and since it has no logical reasoning, it fails.
+
+The idea of neuro-symbolic A.I. is to bring together these approaches to combine both learning and logic.
+Neural networks will help make symbolic A.I. systems smarter by breaking the world into symbols,
+rather than relying on human programmers to do it for them.
+Meanwhile, symbolic A.I. algorithms will help incorporate common sense reasoning 
+and domain knowledge into deep learning. 
+
+"Neural networks and symbolic ideas are really wonderfully complementary to each other,” Cox said.
+“Because neural networks give you the answers for 
+getting from the messiness of the real world to a symbolic representation of the world, 
+finding all the correlations within images. 
+Once you’ve got that symbolic representation, 
+you can do some pretty magical things >>>> in terms of reasoning.”
+
+For instance, in the shape example I started this article with,
+a neuro-symbolic system would use a neural network’s pattern recognition capabilities to identify objects.
+Then it would rely on symbolic A.I. >> to apply logic and semantic reasoning to uncover new relationships. 
+
+Apparently they have better interpretability too.
+
 
 
 
