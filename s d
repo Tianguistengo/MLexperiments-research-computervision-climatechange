@@ -109,6 +109,39 @@ Maithra Raghu and Eric Schmid
  2. From prediction to understanding -> understand properites of the data, features, hidden representations. How the model works.
  3. Complex transformations of input data -> for efficient analysis and automated processing of petabytes of scientific data
  
+ 2.3 Deep Learning or Not?
+ 
+As a final note before diving into the different deep learning techniques,
+when formulating a problem, it is important to consider whether deep learning provides the right set of tools to solve it.
+The powerful underlying neural network models offer many sophisticated functionalities, 
+such learned complex image transforms. 
+However, in many settings, deep learning may not be the best technique to start with
+or best suited to the problem. Below we very briefly overview some of the most ubiquitous machine learning methods, 
+particularly in scientific contexts.
+
+Dimensionality Reduction and Clustering 
+
+In scientific settings, the ultimate goal of data analysis is often understanding
+— identifying the underlying mechanisms that give rise to patterns in the data.
+When this is the goal, dimensionality reduction, and/or clustering are simple (unsupervised) 
+but highly effective methods to reveal hidden properties in the data. 
+They are often very useful in the important first step of exploring and visualizing the data 
+(even if more complex methods are applied later.)
+
+Dimensionality Reduction: 
+Dimensionality reduction methods are either linear, relying on a linear transformation to reduce data dimensionality, 
+or non-linear, reducing dimensionality while approximately preserving the non-linear (manifold) structure of the data. 
+Popular linear dimensionality reduction methods include PCA and non-negative matrix factorization, 
+with some popular non-linear methods including t- SNE [141] and UMAP [148].
+
+Clustering: 
+Often used in combination with dimensionality reduction, 
+clustering methods provide a powerful, unsupervised way to identify similarities and differences across the data population. 
+Commonly used clustering methods include k-means (particularly the k-means++ variant), Gaussian Mixture Models(GMMs),
+hierarchical clustering and spectral clustering. 
+
+
+
   a significant obstacle in beginning to use deep learning is simply knowing where to start.
   The vast research literature, 
   coupled with the enormous number of underlying models, 
