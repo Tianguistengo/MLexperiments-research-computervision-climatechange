@@ -46,6 +46,38 @@ by breaking the world into symbols.
 Then, symbolic AI algorithms can help to incorporate common sense and domain knowledge into deep learning.
 
 
+-----------------
+
+Domain Adaptation
+
+from Raghu et al
+
+Domain adaptation techniques help build a model on the source domain 
+that can also work (reasonably) well out-of-the-box on the shifted target domain.
+
+The most dominant approach to domain adaptation in deep learning is to build a model that can 
+(i) perform well on the source domain task, and 
+(ii) learns features that are as invariant to the domain shift as possible. 
+
+This is achieved through jointly optimizing for both of these goals. 
+
+Returning to our example on handwritten digits and house number photographs, 
+(i) corresponds to the standard supervised learning classification problem of doing well on the (source) task
+of identifying handwritten digits correctly while 
+>>>(ii) is more subtle, and typically involves explicitly optimizing for the hidden layer representations 
+of handwritten digits and house number photographs >> to look the same as each other — domain invariance. 
+
+Some popular ways to implement this include 
+>>>gradient reversal [62], minimizing a distance function on the hidden representations [137], 
+and even adversarial training [63, 211].
+More recently, [219] look at using self-supervision (see Section 6) 
+to jointly train on the source and target domains, enabling better adaptation.
+
+
+
+
+
+
 
 
 
