@@ -93,10 +93,26 @@ In addition to exploring DALL·E’s knowledge of concepts that vary over space,
 we also explore its knowledge of concepts that vary over time.
 "a photo of a phone from the 20s"
 
+Summary
 
+DALL·E is a simple decoder-only transformer t
+hat receives both the text and the image >>as a single stream of 1280 tokens—256 for the text and 1024 for the image—
+and models all of them autoregressively. 
+The attention mask at each of its 64 self-attention layers 
+allows each image token to attend to all text tokens. 
+DALL·E uses the standard causal mask for the text tokens, 
+and sparse attention for the image tokens 
+with either a row, column, or convolutional attention pattern, depending on the layer. 
 
+Text-to-image synthesis 
+has been an active area of research since the pioneering work of Reed et. al,
+whose approach uses a GAN conditioned on text embeddings. 
 
+we use CLIP to rerank the top 32 of 512 samples for each caption. 
+This procedure can also be seen as a kind of language-guided search, 
+and can have a dramatic impact on sample quality.
 
+"an illustration of a baby daikon radish in a tutu walking a dog [caption 1, best 8 of 2048]" 
 
 
 
