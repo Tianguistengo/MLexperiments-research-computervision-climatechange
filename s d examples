@@ -1,0 +1,105 @@
+https://openai.com/blog/dall-e/
+
+DALL·E[1]
+
+We decided to name our model using a portmanteau of the artist Salvador Dalí and Pixar’s WALL·E.
+is a 12-billion parameter version of GPT-3 trained to generate images from text descriptions,
+>> using a dataset of text–image pairs. 
+We’ve found that it has a diverse set of capabilities, including creating anthropomorphized versions of animals and objects,
+>> combining unrelated concepts in plausible ways, 
+rendering text, and applying transformations to existing images.
+
+Overview
+
+Like GPT-3, DALL·E is a transformer language model. 
+It receives both the text and the image as a single stream of data containing up to 1280 tokens,
+and is trained using maximum likelihood to generate all of the tokens, one after another.
+
+A token is any symbol from a discrete vocabulary;
+for humans, each English letter is a token from a 26-letter alphabet.
+DALL·E’s vocabulary has tokens for both text and image concepts. 
+Specifically, each image caption is represented using a maximum of 256 BPE-encoded tokens with a vocabulary size of 16384,
+and the image is represented using 1024 tokens with a vocabulary size of 8192.
+
+This training procedure allows DALL·E to not only generate an image from scratch,
+but also to regenerate any rectangular region of an existing image that extends to the bottom-right corner,
+in a way that is consistent with the text prompt.
+
+Drawing multiple objects
+
+Simultaneously controlling multiple objects, their attributes, and their spatial relationships presents a new challenge.
+For example, consider the phrase “a hedgehog wearing a red hat, yellow gloves, blue shirt, and green pants.” 
+To correctly interpret this sentence, DALL·E must not only correctly compose each piece of apparel with the animal,
+but also form the associations (hat, red), (gloves, yellow), (shirt, blue), and (pants, green) without mixing them up.[4]
+
+This task is called variable binding, and has been extensively studied in the literature.17181920
+We test DALL·E’s ability to do this for relative positioning, stacking objects, and controlling multiple attributes.
+
+While DALL·E does offer some level of controllability over the attributes and positions of a small number of objects,
+the success rate can depend on how the caption is phrased. 
+As more objects are introduced, DALL·E is prone to confusing the associations between the objects and their colors,
+and the success rate decreases sharply.
+
+-Visualizing perspective and three-dimensionality
+
+-Visualizing internal and external structure
+
+-Inferring contextual details
+Depending on the orientation of the capybara, it may be necessary to draw a shadow,
+though this detail is never mentioned explicitly.
+>We explore DALL·E’s ability to resolve underspecification in three cases: 
+changing style, setting, and time; 
+drawing the same object in a variety of different situations; 
+and generating an image of an object with specific text written on it.
+
+>>>> -Combining unrelated concepts
+
+The compositional nature of language 
+allows us to put together concepts to describe both real and imaginary things. 
+We find that DALL·E also has the ability to combine disparate ideas to synthesize objects,
+some of which are unlikely to exist in the real world. 
+We explore this ability in two instances: transferring qualities from various concepts to animals,
+and designing products by taking inspiration from unrelated concepts.
+
+"an armchair in the shape of an avocado. an armchair imitating an avocado. "
+
+-Animal illustrations
+
+In the previous section, we explored DALL·E’s ability to combine unrelated concepts when generating images of real-world objects.
+Here, we explore this ability in the context of >>>> art, for three kinds of illustrations:
+anthropomorphized versions of animals and objects, animal chimeras, and emojis.
+
+"an illustration of a baby daikon radish in a tutu walking a dog"
+
+-Zero-shot visual reasoning
+
+GPT-3 can be instructed to perform many kinds of tasks solely from a description 
+and a cue to generate the answer supplied in its prompt, without any additional training. 
+For example, when prompted with the phrase 
+“here is the sentence ‘a person walking his dog in the park’ translated into French:”, 
+GPT-3 answers “un homme qui promène son chien dans le parc.” This capability is called zero-shot reasoning.
+
+Motivated by these results, we measure DALL·E’s aptitude for >>analogical reasoning problems 
+by testing it on Raven’s progressive matrices, a visual IQ test that saw widespread use in the 20th century.
+
+-Geographic knowledge
+
+We find that DALL·E has learned about geographic facts, landmarks, and neighborhoods. 
+Its knowledge of these concepts is surprisingly precise in some ways and flawed in others.
+
+-Temporal knowledge
+
+In addition to exploring DALL·E’s knowledge of concepts that vary over space, 
+we also explore its knowledge of concepts that vary over time.
+"a photo of a phone from the 20s"
+
+
+
+
+
+
+
+
+
+
+
