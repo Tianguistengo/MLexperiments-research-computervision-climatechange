@@ -73,6 +73,10 @@ and even adversarial training [63, 211].
 More recently, [219] look at using self-supervision (see Section 6) 
 to jointly train on the source and target domains, enabling better adaptation.
 
+Other approaches to domain adaptation include 
+translating data instances from the source to the target domain, 
+and bootstrapping/co-training approaches 
+
 
 
 
