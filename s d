@@ -100,10 +100,12 @@ Now one gets to the question of just how automated/autonomous things really are 
 ---------------
 Maithra Raghu and Eric Schmid
 
->> techniques to use deep learning with less data and better interpret these complex models 
- — two central considerations for many scientific use cases.
+>> two central considerations for many scientific use cases.
+
+    1.Techniques to use deep learning with less data 
+    2.Better interpret these complex models 
  
- >> 3 ways deep learning can help
+ >> Thrree ways deep learning can help
  
  1. Prediction problems -> mapping inputs to outputs
  2. From prediction to understanding -> understand properites of the data, features, hidden representations. How the model works.
@@ -142,7 +144,8 @@ hierarchical clustering and spectral clustering.
 
 
 
-  a significant obstacle in beginning to use deep learning is simply knowing where to start.
+
+  A significant obstacle in beginning to use deep learning is simply knowing where to start.
   The vast research literature, 
   coupled with the enormous number of underlying models, 
   tasks and training methods makes it very difficult to identify which techniques might be most appropriate to try, 
