@@ -326,52 +326,7 @@ that targets DHFR and is able to pass clinical trials,” adds Professor King.
 “Eve’s discovery could be even more significant than just demonstrating a new approach to drug discovery.”
 
 
---------------
-AI Makes New Scientific Discoveries by Analyzing Old Research Papers
-"Unsupervised word embeddings capture latent knowledge from materials science literature"
 
-https://thenewstack.io/ai-makes-new-scientific-discoveries-by-analyzing-old-research-papers/
-
-orignal paper - https://www.researchgate.net/publication/334209824_Unsupervised_word_embeddings_capture_latent_knowledge_from_materials_science_literature
-
-the team gathered 3.3 million abstracts from scientific papers published in over 1,000 journals between 1922 and 2018.
-The algorithm then processed the roughly 500,000 unique words found in the abstracts 
-and transformed each into an array of 200 vectors. 
-Though the AI had no prior training in materials science, after this process it was nevertheless able to ‘learn’
-scientific concepts and
-infer relationships between data points, 
-simply by analyzing the >>placement of words in the abstracts 
-and when they >>co-occur with one another.
-
-these embeddings capture complex materials science concepts 
-such as the underlying structure of the periodic table 
-and structure–property relationships in materials.
-
-" you can use this algorithm to >> address gaps 
-in materials research, things that people 
->>should study but haven’t studied so far.”
-
-In particular, the algorithm proved that it could 
->> predict novel thermoelectric materials,
-which convert heat to electricity efficiently. 
-During the team’s tests, the algorithm came up with a variety of predictions for possible thermoelectric materials,
-with the top ten predictions demonstrating higher-than-average thermoelectric properties
-
-it works in an unsupervised capacity to find novel connections that might have been overlooked
-— perhaps even years ahead of time.
-Moreover, according to the team, this method could be used to automatically 
-extract knowledge that is still hidden in older scientific papers,
-and which might not be apparent to human eyes.
-
-Furthermore, we demonstrate that an unsupervised method 
-can recommend materials for functional applications several years before their discovery.
-
->>>This suggests that LATENT KNOWLEDGE regarding future discoveries 
->>>is to a large extent embedded in past publications. 
-
-Our findings highlight the possibility of extracting knowledge and relationships 
-from the massive body of scientific literature in a collective manner,
->>>>>and point towards a generalized approach to the mining of scientific literature.
 
 
 ----------
