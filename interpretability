@@ -96,3 +96,37 @@ Instead, research in interpretability focuses on a much broader suite of techniq
 ranging from (rough) >>feature attributions — determining what input features matter the most, 
 to >>model inspection — determining what causes certain neurons in the network to fire. 
 In fact, these two examples also provide a rough split in the type of interpretability method.
+
+--------
+AI researchers want to study AI the same way social scientists study humans
+
+Maybe we don’t need to look inside the black box after all. We just need to watch how machines behave, instead.
+
+Karen Hao https://www.technologyreview.com/2019/04/29/135578/ai-researchers-want-to-study-ai-the-same-way-social-scientists-study-humans/
+
+“We've developed scientific methods to study black boxes for hundreds of years now,
+but these methods have primarily been applied to [living beings] up to this point,”
+says Nick Obradovich, an MIT Media Lab researcher and co-author of a new paper published last week in Nature.
+https://www.nature.com/articles/s41586-019-1138-y
+“We can leverage many of the same tools to study the new black box AI systems.”
+
+The paper’s authors, propose to create a new academic discipline called “machine behavior.”
+It approaches studying AI systems in the same way we’ve always studied animals and humans: 
+>>through empirical observation and experimentation.
+
+How an agent—whether artificial or biological—behaves in its habitat, when coexisting in groups,
+and when interacting with other intelligent agents.
+
+“We’re seeing the rise of machines with agency (mmm),
+machines that are actors making decisions and taking actions autonomously,”.
+Thus they need to be studied “as a new class of actors with their own behavioral patterns and ecology.”
+
+This doesn’t mean to suggest that AI systems have developed some kind of free will. 
+(They certainly have not; they’re only glorified math models.)
+But it is meant to move away from viewing AI systems as passive tools 
+that can be assessed purely through their technical architecture, performance, and capabilities.
+They should instead be considered as active actors 
+that change and influence their environments and the people and machines around them.
+
+
+
