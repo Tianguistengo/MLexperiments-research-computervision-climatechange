@@ -748,6 +748,73 @@ for explaining and understanding DNNs, >>instead of relying heavily on CAMs.
 We also believe this approach can be extended to other physiological signals and possibly to other modalities
 such as images to drive scientific discovery and hypothesis testing.
 
+--------------------
+
+How Artificial Intelligence Is Changing Science
+https://www.quantamagazine.org/how-artificial-intelligence-is-changing-science-20190311/
+
+No human, or team of humans, could possibly keep up with the avalanche of information 
+produced by many of today’s physics and astronomy experiments.
+ can plow through mountains of data, highlighting anomalies and detecting patterns 
+ that humans could never have spotted.
+
+But some scientists are arguing that the latest techniques in machine learning and AI 
+represent a fundamentally new way of doing science.
+
+>>>>>>>>"Let’s erase everything we know about astrophysics.   borrar el human bias/verlo desde otra perspectiva
+To what degree could we rediscover that knowledge, just using the data itself?"
+Kevin Schawinski
+
+Both 1.observation and 2.simulation help scientists generate hypotheses that can then be tested with further observations. 
+3. Generative modeling differs from both of these approaches.
+
+“It’s basically a third approach, between observation and simulation,” 
+says Kevin Schawinski, an astrophysicist 
+>>>>>>>>>>“It’s a different way to attack a problem.”
+
+Some scientists see generative modeling and other new techniques 
+>>>> simply as power tools for doing traditional science. >> la diferencia entre horse power y doing things differently
+
+hablando de galaxy zoo, el experimento para crowdsource recognition of galaxies, fue exitoso pero,
+“Today, a talented scientist with a background in machine learning and access to cloud computing
+could do the whole thing in an afternoon.”
+
+“It’s not fully automated science 
+— but it demonstrates that we’re capable of at least in part building the tools 
+that make the process of science automatic,” Schawinski said.
+
+Hardworking Assistants
+
+Polsterer sees these new AI-based systems as “hardworking assistants” that can > comb through data for hours on end 
+without getting bored or complaining about the working conditions. 
+These systems can do all the tedious grunt work, he said, 
+leaving you “to do the cool, interesting science on your own.” >> (buen punto de debate)
+
+But they’re not perfect. 
+In particular, Polsterer cautions, the algorithms can only do > what they’ve been trained to do.
+“It comes back to you, the researcher. You’re the one in charge of doing > the interpretation.”
+
+AI is essential because of what Melko calls “the exponential curse of dimensionality.”
+>>That is, the possibilities for the form of a wave function 
+grow exponentially with the number of particles in the system it describes. 
+The difficulty is similar to trying to work out the best move in a game like chess or Go:
+You try to peer ahead to the next move, imagining what your opponent will play, and then choose the best response, 
+but with each move, >>> the number of possibilities proliferates.
+
+Whether Schawinski is right in claiming that he’s found a “third way” of doing science,
+or whether, as Hogg says, it’s merely traditional observation and data analysis “on steroids,” 
+it’s clear AI is changing the flavor of scientific discovery, and it’s certainly accelerating it. 
+How far will the AI revolution go in science?
+
+
+
+
+
+
+
+
+
+
 
 
 
