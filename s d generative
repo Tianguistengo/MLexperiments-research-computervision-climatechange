@@ -1,0 +1,106 @@
+https://www.quantamagazine.org/how-artificial-intelligence-is-changing-science-20190311/
+
+But some scientists are arguing that the latest techniques in machine learning and AI 
+represent a fundamentally new way of doing science.
+
+One such approach, known as generative modeling, can help 
+>>identify the most plausible theory among competing explanations for observational data, 
+based solely on the data, and, importantly, 
+>>without any preprogrammed knowledge of what physical processes might be at work in the system under study. 
+Proponents of generative modeling see it as novel enough t
+o be considered a potential “third way” of learning about the universe.
+
+Traditionally, we’ve learned about nature through 1. observation. 
+Think of Johannes Kepler poring over Tycho Brahe’s tables of planetary positions 
+and trying to discern the underlying pattern. (He eventually deduced that planets move in elliptical orbits.)
+
+Science has also advanced through 2. simulation. 
+An astronomer might model the movement of the Milky Way and its neighboring galaxy, Andromeda, 
+and predict that they’ll collide in a few billion years.
+
+Both observation and simulation help scientists generate hypotheses that can then be tested with further observations. 
+3. Generative modeling differs from both of these approaches.
+
+“It’s basically a third approach, between observation and simulation,” 
+says Kevin Schawinski, an astrophysicist 
+>>>>>>>>>>“It’s a different way to attack a problem.”
+
+>>>Discovery by Generation
+
+>> Essentially, generative modeling asks 
+how likely it is, 
+given condition X, 
+that you’ll observe outcome Y.
+
+(GANs). After adequate exposure to training data, a GAN can repair images that have damaged or >> missing pixels, 
+or they can make blurry photographs sharp. They learn to >> infer the missing information by means of a competition 
+(hence the term “adversarial”).
+One part of the network, known as the generator, generates fake data, 
+while a second part, the discriminator, tries to distinguish fake data from real data. 
+As the program runs, both halves get progressively better.
+
+More broadly, generative modeling takes sets of data (typically images, but not always) 
+and breaks each of them down into a set of basic, abstract building blocks 
+— scientists refer to this as the data’s “latent space.”
+The algorithm manipulates elements of the latent space to see how this affects the original data,
+and this helps uncover physical processes that are at work in the system.
+
+ Their model created artificial data sets as a way of testing hypotheses about physical processes. 
+ 
+ First, the galaxy images were reduced to their latent space; 
+ then, Schawinski could tweak one element of that space 
+ in a way that corresponded to a particular change in the galaxy’s environment — the density of its surroundings, for example.
+ >>Then he could re-generate the galaxy and see what differences turned up.
+ >>“So now I have a hypothesis-generation machine,” 
+ This matches existing observations about galaxies, Schawinski said. 
+ >>>>The question is  why this is so.
+
+The next step, Schawinski says, has not yet been automated:
+“I have to come in as a human, and say, ‘OK, what kind of physics could explain this effect?’
+” For the process in question, there are two plausible explanations"
+>>>>>With a generative model, both ideas can be put to the test.
+
+Using generative modeling, astrophysicists could investigate how galaxies change 
+when they go from low-density regions of the cosmos to high-density regions,
+and what physical processes are responsible for these changes.
+
+>>The approach is related to traditional simulation, but with critical differences. 
+>A simulation is “essentially assumption-driven,” Schawinski said. 
+“The approach is to say, ‘I think I know what the underlying physical laws are that give rise to everything 
+that I see in the system.’ So I have a recipe for star formation, I have a recipe for how dark matter behaves, and so on.
+I put all of my hypotheses in there, and I let the simulation run. And then I ask: Does that look like reality?” 
+What he’s done with generative modeling, he said, is “in some sense, exactly the opposite of a simulation.
+>>We don’t know anything; we don’t want to assume anything. We want the data itself to tell us what might be going on.”
+
+For David Hogg,
+the technique is impressive but ultimately just > a very sophisticated way of extracting patterns from data
+— which is what astronomers have been doing for centuries. (tal vez no hay nada de malo con eso?)
+In other words, it’s an advanced form of observation plus analysis.
+ “I don’t think it’s a third way,” he said recently. 
+ “I just think we as a community are becoming far more sophisticated about how we use the data.
+ In particular, we are getting much better at comparing data to data.
+ But in my view, my work is still squarely in the observational mode.”
+
+it’s crucial that neural networks deliver not only results, but also error bars to go along with them,
+as every undergraduate is trained to do. 
+In science, if you make a measurement and don’t report an estimate of the associated error,
+no one will take the results seriously, he said.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
