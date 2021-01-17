@@ -115,9 +115,112 @@ like Deep Blue and AlphaGo.
 And the struggle to describe what goes on inside the “mind” of a machine 
 is mirrored by the difficulty we have in probing our own thought processes.
 
+------------------
 
+https://www.quantamagazine.org/computers-evolve-a-new-path-toward-human-intelligence-20191106/
 
+Stanley’s realization led to what he calls the steppingstone principle — and, with it,
+a way of designing algorithms that more fully embraces the endlessly creative potential of biological evolution.
 
+Evolutionary algorithms have been around for a long time. 
+
+The steppingstone principle goes beyond traditional evolutionary approaches.
+>Instead of optimizing for a specific goal, 
+>it embraces creative exploration of all possible solutions. 
+By doing so, it has paid off with groundbreaking results. 
+Earlier this year, one system based on the steppingstone principle mastered two video games 
+that had stumped popular machine learning methods.
+And in a paper published last week in Nature, DeepMind 
+reported success in combining deep learning with the evolution of a diverse population of solutions.
+
+Biological evolution is also the only system to produce human intelligence,
+which is the ultimate dream of many AI researchers. 
+Because of biology’s track record, Stanley and others have come to believe that if we want algorithms 
+that can navigate the physical and social world as easily as we can — or better! —
+>we need to imitate nature’s tactics. 
+Instead of hard-coding the rules of reasoning, or having computers learn to score highly on specific performance metrics, 
+>> we must let a population of solutions blossom. 
+>>Make them prioritize novelty or interestingness instead of the ability to walk or talk. 
+>>They may discover an indirect path, a set of steppingstones,
+>>and wind up walking and talking better than if they’d sought those skills directly.
+
+If I run an algorithm that’s creative to such an extent that I’m not sure what it will produce.
+
+He hoped to show that by simply following ideas in interesting directions, 
+algorithms could not only produce a diversity of results, 
+but solve problems.
+
+More audaciously, he aimed to show that completely ignoring an objective can get you there faster than pursuing it. 
+He did this through an approach called novelty search.
+
+For Kenneth Stanley, the steppingstone principle explains innovation.
+
+In neuroevolution, you start by assigning random values to the weights between layers.
+This randomness means the network won’t be very good at its job. But from this sorry state,
+you then create a set of random mutations — offspring neural networks with slightly different weights — 
+and evaluate their abilities. You keep the best ones, produce more offspring, and repeat. 
+>>Neuroevolution is a meta-algorithm, an algorithm for designing algorithms. 
+And eventually, the algorithms get pretty good at their job.
+
+To test the steppingstone principle, Stanley and his student Joel Lehman tweaked the selection process. 
+Instead of selecting the networks that performed best on a task, 
+novelty search selected them for how different they were from the ones with behaviors most similar to theirs.
+(In Picbreeder, people rewarded interestingness. Here, as a proxy for interestingness, novelty search rewarded novelty.)
+
+ A key element of these algorithms is that they foster steppingstones. 
+ >Instead of constantly prioritizing one overall best solution,
+ >they maintain a diverse set of vibrant niches, 
+ >>any one of which could contribute a winner. 
+ And the best solution might descend from a lineage that has hopped between niches.
+
+One of its biggest drawbacks, is the amount of computation it requires.
+In traditional machine learning, as you train a neural network, it gradually gets better and better.
+With neuroevolution, the weights change randomly, so the network’s performance might degrade before it improves.
+
+Another drawback is the basic fact that most people have a particular problem that they’d like to solve.
+A search strategy that optimizes for interestingness might get you to a creative solution for that particular problem.
+But it could lead you astray before it puts you on the right path.
+
+Within the past year, AI based on the steppingstone principle finally managed 
+to crack a number of long-standing challenges in the field.
+
+Eventually, (cuando buscas en random)
+one of those states is the state of winning the game. 
+And Panama Joe has in his memory all the actions he took to get there. 
+He’s done it with no neural network or reinforcement learning
+— no rewards for collecting keys or nearing the labyrinth’s end — 
+>>just random exploration and a clever way to collect and connect steppingstones. 
+>>This approach managed to beat not only the best algorithms but also the human world record for the game.
+
+The same technique, which the researchers call >>>>> Go-Explore,
+https://arxiv.org/pdf/1901.10995.pdf
+was used to beat human experts at Pitfall!, a game where Pitfall Harry navigates a jungle 
+in search of treasure while avoiding crocodiles and quicksand.
+No other machine learning AI had scored above zero.
+
+Now even DeepMind, that powerhouse of reinforcement learning, has revealed its growing interest in neuroevolution.
+
+Jeff Clune, 
+>>>>>>>>argues that open-ended discovery is likely the fastest way to achieve humanlike artificial intelligence.
+
+As in the children’s game rock-paper-scissors, >> there is no single best game strategy in StarCraft II. 
+So DeepMind encouraged its population of agents to evolve >> a diversity of strategies 
+— not as steppingstones but as an end in itself. 
+When AlphaStar beat two pros each five games to none, it combined the strategies from five different agents
+in its population. The five agents had been chosen so that not all of them would be vulnerable to any one opponent strategy.
+>>>>>>Their strength was in their diversity.
+
+AlphaStar demonstrates one of the main uses of evolutionary algorithms:
+>>maintaining a population of different solutions. 
+Another recent DeepMind project shows the other use: 
+>>optimizing a single solution. 
+Working with Waymo, Alphabet’s autonomous car project, the team evolved algorithms for identifying pedestrians. 
+>To avoid getting stuck with an approach that works fairly well, but that isn’t the best possible strategy,
+they maintained “niches” or subpopulations, 
+so that novel solutions would have time to develop before being crushed by the established top performers.
+
+ “I think it’s an important area of research for AI,” she said, 
+ “because it is complementary to the deep learning approaches that have driven the field.”
 
 
 
