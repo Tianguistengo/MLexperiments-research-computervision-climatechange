@@ -86,6 +86,52 @@ as every undergraduate is trained to do.
 In science, if you make a measurement and don’t report an estimate of the associated error,
 no one will take the results seriously, he said.
 
+---------------
+
+------->Playing with GANs
+
+from the batch
+
+
+Generative adversarial networks don’t just produce pretty pictures. They can build world models, too.
+
+What’s new: A GAN generated a fully functional replica of the classic video game Pac-Man. 
+Researchers from Nvidia, MIT, the University of Toronto, and Vector Institute developed GameGAN
+to celebrate the original Pac-Man's 40th anniversary. 
+The company plans to release the code in a few months.
+
+How it works: GameGAN learned to reproduce the game by watching it in action for 50,000 hours. 
+During gameplay, the system synthesizes the action frame by frame using three neural networks. 
+
+    An LSTM-style network learned how user actions change the game's state.
+    For example, pressing the system's joystick equivalent upward moves the Pac-Man character forward one space.
+    
+    A network inspired by neural Turing machines allows the system to store information about previously generated frames. 
+    In a maze game, retracing your steps should look familiar, and that would be difficult without memory.
+    
+    Based on the memory, updated game state, and latest user action, GameGAN's generator produces the next frame. 
+
+Behind the news: While Nvidia is the first to use a generative adversarial network to reproduce a video game,
+other researchers have used machine learning for this purpose.
+
+    An earlier model from Georgia Tech learns approximate representations of classic titles to create new games.
+    The Metacreation Lab at Simon Fraser University is working on models that generate new levels for existing games.
+    Researchers from Queen Mary University trained a neural network to duplicate a video game’s underlying mechanics
+    by observing pixels.
+
+Yes, but: Compared to the original arcade game, 
+Pac-Man’s GAN-driven twin requires orders of magnitude more computation to run.
+
+Why it matters: Autonomous systems such as self-driving cars and robots are often trained in elaborate simulators. 
+Nvidia hopes that GAN-based sims can save time and money.
+
+We’re thinking: Fifty thousand hours is an awful lot of Pac-Man — or anything else! 
+Simulation makes it possible to amass training data that would be virtually impossible to collect in the real world. 
+It's also a crutch that leads researchers to develop algorithms 
+that work well in simulated environments but are hard to generalize to real-world conditions. 
+
+Until better small-data algorithms emerge, GAN-based simulation looks like an exciting new direction.
+
 
 
 
