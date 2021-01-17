@@ -32,13 +32,44 @@ The history of intelligent machines is one of moving goalposts:
 Sure, a machine can do this, but can it do that? 
 The “that” is often an achievement that strikes us as strongly connected to emotion—that seems especially human.
 
+--------------------
+https://www.technologyreview.com/2017/09/29/67852/is-ai-riding-a-one-trick-pony/
 
+ What we know about intelligence is nothing against the vastness of what we still don’t know.
+ 
+A real intelligence doesn't break when you slightly change the requirements
+of the problem it's trying to solve.
 
+How you might get a computer to work that way: to fluidly apply what it already knows to new tasks, 
+to quickly bootstrap its way from knowing almost nothing about a new domain to being an expert.
 
+For decades, backprop was cool math that didn’t really accomplish anything.
+As computers got faster and the engineering got more sophisticated, suddenly it did. 
+He hopes the same thing might happen with his own work and that of his students, “but it might take another couple decades.”
 
+Eyal Dechter
+Essentially, it is a procedure he calls the “exploration–compression” algorithm.
+It gets a computer to function somewhat like a programmer who builds up a library of reusable, modular components
+on the way to building more and more complex programs. 
+Without being told anything about a new domain, 
+the computer tries to structure knowledge about it just by playing around, 
+consolidating what it’s found, and playing around some more, the way a human child does.
 
+As for Hinton, he is convinced that overcoming AI’s limitations involves building
+“a bridge between computer science and biology.”
+Backprop was, in this view, a triumph of biologically inspired computation; 
+the idea initially came not from engineering but from psychology. So now Hinton is trying to pull off a similar trick.
 
+Neural networks today are made of big flat layers, 
+but in the human neocortex real neurons are arranged not just horizontally into layers but vertically into columns.
+Hinton thinks he knows what the columns are for—in vision, for instance, 
+they’re crucial for our ability to recognize objects even as our viewpoint changes. 
+So he’s building an artificial version—he calls them “capsules”—to test the theory.
+So far, it hasn’t panned out; the capsules haven’t dramatically improved his nets’ performance.
+But this was the same situation he’d been in with backprop for nearly 30 years.
 
+“This thing just has to be right,” he says about the capsule theory, laughing at his own boldness.
+“And the fact that it doesn’t work is just a temporary annoyance.”
 
 
 
