@@ -82,7 +82,7 @@ Adversarial Removal of Demographic Attributes from Text Data
 (es interesante para probar hipotesis tambien porque puedes 
 1. quitar human bias
 2. probar un experimento sin una o muchas variables
-3. simulat como se comportaria/que aprendes de un fenomeno si le quitas una variable) 
+3. simular como se comportaria/que aprendes de un fenomeno si le quitas una variable) 
 
 Recent advances in Representation Learning and Adversarial Training seem to succeed in 
 >>>removing unwanted features from the learned representation.
