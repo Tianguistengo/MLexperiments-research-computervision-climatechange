@@ -5,26 +5,28 @@ The Master Algorithm: Here, the books’ central hypothesis is presented:
     by a single, universal learning algorithm.’
     
  ---------------
- 
+ 6.
  The possibility to imagine counterfactuals
  
  ---------------
- 
+ 5.
  The ability to EXPLORE THE WORLD
  in the hope/with the task of learning - active learning
  
  We don't learn pixels, we learn fuzzy high level abstractons
+ 
+ 6
  we need ai to generate features at the level of unobserverd latent variables 
  
  -------
- 
+ 3*
  GANs (but not only) 
  
  estimate and maximize 
  MUTUAL INFORMATION
  
  ------------
- 
+ 1*
  Neural nets are vector processing machines 
  
  images are seen as vectors with a topology
@@ -32,7 +34,7 @@ The Master Algorithm: Here, the books’ central hypothesis is presented:
  Neural nets are function approximation algorithms
  
  --------------
- 
+ 6
  LATENT   space / variables 
  related to conscious /unconsicous separation
 
@@ -45,12 +47,13 @@ The Master Algorithm: Here, the books’ central hypothesis is presented:
     lying dormant or hidden until circumstances are suitable for development or manifestation.
     
 ----------------    
-    
+  1  
  AI has been developed mainly (but not exclusively) by a technical community
  but IMAGINATION - CREATIVITY - POETRY - INTUITION - BEAUTY - FUZZY THINKING - MAGIC
  will bring the biggest/fastest changes
 
 -----------------
+2
 https://blogs.sciencemag.org/pipeline/archives/2019/10/02/automated-discovery
 
 
@@ -64,7 +67,7 @@ They divide scientific discoveries impacted by automation into three categories:
 3. models (new laws, rules of thumb, correlations, and connections). 
 
 The authors argue that all three of these are fundamentally 
->>search problems
+  >>search problems
 – they just differ in the knowledge space being searched, 
 which is a process of validation and feedback. 
 
@@ -79,6 +82,7 @@ than what was (or even could be) explored.
 
 When you look closer, >>>>>    it’s human input that has narrowed the terms and the search space.
 
+3
 The authors also note the three factors that are enabling automation in all of these classes 
 – access to large amounts of data, 
 -the increasing computing power to process it all, 
@@ -86,7 +90,8 @@ The authors also note the three factors that are enabling automation in all of t
 
 Now one gets to the question of just how automated/autonomous things really are (or really can get):
 
-    Here, we propose a set of questions to ask when evaluating the extent to which a discovery process or workflow is autonomous: 
+3
+We propose a set of questions to ask when evaluating the extent to which a discovery process or workflow is autonomous: 
     
     (i) How broadly is the goal defined? 
     (ii) How constrained is the search/design space? 
@@ -98,6 +103,7 @@ Now one gets to the question of just how automated/autonomous things really are 
 
 
 ---------------
+3
 Maithra Raghu and Eric Schmid
 
 >> two central considerations for many scientific use cases.
@@ -221,12 +227,14 @@ This post https://ruder.io/semi-supervised/ gives a nice overview of different c
 
 
 ------------
+3 o 6
 Uni camb
 
 robot-scientist-becomes-first-machine-to-discover-new-scientific-knowledge
 2009
 https://www.cam.ac.uk/research/news/robot-scientist-becomes-first-machine-to-discover-new-scientific-knowledge
 
+2
 "As we start to consider living systems in a holistic manner, 
 the complexity of such systems 
 means that it will become increasingly difficult for scientists 
@@ -236,6 +244,7 @@ Thus it will be necessary
 for human and robot scientists to work together 
 to achieve the goals of biological research.
 
+3
 "It is not the management and analysis of complex data 
 that is the big deal about Adam, 
 it is the ability of the machine to reason with those data 
@@ -248,7 +257,8 @@ it is important that the details of biological experiments (y yo diria mined tam
 This is difficult and irksome for human scientists, but easy for Robot Scientists."
 
 
-
+----------------
+3 o 6
 Artificially-intelligent Robot Scientist ‘Eve’ could boost search for new drugs
 2015
 https://www.cam.ac.uk/research/news/artificially-intelligent-robot-scientist-eve-could-boost-search-for-new-drugs
@@ -256,6 +266,7 @@ https://www.cam.ac.uk/research/news/artificially-intelligent-robot-scientist-eve
 >>>>>>>> they describe how the robot can help identify promising new drug candidates for
 >>>>>>>.malaria and neglected tropical diseases such as African sleeping sickness and Chagas’ disease.
 
+2
 Eve, an artificially-intelligent ‘robot scientist’ 
 could make drug discovery
 faster 
@@ -272,7 +283,7 @@ and time involved in drug screening.
 They can automatically 
 develop and test hypotheses to explain observations, 
 run experiments using laboratory robotics, 
-interpret the results to amend their hypotheses, 
+interpret the results to amend their hypotheses,  (no completamente) 4
 and then repeat the cycle, 
 automating high-throughput hypothesis-led research. 
 
@@ -296,18 +307,18 @@ and digitally curate
   based on genetically engineered yeast, is used.
   This allows Eve to exclude compounds that are toxic to cells 
   and select those that block the action of the parasite protein while leaving any equivalent human protein unscathed. 
-  This reduces the costs, uncertainty, and time involved in drug screening.
+ >> This reduces the costs, uncertainty, and time involved in drug screening.
 
-Eve is designed to automate early-stage drug design. 
-First, she systematically tests each member from a large set of compounds 
-in the standard brute-force way of conventional mass screening. 
+>Eve is designed to automate early-stage drug design. 
+>First, she systematically tests each member from a large set of compounds 
+>in the standard brute-force way of conventional mass screening. 
 
 The compounds are screened against assays (tests) designed to be automatically engineered, 
 and can be generated much faster and more cheaply than the bespoke assays that are currently standard. 
 
 This enables more types of assay to be applied, 
 more efficient use of screening facilities to be made, 
-and thereby increases the probability of a discovery within a given budget.
+>and thereby increases the probability of a discovery within a given budget.
  
  
 To test the viability of the approach, 
@@ -333,6 +344,7 @@ that targets DHFR and is able to pass clinical trials,” adds Professor King.
 
 
 ----------
+2 y 3
 https://www.graphcore.ai/posts/why-artificial-intelligence-will-allow-us-to-make-new-scientific-discoveries
 
 Why AI will enable new scientific discoveries
@@ -341,7 +353,7 @@ Andrew Briggs
 is Professor of Nanomaterials in the Department of Materials at the University of Oxford
 
 In materials science, as in other branches of experimental science such as drug discovery,
-we are able to obtain ever larger amounts of data from ever more sophisticated experiments and modelling. 
+>>we are able to obtain ever larger amounts of data from ever more sophisticated experiments and modelling. 
 And yet 
 >>> the choice of what data to collect, 
 >>> and the process of how best to analyse it, 
@@ -360,8 +372,8 @@ The key advances in AI that we are currently exploring to make this possible are
 reinforcement learning 
 and Bayesian optimisation.
 
-Uncertainty, 
-which could be reduced by acquiring more data,
+>>Uncertainty, 
+which could be reduced by acquiring more data,   (adquirir pero tambien procesar mejor o procesar la que no has procesado)
 but the data are costly to acquire. 
 How should we choose what experiment to do next?
 
@@ -374,7 +386,8 @@ saving time, money and improving outcomes.
  but eventually it can be applied to >> the whole design 
  and even to >> the manufacturing process. 
  
- This could make a significant difference in the cost of production for advanced materials.
+ This could make a significant difference in 
+ > the cost of production for advanced materials.
 
 (AI) will allow us to 
 > understand 
@@ -393,7 +406,7 @@ within feasible time limits and resources.
 
 https://news.uchicago.edu/story/how-ai-could-change-science
 
-     “While the tech industry is often focused on short-term returns,
+6    “While the tech industry is often focused on short-term returns,
      realizing the full potential of AI to improve our world 
      requires long-term vision.” 
 
