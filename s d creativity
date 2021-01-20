@@ -257,6 +257,42 @@ AI will have less difficulty in modelling the generation of new ideas
  >>Whether computers could “really” be creative isn’t a scientific question but a philosophical one,
  >>to which there’s no clear answer.
 
+-------------
+Risto Miikkulainen
+https://venturebeat.com/2018/05/17/evolutionary-computation-will-drive-the-future-of-creative-ai/
+
+This means we could view evolutionary computation as the next step in the progress of AI.
+This type of AI is based on algorithms inspired by biological evolution.
+Through reproduction, mutation, recombination, and selection, evolutionary computation performs a
+parallel, exploratory search for solutions. 
+>>Because this technology is based on a population of solutions rather than a single, continuously refined solution,
+it can afford to try out novel ideas and discover solutions that are surprising and creative. 
+
+In evolutionary computation, researchers harness these processes to reach a specific goal,
+such as creating a website that maximizes conversions or crafting a procedure to grow the tastiest basil plants.
+
+>>>  Evolutionary computation is focused on creating solutions that do not yet exist.
+
+Evolutionary computation makes it possible to discover such new designs and behaviors through 
+exuberant, but guided, exploration. 
+It is, in a sense, the next step forward from deep learning: the form of AI that can think outside the box. 
+
+e.g. https://en.wikipedia.org/wiki/Evolved_antenna
+
+e.g. https://openai.com/blog/evolution-strategies/
+One example is OpenAI using evolution to design neural networks for reinforcement learning, 
+which showed that it performs as well and parallelizes better than gradient descent techniques. 
+Such an approach takes advantage of massively parallel compute in evaluating population members.
+
+e.g. The Uber.ai group also demonstrated how evolution affords broader exploration
+with a more explicit emphasis on novel solutions. https://eng.uber.com/deep-neuroevolution/
+
+e.g. DeepMind outlined how such exploration of neural network architectures may lead to the 
+successive discovery of new behaviors.  https://deepmind.com/research/publications/pathnet-evolution-channels-gradient-descent-super-neural-networks
+
+
+
+
 
 
 
