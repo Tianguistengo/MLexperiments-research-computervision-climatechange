@@ -6,6 +6,9 @@ Risto Miikkulainen
  i.e. machine learning of statistical models 
  that make it possible to predict what the right decision might be in future situations. 
  
+ Current machine learning methods are also based on hill-climbing.
+ Neural networks and deep learning follow a gradi- ent that is computed based on known examples of desired behavior.
+ The gradient specifies how the neural network should be adjusted to make it perform slightly better,
  -------------
  Function approximators
  
