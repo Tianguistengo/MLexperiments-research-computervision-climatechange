@@ -290,6 +290,49 @@ with a more explicit emphasis on novel solutions. https://eng.uber.com/deep-neur
 e.g. DeepMind outlined how such exploration of neural network architectures may lead to the 
 successive discovery of new behaviors.  https://deepmind.com/research/publications/pathnet-evolution-channels-gradient-descent-super-neural-networks
 
+-------------------------------
+https://www.oreilly.com/radar/open-endedness-the-last-grand-challenge-youve-never-heard-of/
+
+Open-endedness: The last grand challenge you’ve never heard of
+
+The first life form, likely something resembling a single prokaryotic cell, emerged billions of years ago.
+Though we do not know the full story of its origin,
+we do know that over the next few billion years, 
+somehow this humble cell radiated into the full diversity of life on Earth we appreciate today.
+
+Think about it computationally—evolution on Earth is like a single run 
+of a single algorithm that invented all of nature.
+
+ If we run a machine learning algorithm today, we’re happy if it gives us a single solution, or maybe a few,
+ but then it’s over—the problem is either solved or not, and the program is finished.
+ But evolution on Earth is amazingly different—it never seems to end. 
+ It’s true that “never” is a strong word, but several billion years of continual creativity comes as close to never 
+ as we’ll likely ever see. So yes, we call it evolution, but it’s also >> the never-ending algorithm, 
+ a process that tirelessly invents ever-greater complexity and novelty across incomprehensible spans of time.
+
+Some machine learning researchers have further suggested that EAs are inferior optimizers 
+and that alternative algorithms (such as deep learning) are simply better suited for optimization. 
+But that kind of critique misses the real issue. 
+Evolution serves as inspiration for algorithms in computer science 
+not because it is a great optimizer for a particular problem, 
+>> but because it invented all of nature.
+
+>>>>  For a moment, imagine if we could actually program a genuine open-ended algorithm.
+The implications would be extraordinary. Are you interested in new schools of architecture,
+new car designs, new computer algorithms, new inventions in general? 
+And how about generating them ceaselessly? And with increasing complexity?
+
+The power of nature is the power of creation, and it’s entirely encapsulated within the mystery of open-endedness.
+
+The incredible self-generation of nature on Earth is but one infinitesimal slice of what might be possible.
+
+While the multi-trillion-connection brain is a product of natural evolution, 
+it is possible that the process of evolution itself is simpler to describe or implement. 
+So, maybe we can actually figure it out and identify its necessary conditions—maybe even sometime soon.
+
+
+
+
 
 
 
