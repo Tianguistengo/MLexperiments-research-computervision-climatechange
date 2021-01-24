@@ -330,6 +330,96 @@ While the multi-trillion-connection brain is a product of natural evolution,
 it is possible that the process of evolution itself is simpler to describe or implement. 
 So, maybe we can actually figure it out and identify its necessary conditions—maybe even sometime soon.
 
+Importantly, evolution itself is only one of many possible realizations of open-endedness.
+For example, the human brain seems to exhibit its own open-ended creativity,
+so it’s likely that an open-ended process can emerge from many different substrates, 
+including within deep learning.
+
+The potential here is to introduce a generic never-ending creative algorithm, in whatever domain you want.
+( o sea si, si no termina se vuelve mas complejo y con mas potencial pero tampoco necesitas correrrlo
+infinitamente para tener buenos resultados)
+It’s also important to highlight that there are likely interesting degrees of open-endedness 
+(an idea indeed embraced by Bedau’s tests). That is, open-endedness is not just a binary either/or proposition.
+While we are more likely to obtain the deepest possible insight by aiming high,
+as we will see, in practice, even systems and ideas that capture a limited aspect of open-endedness 
+can still serve useful purposes and teach us important lessons on the road to full-scale never-ending innovation.
+
+The hypothesis is that what we observe in nature is only one instance of a whole class of possible open-ended systems. 
+
+The components of the process—interaction among individuals (or what machine learning researchers might call “candidates”),
+selection, reproduction, etc.,—appear fundamentally generic. 
+
+A brief history of open-endedness
+
+Because of the inspiration from natural evolution, so far the study of open-ended algorithms has focused primarily on EAs,
+though it is certainly conceivable that a non-evolutionary process 
+(such as an individual neural network generating new ideas) could exhibit open-ended properties.
+
+Nevertheless, because of the historical evolutionary focus, 
+researchers in this area often refer to it as “open-ended evolution.” 
+While technically these are types of evolutionary algorithms, Open-ended evolution is a whole different ballgame.
+
+For one thing, unlike in most of machine learning, when researchers build an open-ended algorithm, 
+they usually aren’t aiming to solve any problem in particular. 
+>> Rather, they hope to observe a kind of complexity explosion, 
+where evolving artifacts diversify into ever-more intricate and inventive forms. 
+
+For that reason, much of the early work in the field centered on artificial “worlds” (often called “alife worlds”)
+where theories could be tested on the kinds of dynamics that might lead to open-endedness. 
+These virtual worlds are usually populated with “creatures” that perform behaviors like running around 
+and eating other creatures. Usually, the expectation is that the creatures in the artificial world 
+might evolve increasingly complex strategies (and sometimes body plans) as they strive to outcompete each other.
+
+In 1992 Mark Bedau introduced a set of measurements called “activity statistics” 
+meant to measure the degree of open-endedness exhibited by such systems. 
+This outcome led to some debate on what open-endedness actually means—do Bedau’s tests somehow miss the real issue? 
+The bar should be high, after all.
+
+While scientists often seem allergic to any flavor of subjectivity, 
+there may be ways to embrace subjectivity in open-endedness without sacrificing scientific rigor. 
+For example, we can still try to formalize subjective notions such as impressiveness
+(in work by Ken Stanley and Joel Lehman). 
+>> For us to make progress, we may ultimately need to retreat somewhat from grasping after a foolproof objective measure,
+
+una dificultad para disenar open-endedness:
+complex features can arise through unpredictable routes in evolution,
+illuminating how seemingly intractable complexity can evolve through random mutations
+
+The more closed process of conventional EAs, which generally push evolution toward a particular desired outcome.
+In this conventional kind of algorithm, the opportunities for unhampered discovery are limited 
+because selection pressure directly seeks to improve performance with respect to the problem’s objective. 
+The idea in novelty search is to take precisely the opposite approach—instead of selecting for “improvement,” 
+novelty search selects only for novelty. Novelty search is open-ended because it tends to open up new paths of search
+rather than closing them off.
+
+At first, it may seem that this approach is closely related to random search, and therefore of little use, 
+but actually, it turns out to be much more interesting than that. The difference is that computing the novelty
+of a candidate in the search space >> requires real information (which random search would ignore)
+on how the current candidate differs behaviorally from previous discoveries.
+So, we might ask how a current robot’s gait is different from its predecessor’s gaits.
+And if it’s different enough, then it’s considered novel and selected for further evolution.
+The result is a rapid branching (i.e., divergence) and proliferation of new strategies
+(e.g., new robot gaits in a walking simulator).
+
+After the introduction of novelty search, a new class of algorithms began to appear that aimed to 
+>> combine a notion of novelty with a more objective sense of progress or quality.
+For example, you might want to search for all the possible ways a robot can walk,
+but in order to discover the best possible version of each such variant. 
+These algorithms (including novelty search with local competition, or NSLC 
+and the multi-dimensional archive of phenotypic elites, or MAP-Elites) came to be known as
+>>> quality diversity (QD) algorithms.
+
+They are still missing a key ingredient of open-endedness
+—they are destined to stop producing anything interesting within days of launching, and there’s nothing we can do about it.
+The reason is that their problem domains contain only a narrow set of possibilities.  (entonces usa domains mas locos)
+There are only so many interesting ways you can walk before it just starts being silly.
+
+>>>>>In this way, the mystery is, while we have a good sense of how to push a search process
+to keep finding what is possible within a search space, 
+>>>>we don’t really understand how concurrently to expand the space of possibilities itself. 
+>>>That is, the highest level of open-endedness requires not only generating new solutions, but also new problems to solve.
+
+
 
 
 
