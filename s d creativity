@@ -419,8 +419,74 @@ to keep finding what is possible within a search space,
 >>>>we don’t really understand how concurrently to expand the space of possibilities itself. 
 >>>That is, the highest level of open-endedness requires not only generating new solutions, but also new problems to solve.
 
+Overall, the field of open-endedness is interdisciplinary, young, and relatively unexplored.
+Results so far have revealed hints of what’s possible from open-ended systems and 
+uncovered thorny philosophical issues yet to be resolved. 
 
+The necessary ingredients
 
+We are accumulating general insight—for example, that full-blown open-endedness likely requires 
+>the interaction of coevolving entities
+>and that it goes beyond novelty or QD. 
+Such thoughts about what is core to open-endedness motivate attempts to formalize its necessary conditions. 
+
+ the more interesting implication of this experiment is the potential for all kinds of 
+ unimagined pairings and elaborations in the same kind of MCC setup. 
+
+Even as attempts at open-endedness like MCC improve, as we continue to revisit, 
+creativity on the level of complexity of nature remains still far beyond our reach.
+
+Open-endedness in practical domains
+
+One potentially important application of open-ended systems is in creative design.
+
+Open-endedness can vastly expand the scope of conceivable options and generate unimagined new possibilities. 
+
+ It can potentially partner with humans, who could influence the search 
+ (which sometimes goes by the name interactive evolution),
+ or it could be left to generate ideas by itself in perpetuity,
+ where humans can view the latest creations at their leisure.
+
+ It’s true that much of our appreciation of this history is subjective, 
+ but there is nothing in principle to stop us from accelerating our exploration of subjective domains that we enjoy. 
+ ( no hay tanta bronca que sea subjectivo )
+ 
+ Given some initial seed set of axioms from a curious mathematician, 
+ could an algorithmic open-ended system continually produce interesting and surprising proofs?
+
+ Evolve endlessly into new and unimagined forms. 
+
+Open-endedness in AI
+
+how different it is from how most AI research is approached today, 
+where optimization toward specific objective performance is ubiquitous—
+almost the perfect opposite of how an open-ended system generates its products.
+
+So many in AI lean toward definitions of intelligence that involve “solving problems” or “learning to solve problems efficiently.”
+But open-endedness is left out of this equation. A “general” open-ended system is not a machine-like problem solver, 
+but rather a creative master that wanders the space of the imagination. 
+That is certainly within the pantheon of human intelligence.
+
+Intelligence is clearly a factor in cultural progress; after all, culture is a product of brains.
+But a network of millions of brains seems to produce an effect far amplified beyond what any single brain can do, 
+where ideas propagate throughout the network to become stepping stones for new ideas,which then propagate again, and so on. 
+
+In particular, fields involving search within >> large, high-dimensional spaces, 
+namely evolutionary computation and deep learning, stand to be profoundly impacted by advances in open-endedness.
+
+We have only a preliminary understanding of the breadth of open-ended systems,
+the degrees of open-endedness that are possible, or the necessary conditions for triggering an open-ended complexity explosion.
+The potential weapons in our arsenal—evolutionary computation, neuroevolution, deep learning,
+alife worlds, novelty and divergence, coevolution and self-play, minimal criteria, etc., are powerful and compelling,
+but we have only a faint understanding of how they fit together to compose the big picture.
+
+>>Open-endedness defies the dominant paradigm in computer science and AI or machine learning today of
+>> “problems” and “solutions.” 
+In those fields, you can choose a problem and showcase improving results with respect to some benchmark. 
+Open-endedness isn’t like that.
+Open-endedness is for those yearning for an adventure without a clear destination
+—it is the road of creation itself, and  >>>> the entire point is to generate what we presently cannot imagine. 
+Welcome to the newest grand challenge.
 
 
 
