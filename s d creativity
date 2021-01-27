@@ -500,11 +500,17 @@ Evolutionary algorithm outperforms deep-learning machines at video games
 So-called evolutionary computing has achieved some remarkable feats in the 30 years 
 since it was first put to use optimizing factory production lines for tractors.
 
+Evolutionary computing uses a different approach. It starts with code generated entirely at random.
+And not just one version of it, but lots of versions, sometimes hundreds of thousands of randomly assembled pieces of code.
 
+Each of these codes is tested to see whether it achieves the required goal. 
 
+Each of the new generation is then tested to see how well it works.
+The best pieces of code are preferentially reproduced in another generation, and so on.
 
-
-
+The evolved code has another advantage. Because it is small, it is easy to see how it works. 
+By contrast, a well-known problem with deep-learning techniques is that it is sometimes impossible to know why 
+they have made particular decisions, and this can have practical and legal ramifications.
 
 
 
