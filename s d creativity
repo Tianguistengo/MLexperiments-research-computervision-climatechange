@@ -524,6 +524,32 @@ There are two different types of EC techniques.
 2. The other is swarm intelligence which is inspired by the social behaviours of animals.
 (hay otros? supongo)
 
+-----------------
+https://thewinnower.com/papers/2309-what-s-holding-artificial-life-back-from-open-ended-evolution
+
+What’s holding artificial life back from open-ended evolution?
+
+    Emily Dolson 1 2 Anya Vostinar 1 2 Charles Ofria 1 2 
+    
+There is a general consensus that these systems are missing some element of the consistent evolutionary innovation
+that we see in nature. Many have sought to create more "open-ended" evolutionary systems in which no stagnation occurs, 
+but have been stymied by the difficulty of quantifying progress towards such a nebulous concept. 
+
+Here, we propose an alternate framework for thinking about these problems. 
+By measuring obstacles to continued innovation, 
+we can move towards a mechanistic understanding of what drives various evolutionary dynamics.
+We propose that this framework will allow for more rigorous hypothesis testing 
+and clearer applications of these concepts to evolutionary computation. 
+
+
+
+
+
+
+
+
+
+
 
 
 
