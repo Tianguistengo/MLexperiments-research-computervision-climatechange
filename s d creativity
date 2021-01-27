@@ -512,9 +512,17 @@ The evolved code has another advantage. Because it is small, it is easy to see h
 By contrast, a well-known problem with deep-learning techniques is that it is sometimes impossible to know why 
 they have made particular decisions, and this can have practical and legal ramifications.
 
+----------------
+https://www.royalsociety.org.nz/research/the-future-of-artificial-intelligence-evolutionary-computation/
 
+In the review article ‘A survey on evolutionary machine learning’ published in the Journal of the
+Royal Society of New Zealand, Professor Mengjie Zhang FRSNZ, a Fellow of Royal Society Te Apārangi, and his team,
 
-
+Evolutionary computation (EC) is a type of algorithm inspired by nature. 
+There are two different types of EC techniques. 
+1. The first is evolutionary algorithms which applies Darwinian natural selection principles to search for optimal solutions.
+2. The other is swarm intelligence which is inspired by the social behaviours of animals.
+(hay otros? supongo)
 
 
 
