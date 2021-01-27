@@ -164,6 +164,42 @@ Since physical laws can often be expressed in more than one way,
 the researchers wonder if the system might offer 
 >>new ways — perhaps simpler ways — of thinking about known laws.
 
+----------------
+article https://phys.org/news/2020-05-artificial-intelligence-record-setting-catalyst-carbon.html
+paper https://www.nature.com/articles/s41586-020-2242-8
+
+Artificial intelligence helps researchers produce record-setting 
+catalyst for carbon dioxide-to-ethylene conversion
+
+Researchers at University of Toronto Engineering and Carnegie Mellon University are using (AI) 
+>to accelerate progress in transforming waste carbon into a commercially valuable product with record efficiency.
+
+They leveraged AI to >> speed up the search for the key material 
+in a new catalyst that converts carbon dioxide (CO2) into ethylene—a chemical precursor to a wide range of products,
+from plastics to dish detergent.
+
+The new catalyst is the first one for CO2-to-ethylene conversion 
+to have been designed in part through the use of AI.
+It is also the first experimental demonstration of the active learning approaches Ulissi has been developing.
+
+"With other chemical reactions, we have large and well-established datasets listing the potential catalyst materials
+and their properties," says Ulissi.
+"With CO2-to-ethylene conversion, we don't have that, 
+so we can't use brute force to model everything. Our group has spent a lot of time thinking about creative ways
+to find the most interesting materials."
+
+The algorithms created by Ulissi and his team use a combination of machine learning models and active learning strategies 
+>to broadly predict what kinds of products a given catalyst is likely to produce, 
+even without detailed modeling of the material itself.
+
+They applied these algorithms for CO2 reduction to screen over 240 different materials,
+discovering 4 promising candidates that were predicted to have desirable properties 
+over a very wide range of compositions and surface structures.
+
+
+
+
+
 
 
 
