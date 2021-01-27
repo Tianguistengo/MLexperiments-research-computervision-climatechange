@@ -198,6 +198,13 @@ Highlighting what data has been used to train an AI model makes them more transp
 It could help flag potential sources of bias 
 or reveal when a data set was used without permission or for inappropriate purposes. " very cool!
 
+----------------
+on evolutionary computation
+https://www.technologyreview.com/2018/07/18/104191/evolutionary-algorithm-outperforms-deep-learning-machines-at-video-games/
+
+The evolved code has another advantage. Because it is small, it is easy to see how it works. 
+By contrast, a well-known problem with deep-learning techniques is that it is sometimes impossible to know why 
+they have made particular decisions, and this can have practical and legal ramifications.
 
 
 
