@@ -853,5 +853,30 @@ with strong independence assumptions (naive) between the features.
 They are among the simplest Bayesian network models, 
 but coupled with Kernel density estimation, they can achieve higher accuracy levels.
 
+------------
+
+https://en.wikipedia.org/wiki/Central_limit_theorem
+
+In probability theory, the central limit theorem (CLT) establishes that, in many situations, 
+when independent random variables are added, 
+their properly normalized sum tends toward a normal distribution (informally a bell curve) 
+even if the original variables themselves are not normally distributed.
+
+The theorem is a key concept in probability theory because it implies that probabilistic and statistical methods
+that work for normal distributions can be applicable to many problems involving other types of distributions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
