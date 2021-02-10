@@ -196,11 +196,89 @@ They applied these algorithms for CO2 reduction to screen over 240 different mat
 discovering 4 promising candidates that were predicted to have desirable properties 
 over a very wide range of compositions and surface structures.
 
+--------------
+from raghu et al 
+
+     Multi-layer perceptrons
+
+Scientific Examples 
+One recent scientific example is given by the use of simple MLPs for pharamaceutical formulation [256], 
+developing variants of a drug that is stable and safe for patient use.
+
+      CNNs
+
+Image classification
+
+Scientific Examples: Image classification has found many varied scientific applications, such as in 
+analyzing cryoEM data [226] (with associated code https://github.com/cramerlab/boxnet). 
+An especially large body of work has looked at medical imaging uses of image classification, specifically, 
+using CNNs to predict disease labels. 
+Examples range from ophthalmology [72], radiology (2D x-rays and 3D CT scans) [258, 5, 185],
+pathology [135, 55], analyzing brain scans (PET, fMRI) [202, 45]. 
+An excellent survey of the numerous papers in this area is given by [228].
+
+Object detection
+
+Scientific Examples: Object detection has also gained significant attention across different scientific applications. 
+It has been used in many medical settings to localize features of interest, 
+for example, tumor cells across different imaging modalities [125, 269] 
+or fractures in radiology [199, 227].
+
+Semantic Segmentation and Instance Segmentation
+
+Scientific Examples: Out of all of the different types of imaging prediction problems, 
+segmentation methods have been especially useful for (bio)medical applications. 
+Examples include segmenting brain MR images [156, 236], 
+identifying key regions of cells in different tissues [254, 217] 
+and even studying bone structure [129].
+
+Super-Resolution
+
+A technique for transforming low resolution images to high resolution images. 
+
+Scientific Examples: Super resolution is arguably even more useful for scientific settings
+than standard natural image benchmarks. Two recent papers look at 
+U-nets for super-resolution of fluorescence microscopy [245] (code: https://csbdeep.bioimagecomputing.com/) 
+and electron microscopy [56]. 
+Other examples include super resolution of chest CT scans [231] and Brain MRIs [31].
+
+Pose Estimation
+
+Scientific Examples: Pose estimation has gained significant interest in neuroscience settings,
+where videos of animals are recorded, 
+and automatically predicting poses in the image can help identify important behaviors. 
+An example is given by [146, 147], with associated code http://www.mousemotorlab.org/deeplabcut.
+
+Other Tasks with Convolutional Neural Networks
+
+In the preceding sections, we have overviewed some of the most common tasks for which convolutional neural networks are used.
+However, there are many additional use cases of these models that we have not covered, including
+video prediction [57],
+action recognition [52]
+and style transfer [64]. 
 
 
+     Graph Neural Networks
+     
+Many datasets, such as (social) network data and chemical molecules
+have a graph structure to them, consisting of vertices connected by edges. 
 
+Problems where the data has an inherent graph structure, 
+>> and the goal is to learn some function on this graph structure
+— either at the per vertex level or a global property of the entire graph.
 
+There are also spatio-temporal graph neural networks 
+— performing predictions on graph structures evolving over time.
 
+Scientific Examples: Graph neural networks have been very popular for 
+> several chemistry tasks,
+such as predicting molecular properties [53, 93, 67, 103], 
+determining protein interfaces [60, 229] 
+and even generating candidate molecules [41, 21]. 
+A useful library for many of these chemistry tasks is https://github.com/ deepchem,
+which also has an associated benchmark task [249]. 
+A detailed tutorial of different graph neural networks and their use in molecule generation can be seen at 
+https://www.youtube.com/watch?v= VXNjCAmb6Zw.
 
 
 
