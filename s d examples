@@ -199,15 +199,18 @@ over a very wide range of compositions and surface structures.
 --------------
 from raghu et al 
 
+
      Multi-layer perceptrons
 
 Scientific Examples 
 One recent scientific example is given by the use of simple MLPs for pharamaceutical formulation [256], 
 developing variants of a drug that is stable and safe for patient use.
 
+
+
       CNNs
 
-Image classification
+-Image classification
 
 Scientific Examples: Image classification has found many varied scientific applications, such as in 
 analyzing cryoEM data [226] (with associated code https://github.com/cramerlab/boxnet). 
@@ -217,14 +220,14 @@ Examples range from ophthalmology [72], radiology (2D x-rays and 3D CT scans) [2
 pathology [135, 55], analyzing brain scans (PET, fMRI) [202, 45]. 
 An excellent survey of the numerous papers in this area is given by [228].
 
-Object detection
+-Object detection
 
 Scientific Examples: Object detection has also gained significant attention across different scientific applications. 
 It has been used in many medical settings to localize features of interest, 
 for example, tumor cells across different imaging modalities [125, 269] 
 or fractures in radiology [199, 227].
 
-Semantic Segmentation and Instance Segmentation
+-Semantic Segmentation and Instance Segmentation
 
 Scientific Examples: Out of all of the different types of imaging prediction problems, 
 segmentation methods have been especially useful for (bio)medical applications. 
@@ -232,7 +235,7 @@ Examples include segmenting brain MR images [156, 236],
 identifying key regions of cells in different tissues [254, 217] 
 and even studying bone structure [129].
 
-Super-Resolution
+-Super-Resolution
 
 A technique for transforming low resolution images to high resolution images. 
 
@@ -242,7 +245,7 @@ U-nets for super-resolution of fluorescence microscopy [245] (code: https://csbd
 and electron microscopy [56]. 
 Other examples include super resolution of chest CT scans [231] and Brain MRIs [31].
 
-Pose Estimation
+-Pose Estimation
 
 Scientific Examples: Pose estimation has gained significant interest in neuroscience settings,
 where videos of animals are recorded, 
@@ -279,6 +282,91 @@ A useful library for many of these chemistry tasks is https://github.com/ deepch
 which also has an associated benchmark task [249]. 
 A detailed tutorial of different graph neural networks and their use in molecule generation can be seen at 
 https://www.youtube.com/watch?v= VXNjCAmb6Zw.
+
+
+
+      Neural Networks for Sequence Data
+
+A very common attribute for data is to have a sequential structure. 
+This might be frames in a video, amino acid sequences for a protein or words in a sentence. 
+Developing neural network models to work with sequence data has been one of the most extensive areas of research 
+in the past few years. A large fraction of this has been driven by progress on tasks in natural language processing,
+
+
+-Language Modelling (Next Token Prediction)
+
+takes as input the tokens of the sequence up to time/position t, 
+and then uses these to predict token t + 1.
+
+tries to predict the next word
+
+also for capturing sequence dependencies in scientific applications, such as 
+protein function prediction [77, 80], 
+and using the hidden representations as part of a larger pipeline for protein structure prediction in AlphaFold 
+
+-Sequence to Sequence
+
+Transforming one sequence to another.
+Encoder-decoder structure.
+Found in some scientific applications as varied as biology [23] and energy forcasting [145]. 
+Sequence to sequence models critically rely on a technique called attention.
+
+-Question Answering
+
+One other popular benchmark for sequence data has been question answering. 
+Here, a neural network model is given a paragraph of text (as context) 
+and a specific question to answer on this context as input. 
+It must then output the part of the paragraph that answers the question.
+
+Question answering critically relies on the neural network model 
+understanding the relevance and similarity 
+of different sets of sequences (e.g. how relevant is this part of the context to the question of interest?). 
+
+This general capability (with appropriate reformulation) has the potential to be broadly useful,
+both for determining similarity and relevance on other datasets,
+and for question answering in specialized domains [61].
+
+
+Models for sequence data 
+
+-RNNs
+RNNs have found several scientific applications for data with sequential structure, 
+such as in genomics and proteomics [175, 132, 111].
+
+-Attention
+A significant problem in using RNNs and working with sequential data is the 
+difficulty in capturing long range dependencies
+(when tokens in the sequence that are very far apart from each other
+must be processed together to inform the correct output). 
+
+-Transformers
+Which critically relies on attentional mechanisms (the paper is in fact titled Attention is All you Need.) 
+During training transformers take in the entire sequence as input all at once, 
+but have positional embeddings that respects the sequential nature of the data.
+
+Scientific Examples: There have been several interesting examples of transformers used in scientific settings, such as
+training on protein sequences to find representations encoding meaningful biological properties [195], 
+protein generation via language modelling [142], 
+bioBERT [121] for text mining in biomedical data (with pretrained model and training code), 
+embeddings of scientific text [18] (with code https: //github.com/allenai/scibert) 
+and medical question answering [237].
+
+
+      
+      
+      Other Tasks with Sequence Data
+      
+A few other sequential data tasks that might be of interest are 
+
+Structured prediction, where the predicted output has some kind of structure, 
+from tree structures (in e.g. parsing) [28, 246] to short, executable computer program structure [271] 
+
+Summarization, where passages of text are summarized by a neural network [130, 273]. 
+We’ll also discuss word embeddings later in the survey.
+
+
+
+
 
 
 
