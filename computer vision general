@@ -385,7 +385,12 @@ analyses showing that
 >>>> learned latent attributes capture intuitive scene properties, 
 and illustrate the use of PSGs for compositional scene inference.
 
+--------
 
+Image-to-image translation
+is a class of vision and graphics problems where the goal is to 
+learn the mapping 
+between an input image and an output image. 
 
 
 
