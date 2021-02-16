@@ -366,7 +366,22 @@ We’ll also discuss word embeddings later in the survey.
 
 
 
+----------------------------------------------------------------------------------------------------
 
+Deepchem
+https://deepchem.readthedocs.io/en/latest/index.html
+
+What are some of the things you can use DeepChem to do? Here’s a few examples:
+
+    Predict the solubility of small drug-like molecules
+
+    Predict binding affinity for small molecule to protein targets
+
+    Predict physical properties of simple materials
+
+    Analyze protein structures and extract useful descriptors
+
+    Count the number of cells in a microscopy image
 
 
 
