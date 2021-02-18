@@ -104,11 +104,25 @@ Our main conclusion is a cautionary one:
 do not rely on the adversarial training to achieve invariant representation to sensitive features. 
 
 
+--------
 
+From Gil - Thoughtful AI
 
+6.3. Initiative-driven ThAIs: Access to the scientific record
 
+In order for ThAIs to acquire new knowledge about science, the scientific record should be made more accessible. 
+Current published articles do not contain the information necessary to understand what was done in enough detail that they can be reproduced [10].
 
+Many scientists would like to improve the transparency and reproducibility of their papers, 
+but the best practices remain difficult to understand and follow in practice. 
+Inspired by and partnering with early career researchers, I developed the Scientific Paper of the Future (SPF) Initiative 
+to teach scientists how to write papers that 
+>>describe and cite explicitly not just data but also software and methods (workflows and provenance) [11]. 
 
+scientist’s motivation for structuring and reporting their research products more thoroughly.
+
+Most of the work focuses on extracting facts and claims.
+>> Much remains to be done to address the challenges of extracting information about processes and methods.
 
 
 
