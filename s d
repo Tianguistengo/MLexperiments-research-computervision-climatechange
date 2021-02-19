@@ -623,7 +623,6 @@ For hypothesis verification,
 The second option is based on finding other experimental setups within the whole database 
 that are as similar to the reference experiment as possible, 
 with the exception of the feature that is currently analysed. 
-This procedure is computationally costly as well but does not require new computations.
 
 
 -----------------
