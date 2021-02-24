@@ -761,6 +761,9 @@ for explaining and understanding DNNs, >>instead of relying heavily on CAMs.
 We also believe this approach can be extended to other physiological signals and possibly to other modalities
 such as images to drive scientific discovery and hypothesis testing.
 
+
+
+
 --------------------
 
 How Artificial Intelligence Is Changing Science
@@ -778,7 +781,8 @@ represent a fundamentally new way of doing science.
 To what degree could we rediscover that knowledge, just using the data itself?"
 Kevin Schawinski
 
-Both 1.observation and 2.simulation help scientists generate hypotheses that can then be tested with further observations. 
+Both 1.observation and 2.simulation 
+help scientists generate hypotheses that can then be tested with further observations. 
 3. Generative modeling differs from both of these approaches.
 
 “It’s basically a third approach, between observation and simulation,” 
