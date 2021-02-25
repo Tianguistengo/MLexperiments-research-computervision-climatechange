@@ -32,24 +32,146 @@ Adversarial Removal of Demographic Attributes from Text Data
 
 ----------
 
+Quantum physicists like Roger Melko 
+of the Perimeter Institute for Theoretical Physics and the University of Waterloo in Ontario 
+have used neural networks to solve some of the toughest and most important problems in that field,
+>>such as how to represent 
+the mathematical “wave function” describing a many-particle system.
 
+---------
+
+Lee Cronin
+
+More recently, Lee Cronin, a chemist at the University of Glasgow, has been using a robot to
+>>>>>>>>>>>>>>>>>>>randomly mix chemicals, to see what sorts of new compounds are formed.
+
+Monitoring the reactions in real-time with a mass spectrometer, a nuclear magnetic resonance machine,
+and an infrared spectrometer,
+>>>>the system eventually learned to predict which combinations would be the most reactive. 
+
+Even if it doesn’t lead to further discoveries, Cronin has said, 
+the robotic system could allow chemists to >>>>>speed up their research by about 90 percent.
+
+------------------
+
+Last year, another team of scientists at ETH Zurich used neural networks to 
+  >>deduce physical laws from sets of data.
+
+Their system, a sort of robo-Kepler, 
+  >> rediscovered 
+the heliocentric model of the solar system from records of the position of the sun and Mars in the sky, as seen from Earth,
+and figured out the law of conservation of momentum by observing colliding balls. 
+
+Since physical laws can often be expressed in more than one way, 
+the researchers wonder if the system might offer 
+  >> new ways — perhaps simpler ways — of thinking about known laws.
+
+------
+
+DeepChem
+
+   Count the number of cells in a microscopy image
+
+
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
 
 
 
 **Create**
 
 
+Using generative modeling, 
+astrophysicists could investigate how galaxies change 
+when they go from low-density regions of the cosmos to high-density regions,
+and what physical processes are responsible for these changes.
+Schawinski
+https://www.quantamagazine.org/how-artificial-intelligence-is-changing-science-20190311/
 
 
-**Automate**
+----------------
+article https://phys.org/news/2020-05-artificial-intelligence-record-setting-catalyst-carbon.html
+paper https://www.nature.com/articles/s41586-020-2242-8
 
+Artificial intelligence helps researchers produce record-setting 
+catalyst for carbon dioxide-to-ethylene conversion
 
+Researchers at University of Toronto Engineering and Carnegie Mellon University are using (AI) 
+>to accelerate progress in transforming waste carbon into a commercially valuable product with record efficiency.
+
+They leveraged AI to 
+   >> speed up the search for the key material 
+in a new catalyst that converts carbon dioxide (CO2) into ethylene—a chemical precursor to a wide range of products,
+from plastics to dish detergent.
+
+The new catalyst is the first one for CO2-to-ethylene conversion to
+   >>have been designed in part through the use of AI.
+It is also the first experimental demonstration of the active learning approaches Ulissi has been developing.
+
+"With other chemical reactions, we have large and well-established datasets listing the potential catalyst materials
+and their properties," says Ulissi.
+"With CO2-to-ethylene conversion, we don't have that, 
+  >> so we can't use brute force to model everything. 
+Our group has spent a lot of time thinking about creative ways
+to find the most interesting materials."
+
+The algorithms created by Ulissi and his team use a combination of machine learning models and active learning strategies 
+  > to broadly predict what kinds of products a given catalyst is likely to produce, 
+even without detailed modeling of the material itself.
+
+They applied these algorithms for CO2 reduction to screen over 240 different materials,
+  >> discovering 4 promising candidates that were predicted to have desirable properties 
+over a very wide range of compositions and surface structures.
+
+----------
+
+ Deepchem
+https://deepchem.readthedocs.io/en/latest/index.html
+
+What are some of the things you can use DeepChem to do? Here’s a few examples:
+
+    Predict the solubility of small drug-like molecules
+
+    Predict binding affinity for small molecule to protein targets
+
+    Predict physical properties of simple materials
+
+    Analyze protein structures and extract useful descriptors
+    
+  ------
+  
+  raghu et al
+One recent scientific example is given by the use of simple MLPs for pharamaceutical formulation [256], 
+developing variants of a drug that is stable and safe for patient use.
 
 
 
 -------------------------------------------------------------------
+-------------------------------------------------------------------
 
-------------------------------------------------------------------
+
+
+**Automate**
+
+Adam
+
+Occasionally, grand claims are made regarding the achievements of a “robo-scientist.”
+A decade ago, an AI robot chemist named Adam investigated the genome of baker’s yeast 
+and worked out >>which genes are responsible for making certain amino acids.
+(Adam did this by observing strains of yeast that had certain genes missing, 
+and comparing the results to the behavior of strains that had the genes.) 
+Wired’s headline read, “Robot Makes Scientific Discovery All by Itself.”
+
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+
+**Creativity and imagination 
+
+
+
 
 https://openai.com/blog/dall-e/
 
@@ -167,87 +289,24 @@ and can have a dramatic impact on sample quality.
 
 "an illustration of a baby daikon radish in a tutu walking a dog [caption 1, best 8 of 2048]" 
 
-______________________
+------
 
-Quantum physicists like Roger Melko 
-of the Perimeter Institute for Theoretical Physics and the University of Waterloo in Ontario 
-have used neural networks to solve some of the toughest and most important problems in that field,
->>such as how to represent the mathematical “wave function” describing a many-particle system.
+-------------------------------------------------------------------
 
------------------------
+------------------------------------------------------------------
 
-Using generative modeling, astrophysicists could investigate how galaxies change 
-when they go from low-density regions of the cosmos to high-density regions,
-and what physical processes are responsible for these changes.
-Schawinski
-https://www.quantamagazine.org/how-artificial-intelligence-is-changing-science-20190311/
 
--------------
-Adam
+Unstructured
 
-Occasionally, grand claims are made regarding the achievements of a “robo-scientist.”
-A decade ago, an AI robot chemist named Adam investigated the genome of baker’s yeast 
-and worked out >>which genes are responsible for making certain amino acids.
-(Adam did this by observing strains of yeast that had certain genes missing, 
-and comparing the results to the behavior of strains that had the genes.) 
-Wired’s headline read, “Robot Makes Scientific Discovery All by Itself.”
+
+
+
 
 -----------
 
-Lee Cronin
 
-More recently, Lee Cronin, a chemist at the University of Glasgow, has been using a robot to
->>>>>>>>>>>>>>>>>>>randomly mix chemicals, to see what sorts of new compounds are formed.
 
-Monitoring the reactions in real-time with a mass spectrometer, a nuclear magnetic resonance machine,
-and an infrared spectrometer,
->>>>the system eventually learned to predict which combinations would be the most reactive. 
 
-Even if it doesn’t lead to further discoveries, Cronin has said, 
-the robotic system could allow chemists to >>>>>speed up their research by about 90 percent.
-
-------------------
-
-Last year, another team of scientists at ETH Zurich used neural networks to 
->>deduce physical laws from sets of data.
-Their system, a sort of robo-Kepler, >>rediscovered 
-the heliocentric model of the solar system from records of the position of the sun and Mars in the sky, as seen from Earth,
-and figured out the law of conservation of momentum by observing colliding balls. 
-Since physical laws can often be expressed in more than one way, 
-the researchers wonder if the system might offer 
->>new ways — perhaps simpler ways — of thinking about known laws.
-
-----------------
-article https://phys.org/news/2020-05-artificial-intelligence-record-setting-catalyst-carbon.html
-paper https://www.nature.com/articles/s41586-020-2242-8
-
-Artificial intelligence helps researchers produce record-setting 
-catalyst for carbon dioxide-to-ethylene conversion
-
-Researchers at University of Toronto Engineering and Carnegie Mellon University are using (AI) 
->to accelerate progress in transforming waste carbon into a commercially valuable product with record efficiency.
-
-They leveraged AI to >> speed up the search for the key material 
-in a new catalyst that converts carbon dioxide (CO2) into ethylene—a chemical precursor to a wide range of products,
-from plastics to dish detergent.
-
-The new catalyst is the first one for CO2-to-ethylene conversion 
-to have been designed in part through the use of AI.
-It is also the first experimental demonstration of the active learning approaches Ulissi has been developing.
-
-"With other chemical reactions, we have large and well-established datasets listing the potential catalyst materials
-and their properties," says Ulissi.
-"With CO2-to-ethylene conversion, we don't have that, 
-so we can't use brute force to model everything. Our group has spent a lot of time thinking about creative ways
-to find the most interesting materials."
-
-The algorithms created by Ulissi and his team use a combination of machine learning models and active learning strategies 
->to broadly predict what kinds of products a given catalyst is likely to produce, 
-even without detailed modeling of the material itself.
-
-They applied these algorithms for CO2 reduction to screen over 240 different materials,
-discovering 4 promising candidates that were predicted to have desirable properties 
-over a very wide range of compositions and surface structures.
 
 --------------
 from raghu et al 
@@ -269,6 +328,7 @@ Scientific Examples: Image classification has found many varied scientific appli
 analyzing cryoEM data [226] (with associated code https://github.com/cramerlab/boxnet). 
 An especially large body of work has looked at medical imaging uses of image classification, specifically, 
 using CNNs to predict disease labels. 
+
 Examples range from ophthalmology [72], radiology (2D x-rays and 3D CT scans) [258, 5, 185],
 pathology [135, 55], analyzing brain scans (PET, fMRI) [202, 45]. 
 An excellent survey of the numerous papers in this area is given by [228].
@@ -331,8 +391,10 @@ Scientific Examples: Graph neural networks have been very popular for
 such as predicting molecular properties [53, 93, 67, 103], 
 determining protein interfaces [60, 229] 
 and even generating candidate molecules [41, 21]. 
+
 A useful library for many of these chemistry tasks is https://github.com/ deepchem,
 which also has an associated benchmark task [249]. 
+
 A detailed tutorial of different graph neural networks and their use in molecule generation can be seen at 
 https://www.youtube.com/watch?v= VXNjCAmb6Zw.
 
@@ -342,6 +404,7 @@ https://www.youtube.com/watch?v= VXNjCAmb6Zw.
 
 A very common attribute for data is to have a sequential structure. 
 This might be frames in a video, amino acid sequences for a protein or words in a sentence. 
+
 Developing neural network models to work with sequence data has been one of the most extensive areas of research 
 in the past few years. A large fraction of this has been driven by progress on tasks in natural language processing,
 
@@ -421,21 +484,9 @@ We’ll also discuss word embeddings later in the survey.
 
 ----------------------------------------------------------------------------------------------------
 
-Deepchem
-https://deepchem.readthedocs.io/en/latest/index.html
 
-What are some of the things you can use DeepChem to do? Here’s a few examples:
 
-    Predict the solubility of small drug-like molecules
-
-    Predict binding affinity for small molecule to protein targets
-
-    Predict physical properties of simple materials
-
-    Analyze protein structures and extract useful descriptors
-
-    Count the number of cells in a microscopy image
-
+ 
 
 
 
