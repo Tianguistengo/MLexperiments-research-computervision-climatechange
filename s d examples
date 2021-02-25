@@ -72,6 +72,17 @@ DeepChem
 
    Count the number of cells in a microscopy image
 
+------
+
+-Super-Resolution
+
+A technique for transforming low resolution images to high resolution images. 
+
+Scientific Examples: Super resolution is arguably even more useful for scientific settings
+than standard natural image benchmarks. Two recent papers look at 
+U-nets for super-resolution of fluorescence microscopy [245] (code: https://csbdeep.bioimagecomputing.com/) 
+and electron microscopy [56]. 
+Other examples include super resolution of chest CT scans [231] and Brain MRIs [31].
 
 
 -------------------------------------------------------------------
@@ -142,10 +153,11 @@ What are some of the things you can use DeepChem to do? Here’s a few examples:
   ------
   
   raghu et al
-One recent scientific example is given by the use of simple MLPs for pharamaceutical formulation [256], 
+  
+-One recent scientific example is given by the use of simple MLPs for pharamaceutical formulation [256], 
 developing variants of a drug that is stable and safe for patient use.
 
-
+-style transfer [64]
 
 -------------------------------------------------------------------
 -------------------------------------------------------------------
@@ -162,6 +174,14 @@ and worked out >>which genes are responsible for making certain amino acids.
 (Adam did this by observing strains of yeast that had certain genes missing, 
 and comparing the results to the behavior of strains that had the genes.) 
 Wired’s headline read, “Robot Makes Scientific Discovery All by Itself.”
+
+---
+
+Eve - university of manchester
+
+---
+
+
 
 
 -------------------------------------------------------------------
@@ -309,7 +329,9 @@ Unstructured
 
 
 --------------
-from raghu et al 
+from raghu et al   
+
+>>  a lot of them are about science but not necessarily scientific discovery
 
 
      Multi-layer perceptrons
@@ -336,7 +358,8 @@ An excellent survey of the numerous papers in this area is given by [228].
 -Object detection
 
 Scientific Examples: Object detection has also gained significant attention across different scientific applications. 
-It has been used in many medical settings to localize features of interest, 
+It has been used in many medical settings to 
+   >> localize features of interest, 
 for example, tumor cells across different imaging modalities [125, 269] 
 or fractures in radiology [199, 227].
 
@@ -361,8 +384,10 @@ Other examples include super resolution of chest CT scans [231] and Brain MRIs [
 -Pose Estimation
 
 Scientific Examples: Pose estimation has gained significant interest in neuroscience settings,
-where videos of animals are recorded, 
-and automatically predicting poses in the image can help identify important behaviors. 
+where videos of animals are recorded, and
+   >>  automatically predicting poses in the image 
+can help identify important behaviors. 
+
 An example is given by [146, 147], with associated code http://www.mousemotorlab.org/deeplabcut.
 
 Other Tasks with Convolutional Neural Networks
