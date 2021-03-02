@@ -864,7 +864,23 @@ but because the feature embedding network successfully unlearns the bias informa
 We also demonstrate quantitative and qualitative experimental results 
 which show that our algorith meffectively  removes  the  bias  information  from  feature  em-bedding.
 
+-------------
+The Batch 
 
+
+Bigger, Faster Transformers
+
+Performance in language tasks rises with the size of the model — yet, as a model’s parameter count rises, 
+so does the time it takes to render output. 
+   >>>> New work pumps up the number of parameters without slowing down the network.
+   
+What’s new: William Fedus, Barret Zoph, and Noam Shazeer at Google Brain developed the Switch Transformer,
+a large-scale architecture (the authors built a version comprising 1.6 trillion parameters) 
+that’s nearly as fast as a much smaller model.
+
+Key insight: The approach known as mixture-of-experts uses only a subset of a model’s parameters per input example. 
+Like mixture-of-experts, Switch Transformer 
+   >>> chooses which of many layers would best process a given input.
 
 
 
