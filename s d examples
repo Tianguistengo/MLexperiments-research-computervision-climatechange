@@ -84,6 +84,14 @@ U-nets for super-resolution of fluorescence microscopy [245] (code: https://csbd
 and electron microscopy [56]. 
 Other examples include super resolution of chest CT scans [231] and Brain MRIs [31].
 
+----------
+
+https://deepmind.com/blog/article/FermiNet
+FermiNet: Quantum Physics and Chemistry from First Principles
+
+In an article recently published in Physical Review Research, we show how deep learning can help solve the fundamental equations of quantum mechanics for real-world systems. 
+Not only is this an important fundamental scientific question, but it also could lead to practical uses in the future, allowing researchers to prototype new materials and chemical syntheses in silico before trying to make them in the lab. 
+
 
 -------------------------------------------------------------------
 -------------------------------------------------------------------
