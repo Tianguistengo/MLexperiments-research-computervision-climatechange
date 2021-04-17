@@ -908,3 +908,29 @@ Why it matters: Duplex attention helps to generate scenes that make sense in ter
 
 We’re thinking: Transformers, which alternate attention and fully connected layers, perform better than other architectures in language processing. This work, which alternates attention and convolutional layers, may bring similar improvements to image processing.
 
+
+----------
+
+Curiosity-driven AI
+
+https://www.technologyreview.com/2017/05/23/151580/curiosity-may-be-vital-for-truly-smart-ai/
+https://psychblog.berkeley.edu/spotlights/2019/11/05/Eliza-Kosoy/
+
+-----------
+GLOM
+How to represent part-whole hierarchies in a neural network
+Geoffrey Hinton
+
+    This paper does not describe a working system.
+    Instead, it presents a single idea about representation 
+    which allows advances made by several different groups to be combined into an imaginary system called GLOM.
+    
+    The advances include transformers, neural fields, contrastive representation learning, distillation and capsules.
+    
+    GLOM answers the question: How can a neural network with a fixed architecture 
+    parse an image into a part-whole hierarchy 
+    which has a different structure for each image?
+    
+    The idea is simply to use islands of identical vectors to represent the nodes in the parse tree.
+    If GLOM can be made to work, it should significantly improve the interpretability of the representations
+    produced by transformer-like systems when applied to vision or language 
