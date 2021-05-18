@@ -934,3 +934,13 @@ Geoffrey Hinton
     The idea is simply to use islands of identical vectors to represent the nodes in the parse tree.
     If GLOM can be made to work, it should significantly improve the interpretability of the representations
     produced by transformer-like systems when applied to vision or language 
+
+
+----
+from paper 'inverse molecular design using machine learning'
+
+New approaches also lie in inverse RL,
+geared toward learning a reward or loss function (86). 
+
+Research in this direction will allow for the discovery of reward functions 
+associated with different materials discovery tasks.
