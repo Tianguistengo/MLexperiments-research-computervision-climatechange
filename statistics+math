@@ -915,7 +915,28 @@ such as distance, area or volume.
 
 
 
+-----
 
+from wikipedia 
+
+The Schrödinger equation 
+is a differential equation (a type of equation that involves an unknown function rather than an unknown number)
+that forms the basis of quantum mechanics, 
+one of the most accurate theories of how subatomic particles behave. 
+
+It is a mathematical equation that was thought of by Erwin Schrödinger in 1925. 
+
+It defines a wave function of a particle or system (group of particles) 
+which has a certain value at every point in space for every given time.
+
+These values have no physical meaning (in fact, they are mathematically complex),
+yet the wave function contains all information that can be known about a particle or system. 
+
+This information can be found by mathematically manipulating the wave function 
+to return real values relating to physical properties such as position, momentum, energy, etc. 
+
+The wave function can be thought of as a picture of how this particle or system acts with time 
+and describes it as fully as possible. 
 
 
 
