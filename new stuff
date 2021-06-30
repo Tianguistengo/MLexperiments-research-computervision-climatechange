@@ -944,3 +944,33 @@ geared toward learning a reward or loss function (86).
 
 Research in this direction will allow for the discovery of reward functions 
 associated with different materials discovery tasks.
+
+---
+
+from 
+https://ml.berkeley.edu/blog/posts/contrastive_learning/
+
+Contrastive learning
+
+has proven to be one of the most promising approaches in unsupervised representation learning. 
+
+With the evaluation metric described in the last paragraph, contrastive learning methods are able to outperform “pre-training” methods
+which require labeled data. 
+The idea behind contrastive learning is surprisingly simple:
+the model learns to encode images in a lower dimensional space in such a way that
+images that are similar semantically will be close to each other in the low dimensional space,
+and at the same time far away from other images. 
+
+For example, we would want the representation of cats to be close to other cats and far away from representation of pigs. 
+In the rest of this blog post, we will elaborate on this intuition and describe how it is implemented step by step.
+
+Zooming out, there are multiple ways we can do unsupervised representation learning. 
+Some widely used ones include Variational Autoencoders (VAEs) and Generative Adversarial Networks (GANs). 
+Unlike contrastive learning, which only trains an encoder, 
+both VAE and GAN have decoders that are capable of transforming the learned low-dimensional representation back to the original image. 
+From a high level, they make sure the representation captures the relevant information by optimizing this decoder reconstruction loss. 
+
+In contrastive learning, however, 
+we directly try to regulate the distance between images within the learned representation space: 
+the representation of a cat image shall be close to that of other cat images,
+while also being far away from representations of pig images.
