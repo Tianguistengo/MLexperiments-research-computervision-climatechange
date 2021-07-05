@@ -974,3 +974,14 @@ In contrastive learning, however,
 we directly try to regulate the distance between images within the learned representation space: 
 the representation of a cat image shall be close to that of other cat images,
 while also being far away from representations of pig images.
+
+
+----------
+
+from deeplearning.ai
+
+A transformer model trained only to predict missing amino acids in a sequence 
+learned important things about how amino acids form a larger structure. 
+
+Interpreting self-attention values reveals not only how a model works 
+but also how nature works. 
