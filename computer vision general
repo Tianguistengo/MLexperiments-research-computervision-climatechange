@@ -393,7 +393,18 @@ learn the mapping
 between an input image and an output image. 
 
 
+------
 
+from the batch 
+
+Transformer Speed-Up Sped Up
+
+The transformer architecture is notoriously inefficient when processing long sequences — a problem in processing 
+images, which are essentially long sequences of pixels.
+
+One way around this is to break up input images and process the pieces separately. New work improves upon this already-streamlined approach.
+
+What’s new: Zizhao Zhang and colleagues at Google and Rutgers University simplified an earlier proposal for using transformers to process images. They call their architecture NesT.
 
 
 
