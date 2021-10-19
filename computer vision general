@@ -404,9 +404,16 @@ images, which are essentially long sequences of pixels.
 
 One way around this is to break up input images and process the pieces separately. New work improves upon this already-streamlined approach.
 
-What’s new: Zizhao Zhang and colleagues at Google and Rutgers University simplified an earlier proposal for using transformers to process images. They call their architecture NesT.
+What’s new: Zizhao Zhang and colleagues at Google and Rutgers University simplified an earlier proposal for using transformers to process images. 
+They call their architecture NesT.
 
-
+Key Insight:  A transformer that processes parts of an image and then joins them can work more efficiently than
+one that looks at the entire image at once. However, to relate the parts to the whole, it must learn how the pixels 
+in different regions relate to one another. 
+A recent model called Swin does this by shifting region boundaries in between processing regions and merging them together 
+— a step that nonetheless consumes compute cycles.
+Using convolutions to process both within and across regions can enable a model to learn such relationships
+without shifting region boundaries, saving that computation.
 
 
 
