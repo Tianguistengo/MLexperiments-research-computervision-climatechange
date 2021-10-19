@@ -985,3 +985,29 @@ learned important things about how amino acids form a larger structure.
 
 Interpreting self-attention values reveals not only how a model works 
 but also how nature works. 
+
+
+
+--------
+
+from the batch
+
+Crawl the Web, Absorb the Bias
+
+The emerging generation of trillion-parameter models needs datasets of billions of examples, but the most readily available source of examples on that scale — the web — is polluted with bias and antisocial expressions. A new study examines the issue.
+
+What’s new: Abeba Birhane and colleagues at University College Dublin and University of Edinburgh audited the LAION-400M dataset, which was released in September. It comprises data scraped from the open web, from which inaccurate entries were removed by a state-of-the-art model for matching images to text. The automated curation left plenty of worrisome examples among the remaining 400 million examples — including stereotypes, racial slurs, and sexual violence — raising concerns that models trained on LAION-400M would inherit its shortcomings.
+
+Key insight: The compilers of LAION-400M paired images and text drawn from Common Crawl, a large repository of web data. To filter out low-quality pairs, they used CLIP to score the correspondence between them and discarded those with the lowest scores. But CLIP itself is trained on a massive trove of web data. Thus it’s bound to find a high correspondence between words and pictures that are frequently associated with one another on the web, even if the associations are spurious or otherwise undesirable.
+
+NSFT (not safe for training): The authors entered text queries into LAION-400M’s search function, which returned matching images. 
+
+    In response to queries about women, for instance “latina,” “aunty,” and “nun,” the search engine returned a high percentage of pornography and depictions of sexual violence. Similarly, some non-gendered queries including “Korean” and “Indian” returned sexually-explicit images of women.
+    Other queries returned biased results. For example, “CEO” returned images of men but not women. “Terrorist” returned images of Middle Eastern men but not people wearing Ku Klux Klan outfits.
+    Examining CLIP, the authors found that the 0.3 cosine similarity threshold didn’t weed out image/text pairs that expressed stereotypes, sexism, or racism. For instance, CLIP gave a passing score to a female astronaut’s portrait accompanied by the words, “this is a photograph of a smiling housewife in an orange jumpsuit with the American flag.”
+
+Behind the news: The LAION-400M team, a loosely knit collective led by Christoph Schuhmann at University of Vienna, aims to re-create Google’s Wikipedia-based Image Text dataset and ultimately use it to train open-source analogs of OpenAI’s CLIP and DALL·E. The group was inspired by EleutherAI’s community effort to build an open source version of GPT-3.
+
+Why it matters: It’s enormously expensive to manually clean a dataset that spans hundreds of millions of examples. Automated curation has been viewed as a way to ensure that immense datasets contain high-quality data. This study reveals serious flaws in that approach.
+
+We’re thinking: Researchers have retracted or amended several widely used datasets to address issues of biased and harmful data. Yet, as the demand for data rises, there’s no ready solution to this problem. Audits like this make an important contribution, and the community — including large corporations that produce proprietary systems — would do well to take them seriously.
